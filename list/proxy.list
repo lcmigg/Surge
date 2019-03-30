@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,nflximg.net
 DOMAIN-SUFFIX,nflxso.net
 DOMAIN-SUFFIX,nflxvideo.net
 // Proxy
+DOMAIN-KEYWORD,googlevideo
 DOMAIN-SUFFIX,avgle.com
 DOMAIN-SUFFIX,ahcdn.com
 DOMAIN-SUFFIX,xvideos.com
