@@ -140,7 +140,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #bilibili
 ;^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilibili_N2.js
 ;^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilili_N8.js
-^https?:\/\/ap(i|p).bilibili.com\/(pgc\/view\/app\/season)|(xlive\/app-room\/v1\/index\/getInfoByRoom)|(x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank)))\?access_key url script-response-body JS/bilili_N9.js
+^https?:\/\/ap(i|p).bilibili.com\/(pgc\/view\/app\/season)|(xlive\/app-room\/v1\/index\/getInfoByRoom)|(x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank)))\?access_key url script-response-body JS/bilibili_N9.js
 #解锁大会员
 ;^https:\/\/api\.bilibili\.com\/pgc\/view\/app\/season url script-response-body JS/bilibilidhy.js
 #用药助手
