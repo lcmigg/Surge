@@ -113,7 +113,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/.+\/commercial_api\/(launch|real_time) url reject
 ;^https://www.zhihu.com/api/v4/mcn/ url reject
 #BiliBili
-^https:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl url 302 https://bili.miao.best/geturl/maom/
+;^https:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl url 302 https://bili.miao.best/geturl/maom/
 ^https://app.bilibili.com/x/v2/(splash|rank.*rid=(168|5)|search/(defaultword|recommend|trending|resource)) url reject-img
 ^https://api.bilibili.com/x/v2/dm/advert url reject-img
 #ohter
