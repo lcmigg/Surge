@@ -144,6 +144,11 @@ host-suffix, adview.cn, reject
 # bilibili
 host, dataflow.biliapi.com, reject
 host, data.bilibili.com, reject
+# 滴滴出行
+host, ct.xiaojukeji.com, reject
+host, gwp.xiaojukeji.com, reject
+# 高德地图
+host, optimus-ads.amap.com, reject
 # KEYWORD
 host-keyword, admarvel, reject
 #host-keyword, admaster, reject
