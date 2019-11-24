@@ -411,6 +411,7 @@ host-suffix, doubanio.com, CN|Proxy
 host-suffix, ecitic.com, CN|Proxy
 host-suffix, gtimg.com, CN|Proxy
 #host-suffix, haibian.com, CN|Proxy
+host-suffix, hdslb.com, CN|Proxy
 #host-suffix, hongxiu.com, CN|Proxy
 host-suffix, hxcdn.net, CN|Proxy
 host-suffix, iciba.com, CN|Proxy
