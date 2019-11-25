@@ -54,7 +54,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #163
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
 ^https?://oimagec([a-z])([0-9]).ydstatic.com/image.* url reject-img
-^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish url reject
+^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish url reject-200
 ^https?://client.mail.163.com/apptrack/confinfo/searchMultiAd.+ url reject
 ^https?://client.mail.163.com/apptrack/confinfo/searchPullDownAd.+ url reject
 ^http://mos.netease.com/mailyxpublic/mailmaster/icon/ url reject-img
