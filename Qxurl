@@ -71,7 +71,6 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$ url reject
 ^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
 
-
 # > JD
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
@@ -141,21 +140,21 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #JS
 #微信公众号 
 ;https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://lcmig.coding.me/surge/Script/JS/WeChat.js
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
+;^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
 
 #知乎
 ;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|.*\/questions|market\/header) url script-response-body JS/zhihu_N2.js
-^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|.*\/questions|market\/header|people\/) url script-response-body JS/zhihu_N3.js
+;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|.*\/questions|market\/header|people\/) url script-response-body JS/zhihu_N3.js
 
 #bilibili
 ;^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilibili_N2.js
-^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilibili_N8.js
+;^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilibili_N8.js
 
 #用药助手
-^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?|pay\/checkIntroOfferPeriod\?)) url script-response-body JS/yyzs_1.js
+;^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?|pay\/checkIntroOfferPeriod\?)) url script-response-body JS/yyzs_1.js
 
 #陆琪故事
-^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body JS/luqi.js
+;^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body JS/luqi.js
 
 #vsco
 ;^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body JS/vsco.js
