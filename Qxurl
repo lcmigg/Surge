@@ -143,7 +143,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ;^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
 
 #知乎
-;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|.*\/questions|market\/header) url script-response-body JS/zhihu_N2.js
+;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|v4\/questions|market\/header) url script-response-body JS/zhihu_N2.js
 ;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|.*\/questions|market\/header|people\/) url script-response-body JS/zhihu_N3.js
 
 #bilibili
