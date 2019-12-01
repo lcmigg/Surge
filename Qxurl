@@ -118,7 +118,8 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/(mcn|community-ad)\/ url reject
 ^https?:\/\/.+\/commercial_api\/(launch|real_time) url reject
 #BiliBili
-^https://app.bilibili.com/x/v2/(splash|rank.*rid=(168|5)|search/(defaultword|recommend|trending|resource)) url reject-img
+;^https://app.bilibili.com/x/v2/(splash|rank.*rid=(168|5)|search/(defaultword|recommend|trending|resource)) url reject-img
+^https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)) url reject-img
 ^https://api.bilibili.com/x/v2/dm/advert url reject-img
 
 #ohter
