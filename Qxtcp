@@ -299,8 +299,8 @@ host-suffix, ccb.com, direct
 host-suffix, jingoal.com, CN|Proxy
 host-suffix, yikeweiqi.com, CN|Proxy
 host-suffix, golinksworld.com, CN|Proxy
-host-suffix, qingmang.mobi, CN|Proxy
-host-suffix, qingmang.me, CN|Proxy
+;host-suffix, qingmang.mobi, CN|Proxy
+;host-suffix, qingmang.me, CN|Proxy
 host-suffix, veryzhun.com, CN|Proxy
 host-suffix, i.meituan.com, CN|Proxy
 host-suffix, ruguoapp.com, CN|Proxy
@@ -334,8 +334,8 @@ host-keyword, googlevideo, JT|Proxy
 host-keyword, google, JT|Proxy, force-remote-dns
 #host-keyword, -cn, CN|Proxy
 # RRTV
-host-suffix, rr.tv, CN|Proxy
-host-suffix, app-measurement.com, JT|Proxy
+；host-suffix, rr.tv, CN|Proxy
+；host-suffix, app-measurement.com, JT|Proxy
 # Bootstrap中文网
 host-suffix, bootcss.com, reject
 # 点量视频解析
@@ -463,9 +463,9 @@ host-suffix, taobao.com, CN|Proxy
 host-suffix, tenpay.com, CN|Proxy
 host-suffix, tmall.com, CN|Proxy
 host-suffix, tudou.com, CN|Proxy
-host-suffix, upaiyun.com, CN|Proxy
-host-suffix, upyun.com, CN|Proxy
-host-suffix, html-js.com, CN|Proxy
+//又拍云
+;host-suffix, upaiyun.com, CN|Proxy
+;host-suffix, upyun.com, CN|Proxy
 #host-suffix, weibo.com, CN|Proxy
 host-suffix, weiphone.com, CN|Proxy
 host-suffix, weiphone.net, CN|Proxy
@@ -501,15 +501,8 @@ host, api2-16-h2.musical.ly, JT|Proxy
 #host-suffix, adobedtm.com, JT|Proxy
 host-suffix, amazon.com, JT|Proxy
 host-suffix, amazonaws.com, JT|Proxy
-#host-suffix, aolcdn.com, JT|Proxy
 host-suffix, apple-dns.net, JT|Proxy
 host-suffix, appledaily.com, JT|Proxy
-#host-suffix, appledaily.com.tw, JT|Proxy
-#host-suffix, appshopper.com, JT|Proxy
-#host-suffix, appsto.re, JT|Proxy
-#host-suffix, boomtrain.com, JT|Proxy
-#host-suffix, box.com, JT|Proxy
-#host-suffix, box.net, JT|Proxy
 host-suffix, crashlytics.com, JT|Proxy
 host-suffix, dropbox.com, JT|Proxy
 host-suffix, dropboxapi.com, JT|Proxy
