@@ -484,7 +484,6 @@ host-suffix, ykimg.com, CN|Proxy
 host-suffix, youdao.com, CN|Proxy
 host-suffix, youku.com, CN|Proxy
 host-suffix, zealer.com, CN|Proxy
-host-suffix, zgslb.net, CN|Proxy
 host-suffix, zhihu.com, CN|Proxy
 host-suffix, zhimg.com, CN|Proxy
 # Netflix
@@ -502,13 +501,12 @@ host,  api2-16-h2.musical.ly, JT|Proxy
 #host-suffix, adobedtm.com, JT|Proxy
 host-suffix, amazon.com, JT|Proxy
 host-suffix, amazonaws.com, JT|Proxy
-host-suffix, aolcdn.com, JT|Proxy
+#host-suffix, aolcdn.com, JT|Proxy
 host-suffix, apple-dns.net, JT|Proxy
 host-suffix, appledaily.com, JT|Proxy
-host-suffix, appledaily.com.tw, JT|Proxy
-host-suffix, appledailytw.com, JT|Proxy
-host-suffix, appshopper.com, JT|Proxy
-host-suffix, appsto.re, JT|Proxy
+#host-suffix, appledaily.com.tw, JT|Proxy
+#host-suffix, appshopper.com, JT|Proxy
+#host-suffix, appsto.re, JT|Proxy
 #host-suffix, boomtrain.com, JT|Proxy
 #host-suffix, box.com, JT|Proxy
 #host-suffix, box.net, JT|Proxy
@@ -539,7 +537,7 @@ host-suffix, ifttt.com, JT|Proxy
 host-suffix, live.com, JT|Proxy
 host-suffix, live.net, JT|Proxy
 host-suffix, outlook.com, JT|Proxy, force-remote-dns
-host,  www.pornhd.com, JT|Proxy, force-remote-dns
+host, www.pornhd.com, JT|Proxy, force-remote-dns
 host-suffix, surge.run, JT|Proxy
 host-suffix, symcb.com, JT|Proxy
 host-suffix, symcd.com, JT|Proxy
