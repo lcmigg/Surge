@@ -16,7 +16,7 @@
 ;user-agent, seld*, direct
 ;user-agent, Wallet*, direct
 # Siri
-host,  guzzoni.apple.com, direct
+host, guzzoni.apple.com, direct
 ;user-agent, AssistantServices*, direct
 ;user-agent, MobileAsset*, direct
 ;user-agent, Siri*, direct
@@ -29,8 +29,8 @@ host, smp-device.apple.com, direct
 # Apple
 host, appleiphonecell.com, CN|Proxy
 ;user-agent, AppStore*, CN|Proxy
-host-keyword,  icloud, CN|Proxy
-host-keyword,  itunes, CN|Proxy
+host-keyword, icloud, CN|Proxy
+host-keyword, itunes, CN|Proxy
 host-suffix, aaplimg.com, CN|Proxy
 host-suffix, apple.co, CN|Proxy
 host-suffix, apple.com, CN|Proxy
@@ -262,17 +262,17 @@ host-suffix, sinaimg.cn, WEIBO
 host-suffix, music.163.com, Netease_Music
 host-suffix, interface.music.163.com, Netease_Music
 #QQSports
-user-agent,  QQSportsV3*, CN|Proxy
+user-agent, QQSportsV3*, CN|Proxy
 host-suffix, video.qq.com, CN|Proxy
 host-suffix, sports.qq.com, CN|Proxy
 # cnProxy
-user-agent,  WeChat*, direct
-user-agent,  MicroMessenger*, direct
-user-agent,  Moke*, CN|Proxy
-#user-agent,  WeiboOverseas*, CN|Proxy
-#user-agent,  PUClient*, CN|Proxy
-user-agent,  QQ*, CN|Proxy
-#user-agent,  QDaily*, CN|Proxy
+user-agent, WeChat*, direct
+user-agent, MicroMessenger*, direct
+;user-agent, Moke*, CN|Proxy
+#user-agent, WeiboOverseas*, CN|Proxy
+#user-agent, PUClient*, CN|Proxy
+user-agent, QQ*, CN|Proxy
+#user-agent, QDaily*, CN|Proxy
 user-agent, AliBank*, direct
 #user-agent, CallWatch*, direct
 user-agent, Tweetbot*, JT|Proxy
@@ -331,8 +331,8 @@ host-suffix, twitter.com, JT|Proxy, force-remote-dns
 host-suffix, youtube-nocookie.com, JT|Proxy
 host-suffix, youtube.com, JT|Proxy, force-remote-dns
 host-keyword, googlevideo, JT|Proxy
-host-keyword,  google, JT|Proxy, force-remote-dns
-#host-keyword,  -cn, CN|Proxy
+host-keyword, google, JT|Proxy, force-remote-dns
+#host-keyword, -cn, CN|Proxy
 # RRTV
 host-suffix, rr.tv, CN|Proxy
 host-suffix, app-measurement.com, JT|Proxy
@@ -375,12 +375,12 @@ host-suffix, 360buyimg.com, CN|Proxy
 host-suffix, 36kr.com, CN|Proxy
 #host-suffix, abercrombie.com, CN|Proxy
 host-suffix, acfun.tv, CN|Proxy
-host-suffix,  acgvideo.com, CN|Proxy
-host-suffix,  aixifan.com, CN|Proxy
-host-suffix,  alicdn.com, direct
-host-suffix,  dingtalk.com, direct
-host-suffix,  aliyuncs.com, direct
-host-suffix,  alipay.com, CN|Proxy
+host-suffix, acgvideo.com, CN|Proxy
+host-suffix, aixifan.com, CN|Proxy
+host-suffix, alicdn.com, direct
+host-suffix, dingtalk.com, direct
+host-suffix, aliyuncs.com, direct
+host-suffix, alipay.com, CN|Proxy
 host-suffix, amap.com, CN|Proxy
 host-suffix, appstore.com, CN|Proxy
 host-suffix, baidu.com, CN|Proxy
@@ -494,8 +494,8 @@ host-suffix, nflximg.com, JT|Proxy
 host-suffix, nflximg.net, JT|Proxy
 host-suffix, nflxvideo.net, JT|Proxy
 #tiktokv
-host,  api-h2.tiktokv.com, JT|Proxy
-host,  api2-16-h2.musical.ly, JT|Proxy
+host, api-h2.tiktokv.com, JT|Proxy
+host, api2-16-h2.musical.ly, JT|Proxy
 # Proxy
 #host-suffix, adobe.com, JT|Proxy
 #host-suffix, adobedtm.com, JT|Proxy
@@ -581,10 +581,10 @@ ip-cidr, 149.154.175.0/24, JT|Proxy, no-resolve
 ip-cidr, 149.154.171.5/32, JT|Proxy, no-resolve
 # END
 ;ip-cidr, 10.0.0.0/8, direct
-ip-cidr,  100.64.0.0/10, direct
-;ip-cidr,  127.0.0.0/8, direct
-;ip-cidr,  172.16.0.0/12, direct
+ip-cidr, 100.64.0.0/10, direct
+;ip-cidr, 127.0.0.0/8, direct
+;ip-cidr, 172.16.0.0/12, direct
 ;ip-cidr, 192.168.0.0/16, direct
-#ip-cidr, 45.77.187.26/32, direct
+;ip-cidr, 45.77.187.26/32, direct
 ;geoip, CN, CN|Proxy
 ;final, JT|Proxy
