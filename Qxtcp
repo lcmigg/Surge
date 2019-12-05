@@ -467,8 +467,8 @@ host-suffix, tudou.com, CN|Proxy
 ;host-suffix, upaiyun.com, CN|Proxy
 ;host-suffix, upyun.com, CN|Proxy
 #host-suffix, weibo.com, CN|Proxy
-host-suffix, weiphone.com, CN|Proxy
-host-suffix, weiphone.net, CN|Proxy
+;host-suffix, weiphone.com, CN|Proxy
+;host-suffix, weiphone.net, CN|Proxy
 host-suffix, xiami.com, CN|Proxy
 host-suffix, xiami.net, CN|Proxy
 host-suffix, xiaomi.com, CN|Proxy
