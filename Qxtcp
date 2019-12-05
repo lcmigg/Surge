@@ -334,8 +334,8 @@ host-keyword, googlevideo, JT|Proxy
 host-keyword, google, JT|Proxy, force-remote-dns
 #host-keyword, -cn, CN|Proxy
 # RRTV
-；host-suffix, rr.tv, CN|Proxy
-；host-suffix, app-measurement.com, JT|Proxy
+;host-suffix, rr.tv, CN|Proxy
+;host-suffix, app-measurement.com, JT|Proxy
 # Bootstrap中文网
 host-suffix, bootcss.com, reject
 # 点量视频解析
