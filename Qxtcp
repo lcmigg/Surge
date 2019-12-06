@@ -515,7 +515,7 @@ host-suffix, feedly.com, JT|Proxy
 host-suffix, g.co, JT|Proxy
 #host-suffix, ggpht.com, JT|Proxy
 host-suffix, git.io, JT|Proxy
-host, raw.githubusercontent.com, JT|Proxy
+host-suffix, githubusercontent.com, JT|Proxy
 host-suffix, github.com, JT|Proxy
 host-suffix, github.io, JT|Proxy
 host-suffix, githubapp.com, JT|Proxy
