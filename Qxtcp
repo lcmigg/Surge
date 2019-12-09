@@ -305,6 +305,14 @@ host-suffix, veryzhun.com, CN|Proxy
 host-suffix, i.meituan.com, CN|Proxy
 host-suffix, ruguoapp.com, CN|Proxy
 host-suffix, servicewechat.com, direct
+host-suffix, dji.com, CN|Proxy
+host-suffix, djicdn.com, CN|Proxy
+host, dove.589669.xyz, JT|Proxy
+host-suffix, lzdxedu.com, CN|Proxy
+host, news.ssp.qq.com, reject
+host, huyaimg.msstatic.com, CN|Proxy
+host-suffix, coding.me, CN|Proxy
+host-suffix, flurry.com, JT|Proxy
 #host-suffix, xonline.tv, JT|Proxy
 #host-suffix, xonlinehd.com, JT|Proxy
 #host-suffix, xonline.vip, JT|Proxy
@@ -496,6 +504,8 @@ host-suffix, nflxvideo.net, JT|Proxy
 #tiktokv
 host, api-h2.tiktokv.com, JT|Proxy
 host, api2-16-h2.musical.ly, JT|Proxy
+#香蕉视频
+host, apple.fuliapps.com, JT|Proxy
 # Proxy
 #host-suffix, adobe.com, JT|Proxy
 #host-suffix, adobedtm.com, JT|Proxy
