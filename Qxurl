@@ -1,5 +1,5 @@
 #hostname
-hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,api.m.jd.com,ms.jr.jd.com,api.jr.mi.com，img*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,mp.weixin.qq.com,i.weread.qq.com,api.zhihu.com,www.zhihu.com,acs.m.taobao.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,app.stoneread.com,api*.musical.ly,api*.tiktokv.com,aweme*.snssdk.com,api*.amemv.com,p.du.163.com,ios.fuliapps.com,ios.xiaoxiaoapps.com,newdrugs.dxy.cn,www.luqijianggushi.com,vsco.co,api.tophub.today,education.github.com,api.pushover.net,pocketlists.com,mubu.com,book.haitunwallet.com
+hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,api.m.jd.com,ms.jr.jd.com,api.jr.mi.com，img*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,mp.weixin.qq.com,i.weread.qq.com,api.zhihu.com,www.zhihu.com,acs.m.taobao.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,app.stoneread.com,api*.musical.ly,api*.tiktokv.com,aweme*.snssdk.com,api*.amemv.com,p.du.163.com,ios.fuliapps.com,ios.xiaoxiaoapps.com,newdrugs.dxy.cn,www.luqijianggushi.com,vsco.co,api.tophub.today,education.github.com,api.pushover.net,pocketlists.com,mubu.com,book.haitunwallet.com,*ttcdn-tos.pstatp.com,smr.snssdk.com,extlob.snssdk.com
 
 #url reject
 ^http://(www.)?google.cn url 302 https://www.google.com
@@ -137,6 +137,12 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 
 #票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
+
+#大鱼视频
+^https://smr.snssdk.com/api/ad/ url reject-200
+^https://sf3-ttcdn-tos.pstatp.com/obj/ad-pattern/ url reject-200
+^https://extlob.snssdk.com/service/2/app_log/ url reject-200
+^https?://sf1-ttcdn-tos.pstatp.com/img/mosaic-legacy/ url reject-200
 
 #JS
 #微信公众号 
