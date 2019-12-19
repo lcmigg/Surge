@@ -140,11 +140,9 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 
-#大鱼视频
-;^https://smr.snssdk.com/api/ad/ url reject-200
-;^https://sf3-ttcdn-tos.pstatp.com/obj/ad-pattern/ url reject-200
-;^https://extlob.snssdk.com/service/2/app_log/ url reject-200
-;^https?://sf1-ttcdn-tos.pstatp.com/img/mosaic-legacy/ url reject-200
+#虎牙
+^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
+^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
 
 #JS
 #微信公众号 
