@@ -47,6 +47,7 @@ host-suffix, aaplimg.com, JT|Proxy
 host-suffix, avgle.com, JT|Proxy
 host-suffix, ahcdn.com, JT|Proxy
 # ME
+host, trade-acs.m.taobao.com, direct
 host-suffix, umengcloud.com, reject
 host-suffix, zhugeio.com, reject
 host, logs.luojilab.com, reject
