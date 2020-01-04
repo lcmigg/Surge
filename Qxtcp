@@ -586,6 +586,7 @@ ip-cidr, 149.154.171.5/32, JT|Proxy, no-resolve
 # END
 ;ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 100.64.0.0/10, direct
+ip-cidr, 203.119.0.0/16, reject, no-resolve
 ;ip-cidr, 127.0.0.0/8, direct
 ;ip-cidr, 172.16.0.0/12, direct
 ;ip-cidr, 192.168.0.0/16, direct
