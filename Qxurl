@@ -116,7 +116,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #zhihu
 ^https?://api.zhihu.com/answers/.*/comments/featured-comment-ad url reject
 ;^https?://api.zhihu.com/(fringe|zst|real_time|ad-style-service|banners|market/popover|mqtt|.*launch|.*featured-comment-ad|.*recommendations|search/(top|tabs|preset)) url reject
-^https?://api.zhihu.com/(ab|adx|fringe|drama|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(banners_v3|guide|recommendations|featured-comment-ad)) url reject-200
+^https?://api.zhihu.com/(ab|adx|fringe|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(banners_v3|guide|recommendations|extended|featured-comment-ad)) url reject-200
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/(mcn|community-ad)\/ url reject
 ^https?:\/\/.+\/commercial_api\/(launch|real_time) url reject
 #BiliBili
