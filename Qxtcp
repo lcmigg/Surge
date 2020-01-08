@@ -586,8 +586,10 @@ ip-cidr, 149.154.175.0/24, JT|Proxy, no-resolve
 ip-cidr, 149.154.171.5/32, JT|Proxy, no-resolve
 ip-cidr, 91.108.56.200/32, JT|Proxy
 # TB price
-;ip-cidr, 203.119.144.0/23, reject
-;ip-cidr, 203.119.175.0/24, reject
+;ip-cidr, 203.119.144.0/23, reject, no-resolve
+;ip-cidr, 203.119.175.0/24, reject, no-resolve
+;ip-cidr, 106.11.162.0/24, reject, no-resolve
+;ip-cidr, 47.102.83.0/24, reject, no-resolve
 # END
 IP-cidr, 119.28.28.28/32, CN|Proxy
 ip-cidr, 10.0.0.0/8, direct
