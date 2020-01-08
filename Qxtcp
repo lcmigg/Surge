@@ -441,6 +441,7 @@ host-suffix, miui.com, CN|Proxy
 host-suffix, miwifi.com, CN|Proxy
 host-suffix, myqcloud.com, CN|Proxy
 host-suffix, myunlu.com, CN|Proxy
+host-suffix, myzaker.com, CN|Proxy
 host-suffix, netease.com, CN|Proxy
 host-suffix, qbox.me, CN|Proxy
 host-suffix, qcloud.com, CN|Proxy
@@ -583,13 +584,18 @@ ip-cidr, 91.108.56.111/32, JT|Proxy, no-resolve
 ip-cidr, 149.154.167.0/24, JT|Proxy, no-resolve
 ip-cidr, 149.154.175.0/24, JT|Proxy, no-resolve
 ip-cidr, 149.154.171.5/32, JT|Proxy, no-resolve
+ip-cidr, 91.108.56.200/32, JT|Proxy
+# TB price
+;ip-cidr, 203.119.144.0/23, reject
+;ip-cidr, 203.119.175.0/24, reject
 # END
-;ip-cidr, 10.0.0.0/8, direct
+IP-cidr, 119.28.28.28/32, CN|Proxy
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
 ip-cidr, 100.64.0.0/10, direct
-;ip-cidr, 203.119.0.0/16, reject, no-resolve
-;ip-cidr, 127.0.0.0/8, direct
-;ip-cidr, 172.16.0.0/12, direct
-;ip-cidr, 192.168.0.0/16, direct
-;ip-cidr, 45.77.187.26/32, direct
-;geoip, CN, CN|Proxy
+ip-cidr, 45.77.187.26/32, direct
+geoip, CN, CN|Proxy
 ;final, JT|Proxy
