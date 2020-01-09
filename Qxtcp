@@ -283,6 +283,8 @@ user-agent, *telegra*, JT|Proxy
 #user-agent, kiwi*, CN|Proxy
 #user-agent, OneTravel*, direct
 user-agent, Speedtest*, JT|Proxy
+host-keyword, speedtest, JT|Proxy
+host-suffix, ooklaserver.net, JT|Proxy
 host-suffix, luojilab.com, CN|Proxy
 host-suffix, igetget.com, CN|Proxy
 host, stats.mlinks.cc, CN|Proxy
