@@ -195,7 +195,7 @@ host-suffix, apxadtracking.net, reject
 host-suffix, cloudmobi.net, reject
 host-suffix, cnzz.com, reject
 host-suffix, ctrmi.com, reject
-;host-suffix, go2cloud.org, reject
+host-suffix, go2cloud.org, reject
 host-suffix, growingio.com, reject
 host-suffix, haloapps.com, reject
 host-suffix, irs01.com, reject
@@ -222,7 +222,7 @@ host-suffix, track.xiachufang.com, reject
 host-suffix, deliver.ifeng.com, reject
 host, abema-adx.ameba.jp, reject
 host, ad.caiyunapp.com, reject
-#host, ad.huajiao.com, reject
+host, ad.huajiao.com, reject
 host, ad.hzyoka.com, reject
 #host, ad.jiemian.com, reject
 #host, ad.qingting.fm, reject
@@ -285,6 +285,7 @@ user-agent, *telegra*, JT|Proxy
 user-agent, Speedtest*, JT|Proxy
 host-keyword, speedtest, JT|Proxy
 host-suffix, ooklaserver.net, JT|Proxy
+host-suffix, fast.com, JT|Proxy
 host-suffix, luojilab.com, CN|Proxy
 host-suffix, igetget.com, CN|Proxy
 host, stats.mlinks.cc, CN|Proxy
