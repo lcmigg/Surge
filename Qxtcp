@@ -195,7 +195,7 @@ host-suffix, apxadtracking.net, reject
 host-suffix, cloudmobi.net, reject
 host-suffix, cnzz.com, reject
 host-suffix, ctrmi.com, reject
-host-suffix, go2cloud.org, reject
+;host-suffix, go2cloud.org, reject
 host-suffix, growingio.com, reject
 host-suffix, haloapps.com, reject
 host-suffix, irs01.com, reject
