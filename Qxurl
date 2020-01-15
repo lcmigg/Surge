@@ -141,6 +141,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 
 #虎牙
+^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
 ^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
 
