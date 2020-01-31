@@ -14,7 +14,6 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #Tencent QQLive
 ^https?:\/\/btrace.qq.com url reject-200
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
-;^https?:\/\/.+\.mp4.+&sdtfrom=v3004 url reject-200
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\.tc\.qq\.com\/.+\.mp4\? url reject-200
 
 #Apple
@@ -33,15 +32,14 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/.+\.youtube\.com\/ptracking url reject
 
 #爱奇艺
-^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject
-^https?:\/\/.+\/(mixer|track2)\? url reject
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show.do url reject
-^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject
+;^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject
+;^https?:\/\/.+\/(mixer|track2)\? url reject
+;^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show.do url reject
+;^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject
 
 #Alibaba
 #Taobao
 ^https?://gw.alicdn.com/tfs/.+-1125-1602 url reject-img
-;^https?:\/\/gw\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject-img
 ^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject
 #Xianyu
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
@@ -67,7 +65,6 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 
 #163 Music
 ^https?://interface[1-9].music.163.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
-;^https?:\/\/.+\/eapi\/(ad|log)\/ url reject-200
 ^https?://admusicpic.music.126.net/* url reject
 ^http://iadmusicmat.music.126.net/.*jpg$ url reject-img
 ^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$ url reject
@@ -119,15 +116,13 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload) url reject
 
 #zhihu
-^https?://api.zhihu.com/answers/.*/comments/featured-comment-ad url reject
-;^https?://api.zhihu.com/(fringe|zst|real_time|ad-style-service|banners|market/popover|mqtt|.*launch|.*featured-comment-ad|.*recommendations|search/(top|tabs|preset)) url reject
-^https?://api.zhihu.com/(ab|adx|fringe|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(banners_v3|guide|recommendations|extended|featured-comment-ad)) url reject-200
-^https?:\/\/www\.zhihu\.com\/api\/v4\/(mcn|community-ad)\/ url reject
-^https?:\/\/.+\/commercial_api\/(launch|real_time) url reject
+^https:\/\/pic\d\.zhimg\.com\/70\/ url reject-200
+^https://(api|www).zhihu.com/(fringe|zst|commercial|real_time|ad-style-service|banners|market/popover|mqtt|.*(launch|featured-comment-ad|recommendations|community-ad|guide)|search/(top|tab|preset)|ab|adx|drama|api/v4/mcn) url reject-200
+^https://api.zhihu.com/(ab|adx|fringe|drama|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad)) url reject-200
+^https://www.zhihu.com/api/v4/mcn/ url reject-200
+
 #BiliBili
-;^https://app.bilibili.com/x/v2/(splash|rank.*rid=(168|5)|search/(defaultword|recommend|trending|resource)) url reject-img
-^https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)) url reject-img
-^https://api.bilibili.com/x/v2/dm/advert url reject-img
+^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
 
 #ohter
 ^http://api.ximalaya.com/oauth2/ url reject
@@ -146,29 +141,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
 
 #虎牙
-^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
+;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
 ^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
 ^http://business.msstatic.com/advertiser/ url reject-200
-
-#JS
-#微信公众号 
-;https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://lcmig.coding.me/surge/Script/JS/WeChat.js
-;^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
-
-#知乎
-;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|v4\/questions|market\/header) url script-response-body JS/zhihu_N2.js
-;^https?:\/\/api\.zhihu\.com\/(moments\?|topstory\/recommend|.*\/questions|market\/header|people\/) url script-response-body JS/zhihu_N3.js
-
-#bilibili
-;^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilibili_N2.js
-;^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index|rank))\?access_key url script-response-body JS/bilibili_N8.js
-
-#用药助手
-;^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?|pay\/checkIntroOfferPeriod\?)) url script-response-body JS/yyzs_1.js
-
-#陆琪故事
-;^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body JS/luqi.js
-
-#vsco
-;^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body JS/vsco.js
