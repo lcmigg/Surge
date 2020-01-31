@@ -75,6 +75,7 @@ host, adashx4yt.m.taobao.com, reject
 host, apoll.m.taobao.com, reject
 host, nbsdk-baichuan.alicdn.com, reject
 host, tunion-api.m.taobao.com, reject
+host, unidesk.alicdn.com, reject
 # > Baidu
 host-suffix, baidustatic.com, reject
 host, afd.baidu.com, reject
@@ -133,6 +134,7 @@ host, splashqqlive.gtimg.com, reject
 host, tajs.qq.com, reject
 host, wxsnsdy.wxs.qq.com, reject
 host, wxsnsdythumb.wxs.qq.com, reject
+host, wa.gtimg.com, reject
 # 12306
 host, ad.12306.cn, reject
 # 搜书阁
