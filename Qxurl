@@ -39,7 +39,7 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 #Alibaba
 #Taobao
 ^https?://gw.alicdn.com/tfs/.+-1125-1602 url reject-img
-^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject
+;^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject
 #Xianyu
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
 #飞猪
