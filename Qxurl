@@ -97,8 +97,8 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 ^https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\? url reject-200
 
 # >> 新浪微博
-^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
-^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
+;^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
+;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads url reject-200
 
 #高德
