@@ -99,7 +99,9 @@ hostname =*youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.
 # >> 新浪微博
 ;^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
 ;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads url reject-200
+
+# >> 新浪微博国际版
+^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads url reject-200
 
 #高德
 ^http://optimus-ads.amap.com/uploadimg/ url reject
