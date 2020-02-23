@@ -255,11 +255,11 @@ host, track.tiara.daum.net, reject
 #host, traffic.mogujie.com, reject
 host, wmlog.meituan.com, reject
 #weibo
-user-agent, Moke*, WEIBO
-host-suffix, weibocdn.com, WEIBO
-host-suffix, weibo.com, WEIBO
-host-suffix, weibo.cn, WEIBO
-host-suffix, sinaimg.cn, WEIBO
+user-agent, Moke*, CN|Proxy
+host-suffix, weibocdn.com, CN|Proxy
+host-suffix, weibo.com, CN|Proxy
+host-suffix, weibo.cn, CN|Proxy
+host-suffix, sinaimg.cn, CN|Proxy
 #Netease_Music
 host-suffix, music.163.com, Netease_Music
 host-suffix, interface.music.163.com, Netease_Music
