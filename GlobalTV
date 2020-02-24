@@ -1,0 +1,9 @@
+
+# > Netflix
+host-suffix, netflix.com, NETFIX
+host-suffix, netflix.net, NETFIX
+host-suffix, nflxext.com, NETFIX
+host-suffix, nflximg.com, NETFIX
+host-suffix, nflximg.net, NETFIX
+host-suffix, nflxso.net, NETFIX
+host-suffix, nflxvideo.net, NETFIX
