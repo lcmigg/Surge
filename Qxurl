@@ -150,3 +150,6 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 ^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
 ^http://business.msstatic.com/advertiser/ url reject-200
+
+#zaker
+^http://zkres.myzaker.com/img_upload/editor/img_upload/ url reject
