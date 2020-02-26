@@ -10,7 +10,7 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Cookie
 **Qx_Script**  
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Script  
 
-**Qx_task**  
+**Qx_task**(不能订阅)  
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task  
 
 **Qx_tcp分流**  
