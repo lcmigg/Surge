@@ -1,5 +1,5 @@
 # Surge Quantumultx
-![surge](https://i.loli.net/2020/02/26/tEqzog3kIRWANVL.jpg)
+![surge](https://i.loli.net/2020/02/26/tEqzog3kIRWANVL.jpg | width=100)
 
 >surge 3.4  
 quantumultx 1.0.6(198以上)
