@@ -10,4 +10,4 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 ^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/yxgsir/chavyleung/master/tieba/tieba.cookie.js
 
 #活动抽奖小程序
-^https:\/\/new\.api\.hdcj\.9w9\.com\/api\/sign\/sign url script-request-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/hdcj.js
+^https:\/\/new\.api\.hdcj\.9w9\.com\/api\/sign\/sign url script-request-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/hdcj.js
