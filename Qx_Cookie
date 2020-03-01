@@ -9,5 +9,5 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 #帖吧文库签到
 ^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/yxgsir/chavyleung/master/tieba/tieba.cookie.js
 
-#京东到家签到
-^https:\/\/daojia\.jd\.com\/client? url script-request-header https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/jddj_cookie.js
+#活动抽奖小程序
+^https:\/\/new\.api\.hdcj\.9w9\.com\/api\/sign\/sign url script-request-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/hdcj.js
