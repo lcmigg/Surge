@@ -39,6 +39,3 @@
 ;^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 # Weibo国际版
 ;^https?://api\.weibo\.cn/2/(statuses|groups)/(unread_hot_|friends_)?timeline url script-response-body JS/weibointl/weibointl_timeline.js
-
-#流利阅读
-^https?:\/\/vira\.llsapp\.com\/api\/v2\/readings\/(accessible|limitation) url script-response-body https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Script/llyd.js
