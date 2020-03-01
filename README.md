@@ -21,3 +21,4 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Cookie
 Qx_task(不能订阅)  
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task  
 ```
+- [x] Script均取自github
