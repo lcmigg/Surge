@@ -501,12 +501,12 @@ host-suffix, zealer.com, CN|Proxy
 host-suffix, zhihu.com, CN|Proxy
 host-suffix, zhimg.com, CN|Proxy
 # Netflix
-host-suffix, netflix.com, JT|Proxy
-host-suffix, netflix.net, JT|Proxy
-host-suffix, nflxext.com, JT|Proxy
-host-suffix, nflximg.com, JT|Proxy
-host-suffix, nflximg.net, JT|Proxy
-host-suffix, nflxvideo.net, JT|Proxy
+;host-suffix, netflix.com, JT|Proxy
+;host-suffix, netflix.net, JT|Proxy
+;host-suffix, nflxext.com, JT|Proxy
+;host-suffix, nflximg.com, JT|Proxy
+;host-suffix, nflximg.net, JT|Proxy
+;host-suffix, nflxvideo.net, JT|Proxy
 #tiktokv
 host, api-h2.tiktokv.com, JT|Proxy
 host, api2-16-h2.musical.ly, JT|Proxy
