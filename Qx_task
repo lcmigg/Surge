@@ -1,6 +1,6 @@
 [task_local]
 3,9 0 * * * JS/jd_auto.js
-31 8 * * * jddj.js
+31 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/hdcj.js
 30 8 * * * neteasemusic.js
 29 8 * * * tieba.js
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js
