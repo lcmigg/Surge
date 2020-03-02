@@ -1,5 +1,6 @@
 [task_local]
 3,9 0 * * * JS/jd_auto.js
+32 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
 31 8 * * * https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/hdcj.js
 30 8 * * * neteasemusic.js
 29 8 * * * tieba.js
