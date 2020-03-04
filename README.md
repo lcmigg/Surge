@@ -21,6 +21,7 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Cookie
 Qx_task(不能订阅)
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task
 ```
+```
 [task_local]
 3,9 0 * * * JS/jd_auto.js
 32 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
@@ -34,6 +35,5 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task
 ;20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 ;40 7,12 * * * JS/weather-sky.js
 ;5 18 * * * JS/weather-tqt.js
-```
 ```
 - [x] **Script均取自github**
