@@ -45,3 +45,6 @@
 ;^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
 # Weibo国际版
 ;^https?://api\.weibo\.cn/2/(statuses|groups)/(unread_hot_|friends_)?timeline url script-response-body JS/weibointl/weibointl_timeline.js
+
+#克拉壁纸
+^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/clarity.js
