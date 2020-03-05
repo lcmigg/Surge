@@ -1,14 +1,24 @@
 [task_local]
-3,9 0 * * * JS/jd_auto.js
-32 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
-31 8 * * * https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/hdcj.js
-30 8 * * * neteasemusic.js
-29 8 * * * tieba.js
-55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js
-15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js
+#京东签到
+3,9 0 * * * JS/jd_auto.js, enabled=false
+20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, enabled=true
+
+#rrtv
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enabled=true
+
+#微信小程序活动抽奖
+31 8 * * * https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/hdcj.js, enabled=true
+
+#网易云音乐&百度贴吧
+30 8 * * * neteasemusic.js, enabled=true
+29 8 * * * tieba.js, enabled=true
+
+#每日一言(钉钉签到)
+55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
+
 
 ;*/1 * * * * sample-task.js
 ;30 7 * * 1-5 nzw9314/yichahucha/cron_daily.js
-;20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+;32 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js, enabled=true
 ;40 7,12 * * * JS/weather-sky.js
 ;5 18 * * * JS/weather-tqt.js
