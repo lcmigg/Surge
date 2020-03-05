@@ -1,5 +1,5 @@
 #hostname
-hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,acs.m.taobao.com,dxy.com,*.dxy.cn,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,new.api.hdcj.9w9.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv
+hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,acs.m.taobao.com,dxy.com,*.dxy.cn,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,new.api.hdcj.9w9.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
 
 #url 302
@@ -52,15 +52,15 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 
 #163
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
-^https?://oimagec([a-z])([0-9]).ydstatic.com/image.* url reject-img
-^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish url reject-200
-^https?://client.mail.163.com/apptrack/confinfo/searchMultiAd.+ url reject
-^https?://client.mail.163.com/apptrack/confinfo/searchPullDownAd.+ url reject
-^http://mos.netease.com/mailyxpublic/mailmaster/icon/ url reject-img
-^https?://client.mail.163.com/apptrack/confinfo/showAds.do.* url reject
-^https?://img\d.126.net/ url reject-img
-^https?://mimg.127.net/external/smartpop-manger.min.js url reject
-#^https?://g1.163.com url reject
+;^https?://oimagec([a-z])([0-9]).ydstatic.com/image.* url reject-img
+;^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish url reject-200
+;^https?://client.mail.163.com/apptrack/confinfo/searchMultiAd.+ url reject
+;^https?://client.mail.163.com/apptrack/confinfo/searchPullDownAd.+ url reject
+;^http://mos.netease.com/mailyxpublic/mailmaster/icon/ url reject-img
+;^https?://client.mail.163.com/apptrack/confinfo/showAds.do.* url reject
+;^https?://img\d.126.net/ url reject-img
+;^https?://mimg.127.net/external/smartpop-manger.min.js url reject
+;^https?://g1.163.com url reject
 
 #163 Music
 ^https?://interface[1-9].music.163.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
@@ -92,8 +92,8 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 
 #小米
 ^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
-^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
-^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
+;^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
+;^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
 ^https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\? url reject-200
 
 # >> 新浪微博
@@ -107,6 +107,7 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 ^http://optimus-ads.amap.com/uploadimg/ url reject
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
 ^https?//page.amap.com/ws/page/upload/ url reject-img
+
 # 丁香园
 ^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
 ^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id= url reject-200
@@ -148,9 +149,14 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 
 #虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
-^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
-^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
-^http://business.msstatic.com/advertiser/ url reject-200
+;^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
+;^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
+;^http://business.msstatic.com/advertiser/ url reject-200
 
 #zaker
 ^http://zkres.myzaker.com/img_upload/editor/img_upload/ url reject
+
+# 人人视频
+^https?:\/\/msspjh\.emarbox\.com\/getAdConfig - reject
+^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising - reject
+^https?:\/\/api\.rr\.tv\/ad\/ - reject
