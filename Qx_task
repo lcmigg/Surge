@@ -5,6 +5,7 @@
 30 8 * * * neteasemusic.js
 29 8 * * * tieba.js
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js
 
 ;*/1 * * * * sample-task.js
 ;30 7 * * 1-5 nzw9314/yichahucha/cron_daily.js
