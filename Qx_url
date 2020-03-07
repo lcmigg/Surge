@@ -157,6 +157,6 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 ^http://zkres.myzaker.com/img_upload/editor/img_upload/ url reject
 
 # 人人视频
-^https?:\/\/msspjh\.emarbox\.com\/getAdConfig - reject
-^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising - reject
-^https?:\/\/api\.rr\.tv\/ad\/ - reject
+^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
+^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
+^https?:\/\/api\.rr\.tv\/ad\/ url reject
