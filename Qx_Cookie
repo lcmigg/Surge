@@ -5,10 +5,10 @@ hostname = music.163.com,tieba.baidu.com,new.api.hdcj.9w9.com
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-request-header JS/jd_auto.js
 
 #网易云音乐
-^https?:\/\/music\.163\.com\/m\/ url  script-request-header https://raw.githubusercontent.com/yxgsir/chavyleung/master/neteasemusic/neteasemusic.cookie.js
+^https?:\/\/music\.163\.com\/m\/ url  script-request-header neteasemusic.cookie.js
 
 #帖吧文库签到
-^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/yxgsir/chavyleung/master/tieba/tieba.cookie.js
+^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header tieba.cookie.js
 
 #活动抽奖小程序
 ^https:\/\/new\.api\.hdcj\.9w9\.com\/api\/sign\/sign url script-request-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/hdcj.js
