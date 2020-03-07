@@ -1,6 +1,6 @@
 #hostname
-hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,acs.m.taobao.com,dxy.com,*.dxy.cn,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,new.api.hdcj.9w9.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com
-;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
+hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,acs.m.taobao.com,dxy.com,*.dxy.cn,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,new.api.hdcj.9w9.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com
+;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com
 
 #url 302
 ^http://(www.)?google.cn url 302 https://www.google.com
@@ -25,10 +25,10 @@ hostname = *youtube.com,youtubei.googleapis.com,*googlesyndication.com,*ydstatic
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_ url reject
 ^https?:\/\/.+\.youtube\.com\/get_midroll_ url reject
 ^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite url reject
-^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject
-^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat url reject
-^https?:\/\/.+\.youtube\.com\/pagead\/ url reject
-^https?:\/\/.+\.youtube\.com\/ptracking url reject
+;^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject
+;^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat url reject
+;^https?:\/\/.+\.youtube\.com\/pagead\/ url reject
+;^https?:\/\/.+\.youtube\.com\/ptracking url reject
 
 #爱奇艺
 ;^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject
