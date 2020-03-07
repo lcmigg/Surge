@@ -1,0 +1,154 @@
+# >> Tencent WeChat
+URL-REGEX,^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad)
+URL-REGEX,^https://mp.weixin.qq.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app))
+
+#Tencent QQLive
+URL-REGEX,^https?:\/\/btrace.qq.com
+URL-REGEX,^https?:\/\/vv\.video\.qq\.com\/getvmind\?
+URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\.tc\.qq\.com\/.+\.mp4\?
+
+#Apple
+URL-REGEX,^https?://a.applovin.com/.+/ad
+
+# > Google
+#URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+&oad
+#URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+ctier
+URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_
+URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/get_midroll_
+URL-REGEX,^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/ads
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/pagead\/
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/ptracking
+
+#爱奇艺
+#URL-REGEX,^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo
+#URL-REGEX,^https?:\/\/.+\/(mixer|track2)\?
+#URL-REGEX,^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show.do
+#URL-REGEX,^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show
+
+#Alibaba
+#Taobao
+URL-REGEX,^https?://gw.alicdn.com/tfs/.+-1125-1602
+#URL-REGEX,^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4})
+#Xianyu
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/
+#飞猪
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/
+#淘票票
+URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/
+#口碑
+#URL-REGEX,^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json
+#URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/
+
+#163
+URL-REGEX,^https?:\/\/appconf\.mail\.163\.com\/mmad\/
+#URL-REGEX,^https?://oimagec([a-z])([0-9]).ydstatic.com/image.*
+#URL-REGEX,^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish
+#URL-REGEX,^https?://client.mail.163.com/apptrack/confinfo/searchMultiAd.+
+#URL-REGEX,^https?://client.mail.163.com/apptrack/confinfo/searchPullDownAd.+
+#URL-REGEX,^http://mos.netease.com/mailyxpublic/mailmaster/icon/
+#URL-REGEX,^https?://client.mail.163.com/apptrack/confinfo/showAds.do.*
+#URL-REGEX,^https?://img\d.126.net/
+#URL-REGEX,^https?://mimg.127.net/external/smartpop-manger.min.js
+#URL-REGEX,^https?://g1.163.com
+
+#163 Music
+URL-REGEX,^https?://interface[1-9].music.163.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot)))
+URL-REGEX,^https?://admusicpic.music.126.net/*
+URL-REGEX,^http://iadmusicmat.music.126.net/.*jpg$
+URL-REGEX,^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$
+URL-REGEX,^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$
+
+# > JD
+URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts)
+URL-REGEX,^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
+URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture
+
+# 拼多多
+URL-REGEX,^http:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash
+
+#广发证券&发现精彩
+URL-REGEX,^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d+\.(png|jpg)
+URL-REGEX,^http://cdn.gfzq.cn/store/mobile/ad_mobile.json
+URL-REGEX,^http://apm.gf.com.cn:8081/uploadMobile.+
+URL-REGEX,^https://config.gf.com.cn/ytj_config/.+\?ad.+
+
+#中国银行
+URL-REGEX,^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?
+
+#工商银行
+URL-REGEX,^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/
+
+#小米
+URL-REGEX,^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start
+#URL-REGEX,^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/
+#URL-REGEX,^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen
+URL-REGEX,^https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\?
+
+# >> 新浪微博
+#URL-REGEX,^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php
+#URL-REGEX,^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua
+
+# >> 新浪微博国际版
+URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads
+
+#高德
+URL-REGEX,^http://optimus-ads.amap.com/uploadimg/
+URL-REGEX,^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/
+URL-REGEX,^https?//page.amap.com/ws/page/upload/
+
+# 丁香园
+URL-REGEX,^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch
+URL-REGEX,^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id=
+URL-REGEX,^https?:\/\/drugs\.dxy\.cn\/api\/ad\?productType=
+URL-REGEX,^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac=
+
+#美团
+#URL-REGEX,^https?:\/\/img\.meituan\.net\/midas\/
+#URL-REGEX,^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|linglong|mmc|wmbanner)\/
+#URL-REGEX,^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/
+
+# 滴滴出行
+URL-REGEX,^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload)
+
+#zhihu
+# > 知乎
+URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/
+URL-REGEX,https://(api|www).zhihu.com/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api/v4/mcn/)
+AND,((USER-AGENT,osee2*), (OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve))))
+
+#BiliBili
+URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash))
+
+#ohter
+URL-REGEX,^http://api.ximalaya.com/oauth2/
+URL-REGEX,^http://hmma.baidu.com
+
+#奕客围棋
+#URL-REGEX,^http://image.golinksworld.com/res/adv/
+
+# 印象笔记
+URL-REGEX,^https?:\/\/app\.yinxiang\.com\/ads\/getAdsInfo$
+
+#10086
+URL-REGEX,^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver
+
+#票根
+URL-REGEX,^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/
+
+#虎牙
+#URL-REGEX,^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
+#URL-REGEX,^https?://huyaimg.msstatic.com/cdnimage/roomad/
+#URL-REGEX,^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip
+#URL-REGEX,^http://business.msstatic.com/advertiser/
+
+#zaker
+URL-REGEX,^http://zkres.myzaker.com/img_upload/editor/img_upload/
+
+# 人人视频
+URL-REGEX,^https?:\/\/msspjh\.emarbox\.com\/getAdConfig
+URL-REGEX,^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising
+URL-REGEX,^https?:\/\/api\.rr\.tv\/ad\/
