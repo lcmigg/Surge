@@ -1,17 +1,20 @@
 [task_local]
 #京东签到
-3,9 0 * * * JS/jd_auto.js, enabled=false
+;3,9 0 * * * JS/jd_auto.js, enabled=false
 20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, enabled=true
+
+#京东到家签到
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
 
 #rrtv
 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enabled=true
 
 #微信小程序活动抽奖
-31 8 * * * https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/hdcj.js, enabled=true
+14 8 * * * https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/hdcj.js, enabled=true
 
 #网易云音乐&百度贴吧
-30 8 * * * neteasemusic.js, enabled=true
-29 8 * * * tieba.js, enabled=true
+13 8 * * * neteasemusic.js, enabled=true
+12 8 * * * tieba.js, enabled=true
 
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
