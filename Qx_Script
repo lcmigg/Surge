@@ -6,12 +6,12 @@
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
 
 #知乎
-^https://api.zhihu.com/topstory/recommend  url script-response-body JS/zhihu/recommend.js
-^https://api.zhihu.com/moments\?(action|feed_type) url script-response-body JS/zhihu/feed.js
-^https://api.zhihu.com/people/ url script-response-body JS/zhihu/people.js
-^https://api.zhihu.com/v4/questions url script-response-body JS/zhihu/answer.js
+;^https://api.zhihu.com/topstory/recommend  url script-response-body JS/zhihu/recommend.js
+;^https://api.zhihu.com/moments\?(action|feed_type) url script-response-body JS/zhihu/feed.js
+;^https://api.zhihu.com/people/ url script-response-body JS/zhihu/people.js
+;^https://api.zhihu.com/v4/questions url script-response-body JS/zhihu/answer.js
 ;^https://api.zhihu.com/market/header url script-response-body JS/zhihu/market.js
-;^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=) url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js
+^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=) url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js
 
 #bilibili
 ^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine|teenagers\/status)|view|feed\/index|show\/popular\/index|rank)|app-room/v1/index/getInfoByRoom)\?access_key url script-response-body JS/Bilibili_N11.js
