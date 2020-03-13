@@ -70,7 +70,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
 
 # > JD
-;^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts|uniformRecommend) url reject-200
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(base|aladdin)\/na\/m\/(adInfo|getLoadingPicture) url reject-200
 
