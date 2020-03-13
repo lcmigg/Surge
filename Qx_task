@@ -4,8 +4,8 @@
 20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, enabled=true
 
 #京东到家签到
-#15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
-15 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
+;15 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
 
 #rrtv
 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enabled=true
