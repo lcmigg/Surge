@@ -141,7 +141,7 @@ host, ad.12306.cn, reject
 host, iflyad.bj.openstorage.cn, reject
 host, ads.voiceads.cn, reject
 # 黑匣子
-host-suffix, adview.cn, reject
+#host-suffix, adview.cn, reject
 #host-suffix, admaster.com.cn, reject
 # bilibili
 host, dataflow.biliapi.com, reject
@@ -151,6 +151,9 @@ host, ct.xiaojukeji.com, reject
 host, gwp.xiaojukeji.com, reject
 # 高德地图
 host, optimus-ads.amap.com, reject
+#zhihu
+host-suffix, appcloud2.in.zhihu.com, reject
+host-suffix, appcloud2.zhihu.com, reject
 # KEYWORD
 host-keyword, admarvel, reject
 #host-keyword, admaster, reject
@@ -180,7 +183,7 @@ host-keyword, adservice, reject
 host-keyword, analytics, reject
 host-keyword, analysis, reject
 
-host-suffix, 42trck.com, reject
+#host-suffix, 42trck.com, reject
 host-suffix, 51.la, reject
 host-suffix, adjust.com, reject
 host-suffix, adjust.io, reject
