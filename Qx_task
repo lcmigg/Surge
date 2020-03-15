@@ -17,6 +17,9 @@
 13 8 * * * neteasemusic.js, enabled=true
 12 8 * * * tieba.js, enabled=true
 
+#加油广东
+16 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js
+
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
 
