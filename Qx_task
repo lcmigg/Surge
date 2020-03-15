@@ -20,6 +20,9 @@
 #加油广东
 16 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js
 
+#顺丰速运
+10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js
+
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
 
