@@ -1,1 +1,3 @@
 hostname= *
+
+^https?:\/\/hypersnap\.mairuan\.com\/ url 302 https://www.keyshot.com/
