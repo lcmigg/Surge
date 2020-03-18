@@ -4,8 +4,11 @@
 20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, enabled=true
 
 #京东到家签到
-10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js
+10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, enabled=true
 ;15 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
+
+# 微信小程序-来客有礼
+10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/JDLK_sign.js, enabled=true
 
 #rrtv
 11 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enabled=true
@@ -21,10 +24,10 @@
 14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js, enabled=true
 
 #顺丰速运
-15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, enabled=true
+14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, enabled=true
 
 #ZAKER新闻
-16 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enabled=true
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enabled=true
 
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
