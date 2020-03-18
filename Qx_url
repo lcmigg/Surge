@@ -159,3 +159,6 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
 ^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
 ^https?:\/\/api\.rr\.tv\/ad\/ url reject
+
+#微信小程序，交作业app
+^https://mp.nezhazy.cn/student/ad/ url reject
