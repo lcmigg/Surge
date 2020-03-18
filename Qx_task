@@ -24,7 +24,7 @@
 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, enabled=true
 
 #ZAKER新闻
-16 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
+16 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enabled=true
 
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
