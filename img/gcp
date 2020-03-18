@@ -1,1 +1,1 @@
-shadowsocks=34.92.198.169:19508, method=chacha20-ietf-poly1305, password=lcm00Aa, fast-open=true, udp-relay=true, tag=GCP2
+shadowsocks=34.92.198.169:19508, method=chacha20-ietf-poly1305, password=lcm00Aa, fast-open=true, udp-relay=true, tag=GCP
