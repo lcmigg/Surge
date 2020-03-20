@@ -30,9 +30,6 @@
 #ZAKER新闻
 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enabled=true
 
-#工银e生活
-15 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/icbc_sign.js, enabled=true
-
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
 
