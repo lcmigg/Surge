@@ -5,7 +5,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^http://(www.)?google.cn url 302 https://www.google.com
 ^http://(www.)?g.cn url 302 https://www.google.com
 
-# >> Tencent WeChat
+#Tencent WeChat
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) url reject-200
 ^https://mp.weixin.qq.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) url reject
 
@@ -17,7 +17,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 #Apple
 ^https?://a.applovin.com/.+/ad url reject
 
-# > Google
+#Google
 #^https?:\/\/.+\.googlevideo\.com\/.+&oad url reject
 #^https?:\/\/.+\.googlevideo\.com\/.+ctier url reject
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_ url reject
