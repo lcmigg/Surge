@@ -163,4 +163,4 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
 
 #云闪付开屏
-^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/large\/kjp\d+\.png$
+^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/large\/kjp\d+\.png$ url reject-200
