@@ -234,6 +234,7 @@ host, ad.hzyoka.com, reject
 #host, ad.wappalyzer.com, reject
 host, ad-cn.jovcloud.com, reject
 #host, ads.daydaycook.com.cn, reject
+host, ads.yahoo.com, reject
 #host, adsapi.manhuaren.com, reject
 #host, adsdk.dmzj.com, reject
 #host, adui.tg.meitu.com, reject
@@ -246,13 +247,13 @@ host, appnext.hs.llnwd.net, reject
 host, appnext-a.akamaihd.net, reject
 host, ggs.myzaker.com, reject
 #host, itad.linetv.tw, reject
-host, ja.chushou.tv, reject
+#host, ja.chushou.tv, reject
 host, mads.suning.com, reject
 #host, mopnativeadv.037201.com, reject
 #host, nativeadv.dftoutiao.com, reject
 host, optimus-ads.amap.com, reject
 host, sugar.zhihu.com, reject
-host, track.tiara.daum.net, reject
+#host, track.tiara.daum.net, reject
 #host, track.tiara.kakao.com, reject
 #host, trackapp.guahao.cn, reject
 #host, traffic.mogujie.com, reject
