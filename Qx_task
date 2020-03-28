@@ -8,7 +8,7 @@
 ;15 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
 
 # 微信小程序-来客有礼
-10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/JDLK_sign.js, enabled=true
+10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, enabled=true
 
 #rrtv
 11 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enabled=true
