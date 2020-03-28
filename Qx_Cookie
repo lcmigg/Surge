@@ -32,4 +32,4 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
 
 #微信小程序-来客有礼
-^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/JDLK_cookie.js
+^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
