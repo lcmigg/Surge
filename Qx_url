@@ -2,20 +2,20 @@
 hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,acs.m.taobao.com,dxy.com,*.dxy.cn,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com,new.api.hdcj.9w9.com,wallet.95516.com
 #url 302
-^http://(www.)?google.cn url 302 https://www.google.com
-^http://(www.)?g.cn url 302 https://www.google.com
+^http://(www.)?google\.cn url 302 https://www.google.com
+^http://(www.)?g\.cn url 302 https://www.google.com
 
 #Tencent WeChat
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) url reject-200
-^https://mp.weixin.qq.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) url reject
+^https://mp\.weixin\.qq\.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) url reject
 
 #Tencent QQLive
-^https?:\/\/btrace.qq.com url reject-200
+^https?:\/\/btrace\.qq\.com url reject-200
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\.tc\.qq\.com\/.+\.mp4\? url reject-200
 
 #Apple
-^https?://a.applovin.com/.+/ad url reject
+^https?://a\.applovin\.com/.+/ad url reject
 
 #Google
 #^https?:\/\/.+\.googlevideo\.com\/.+&oad url reject
@@ -37,7 +37,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 
 #Alibaba
 #Taobao
-^https?://gw.alicdn.com/tfs/.+-1125-1602 url reject-img
+^https?://gw\.alicdn\.com/tfs/.+-1125-1602 url reject-img
 ;^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject
 #Xianyu
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
@@ -62,9 +62,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ;^https?://g1.163.com url reject
 
 #163 Music
-^https?://interface[1-9].music.163.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
-^https?://admusicpic.music.126.net/* url reject
-^http://iadmusicmat.music.126.net/.*jpg$ url reject-img
+^https?://interface[1-9]\.music\.163\.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
+^https?://admusicpic\.music\.126\.net/* url reject
+^http://iadmusicmat\.music\.126\.net/.*jpg$ url reject-img
 ^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$ url reject
 ^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
 
@@ -78,9 +78,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 
 #广发证券&发现精彩
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d+\.(png|jpg) url reject-img
-^http://cdn.gfzq.cn/store/mobile/ad_mobile.json url reject
-^http://apm.gf.com.cn:8081/uploadMobile.+ url reject
-^https://config.gf.com.cn/ytj_config/.+\?ad.+ url reject
+^http:\/\/cdn\.gfzq\.cn/store\/mobile\/ad_mobile.json url reject
+^http:\/\/apm.gf.com.cn:8081\/uploadMobile.+ url reject
+^https:\/\/config\.gf\.com.cn\/ytj_config/.+\?ad.+ url reject
 
 #中国银行
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? url reject-200
@@ -99,12 +99,12 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
 
 # >> 新浪微博国际版
-^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads url reject-200
+^https:\/\/weibointl\.api\.weibo.cn\/portal\.php\?a=get_coopen_ads url reject-200
 
 #高德
-^http://optimus-ads.amap.com/uploadimg/ url reject
+^http:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
-^https?//page.amap.com/ws/page/upload/ url reject-img
+^https?\/\/page\.amap\.com\/ws\/page\/upload\/ url reject-img
 
 # 丁香园
 ^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
@@ -122,16 +122,16 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 
 #zhihu
 ^https:\/\/pic\d\.zhimg\.com\/70\/ url reject-200
-^https://(api|www).zhihu.com/(fringe|zst|commercial|real_time|ad-style-service|banners|market/popover|mqtt|.*(launch|featured-comment-ad|recommendations|community-ad|guide)|search/(top|tab|preset)|ab|adx|drama|api/v4/mcn) url reject-200
-^https://api.zhihu.com/(ab|adx|xen|fringe|drama|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad)) url reject-200
-^https://www.zhihu.com/api/v4/mcn/ url reject-200
+^https:\/\/(api|www)\.zhihu\.com\/(fringe|zst|commercial|real_time|ad-style-service|banners|market\/popover|mqtt|.*(launch|featured-comment-ad|recommendations|community-ad|guide)|search\/(top|tab|preset)|ab|adx|drama|api\/v4\/mcn) url reject-200
+^https:\/\/api\.zhihu\.com\/(ab|adx|xen|fringe|drama|zst|commercial|ad-style-service|market\/popover|search\/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad)) url reject-200
+^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/ url reject-200
 
 #BiliBili
 ^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
 
 #ohter
-^http://api.ximalaya.com/oauth2/ url reject
-^http://hmma.baidu.com url reject
+^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
+^http:\/\/hmma\.baidu\.com url reject
 
 #奕客围棋
 ;^http://image.golinksworld.com/res/adv/ url reject-img
@@ -143,7 +143,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver url reject
 
 #票根
-^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ url reject-200
+^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
 
 #虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
@@ -152,7 +152,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ;^http://business.msstatic.com/advertiser/ url reject-200
 
 #zaker
-^http://zkres.myzaker.com/img_upload/editor/img_upload/ url reject
+^http:\/\/zkres\.myzaker\.com\/img_upload\/editor\/img_upload\/ url reject
 
 # 人人视频
 ^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
