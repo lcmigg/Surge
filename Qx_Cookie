@@ -27,7 +27,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 
 #顺丰速运
 ^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/(.*?)Redirect url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
+^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 #ZAKER新闻
 ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
