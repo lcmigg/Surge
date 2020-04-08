@@ -1,5 +1,5 @@
 #Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,mcs-mimp-web.sf-express.com,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,mcs-mimp-web.sf-express.com,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com
 
 ;hostname = new.api.hdcj.9w9.com
 #京东签到获取cookie
@@ -34,3 +34,6 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 
 #微信小程序-来客有礼
 ^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+
+#趣头条
+^https:\/\/api\.1sapp\.com\/sign\/sign? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
