@@ -30,6 +30,9 @@
 #ZAKER新闻
 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enabled=true
 
+#趣头条
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js, enabled=true
+
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
 
