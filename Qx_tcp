@@ -26,6 +26,8 @@ host, ocsp.apple.com, reject
 host, api.smoot.apple.com.cn, direct
 host, cn-smp-paymentservices.apple.com, direct
 host, smp-device.apple.com, direct
+#appstore转圈
+host, p14-buy.itunes.apple.com, JT|Proxy
 # Apple
 host, appleiphonecell.com, CN|Proxy
 ;user-agent, AppStore*, CN|Proxy
