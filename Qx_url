@@ -47,6 +47,8 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 
 #Alibaba
 #Taobao
+^https?+:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch url request-body &domain=.+?& request-body &
+^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/ url response-body "ems_etao_advertise" response-body ""
 ^https?://gw\.alicdn\.com/tfs/.+-1125-1602 url reject-img
 ;^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject
 #Xianyu
@@ -84,7 +86,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(base|aladdin)\/na\/m\/(adInfo|getLoadingPicture) url reject-200
 
 # 拼多多
-^http:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject
+^http:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject-200
 
 #广发证券&发现精彩
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d+\.(png|jpg) url reject-img
