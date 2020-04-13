@@ -1,0 +1,14 @@
+#!name=cookie
+#!desc=定时签到脚本的Cookie获取，不用时禁止
+#!system=ios
+
+[Script]
+
+JD_DailyBonus.js = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+tieba.cookie.js = type=http-request,pattern=https?:\/\/tieba\.baidu\.com\/?.?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
+
+rrtv.cookie.js = type=https:\/\/api\.rr\.tv\/user\/profile,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
+
+[MITM]
+hostname = %APPEND% tieba.baidu.com
