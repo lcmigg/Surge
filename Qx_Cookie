@@ -36,4 +36,4 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 ^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
 #趣头条
-^https:\/\/api\.1sapp\.com\/sign\/sign? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
+;^https:\/\/api\.1sapp\.com\/sign\/sign? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
