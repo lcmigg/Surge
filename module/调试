@@ -1,0 +1,5 @@
+#!name=MitM All Hostnames
+#!desc=对所有域名 mitm ,排除苹果域名
+
+[MITM]
+hostname = %INSERT% -*.apple.com, -*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, *
