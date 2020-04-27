@@ -30,14 +30,14 @@ URL-REGEX,^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite
 
 #Alibaba
 #Taobao
-URL-REGEX,^https?://gw.alicdn.com/tfs/.+-1125-1602
+#URL-REGEX,^https?://gw.alicdn.com/tfs/.+-1125-1602
 #URL-REGEX,^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4})
 #Xianyu
-URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/
+#URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/
 #飞猪
-URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/
+#URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/
 #淘票票
-URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/
+#URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/
 #口碑
 #URL-REGEX,^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json
 #URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/
@@ -93,7 +93,7 @@ URL-REGEX,^https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\?
 #URL-REGEX,^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua
 
 # >> 新浪微博国际版
-URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads
+#URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads
 
 #高德
 URL-REGEX,^http://optimus-ads.amap.com/uploadimg/
