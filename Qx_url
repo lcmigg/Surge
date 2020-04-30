@@ -134,8 +134,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 
 #zhihu
 ^https:\/\/pic\d\.zhimg\.com\/70\/ url reject-200
-^https:\/\/(api|www)\.zhihu\.com\/(fringe|zst|commercial|real_time|ad-style-service|banners|market\/popover|mqtt|.*(launch|featured-comment-ad|recommendations|community-ad|guide)|search\/(top|tab|preset)|ab|adx|drama|api\/v4\/mcn) url reject-200
-^https:\/\/api\.zhihu\.com\/(ab|adx|xen|fringe|drama|zst|commercial|ad-style-service|market\/popover|search\/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad)) url reject-200
+#^https:\/\/(api|www)\.zhihu\.com\/(fringe|zst|commercial|real_time|ad-style-service|banners|market\/popover|mqtt|.*(launch|featured-comment-ad|recommendations|community-ad|guide)|search\/(top|tab|preset)|ab|adx|drama|api\/v4\/mcn) url reject-200
+#^https:\/\/api\.zhihu\.com\/(ab|adx|xen|fringe|drama|zst|commercial|ad-style-service|market\/popover|search\/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad)) url reject-200
+^https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)|brand\/questions\/\d+\/activity\/answers\/red-packet(\/|\?|$)) url reject-200
 ^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/ url reject-200
 
 #BiliBili
