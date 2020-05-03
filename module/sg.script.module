@@ -1,0 +1,25 @@
+#!name=surge脚本
+#!desc=白描,微信去广告,用药助手,陆琪讲故事,workingcopy,document
+#!system=ios
+
+[Script]
+//白描VIP
+Baimiao.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Baimiao.js,script-update-interval=0,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser
+
+//微信去广告
+WeChat.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/WeChat.js,script-update-interval=-1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
+
+//用药助手
+luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/yyzs.js,script-update-interval=-1,pattern=^https?:\/\/newdrugs\.dxy\.cn\/app\/user\/(p(ay\/checkIntroOfferPeriod|ro\/stat)|init)\?
+
+//陆琪讲故事
+luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/luqi.js,script-update-interval=-1,pattern=^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get
+
+//workingcopy
+workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/education\.github\.com\/api\/user$
+
+//document
+documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
+
+[MITM]
+hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com
