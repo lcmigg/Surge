@@ -34,5 +34,8 @@ lkyl.js = type=http-request,script-path=https://raw.githubusercontent.com/Sunert
 # > 微信小程序 活动抽奖 (By @makexp & @zZPiglet)
 WeChatLottery_new.js = type=http-request,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js,pattern=^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign
 
+# > zaker app
+zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js,pattern= ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php
+
 [MITM]
 hostname = %APPEND% tieba.baidu.com, api-hdcj.9w9.com, draw.jdfcloud.com, daojia.jd.com, m.gdoil.cn, mcs-mimp-web.sf-express.com, sf-integral-sign-in.weixinjia.net, music.163.com
