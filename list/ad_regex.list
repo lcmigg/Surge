@@ -117,6 +117,7 @@ URL-REGEX,^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload)
 # > 知乎
 URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/
 URL-REGEX,https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)|brand\/questions\/\d+\/activity\/answers\/red-packet(\/|\?|$))
+REGEX,https://www.zhihu.com/api/v4/clubs/answers/\d+/bind_club
 AND,((USER-AGENT,osee2*), (OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve))))
 
 # > 哔哩哔哩
