@@ -5,7 +5,7 @@
 surge 3.4  
 
 #### *订阅链接*
-```
+```properties
 Qx_tcp分流
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_tcp
 
