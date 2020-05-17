@@ -62,6 +62,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 #^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject
 
 #163
+https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
 ;^https?://oimagec([a-z])([0-9]).ydstatic.com/image.* url reject-img
 ;^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish url reject-200
