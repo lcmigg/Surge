@@ -33,7 +33,8 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
 
 #微信小程序-来客有礼
-^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+;^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
+https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 
 #趣头条
 ;^https:\/\/api\.1sapp\.com\/sign\/sign? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
