@@ -1,40 +1,37 @@
 [task_local]
 #京东签到
 ;3,9 0 * * * JS/jd_auto.js, enabled=false
-20,25 7 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, enabled=true
+4,8 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东领豆, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=true
 
 #京东到家签到
-10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, enabled=true
-;15 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js
+10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, tag=京东到家, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jddj.png, enabled=true
 
-# 微信小程序-来客有礼
-10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, enabled=true
+#微信小程序-来客有礼
+10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, tag=来客有礼, img-url=lkyl.png, enabled=true
 
 #rrtv
-11 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enabled=true
+11 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, tag=rrtv签到, img-url=rrtv.png, enabled=true
 
 #微信小程序活动抽奖
-;12 8 * * * https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/hdcj.js, enabled=false
-12 8 * * * https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery.js, enabled=true
+30 7,20 * * * https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js, tag=活动抽奖小程序, img-url=hdcj.png, enabled=true
 
 #网易云音乐&百度贴吧
-13 8 * * * neteasemusic.js, enabled=true
-13 8 * * * tieba.js, enabled=true
+13 8 * * * neteasemusic.js, tag=网易云音乐, img-url=music.png, enabled=true
+13 8 * * * tieba.js, tag=百度贴吧, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/tieba.png, enabled=true
 
 #加油广东
-14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js, enabled=true
+14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js, tag=加油广东, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/gdoil.png, enabled=true
 
 #顺丰速运
-14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, enabled=true
+14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰速运, img-url=sfexpress.png, enabled=true
 
 #ZAKER新闻
-15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enabled=true
+15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, tag=ZAKER新闻, img-url=zaker.png, enabled=true
 
-#趣头条
-15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js, enabled=true
+9 8 * * * JS/checkin_maying.js, tag=魅影签到, img-url=魅影.png, enabled=true
 
 #每日一言(钉钉签到)
-55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, enabled=false
+55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, tag=每日一言, img-url=一言.png, enabled=false
 
 
 ;*/1 * * * * sample-task.js
