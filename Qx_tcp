@@ -22,10 +22,10 @@ host, guzzoni.apple.com, direct
 ;user-agent, Siri*, direct
 ;user-agent, *siri*, direct
 // 绕过App企业证书过期
-host, ocsp.apple.com, reject
-host, api.smoot.apple.com.cn, direct
-host, cn-smp-paymentservices.apple.com, direct
-host, smp-device.apple.com, direct
+;host, ocsp.apple.com, reject
+;host, api.smoot.apple.com.cn, direct
+;host, cn-smp-paymentservices.apple.com, direct
+;host, smp-device.apple.com, direct
 #appstore转圈
 host, p14-buy.itunes.apple.com, JT|Proxy
 # Apple
