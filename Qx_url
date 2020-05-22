@@ -146,7 +146,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 #ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
-^http:\/\/hmma\.baidu\.com url reject
+^http:\/\/hmma\.baidu\.com url reject-dict
 
 #奕客围棋
 ;^http://image.golinksworld.com/res/adv/ url reject-img
@@ -170,9 +170,9 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^http:\/\/zkres\.myzaker\.com\/img_upload\/editor\/img_upload\/ url reject
 
 # 人人视频
-^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
-^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
-^https?:\/\/api\.rr\.tv\/ad\/ url reject
+;^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
+;^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
+;^https?:\/\/api\.rr\.tv\/ad\/ url reject
 
 #微信小程序，交作业app
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
