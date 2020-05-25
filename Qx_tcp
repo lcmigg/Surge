@@ -605,6 +605,7 @@ ip-cidr, 91.108.56.200/32, JT|Proxy
 ip-cidr, 182.254.116.0/24, direct
 # END
 IP-cidr, 119.28.28.28/32, CN|Proxy
+IP-cidr, 119.29.29.29/32, CN|Proxy
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
 ip-cidr, 172.16.0.0/12, direct
