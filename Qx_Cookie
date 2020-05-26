@@ -14,7 +14,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-reques
 
 #帖吧文库签到
 ;^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header tieba.cookie.js
-https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login url script-request-header https://raw.githubusercontent.com/nzw9314/QuantumultX/master/NobyDa/BDTieBa-DailyBonus/TieBa.js
+https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
 #活动抽奖小程序
 ;^https:\/\/new\.api\.hdcj\.9w9\.com\/api\/sign\/sign url script-request-body https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery.js
