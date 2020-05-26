@@ -1,5 +1,5 @@
 #Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,mcs-mimp-web.sf-express.com,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com
 
 ;hostname = new.api.hdcj.9w9.com
 #京东签到获取cookie
@@ -17,7 +17,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 
 #活动抽奖小程序
 ;^https:\/\/new\.api\.hdcj\.9w9\.com\/api\/sign\/sign url script-request-body https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery.js
-^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign url script-request-header https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery_new.js
+^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign url script-request-header https://raw.githubusercontent.com/lcmigg/Surge/master/Script/WeChatLottery_new.js
 
 #RR视频
 ^https:\/\/api\.rr\.tv\/user\/profile url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
@@ -27,14 +27,9 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBeanIndex url script-r
 
 #顺丰速运
 ^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 #ZAKER新闻
 ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
 
 #微信小程序-来客有礼
-;^https:\/\/draw\.jdfcloud\.com\/\/api\/turncard\/sign\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
 https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js
-
-#趣头条
-;^https:\/\/api\.1sapp\.com\/sign\/sign? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js
