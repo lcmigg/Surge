@@ -142,7 +142,8 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/ url reject-200
 
 #BiliBili
-^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
+;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
+^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
 
 #ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
