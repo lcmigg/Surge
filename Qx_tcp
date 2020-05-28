@@ -1,26 +1,26 @@
 # Apple
 # 定位相关
-;user-agent, com.apple.geod*, direct
-;user-agent, com.apple.Maps, direct
-;user-agent, FindMyFriends*, direct
-;user-agent, FindMyiPhone*, direct
-;user-agent, FMDClient*, direct
-;user-agent, FMFD*, direct
-;user-agent, fmflocatord*, direct
-;user-agent, geod*, direct
-;user-agent, locationd*, direct
-;user-agent, Maps*, direct
+user-agent, com.apple.geod*, direct
+user-agent, com.apple.Maps, direct
+user-agent, FindMyFriends*, direct
+user-agent, FindMyiPhone*, direct
+user-agent, FMDClient*, direct
+user-agent, FMFD*, direct
+user-agent, fmflocatord*, direct
+user-agent, geod*, direct
+user-agent, locationd*, direct
+user-agent, Maps*, direct
 # 支付相关
-;user-agent, PassbookUIService*, direct
-;user-agent, passd*, direct
-;user-agent, seld*, direct
-;user-agent, Wallet*, direct
+user-agent, PassbookUIService*, direct
+user-agent, passd*, direct
+user-agent, seld*, direct
+user-agent, Wallet*, direct
 # Siri
 host, guzzoni.apple.com, direct
-;user-agent, AssistantServices*, direct
-;user-agent, MobileAsset*, direct
-;user-agent, Siri*, direct
-;user-agent, *siri*, direct
+user-agent, AssistantServices*, direct
+user-agent, MobileAsset*, direct
+user-agent, Siri*, direct
+user-agent, *siri*, direct
 // 绕过App企业证书过期
 ;host, ocsp.apple.com, reject
 ;host, api.smoot.apple.com.cn, direct
