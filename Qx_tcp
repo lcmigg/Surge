@@ -519,8 +519,8 @@ host, api2-16-h2.musical.ly, JT|Proxy
 #香蕉视频
 host, apple.fuliapps.com, JT|Proxy
 # Proxy
-#host-suffix, adobe.com, JT|Proxy
-#host-suffix, adobedtm.com, JT|Proxy
+host-suffix, adobe.com, JT|Proxy
+host-suffix, adobedtm.com, JT|Proxy
 host-suffix, amazon.com, JT|Proxy
 host-suffix, amazonaws.com, JT|Proxy
 host-suffix, apple-dns.net, JT|Proxy
@@ -535,7 +535,7 @@ host-suffix, duckduckgo.com, JT|Proxy
 #host-suffix, dueapp.com, JT|Proxy
 host-suffix, feedly.com, JT|Proxy
 host-suffix, g.co, JT|Proxy
-#host-suffix, ggpht.com, JT|Proxy
+host-suffix, ggpht.com, JT|Proxy
 host-suffix, git.io, JT|Proxy
 host-suffix, githubusercontent.com, JT|Proxy
 host-suffix, github.com, JT|Proxy
