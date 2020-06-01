@@ -3,6 +3,9 @@
 ;3,9 0 * * * JS/jd_auto.js, enabled=false
 4,8 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东领豆, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=true
 
+#京东618
+10,20,30,40,50 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jd/jd.618.js, tag=京东618, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=true
+
 #京东到家签到
 10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, tag=京东到家, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jddj.png, enabled=true
 
