@@ -31,7 +31,11 @@
 #ZAKER新闻
 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, tag=ZAKER新闻, img-url=zaker.png, enabled=true
 
-9 8 * * * JS/checkin_maying.js, tag=魅影签到, img-url=魅影.png, enabled=true
+#魅影签到
+16 8 * * * JS/checkin_maying.js, tag=魅影签到, img-url=魅影.png, enabled=true
+
+#github更新
+16 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/github.js, tag=github更新, img-url=github.png, enabled=true
 
 #每日一言(钉钉签到)
 55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, tag=每日一言, img-url=一言.png, enabled=false
