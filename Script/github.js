@@ -36,7 +36,7 @@ const repository = [
   {
     name: "NobyDa 脚本",
     url: "https://github.com/NobyDa/Script/tree/master"
-  }
+  },
   {
     name: "chahu 脚本",
     url: "https://github.com/yichahucha/surge/tree/master"
