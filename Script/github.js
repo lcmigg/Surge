@@ -135,11 +135,11 @@ async function checkUpdate(item) {
             const { published_at, body } = releases[0];
             if (needUpdate(url, published_at)) {
               $notify(
-                `🎉🎉🎉 [${name}] 新版本发布`,
-                `📦 版本: ${release_name}`,
-                `⏰ 发布于: ${formatTime(
+                `[${name}] 新版本发布`,
+                `版本: ${release_name}`,
+                `发布于: ${formatTime(
                   published_at
-                )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: \n${body}`
+                )}\n👨🏻‍ 发布者: ${author}\n 更新说明: \n${body}`
               );
               if (!debug){
                 $prefs.setValueForKey(published_at, url.hashCode());
@@ -162,11 +162,11 @@ async function checkUpdate(item) {
 
           if (needUpdate(url, published_at)) {
             $notify(
-              `🎈🎈🎈 [${name}] 新提交`,
+              `[${name}] 新提交`,
               "",
-              `⏰ 提交于: ${formatTime(
+              `提交于: ${formatTime(
                 published_at
-              )}\n👨🏻‍💻 发布者: ${author}\n📌 更新说明: \n${body}`
+              )}\n👨🏻‍ 发布者: ${author}\n 更新说明: \n${body}`
             );
             // update stored timestamp
             if (!debug){
