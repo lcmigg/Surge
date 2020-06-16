@@ -48,8 +48,8 @@ const repositories = [
   },
   {
     name: "Peng-YM 脚本",
-    file_names: ["github.js"],
-    url: "https://github.com/Peng-YM/QuanX/tree/master/Tasks",
+    file_names: ["Tasks"],
+    url: "https://github.com/Peng-YM/QuanX/tree/master",
   },
 ];
 
