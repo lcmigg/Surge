@@ -103,7 +103,8 @@ if(Pinfo==1 && subinfo){
 		} else{
 			epr=""; //"过期时间: ✈️ 未提供該信息" //没过期时间的显示订阅链接
 		}
-	var message=total+"\n"+usd+", "+left;
+	// var message=total+"\n"+usd+", "+left;
+	var message=usd+"\n"+left+"\n"+total;
 	$notify("流量信息: "+subtag, epr, message,tg_link0)
 }
 
