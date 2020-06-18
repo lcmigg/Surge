@@ -45,11 +45,11 @@ const repositories = [
     name: "NobyDa 脚本",
     // file_names: ["wb_ad.js", "wb_launch.js"],
     file_names: ["JD-DailyBonus"],
-    url: "https://github.com/NobyDa/Script/tree/master",//路径模板🌟
+    url: "https://github.com/NobyDa/Script/tree/master",//路径模板
   },
   {
     name: "Peng-YM 脚本",
-    // file_names: ["Tasks/github.js", "52pojie-DailyBonus"],//路径模板🌟
+    // file_names: ["Tasks/github.js", "52pojie-DailyBonus"],//路径模板
     file_names: ["Tasks/github.js"],
     url: "https://github.com/Peng-YM/QuanX/tree/master",
   }
