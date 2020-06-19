@@ -107,9 +107,9 @@ if(Pinfo==1 && subinfo){
 			epr=""; //"过期时间: ✈️ 未提供該信息" //没过期时间的显示订阅链接
 		}
 	// var message=total+"\n"+usd+", "+left;
-	var message=usd+"\n"+left+"\n"+total;
+	var message=usd+"\n"+left+", "+total;
 	// $notify("流量信息: ⟦"+subtag+"⟧", epr, message,tg_link0)
-	$notify("流量信息: 魅影极速", epr, message,tg_link0)
+	$notify("👉魅影极速", epr, message,tg_link0)
 }
 
 if(type0=="Subs-B64Encode"){
