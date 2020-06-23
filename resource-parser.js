@@ -3,15 +3,6 @@
 ----------------------------------------------------------
 🚫 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
-🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada
-
-🤖 主要功能: 
-A. 将各格式的服务器订阅解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式引用
-✔︎ 支持 V2RayN/SSR/SS/SSD/Trojan/QuanX/Surge/https 订阅
-✔︎ 提供说明 1⃣️ 中的可选个性化参数(筛选、重命名 等)
-B. rewrite(重写) /filter(分流) 的转换&筛选 
-✔︎ 用于禁用远程引用中某(几)项 rewrite/hostname/filter
-✔︎ Surge 类型规则 list(不含策略组)的解析与使用
 ----------------------------------------------------------
 0️⃣ ⟦原始订阅链接⟧ 后加 "#" , 不同参数用 "&" 连接: 
 ⚠️ ☞ https://mysub.com#in=香港+台湾&emoji=1&tfo=1
@@ -109,7 +100,7 @@ var tg_link0 = {"media-url" :"https://raw.githubusercontent.com/lcmigg/Surge/mas
 //响应头流量处理部分
 if(Pinfo==1 && subinfo){
 	var sinfo=subinfo.replace(/ /g,"").toLowerCase();
-	var total="套餐流量: "+(parseFloat(sinfo.split("total=")[1].split(",")[0])/(1024**3)).toFixed(2)+"GB";
+	var total="总流量: "+(parseFloat(sinfo.split("total=")[1].split(",")[0])/(1024**3)).toFixed(2)+"GB";
 	var usd="已用流量: "+((parseFloat(sinfo.split("upload=")[1].split(",")[0])+parseFloat(sinfo.split("download=")[1].split(",")[0]))/(1024**3)).toFixed(2)+"GB"
 	var left="剩余流量: "+((parseFloat(sinfo.split("total=")[1].split(",")[0])/(1024**3))-((parseFloat(sinfo.split("upload=")[1].split(",")[0])+parseFloat(sinfo.split("download=")[1].split(",")[0]))/(1024**3))).toFixed(2)+"GB"
 	if(sinfo.indexOf("expire=")!=-1){
