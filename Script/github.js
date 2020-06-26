@@ -51,7 +51,7 @@ const repositories = [
     name: "Peng-YM 脚本",
     // file_names: ["Tasks/github.js", "52pojie-DailyBonus"],//路径模板
     file_names: ["Tasks/github.js"],
-    url: "https://github.com/Peng-YM/QuanX/tree/master",
+    url: "https://github.com/Peng-YM/QuanX/tree/dev",
   }
 ];
 
