@@ -224,7 +224,7 @@ async function checkUpdate(item) {
 function findFile(name, tree_url, paths, current_pos) {
     if (current_pos == paths.length) {
         $.notify(
-            `🐬 [${name}]`,
+            `[${name}]`,
             "",
             `🚫 仓库中没有该文件：${paths[paths.length - 1]}`
         );
@@ -252,7 +252,7 @@ function findFile(name, tree_url, paths, current_pos) {
                         let file_hash = file_list[i].sha;
                         let last_sha = $.read(hash(name + paths[current_pos]));
                         if (file_hash != last_sha) {
-                            $.notify(`🐬 [${name}]`, "", `📌 ${paths[current_pos]}有更新`);
+                            $.notify(`[${name}]`, "", `${paths[current_pos]}有更新`);
                             $.write(file_hash, hash(name + paths[current_pos]));
                         }
                         $.log(
@@ -271,7 +271,7 @@ function findFile(name, tree_url, paths, current_pos) {
                         let file_hash = file_list[i].sha;
                         let last_sha = $.read(hash(name + paths[current_pos]));
                         if (file_hash != last_sha) {
-                            $.notify(`🐬 [${name}]`, "", `📌 ${paths[current_pos]}有更新`);
+                            $.notify(`[${name}]`, "", `${paths[current_pos]}有更新`);
                             $.write(file_hash, hash(name + paths[current_pos]));
                         }
                         $.log(
@@ -290,7 +290,7 @@ function findFile(name, tree_url, paths, current_pos) {
             }
             if (isFind == false) {
                 $.notify(
-                    `🐬 [${name}]`,
+                    `[${name}]`,
                     "",
                     `🚫 仓库中没有该文件：${
                         paths[paths.length - 1]
