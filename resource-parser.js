@@ -89,12 +89,12 @@ const subtag=$resource.tag!=undefined? $resource.tag:"";
 const Base64=new Base64Code();
 const escapeRegExp = str => str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); //处理特殊符号以便正则匹配使用
 const qxpng="https://raw.githubusercontent.com/crossutility/Quantumult-X/master/quantumult-x.png"
+var my_link = {"media-url" :"https://raw.githubusercontent.com/lcmigg/Surge/master/img/65.jpg"};
 var subinfo_link = {"open-url": "https://t.me/QuanX_API", "media-url" :"https://shrtm.nu/ebAr"};
 var rwrite_link = {"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/G2Xn"}
 var rule_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/7eiK"}
 var nan_link={"open-url":link0.split("#")[0], "media-url": qxpng}
 var sub_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/ebAr"}
-var my_link = {"media-url" :"https://raw.githubusercontent.com/lcmigg/Surge/master/img/65.jpg"};
 
 //$notify(link0,type0,content0)
 
