@@ -1,5 +1,5 @@
 /**
- * 2020年06月17日
+ * 2020年06月30日
  * 1、监控github仓库的commits和release。
  * 2、监控具体的文件或目录是否有更新。
  * 3、新增：可以监控多层目录里面的某个文件
@@ -58,7 +58,9 @@ let repositories = [
 const $ = API("github", false);
 
 token = $.read('token') || token;
-repositories = $.read("repositories") || repositories;
+if ($.read("repo") !== undefined) {
+    repositories = JSON.parse($.read("repo"));
+}
 
 const parser = {
     commits: new RegExp(
@@ -256,7 +258,7 @@ function findFile(name, tree_url, paths, current_pos) {
                             $.write(file_hash, hash(name + paths[current_pos]));
                         }
                         $.log(
-                            `🐬 ${
+                            `${
                                 paths[current_pos]
                             }：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${
                                 file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"
@@ -275,7 +277,7 @@ function findFile(name, tree_url, paths, current_pos) {
                             $.write(file_hash, hash(name + paths[current_pos]));
                         }
                         $.log(
-                            `🐬 ${
+                            `${
                                 paths[current_pos]
                             }：\n\tlast sha: ${last_sha}\n\tlatest sha: ${file_hash}\n\t${
                                 file_hash == last_sha ? "✅当前已是最新" : "🔅需要更新"
