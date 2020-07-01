@@ -154,8 +154,10 @@ host, gwp.xiaojukeji.com, reject
 # 高德地图
 host, optimus-ads.amap.com, reject
 #zhihu
-host-suffix, appcloud2.in.zhihu.com, reject
-host-suffix, appcloud2.zhihu.com, reject
+host, 118.89.204.198, reject
+host, sugar.zhihu.com, reject
+host, appcloud2.in.zhihu.com, reject
+
 # KEYWORD
 host-keyword, admarvel, reject
 #host-keyword, admaster, reject
@@ -281,10 +283,10 @@ user-agent, MicroMessenger*, direct
 #user-agent, PUClient*, CN|Proxy
 user-agent, QQ*, CN|Proxy
 #user-agent, QDaily*, CN|Proxy
-user-agent, AliBank*, direct
+#user-agent, AliBank*, direct
 #user-agent, CallWatch*, direct
 user-agent, Tweetbot*, JT|Proxy
-user-agent, Twitter*, JT|Proxy
+#user-agent, Twitter*, JT|Proxy
 user-agent, *ou?ube*, JT|Proxy
 user-agent, *telegra*, JT|Proxy
 #user-agent, Hyperbase*, JT|Proxy
