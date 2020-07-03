@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-06-30 15:59⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-07-03 14:59⟧
 ----------------------------------------------------------
 🚫 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -21,6 +21,7 @@
     ❖ 如 "in=香港.IPLC.04+台湾&out=香港%20BGP"
 ⦿ regex=正则筛选(字母大小写忽略), 请自行折腾正则表达式;
     ❖ 可用上面的 in/out 搭配使用，in/out 会优先执行;
+    ❖ 对节点完整信息匹配(端口、加密等), 而不只是节点名
 ⦿ rename 重命名、删除字段, "旧名@新名", "删除字段1.删除字段2☠️", 以及 "前缀@", "@后缀",用 "+" 连接多个参数;
     ❖ 如 "rename=香港@HK+[SS]@+@[1X]+倍率.流量☠️"
     ❖ 如想删除 ".", 请用"rename=.@點+點☠️" 类似操作
@@ -29,7 +30,7 @@
 2⃣️ ⟦rewrite 重写⟧/⟦filter 分流⟧ ➠ 参数说明:
 ⦿ in, out, 根据关键词 保留/禁用 相关的规则、重写;
 ⦿ inhn, outhn, “保留/删除”主机名(hostname);
-⦿ dst=regex/script，分别为只保留 Surge-module/profile 中的 url-regex/rewrite(script), 默认全部保留;
+⦿ dst=regex/script，分别为只保留 Surge-module/profile 中的 url-regex/script(302/307), 默认全部保留;
 ⦿ 分流规则另有 "policy=xxx" 参数, 可用于直接指定策略组，或为 Surge 类型 rule-set 生成策略组(默认"Shawn"策略组);
 ⦿ 示范: 禁用某重写引用中的 "淘宝比价 js" 以及 "weibo 的 js"
 ⚠️ ☞  https://myrewrite.list#out=tb_price.js+wb_ad.js
@@ -94,8 +95,9 @@ const escapeRegExp = str => str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); //�
 const qxpng="https://raw.githubusercontent.com/crossutility/Quantumult-X/master/quantumult-x.png"
 var my_link = {"media-url" :"https://raw.githubusercontent.com/lcmigg/Surge/master/img/65.jpg"};
 var subinfo_link = {"open-url": "https://t.me/QuanX_API", "media-url" :"https://shrtm.nu/ebAr"};
-var rwrite_link = {"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/G2Xn"}
-var rule_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/7eiK"}
+var rwrite_link = {"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/x3o2"}
+var rwhost_link = {"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/0n5J"}
+var rule_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/tIHl"}
 var nan_link={"open-url":link0.split("#")[0], "media-url": qxpng}
 var sub_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/ebAr"}
 
@@ -400,9 +402,9 @@ function HostNamecheck(content,parain,paraout){
 			var noname=dname.length<=10?emojino[dname.length]:dname.length
 			var no1name=nname.length<=10?emojino[nname.length]:nname.length
 			if(parain && no1name!=" 0️⃣ "){
-			$notify("🤖 "+"重写引用  ➟ "+"⟦"+subtag+"⟧","⛔️ 筛选参数: "+pfihn+pfohn,"☠️ 主机名 hostname 中已保留以下"+no1name+"个匹配项:"+"\n ⨷ "+nname.join(","),rwrite_link )
+			$notify("🤖 "+"重写引用  ➟ "+"⟦"+subtag+"⟧","⛔️ 筛选参数: "+pfihn+pfohn,"☠️ 主机名 hostname 中已保留以下"+no1name+"个匹配项:"+"\n ⨷ "+nname.join(","),rwhost_link )
 		} else if(dname.length>0){
-			$notify("🤖 "+"重写引用  ➟ "+"⟦"+subtag+"⟧","⛔️ 筛选参数: "+pfihn+pfohn,"☠️ 主机名 hostname 中已删除以下"+noname+"个匹配项:"+"\n ⨷ "+dname.join(","),rwrite_link )}
+			$notify("🤖 "+"重写引用  ➟ "+"⟦"+subtag+"⟧","⛔️ 筛选参数: "+pfihn+pfohn,"☠️ 主机名 hostname 中已删除以下"+noname+"个匹配项:"+"\n ⨷ "+dname.join(","),rwhost_link )}
 		}
 	}
 	if(nname.length==0){
@@ -788,10 +790,10 @@ function Pobfs(jsonl,Pcert,Ptls13){
 	}
 }
 
-//正则筛选
+//正则筛选, 完整内容匹配
 function Regex(content){
 	Preg=RegExp(Preg,"i")
-	cnt=content.split("tag=")[1]
+	cnt=content //.split("tag=")[1]
 	if(Preg.test(cnt)){
 		return content
 	}
