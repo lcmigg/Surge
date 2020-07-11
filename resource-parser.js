@@ -1,9 +1,9 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-07-08 19:39⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-07-11 10:59⟧
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
-⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝗶𝗻=香港+台湾&𝗲𝗺𝗼𝗷𝗶=1&𝘁𝗳𝗼=1
-❖ 本地资源引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅..." 填入资源文件第一行 ❖
+⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
+❖ 本地资源引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅." 填入资源文件第 ① 行 ❖
 
 1️⃣ ⟦𝐬𝐞𝐫𝐯𝐞𝐫 节点⟧ ➠ 参数说明:
 ⦿ 𝗶𝗻𝗳𝗼=1, 开启通知提示机场 ✈️ 流量信息(如有提供);
@@ -29,16 +29,18 @@
 2⃣️ ⟦𝐫𝐞𝐰𝐫𝐢𝐭𝐞 重写⟧/⟦𝐟𝐢𝐥𝐭𝐞𝐫 分流⟧ ➠ 参数说明:
 ⦿ 𝗶𝗻, 𝗼𝘂𝘁, 根据关键词 保留/禁用 相关的规则、重写;
 ⦿ 𝗶𝗻𝗵𝗻, 𝗼𝘂𝘁𝗵𝗻, “保留/删除”主机名(𝒉𝒐𝒔𝒕𝒏𝒂𝒎𝒆);
-⦿ 𝗱𝘀𝘁=𝗿𝗲𝗴𝗲𝘅/𝘀𝗰𝗿𝗶𝗽𝘁，分别为只保留 𝐒𝐮𝐫𝐠𝐞-𝐦𝐨𝐝𝐮𝐥𝐞/𝐩𝐫𝐨𝐟𝐢𝐥𝐞 中的 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱/𝐬𝐜𝐫𝐢𝐩𝐭(302/307), 默认全部保留;
-⦿ 分流规则另有 "𝗽𝗼𝗹𝗶𝗰𝘆=𝘅𝘅𝘅" 参数, 可用于直接指定策略组，或为 𝐒𝐮𝐫𝐠𝐞 类型 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 生成策略组(默认"𝐒𝐡𝐚𝐰𝐧"策略组);
-⦿ 示范: 禁用重写引用中 "淘宝比价 js" 以及 "weibo" 的 js 同主机名
+    ❖ 示范: 禁用 "淘宝比价" 及 "weibo" 的 js 同主机名
  𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐥𝐢𝐬𝐭#𝒐𝒖𝒕=𝒕𝒃_𝒑𝒓𝒊𝒄𝒆.𝒋𝒔+𝒘𝒃_𝒂𝒅.𝒋𝒔&𝒐𝒖𝒕𝒉𝒏=𝒘𝒆𝒊𝒃𝒐
+⦿ 𝗱𝘀𝘁=𝗿𝗲𝗴𝗲𝘅/𝘀𝗰𝗿𝗶𝗽𝘁，分别为只保留 𝐒𝐮𝐫𝐠𝐞-𝐦𝐨𝐝𝐮𝐥𝐞 中的 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱/𝐬𝐜𝐫𝐢𝐩𝐭(302/307), 默认全部保留;
+    ❖ 把含 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱 的 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 转成重写时, 一定要 𝗱𝘀𝘁=𝗿𝗲𝗴𝗲𝘅
+⦿ 𝗽𝗼𝗹𝗶𝗰𝘆 参数, 用于直接指定策略组，或为 𝐒𝐮𝐫𝐠𝐞 类型 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 生成策略组(默认"𝐒𝐡𝐚𝐰𝐧"策略组);
 
 3⃣️ 通知参数 𝗻𝘁𝗳=0/1, 用于 关闭/打开 资源解析器的提示通知
 ⦿ 𝗿𝗲𝘄𝗿𝗶𝘁𝗲/𝗳𝗶𝗹𝘁𝗲𝗿 默认“开启”通知提示, 以防规则误删除
 ⦿ 𝘀𝗲𝗿𝘃𝗲𝗿 资源解析则默认”关闭“通知提示
 ----------------------------------------------------------
  */
+
 
 /**
  * 使用说明，
@@ -51,6 +53,7 @@
 
 PS. 隐藏参数 ntf=0/1, 用于关闭/打开资源解析器的提示通知
 ⦿ rewrite/filter 资源在有 in/out 参数时会默认开启通知提示, 以防规则误删除
+
 ------------------------------
  */
 
@@ -78,6 +81,7 @@ const rwrite_link = {"open-url":link0.split("#")[0], "media-url": "https://shrtm
 const rwhost_link = {"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/0n5J"}
 const rule_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/cpHD"}
 const nan_link={"open-url":link0.split("#")[0], "media-url": qxpng}
+const bug_link={"open-url":"https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB"} // bug link
 const sub_link={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/ebAr"}
 const subinfo_link1={"open-url":link0.split("#")[0], "media-url": "https://shrtm.nu/uo13"}
 
@@ -108,6 +112,7 @@ var pfihn=Phin0? "inhn="+Phin0.join(", ")+",  ":""
 var pfohn=Phout0? "outhn="+Phout0.join(", "):""
 var flow="";
 var exptime="";
+//$notify(type0)
 
 //响应头流量处理部分
 function SubFlow(){
@@ -165,11 +170,11 @@ if(type0=="Subs-B64Encode"){
 	total=content0.split("\n");
 	total=Rule_Handle(total,Pout0,Pin0);
 }else if(content0.trim()==""){
-	$notify("‼️ 引用"+"⟦"+subtag+"⟧"+" 链接返回內容为空","⁉️请自行复制原始链接到浏览器, 确认链接是否失效",para.split("#")[0],nan_link);
+	$notify("‼️ 引用"+"⟦"+subtag+"⟧"+" 返回內容为空","⁉️ 点通知跳转以确认链接是否失效",para.split("#")[0],nan_link);
 	flag=0;
 	$done({content : ""})
 }else if(type0=="unknown"){
-	$notify("😭 太难写了, 可能是 bug ⁉️  "+"⟦"+subtag+"⟧", "👻 本解析器 暂未支持/未能识别 该订阅格式", "⚠️ 已尝试直接导入Quantumult X",nan_link);
+	$notify("😭 太难写了, 可能是 bug ⁉️  "+"⟦"+subtag+"⟧", "👻 本解析器 暂未支持/未能识别 该订阅格式", "⚠️ 将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈",bug_link);
 	$done({content : content0});
 	flag=-1;
 }else { flag=0 }
@@ -247,7 +252,7 @@ function Type_Check(subs){
 	var type="unknown"
 	var RuleK=["host","domain","ip-cidr","geoip","user-agent","ip6-cidr"];
 	var QuanXK=["shadowsocks=","trojan=","vmess=","http="];
-	var SurgeK=["=ss,","=vmess,","=trojan,","=http,","=custom,","=https,","=shadowsocks"];
+	var SurgeK=["=ss,","=vmess,","=trojan,","=http,","=custom,","=https,","=shadowsocks","=shadowsocksr"];
 	var SubK=["dm1lc3M","c3NyOi8v","dHJvamFu","c3M6Ly","c3NkOi8v"];
 	var RewriteK=[" url "]
 	var SubK2=["ss://","vmess://","ssr://","trojan://","ssd://"];
@@ -261,7 +266,7 @@ function Type_Check(subs){
 	var subsn=subs.split("\n")
 	//$notify("Subs","cnt",subs)
 	if(subs.indexOf(html)!=-1){
-		$notify("‼️ 该链接返回内容有误","⁉️ 请自行复制原始链接到浏览器, 确认链接是否失效",link0,nan_link);
+		$notify("‼️ 该链接返回内容有误","⁉️ 点通知跳转以确认链接是否失效",link0,nan_link);
 		type="web";
 	} else if(subsn.length>=1 && SubK2.some(SubCheck)){ //未b64加密的多行URI 组合订阅
 			type="Subs"
@@ -273,7 +278,7 @@ function Type_Check(subs){
 		type="Surge"; // Surge Profiles
 	} else if(SurgeK.some(SurgeCheck)){
 		type="Subs" // Surge proxy list
-	} else if(subi.indexOf("[Script]")!=-1 || subi.indexOf("[Rule]")!=-1 || subi.indexOf("[URL Rewrite]")!=-1){ // Surge module /profile 类型
+	} else if(subi.indexOf("[Script]")!=-1 || subi.indexOf("[Rule]")!=-1 || subi.indexOf("[URL Rewrite]")!=-1 || para1.indexOf("dst=regex")!=-1){ // Surge module /rule-set(url-regex) 类型
 		type="sgmodule"
 	}else if(subi.indexOf("hostname=")!=-1 || RewriteK.some(RewriteCheck)){
 		type="rewrite"
@@ -317,7 +322,7 @@ function SCP2QX(subs){
 		}
 		var SC=["type=",".js","pattern=","script-path="]
 		const sccheck = (item) => subs[i].indexOf(item)!=-1
-		if(SC.every(sccheck)){
+		if(SC.every(sccheck)){ // surge js 新格式
 			//console.log(subs[i])
 			ptn=subs[i].split("pattern=")[1].split(",")[0]
 			js=subs[i].split("script-path=")[1].split(",")[0]
@@ -336,6 +341,21 @@ function SCP2QX(subs){
 		}else if(subs[i].indexOf(" 302")!=-1 || subs[i].indexOf(" 307")!=-1){ //rewrite 复写
 			//console.log(subs[i])
 			rw=subs[i].split(" ")[0]+" url "+subs[i].split(" ")[2]+" "+subs[i].split(" ")[1]
+			nrw.push(rw)
+		}else if(subs[i].indexOf("script-path")!=-1){ //surge js 旧写法
+			type=subs[i].split(" ")[0]
+			js=subs[i].split("script-path")[1].split("=")[1].split(",")[0]
+			ptn=subs[i].split(" ")[1]
+			if(type=="http-response" && subs[i].indexOf("requires-body=1")!=-1){
+				type="script-response-body "
+			}else if(type=="http-response" && subs[i].indexOf("requires-body=1")==-1){
+				type="script-response-header "
+			}else if(type=="http-request" && subs[i].indexOf("requires-body=1")!=-1){
+				type="script-request-body "
+			}else if(type=="http-request" && subs[i].indexOf("requires-body=1")==-1){
+				type="script-request-header "
+			}
+			rw=ptn+" url "+type+js
 			nrw.push(rw)
 		}
 	}//console.log(nrw)
@@ -556,6 +576,7 @@ function SubsEd2QX(subs,Pudp,Ptfo,Pcert,Ptls13){
 	//$notify("After B64","lists",list0)
 	var QuanXK=["shadowsocks=","trojan=","vmess=","http="];
 	var SurgeK=["=ss","=vmess","=trojan","=http","=custom"];
+	var LoonK=["=shadowsocks","=shadowsocksr"]
 	var QXlist=[];
 	for(var i=0;i<list0.length;i++){
 		var node=""
@@ -565,6 +586,7 @@ function SubsEd2QX(subs,Pudp,Ptfo,Pcert,Ptls13){
 		var listi=list0[i].replace(/ /g,"")
 		const QuanXCheck = (item) => listi.toLowerCase().indexOf(item)!=-1;
 		const SurgeCheck = (item) => listi.toLowerCase().indexOf(item)!=-1;
+		const LoonCheck = (item) => listi.toLowerCase().indexOf(item)!=-1;
 		if(type=="vmess" && list0[i].indexOf("remarks=")==-1){
 			var bnode=Base64.decode(list0[i].split("vmess://")[1])
 			if(bnode.indexOf("over-tls=")==-1){ //v2rayN
@@ -603,7 +625,7 @@ function Subs2QX(subs,Pudp,Ptfo,Pcert,Ptls13){
 	//$notify(list0,list0.length)
 	var QuanXK=["shadowsocks=","trojan=","vmess=","http="];
 	var SurgeK=["=ss","=vmess","=trojan","=http"];
-	var LoonK=["=shadowsocks"]
+	var LoonK=["=shadowsocks","=shadowsocksr"]
 	var QXlist=[];
 	for(var i=0;i<list0.length;i++){
 		var node=""
@@ -1297,6 +1319,8 @@ function Loon2QX(cnt){
 	var node=""
 	if(type=="Shadowsocks"){ //ss 类型
 		node=LoonSS2QX(cnt)
+	}else if(type=="ShadowsocksR"){ //ssr 类型
+		node=LoonSSR2QX(cnt)
 	}
 	return node	
 }
@@ -1309,6 +1333,25 @@ function LoonSS2QX(cnt){
 	var obfs=cnt.split(",").length==7? ", "+["obfs="+cnt.split(",")[5].trim(),"obfs-host="+cnt.split(",")[6].trim()].join(","):""
 	var tag=", tag="+cnt.split("=")[0].trim()
 	node=node+[ip,mtd,pwd].join(", ")+obfs+tag
+	//$notify(node)
+	return node
+}
+
+//Loon 的 ssr 部分
+//# SSR 格式：名称=协议类型,地址,端口,加密方式,密码,协议类型,{协议参数},混淆类型,{混淆参数}
+//3 = ShadowsocksR, 1.2.3.4, 443, aes-256-cfb,"password",auth_aes128_md5,{},tls1.2_ticket_auth,{}
+function LoonSSR2QX(cnt){
+	var node="shadowsocks="
+	var ip=[cnt.split(",")[1].trim(),cnt.split(",")[2].trim()].join(":")
+	var mtd="method="+cnt.split(",")[3].trim()
+	var pwd="password="+cnt.split(",")[4].trim().split("\"")[1]
+	//var obfs=cnt.split(",").length==7? ", "+["obfs="+cnt.split(",")[5].trim(),"obfs-host="+cnt.split(",")[6].trim()].join(","):""
+	var ssrp="ssr-protocol="+cnt.split(",")[5].trim()
+	var ssrpara="ssr-protocol-param="+cnt.split(",")[6].replace(/\{|\}/g,"").trim()
+	var obfs="obfs="+cnt.split(",")[7].trim()
+	var obfshost="obfs-host="+cnt.split(",")[8].replace(/\{|\}/g,"").trim()
+	var tag=", tag="+cnt.split("=")[0].trim()
+	node=node+[ip,mtd,pwd,ssrp,ssrpara,obfs,obfshost].join(", ")+tag
 	//$notify(node)
 	return node
 }
