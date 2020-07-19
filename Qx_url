@@ -20,9 +20,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https://mp\.weixin\.qq\.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) url reject
 
 #Tencent QQLive
-^https?:\/\/btrace\.qq\.com url reject-200
-^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\.tc\.qq\.com\/.+\.mp4\? url reject-200
+;^https?:\/\/btrace\.qq\.com url reject-200
+;^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
+;^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\.tc\.qq\.com\/.+\.mp4\? url reject-200
 
 #Apple
 ^https?://a\.applovin\.com/.+/ad url reject
@@ -112,7 +112,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
 
 # >> 新浪微博国际版
-^https:\/\/weibointl\.api\.weibo.cn\/portal\.php\?a=get_coopen_ads url reject-200
+;^https:\/\/weibointl\.api\.weibo.cn\/portal\.php\?a=get_coopen_ads url reject-200
 
 #高德
 ^http:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
@@ -120,10 +120,10 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?\/\/page\.amap\.com\/ws\/page\/upload\/ url reject-img
 
 # 丁香园
-^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
-^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id= url reject-200
-^https?:\/\/drugs\.dxy\.cn\/api\/ad\?productType= url reject-200
-^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac= url reject-200
+;^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
+;^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id= url reject-200
+;^https?:\/\/drugs\.dxy\.cn\/api\/ad\?productType= url reject-200
+;^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac= url reject-200
 
 #美团
 #^https?:\/\/img\.meituan\.net\/midas\/ url reject
