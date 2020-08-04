@@ -470,14 +470,14 @@ function HostNamecheck(content, parain, paraout) {
             var noname = dname.length <= 10 ? emojino[dname.length] : dname.length
             var no1name = nname.length <= 10 ? emojino[nname.length] : nname.length
             if (parain && no1name != " 0️⃣ ") {
-                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","), rwhost_link)
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","))
             } else if (dname.length > 0) {
-                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","), rwhost_link)
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","))
             }
         }
     }
     if (nname.length == 0) {
-        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接", nan_link)
+        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
     }
     if(Preg){ nname = nname.map(Regex).filter(Boolean) 
     	RegCheck(nname, "主机名", Preg) }
