@@ -1,9 +1,17 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-01 14:29⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-03 09:29⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
+
+🤖 主要功能: 
+❶ 将各格式的服务器订阅解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
+☑︎ 支持 𝗩𝗺𝗲𝘀𝘀/𝗦𝗦(𝗥/𝗗)/𝗧𝗿𝗼𝗷𝗮𝗻/𝗤𝘂𝗮𝗻𝘁𝘂𝗺𝘂𝗹𝘁(𝗫)/𝗦𝘂𝗿𝗴𝗲/𝗛𝗧𝗧𝗣(𝗦)
+☑︎ 提供说明 1⃣️ 中的可选个性化参数(筛选、重命名 等)
+❷ 𝗿𝗲𝘄𝗿𝗶𝘁𝗲(重写) & 𝗳𝗶𝗹𝘁𝗲𝗿(分流) 的 转换&筛选 
+☑︎ 用于禁用远程引用中某(几)项 𝗿𝗲𝘄𝗿𝗶𝘁𝗲/𝗵𝗼𝘀𝘁𝗻𝗮𝗺𝗲/𝗳𝗶𝗹𝘁𝗲𝗿
+☑︎ 𝐒𝐮𝐫𝐠𝐞 类型规则 𝗹𝗶𝘀𝘁 与 模块 𝐦𝐨𝐝𝐮𝐥𝐞 的解析使用
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
 ⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
@@ -28,6 +36,7 @@
         ∎ "@"⇒"%40","+"⇒"%2B", 空格⇒"%20", "&"⇒"%26"
     ❖ 删除字段: "字段1.字段2☠️", 想删除 "." 时用 "\." 替代
     ❖ 示范: "𝐫𝐞𝐧𝐚𝐦𝐞=香港@𝐇𝐊+[𝐒𝐒]@+@[1𝐗]+流量.0\.2☠️"
+    ❖ 默认emoji 先生效, 如想更改顺序, 请用 𝗿𝗿𝗻𝗮𝗺𝗲 参数
 ⦿ 𝗱𝗲𝗹𝗿𝗲𝗴, 利用正则表达式来删除节点名中的字段(⚠️ 慎用)
 ⦿ 𝘀𝗼𝗿𝘁=1, -1, x, 分别根据节点名 正序/逆序/随机 排序
 ⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换 𝐬𝐞𝐫𝐯𝐞𝐫 中内容, 可用于重命名/更改加密方式等
@@ -89,7 +98,7 @@ const Base64 = new Base64Code();
 const escapeRegExp = str => str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&'); //处理特殊符号以便正则匹配使用
 var link1 = link0.split("#")[0]
 const qxpng = "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/quantumult-x.png" // server sub-info link
-var my_link = {"media-url" :"https://raw.githubusercontent.com/lcmigg/Surge/master/img/65.jpg"};
+const my_link = {"media-url" :"https://raw.githubusercontent.com/lcmigg/Surge/master/img/65.jpg"};
 const subinfo_link = { "open-url": "https://t.me/QuanX_API", "media-url": "https://shrtm.nu/ebAr" };
 const subinfo_link1 = { "open-url": link1, "media-url": "https://shrtm.nu/uo13" } // server sub-info link(fake-nodes)
 const rwrite_link = { "open-url": link1, "media-url": "https://shrtm.nu/x3o2" } // rewrite filter link
@@ -151,7 +160,7 @@ function SubFlow() {
         var message=usd+"\n"+left+", "+total;
         ntf_flow = 1;
         //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
-        $notify("👉魅影极速", epr, message,my_link)
+        $notify("👉魅影极速", epr, message, my_link)
     }
 }
 
@@ -1192,7 +1201,7 @@ function RenameScript(servers, script) {
 
 //删除 emoji 
 function emoji_del(str) {
-    return unescape(escape(str).replace(/\%uD.{3}/g, ''));
+    return str.replace(/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g, "").trim();//unescape(escape(str).replace(/\%uD.{3}/g, ''));
 }
 
 //为节点名添加 emoji
@@ -1209,7 +1218,7 @@ function get_emoji(source, sname) {
             }
         }
     }
-    if (flag == 0) { return "🏴‍☠️ " + sname.trim() }
+    if (flag == 0) { return "🏴‍☠️ " + sname.replace(/[\uD83C][\uDDE6-\uDDFF][\uD83C][\uDDE6-\uDDFF]/g, "").trim() }
 }
 
 //emoji 处理
@@ -1424,9 +1433,9 @@ function LoonSSR2QX(cnt) {
 function XUDP(cnt,pudp) {
     var udp = pudp == 1? "udp-relay=true, " : "udp-relay=false, "
     if(cnt.indexOf("udp-relay") != -1){
-        var cnt0 = cnt.replace(new RegExp("udp\-relay.*\, ", "gmi"), udp)
+        var cnt0 = cnt.replace(RegExp("udp\-relay.*?\,", "gmi"), udp)
     }else{
-        var cnt0 = cnt.replace(new RegExp("tag.*\=", "gmi"), udp+"tag=")
+        var cnt0 = cnt.replace(new RegExp("tag.*?\=", "gmi"), udp+"tag=")
     }
     return cnt0
 }
@@ -1434,11 +1443,11 @@ function XUDP(cnt,pudp) {
 function XTFO(cnt,ptfo) {
     var tfo = ptfo == 1? "fast-open=true, " : "fast-open=false, "
     if(cnt.indexOf("fast-open") != -1){
-        cnt = cnt.replace(RegExp("fast\-open.*\, ", "gmi"), tfo)
+        var cnt0 = cnt.replace(RegExp("fast\-open.*?\,", "gmi"), tfo)
     }else{
-        cnt = cnt.replace(RegExp("tag.*\=", "gmi"), tfo+"tag=")
+        var cnt0 = cnt.replace(RegExp("tag.*?\=", "gmi"), tfo+"tag=")
     }
-    return cnt
+    return cnt0
 }
 
 //比较完美的一款 base64 encode/decode 工具
