@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-04 21:21⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-07 11:29⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -308,7 +308,7 @@ function Type_Check(subs) {
         type = "Surge"; // Surge Profiles
     } else if (SurgeK.some(SurgeCheck)) {
         type = "Subs" // Surge proxy list
-    } else if (subi.indexOf("[Script]") != -1 || subi.indexOf("[Rule]") != -1 || subi.indexOf("[URL Rewrite]") != -1 || para1.indexOf("dst=regex") != -1) { // Surge module /rule-set(url-regex) 类型
+    } else if (subi.indexOf("[Script]") != -1 || subi.indexOf("[Rule]") != -1 || subs.indexOf("[URL Rewrite]") != -1 || subs.indexOf("[Map Local]") != -1 || para1.indexOf("dst=regex") != -1) { // Surge module /rule-set(url-regex) 类型
         type = "sgmodule"
     } else if (subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck)) {
         type = "rewrite"
@@ -331,6 +331,9 @@ function URX2QX(subs) {
     for (var i = 0; i < subs.length; i++) {
         if (subs[i].slice(0, 9) == "URL-REGEX") {
             rw = subs[i].replace(/ /g, "").split(",REJECT")[0].split("GEX,")[1] + " url " + "reject-200"
+            nrw.push(rw)
+        } else if (subs[i].indexOf("data=") != -1 && subs.indexOf("[Map Local]") != -1){
+            rw = subs[i].replace(/ /g, "").split("data=")[0] + " url " + "reject-dict"
             nrw.push(rw)
         }
     }
@@ -470,13 +473,16 @@ function HostNamecheck(content, parain, paraout) {
             var noname = dname.length <= 10 ? emojino[dname.length] : dname.length
             var no1name = nname.length <= 10 ? emojino[nname.length] : nname.length
             if (parain && no1name != " 0️⃣ ") {
+                //$notify("🤖 " + "重写引用  ➟ " + "⟦" + subtag + "⟧", "⛔️ 筛选参数: " + pfihn + pfohn, "☠️ 主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","), rwhost_link)
                 $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","))
             } else if (dname.length > 0) {
+                //$notify("🤖 " + "重写引用  ➟ " + "⟦" + subtag + "⟧", "⛔️ 筛选参数: " + pfihn + pfohn, "☠️ 主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","), rwhost_link)
                 $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","))
             }
         }
     }
     if (nname.length == 0) {
+        //$notify("🤖 " + "重写引用  ➟ " + "⟦" + subtag + "⟧", "⛔️ 筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接", nan_link)
         $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
     }
     if(Preg){ nname = nname.map(Regex).filter(Boolean) 
