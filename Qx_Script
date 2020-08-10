@@ -1,5 +1,5 @@
 #hostname
-;hostname = mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com,118.89.204.198
+;hostname = mp.weixin.qq.com,api.zhihu.com,www.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,newdrugs.dxy.cn,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
 
 #JS
 #微信公众号
