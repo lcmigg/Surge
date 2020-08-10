@@ -154,9 +154,11 @@ host, gwp.xiaojukeji.com, reject
 # 高德地图
 host, optimus-ads.amap.com, reject
 #zhihu
-host, 118.89.204.198, reject
+;host, 118.89.204.198, reject
+USER-AGENT, AVOS*, REJECT
 host, sugar.zhihu.com, reject
 host, appcloud2.in.zhihu.com, reject
+IP-CIDR, 118.89.204.198/32, REJECT
 
 # KEYWORD
 host-keyword, admarvel, reject
@@ -263,7 +265,7 @@ host, sugar.zhihu.com, reject
 #host, traffic.mogujie.com, reject
 host, wmlog.meituan.com, reject
 #weibo
-user-agent, Moke*, CN|Proxy
+;user-agent, Moke*, CN|Proxy
 host-suffix, weibocdn.com, CN|Proxy
 host-suffix, weibo.com, CN|Proxy
 host-suffix, weibo.cn, CN|Proxy
