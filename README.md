@@ -23,4 +23,4 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task
 ```
 
 - [x] **Script均取自github**  
-![](https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&theme=merko)
+(https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&theme=merko)
