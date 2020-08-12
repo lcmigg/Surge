@@ -1,4 +1,3 @@
-![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&theme=merko)  
 <img src="https://i.loli.net/2020/02/26/EqO18PQXjpkCsh4.jpg" width="54">   <img src="https://i.loli.net/2020/02/26/tEqzog3kIRWANVL.jpg" width="64">  
 # Surge Quantumultx  
 
@@ -23,4 +22,5 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Cookie
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task
 ```
 
-- [x] **Script均取自github**
+- [x] **Script均取自github**  
+![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&theme=merko)
