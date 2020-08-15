@@ -152,7 +152,7 @@ async function checkUpdate(item) {
                         const {published_at, body} = releases[0];
                         const notificationURL = {
                             "open-url": `https://github.com/${repository.owner}/${repository.repo}/releases`,
-                            "media-url": `https://raw.githubusercontent.com/Orz-3/task/master/github.png`,
+                            "media-url": `https://raw.githubusercontent.com/58xinian/icon/master/Github2.png`,
                         };
                         if (needUpdate(url, published_at)) {
                             $.notify(
