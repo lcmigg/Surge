@@ -3,7 +3,8 @@
 
 >quantumultx 1.0.6(198以上)  
 surge 3.4  
-<img src="https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&icon_color=FFFFFF&text_color=B5CAA0&bg_color=4D5139&hide_title=true" width="400">  
+<img src="https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&icon_color=FFFFFF&text_color=B5CAA0&bg_color=4D5139&hide_title=true" height="150">  
+
 #### *订阅链接*
 ```properties
 [Qx_tcp分流]
