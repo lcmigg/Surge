@@ -24,4 +24,4 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task
 
 - [x] **Script均取自github**  
 
-<img src="https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&icon_color=DB4D6D&text_color=FFBA84&bg_color=101010&hide_title=true" />
+<img src="https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&icon_color=FFFFFF&text_color=B5CAA0&bg_color=4D5139&hide_title=true" />
