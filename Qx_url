@@ -15,9 +15,21 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https://mp\.weixin\.qq\.com/(s|mp/(getappmsgext|profile|author|homepage|lifedetail|videoplayer|app)) url reject
 
 #Tencent QQLive
-;^https?:\/\/btrace\.qq\.com url reject-200
-;^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
-;^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\.tc\.qq\.com\/.+\.mp4\? url reject-200
+# > Tencent Game - ssl.kohsocialapp.qq.com
+^(http|https):\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons url reject-200
+^(http|https):\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info url reject-200
+# > Tencent Map - 4gimg.map.qq.com
+^(http|https):\/\/4gimg\.map\.qq\.com\/mwaSplash\/ url reject-200
+# > Tencent Video
+^(http|https):\/\/vv\.video\.qq\.com\/getvmind\? url reject-200
+^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\? url reject-200
+^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 url reject-200
+^(http|https):\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 url reject-200
+^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ url reject-200
+# > Tencent News - r.inews.qq.com
+^(http|https):\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) url reject-200
+# > Tencent Sports - news.ssp.qq.com
+^(http|https):\/\/news\.ssp\.qq\.com\/app url reject-200
 
 #Apple
 ^https?://a\.applovin\.com/.+/ad url reject
