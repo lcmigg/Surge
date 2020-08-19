@@ -57,9 +57,11 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https?+:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch url request-body &domain=.+?& request-body &
 ^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/ url response-body "ems_etao_advertise" response-body ""
 ^https?://gw\.alicdn\.com/tfs/.+-1125-1602 url reject-img
-;^https?:\/\/[a-z]*\.alicdn\.com\/.*\.jpg_(9\d{2}|\d{4}) url reject
+^(http|https):\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject-200
+
 #Xianyu
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
+
 #飞猪
 #^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject
 #淘票票
@@ -92,6 +94,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ;^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(base|aladdin)\/na\/m\/(adInfo|getLoadingPicture) url reject-200
+^(http|https):\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject-200
 
 # 拼多多
 ^http:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject-200
@@ -109,10 +112,11 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
 
 #小米
-^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
-;^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
-;^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
-^https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\? url reject-200
+^(http|https):\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
+^(http|https):\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
+^(http|https):\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
+^(http|https):\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? url reject-200
+
 
 # >> 新浪微博
 ;^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
