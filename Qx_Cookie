@@ -1,5 +1,5 @@
 #Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn
 
 ;hostname = new.api.hdcj.9w9.com
 #京东签到获取cookie
@@ -43,3 +43,6 @@ https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? url 
 
 # 慢慢买每日自动签到
 https?:\/\/m\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
+
+# 太好购
+^https://cxdng\.cpic\.com\.cn/taieshop/api/CustomerFansInfo/GetFansInfo url script-request-header https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.cookie.js
