@@ -105,6 +105,7 @@ ip-cidr, 101.227.97.240/32, reject, no-resolve
 ip-cidr, 101.227.200.11/32, reject, no-resolve
 ip-cidr, 101.227.200.28/32, reject, no-resolve
 ip-cidr, 124.192.153.42/32, reject, no-resolve
+
 # > NetEase
 host, ad.bn.netease.com, reject
 host, ad.yixin.im, reject
@@ -119,6 +120,7 @@ host, log-yex.youdao.com, reject
 host, n.3g.163.com, reject
 host, nex.163.com, reject
 host, yt-adp.nosdn.127.net, reject
+
 # > Tencent
 host-suffix, bugly.qq.com, reject
 host-suffix, e.qq.com, reject
@@ -137,28 +139,40 @@ host, tajs.qq.com, reject
 host, wxsnsdy.wxs.qq.com, reject
 host, wxsnsdythumb.wxs.qq.com, reject
 host, wa.gtimg.com, reject
+
 # 12306
 host, ad.12306.cn, reject
+
 # 搜书阁
 host, iflyad.bj.openstorage.cn, reject
 host, ads.voiceads.cn, reject
+
 # 黑匣子
 #host-suffix, adview.cn, reject
 #host-suffix, admaster.com.cn, reject
 # bilibili
 host, dataflow.biliapi.com, reject
 host, data.bilibili.com, reject
+
 # 滴滴出行
 host, ct.xiaojukeji.com, reject
 host, gwp.xiaojukeji.com, reject
+
 # 高德地图
 host, optimus-ads.amap.com, reject
+
 #zhihu
-;host, 118.89.204.198, reject
-USER-AGENT, AVOS*, REJECT
+host, 118.89.204.198, reject
+user-agent, AVOS*, reject
 host, sugar.zhihu.com, reject
 host, appcloud2.in.zhihu.com, reject
-IP-CIDR, 118.89.204.198/32, REJECT
+ip-cidr, 118.89.204.198/32, reject
+host-suffix, 118.89.204.198, reject
+host-keyword, 118.89.204.198, reject
+IP-CIDR, 118.89.204.198/32, reject
+user-agent, USER-AGENT,AVOS*, reject
+host-suffix, appcloud2.zhihu.com, reject
+host-suffix, appcloud2.in.zhihu.com, reject
 
 # KEYWORD
 host-keyword, admarvel, reject
