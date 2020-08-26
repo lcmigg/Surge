@@ -163,14 +163,12 @@ host, optimus-ads.amap.com, reject
 
 #zhihu
 host, 118.89.204.198, reject
-;user-agent, AVOS*, reject
-host, sugar.zhihu.com, reject
-host, appcloud2.in.zhihu.com, reject
 ip-cidr, 118.89.204.198/32, reject
 host-suffix, 118.89.204.198, reject
 host-keyword, 118.89.204.198, reject
 IP-CIDR, 118.89.204.198/32, reject
-user-agent, USER-AGENT,AVOS*, reject
+user-agent, AVOS*, reject
+host, sugar.zhihu.com, reject
 host-suffix, appcloud2.zhihu.com, reject
 host-suffix, appcloud2.in.zhihu.com, reject
 
