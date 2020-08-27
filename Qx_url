@@ -53,35 +53,22 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ;^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject
 
 #Alibaba
-#Taobao
-^https?+:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch url request-body &domain=.+?& request-body &
-^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/ url response-body "ems_etao_advertise" response-body ""
-^https?://gw\.alicdn\.com/tfs/.+-1125-1602 url reject-img
-^(http|https):\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject-200
-
-#Xianyu
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
-
-#飞猪
-#^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject
-#淘票票
-#^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject
-#口碑
-#^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
-#^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject
+# > Taobao - gw.alicdn.com,heic.alicdn.com
+^(http|https):\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject
+# > Xianyu - acs.m.taobao.com
+^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
+# > Fliggy - acs.m.taobao.com
+^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject
+# > koubei - acs.m.taobao.com
+^(http|https):\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
+^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject
+^(http|https):\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
+^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.exposure\.get\/ url reject
 
 #163
 https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
-;^https?://oimagec([a-z])([0-9]).ydstatic.com/image.* url reject-img
-;^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+?&product=adpublish url reject-200
-;^https?://client.mail.163.com/apptrack/confinfo/searchMultiAd.+ url reject
-;^https?://client.mail.163.com/apptrack/confinfo/searchPullDownAd.+ url reject
-;^http://mos.netease.com/mailyxpublic/mailmaster/icon/ url reject-img
-;^https?://client.mail.163.com/apptrack/confinfo/showAds.do.* url reject
-;^https?://img\d.126.net/ url reject-img
-;^https?://mimg.127.net/external/smartpop-manger.min.js url reject
-;^https?://g1.163.com url reject
+
 
 #163 Music
 ^https?://interface[1-9]\.music\.163\.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
@@ -91,10 +78,10 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
 
 # > JD
-;^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(base|aladdin)\/na\/m\/(adInfo|getLoadingPicture) url reject-200
-^(http|https):\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject-200
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
+^(http|https):\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
+^(http|https):\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject
+^(http|https):\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
 
 # 拼多多
 ^http:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject-200
