@@ -48,6 +48,7 @@ host-suffix, itunes-apple.com.akadns.net, CN|Proxy
 host-suffix, aaplimg.com, JT|Proxy
 host-suffix, avgle.com, JT|Proxy
 host-suffix, ahcdn.com, JT|Proxy
+
 # ME
 host-suffix, umengcloud.com, reject
 host-suffix, zhugeio.com, reject
@@ -61,33 +62,27 @@ host, dongfeng.alicdn.com, reject
 host, dditscdn.com, reject
 host, mqtt.zhihu.com, reject
 host-suffix, xdrig.com, reject
+
 # > Apple
 host-suffix, iadsdk.apple.com, reject
 host-suffix, ads.internal.unity3d.com, reject
 host-suffix, ads.prd.ie.internal.unity3d.com, reject
 host-suffix, unityads.unity3d.com, reject
+
 # > Alibaba
-host, acs4baichuan.m.taobao.com, reject
-host, adash.m.taobao.com, reject
-host, adash.man.aliyuncs.com, reject
-host, adashbc.ut.taobao.com, reject
-host, adash-c.ut.taobao.com, reject
-host, adashxgc.ut.taobao.com, reject
-host, adashx4yt.m.taobao.com, reject
-host, apoll.m.taobao.com, reject
-host, nbsdk-baichuan.alicdn.com, reject
 host, tunion-api.m.taobao.com, reject
-host, unidesk.alicdn.com, reject
+
 # > Baidu
-host-suffix, baidustatic.com, reject
+host-suffix, cpro.baidu.com, reject
+host-suffix, pos.baidu.com, reject
 host, afd.baidu.com, reject
+host, als.baidu.com, reject
 host, duclick.baidu.com, reject
-host, hm.baidu.com, reject
-host, hmma.baidu.com, reject
 host, mobads.baidu.com, reject
 host, mobads-logs.baidu.com, reject
 host, nsclick.baidu.com, reject
-host, wn.pos.baidu.com, reject
+
+
 # > Google
 host-suffix, doubleclick.net, reject
 host-suffix, googleadservices.com, reject
@@ -95,31 +90,32 @@ host-suffix, googleadsserving.cn, reject
 host-suffix, googlesyndication.com, reject
 host-suffix, googletagmanager.com, reject
 host-suffix, googletagservices.com, reject
+host, ads.youtube.com, reject
+
 # > iQiyi
-host, ifacelog.iqiyi.com, reject
-host, mbdlog.iqiyi.com, reject
-host, msg.71.am, reject
-host, msg.qy.net, reject
 host, t7z.cupid.iqiyi.com, reject
-ip-cidr, 101.227.97.240/32, reject, no-resolve
-ip-cidr, 101.227.200.11/32, reject, no-resolve
-ip-cidr, 101.227.200.28/32, reject, no-resolve
-ip-cidr, 124.192.153.42/32, reject, no-resolve
+ip-cidr, 101.227.97.240/32, reject
+ip-cidr, 101.227.200.11/32, reject
+ip-cidr, 101.227.200.28/32, reject
+ip-cidr, 124.192.153.42/32, reject
 
 # > NetEase
+host-suffix, dsp.youdao.com, reject
+host-suffix, union.youdao.com, reject
 host, ad.bn.netease.com, reject
 host, ad.yixin.im, reject
 host, admusicpic.music.126.net, reject
+host, gorgon.youdao.com, reject
+host, iad.g.163.com, reject
 host, iadmat.nosdn.127.net, reject
 host, iadmusicmat.music.126.net, reject
 host, iadmusicmatvideo.music.126.net, reject
 host, impservice.dictapp.youdao.com, reject
 host, impservice.youdao.com, reject
-host, log.yex.youdao.com, reject
-host, log-yex.youdao.com, reject
 host, n.3g.163.com, reject
 host, nex.163.com, reject
 host, yt-adp.nosdn.127.net, reject
+host, yt-adp.ws.126.net, reject
 
 # > Tencent
 host-suffix, bugly.qq.com, reject
@@ -128,10 +124,14 @@ host-suffix, gdt.qq.com, reject
 host-suffix, l.qq.com, reject
 host-suffix, rqd.qq.com, reject
 host, adsmind.tc.qq.com, reject
+host, adsmind.apdcdn.tc.qq.com, reject
+host, adsmind.gdtimg.com, reject
 host, btrace.qq.com, reject
 host, mtrace.qq.com, reject
+host, pgdt.ugdtimg.com, reject
 host, oth.eve.mdt.qq.com, reject
 host, pgdt.gtimg.cn, reject
+host, pgdt.gtimg.com, reject
 host, pingma.qq.com, reject
 host, pingtcss.qq.com, reject
 host, splashqqlive.gtimg.com, reject
@@ -139,6 +139,13 @@ host, tajs.qq.com, reject
 host, wxsnsdy.wxs.qq.com, reject
 host, wxsnsdythumb.wxs.qq.com, reject
 host, wa.gtimg.com, reject
+
+# > MI
+host-suffix, ad.intl.xiaomi.com, reject
+host-suffix, ad.xiaomi.com, reject
+host-suffix, admob.xiaomi.com, reject
+host, adv.sec.intl.miui.com, reject
+host, adv.sec.miui.com, reject
 
 # 12306
 host, ad.12306.cn, reject
@@ -191,11 +198,13 @@ host-keyword, umeng.co, reject
 host-keyword, usage, reject
 host-keyword, wlmonitor, reject
 host-keyword, zjtoolbar, reject
+
 # > Exclusions
 host, analytics.google.com, proxy
 host, analyticsinsights-pa.googleapis.com, proxy
 host, analyticsreporting.googleapis.com, proxy
 host-suffix, vd.l.qq.com, direct
+
 # > General
 host-keyword, adservice, reject
 host-keyword, analytics, reject
