@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-25 10:45⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-29 17:19⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -18,21 +18,21 @@
 ⦿ 𝗶𝗻, 𝗼𝘂𝘁, 分别为 保留、删除 节点;
     ❖ 多参数(逻辑"或")用 "+", 逻辑"与"用 "." 表示;
     ❖ 支持中文, 操作以下特殊字符时请先替换
-        ∎ "+"⇒"%2B", 空格⇒"%20", "&"⇒"%26", "."⇒"\."
+      ∎ "+"⇒"%2B", 空格⇒"%20", "&"⇒"%26", "."⇒"\."
     ❖ 示范: "𝐢𝐧=香港.0\.2倍率+台湾&𝐨𝐮𝐭=香港%20𝐁𝐆𝐏"
 ⦿ 𝗿𝗲𝗴𝗲𝘅, 正则筛选, 请自行折腾正则表达式;
     ❖ 可与 𝗶𝗻/𝗼𝘂𝘁 参数搭配使用, 𝗶𝗻/𝗼𝘂𝘁 会优先执行;
     ❖ 对节点的完整信息进行匹配(类型、端口、加密等)
 ⦿ 𝗿𝗲𝗻𝗮𝗺𝗲 重命名, "旧名@新名", "前缀@", "@后缀", 用 "+" 连接多个参数;
     ❖ 支持中文, 操作以下特殊字符时请先替换
-        ∎ "@"⇒"%40","+"⇒"%2B", 空格⇒"%20", "&"⇒"%26"
+      ∎ "@"⇒"%40","+"⇒"%2B", 空格⇒"%20", "&"⇒"%26"
     ❖ 删除字段: "字段1.字段2☠️", 想删除 "." 时用 "\." 替代
     ❖ 示范: "𝐫𝐞𝐧𝐚𝐦𝐞=香港@𝐇𝐊+[𝐒𝐒]@+@[1𝐗]+流量.0\.2☠️"
     ❖ 默认emoji 先生效, 如想更改顺序, 请用 𝗿𝗿𝗻𝗮𝗺𝗲 参数
 ⦿ 𝗱𝗲𝗹𝗿𝗲𝗴, 利用正则表达式来删除节点名中的字段(⚠️ 慎用)
 ⦿ 𝘀𝗼𝗿𝘁=1, -1, x, 分别根据节点名 正序/逆序/随机 排序
 ⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换 𝐬𝐞𝐫𝐯𝐞𝐫 中内容, 可用于重命名/更改加密方式等
-⦿ 进阶参数: 𝘀𝗳𝗶𝗹𝘁𝗲𝗿/𝘀𝗿𝗲𝗻𝗮𝗺𝗲, 可传入一段 base64 编码的脚本, 用于过滤/重命名订阅节点
+⦿ ⟦进阶参数⟧: 𝘀𝗳𝗶𝗹𝘁𝗲𝗿/𝘀𝗿𝗲𝗻𝗮𝗺𝗲, 传入一段 base64 编码的脚本, 可用于过滤/重命名订阅节点
     ❖ 说明: https://github.com/KOP-XIAO/QuantumultX/pull/9
 
 2⃣️ ⟦𝐫𝐞𝐰𝐫𝐢𝐭𝐞 重写⟧/⟦𝐟𝐢𝐥𝐭𝐞𝐫 分流⟧ ➠ 参数说明:
@@ -46,10 +46,11 @@
 ⦿ 𝗽𝗼𝗹𝗶𝗰𝘆 参数, 用于直接指定策略组，或为 𝐒𝐮𝐫𝐠𝐞 类型 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 生成策略组(默认"𝐒𝐡𝐚𝐰𝐧"策略组);
 ⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换 𝐟𝐢𝐥𝐭𝐞𝐫/𝐫𝐞𝐰𝐫𝐢𝐭𝐞 内容, regex@newregex;
     ❖ 将淘宝比价中脚本替换成 lite 版本, tiktok 中 JP 换成 KR
-        ∎ 𝐫𝐞𝐩𝐥𝐚𝐜𝐞=(𝐩𝐫𝐢𝐜𝐞)(.*)@$1_𝐥𝐢𝐭𝐞$2+𝐣𝐩@𝐤𝐫 
-⦿ 𝗱𝘀𝘁=𝗿𝗲𝗴𝗲𝘅/𝘀𝗰𝗿𝗶𝗽𝘁，分别为只保留 𝐒𝐮𝐫𝐠𝐞-𝐦𝐨𝐝𝐮𝐥𝐞 中的 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱/𝐬𝐜𝐫𝐢𝐩𝐭(302/307), 默认全部保留;
-    ❖ 把含 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱 的 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 转成重写时, 一定要 𝗱𝘀𝘁=𝗿𝗲𝗴𝗲𝘅;
-    ❖ 暂不处理 𝐦𝐨𝐝𝐮𝐥𝐞 中非 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱 的规则类型
+      ∎ 𝐫𝐞𝐩𝐥𝐚𝐜𝐞=(𝐩𝐫𝐢𝐜𝐞)(.*)@$1_𝐥𝐢𝐭𝐞$2+𝐣𝐩@𝐤𝐫 
+⦿ 𝗱𝘀𝘁=𝐫𝐞𝐰𝐫𝐢𝐭𝐞/𝐟𝐢𝐥𝐭𝐞𝐫，分别为将 𝐦𝐨𝐝𝐮𝐥𝐞&𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 转换成 重写/分流;
+    ❖ ⚠️ 默认将 𝐦𝐨𝐝𝐮𝐥𝐞 转换到重写, 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 转成分流
+    ❖ ⚠️ 把 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 中 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱 转成重写时, 必须要加 𝗱𝘀𝘁=𝐫𝐞𝐰𝐫𝐢𝐭𝐞;
+    ❖ ⚠️ 把 𝐦𝐨𝐝𝐮𝐥𝐞 中的分流规则转换时, 必须要加 𝗱𝘀𝘁=𝐟𝐢𝐥𝐭𝐞𝐫
 
 3⃣️ 通知参数 𝗻𝘁𝗳=0/1, 用于 关闭/打开 资源解析器的提示通知
 ⦿ 𝗿𝗲𝘄𝗿𝗶𝘁𝗲/𝗳𝗶𝗹𝘁𝗲𝗿 默认“开启”通知提示, 以防规则误删除
@@ -155,7 +156,7 @@ function SubFlow() {
                 //var message = total + "\n" + usd + ", " + left;
                 var message=usd+"\n"+left+", "+total;
                 ntf_flow = 1;
-                //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
+                $notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
                 $notify("👉魅影极速", epr, message, my_link)
         }
 }
@@ -170,16 +171,11 @@ if (type0 == "Subs-B64Encode") {
         total = isQuanX(content0);
 } else if (type0 == "Surge") {
         total = Surge2QX(content0);
-} else if (type0 == "sgmodule") { // surge module 模块，只处理到 rewrite 部分
-        flag = 2
-        if (para1.indexOf("dst=regex") != -1) {
-                total = URX2QX(content0)
-        } else if (para1.indexOf("dst=script") != -1) {
-                total = SCP2QX(content0)
-        } else {
-                total = SGMD2QX(content0)
-        }
-        total = Rewrite_Filter(total, Pin0, Pout0);
+} else if (type0 == "sgmodule") { // surge module 模块/含 url-regex 的 rule-set
+        flag = 2 
+        total = SGMD2QX(content0) // 转换 
+        total = Rewrite_Filter(total, Pin0, Pout0); // 筛选过滤
+        if (Preplace) { total = ReplaceReg(total, Preplace) }
         total = total.join("\n")
 } else if (type0 == "rewrite") { // rewrite 类型
         flag = 2;
@@ -191,6 +187,7 @@ if (type0 == "Subs-B64Encode") {
         total = Rule_Handle(content0.split("\n"), Pout0, Pin0);
         if (Preg && total.length!=0) { // 正则筛选规则 filter
         total = total.map(Regex).filter(Boolean).join("\n") 
+        if (Preplace) { total = ReplaceReg(total, Preplace) }
         RegCheck(total, "分流引用", Preg)} 
         total = total.join("\n")
 } else if (content0.trim() == "") {
@@ -202,6 +199,8 @@ if (type0 == "Subs-B64Encode") {
         $done({ content: content0 });
         flag = -1;
 } else { flag = 0 }
+
+if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
 
 if (flag == 1) { //server 类型统一处理
         if (Pinfo == 1 && ntf_flow == 0) { //假节点类型的流量通知
@@ -232,7 +231,7 @@ if (flag == 1) { //server 类型统一处理
                 total = QXSort(total, Psort0);
         }
         total = TagCheck_QX(total) //节点名检查
-        if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
+        //if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
         if (flag == 1) { total = Base64.encode(total.join("\n")) } //强制节点类型 base64 加密后再导入 Quantumult X
         $done({ content: total });
 } else { $done({ content: total });}
@@ -260,10 +259,10 @@ function flowcheck(cnt) {
 // regex 后的检查
 function RegCheck(total, typen, regpara) {
 	if(total.length == 0){ 
-		$notify("‼️ " + typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "⚠️ 筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
+		$notify("‼️ " + typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
 	}else if((typen != "节点订阅" && Pntf0 !=0) || (typen == "节点订阅" && Pntf0 ==1)){
 		var nolist = total.length <= 10 ? emojino[total.length] : total.length
-		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "⚠️ 筛选后剩余以下" + nolist + "个匹配项 \\n ⨷ " + total.join("\n ⨷ "))
+		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余以下" + nolist + "个匹配项 \\n ⨷ " + total.join("\n ⨷ "))
 	}
 }
 //判断订阅类型
@@ -300,10 +299,10 @@ function Type_Check(subs) {
                 type = "Clash";
                 //console.log(type)
                 content0 = Clash2QX(subs)
-        } else if (subi.indexOf("[Script]") != -1 || subi.indexOf("[Rule]") != -1 || subs.indexOf("[URL Rewrite]") != -1 || subs.indexOf("[Map Local]") != -1 || para1.indexOf("dst=regex") != -1) { // Surge module /rule-set(url-regex) 类型
+        } else if ( (subi.indexOf("[Script]") != -1 || subi.indexOf("[Rule]") != -1 || subs.indexOf("[URL Rewrite]") != -1 || subs.indexOf("[Map Local]") != -1 || subs.indexOf("[MITM]") != -1 || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) ) { // Surge 类型 module /rule-set(含url-regex) 类型
                 type = "sgmodule"
         } else if (subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck)) {
-                type = "rewrite"
+                type = "rewrite" //Quantumult X 类型 rewrite
         } else if (RuleK.some(RuleCheck) && subs.indexOf(html) == -1) {
                 type = "Rule";
         } else if (DomainK.some(RuleCheck)) {
@@ -345,11 +344,11 @@ function TagCheck_QX(content) {
         } // for
         if (nulllist.length >= 1) {
                 no = nulllist.length <= 10 ? emojino[nulllist.length] : nulllist.length;
-                $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个空节点名 ", "已将节点“类型+IP”设为节点名", " ⨁ " + nulllist.join("\n ⨁ "))
+                $notify("引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个空节点名 ", "已将节点“类型+IP”设为节点名", " ⨁ " + nulllist.join("\n ⨁ "))
         }
         if (duplist.length >= 1) {
                 no = duplist.length <= 10 ? emojino[duplist.length] : duplist.length;
-                $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个重复节点名 ", "已添加⌘符号作为区分:", " ⨁ " + duplist.join("\n ⨁ "))
+                $notify("引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个重复节点名 ", "已添加⌘符号作为区分:", " ⨁ " + duplist.join("\n ⨁ "))
         }
         return Nlist
 }
@@ -364,13 +363,13 @@ function URX2QX(subs) {
         var rw = ""
         subs = subs.split("\n")
         for (var i = 0; i < subs.length; i++) {
-                if (subs[i].slice(0, 9) == "URL-REGEX") {
+                if (subs[i].slice(0, 9) == "URL-REGEX") {  // regex 类型
                         rw = subs[i].replace(/ /g, "").split(",REJECT")[0].split("GEX,")[1] + " url " + "reject-200"
                         nrw.push(rw)
-                } else if (subs[i].indexOf("data=") != -1 && subs.indexOf("[Map Local]") != -1){
+                } else if (subs[i].indexOf("data=") != -1 && subs.indexOf("[Map Local]") != -1){ // Map Local 类型
                         rw = subs[i].replace(/ /g, "").split("data=")[0] + " url " + "reject-dict"
                         nrw.push(rw)
-                }
+                } 
         }
         return nrw
 }
@@ -402,8 +401,16 @@ function SCP2QX(subs) {
                         }
                         rw = ptn + " url " + type + js
                         nrw.push(rw)
-                } else if (subs[i].indexOf(" 302") != -1 || subs[i].indexOf(" 307") != -1) { //rewrite 复写
-                        rw = subs[i].split(" ")[0] + " url " + subs[i].split(" ")[2] + " " + subs[i].split(" ")[3]
+                } else if (subs[i].indexOf(" 302") != -1 || subs[i].indexOf(" 307") != -1) { //rewrite 302&307 复写
+                        rw = subs[i].split(" ")[0] + " url " + subs[i].split(" ")[2] + " " + subs[i].split(" ")[1]
+                        nrw.push(rw)
+                } else if(subs[i].split(" ")[2] == "header") { // rewrite header 类型
+                        var pget = subs[i].split(" ")[0].split(".com")[1]
+                        var pgetn = subs[i].split(" ")[1].split(".com")[1]
+                        rw = subs[i].split(" ")[0] + " url request-header ^GET " + pget +"(.+\\r\\n)Host:.+(\\r\\n) request-header GET " + pgetn + "$1Host: " + subs[i].split(" ")[1].split("://")[1].split(".com")[0] + ".com$2"
+                        nrw.push(rw)
+                } else if(subs[i].indexOf(" - reject") != -1) { // rewrite reject 类型
+                        rw = subs[i].split(" ")[0] + " url reject-200"
                         nrw.push(rw)
                 } else if (subs[i].indexOf("script-path") != -1) { //surge js 旧写法
                         type = subs[i].split(" ")[0]
@@ -470,7 +477,7 @@ function Rewrite_Filter(subs, Pin, Pout) {
                         $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中已禁用以下" + nowrite + "个匹配项:" + "\n ⨷ " + dwrite.join("\n ⨷ "))
                 }
         }
-        if (Nlist.length == 0) { $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "⚠️ 筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") }
+        if (Nlist.length == 0) { $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") }
         if(Preg){ Nlist = Nlist.map(Regex).filter(Boolean) // regex to filter rewrites
         	RegCheck(Nlist, "重写引用", Preg) }
         if (hostname != "") { Nlist.push(hostname) }
@@ -515,7 +522,7 @@ function HostNamecheck(content, parain, paraout) {
                 }
         }
         if (nname.length == 0) {
-                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
         }
         if(Preg){ nname = nname.map(Regex).filter(Boolean) 
         	RegCheck(nname, "主机名", Preg) }
@@ -569,7 +576,7 @@ function Rule_Handle(subs, Pout, Pin) {
                 var no = dlist.length <= 10 ? emojino[dlist.length] : dlist.length
                 if (dlist.length > 0) {
                         if (Pntf0 != 0) { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "已禁用以下" + no + "条匹配规则:" + "\n ⨷ " + dlist.join("\n ⨷ ")) }
-                } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 未发现任何匹配项, 请检查参数或原始链接") }
+                } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "未发现任何匹配项, 请检查参数或原始链接") }
                 if (Tin != "" && Tin != null) {  //有 in 跟 out 参数时
                         if (nlist.length > 0) {
                                 var noin0 = nlist.length <= 10 ? emojino[nlist.length] : nlist.length
@@ -577,11 +584,11 @@ function Rule_Handle(subs, Pout, Pin) {
                                         $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
                                 }
                         } else {
-                                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
                         }
                 } else {// if Tin (No Tin)
                         if (nlist.length == 0) {
-                                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
                         }
                 }
                 return [...dlist, ...nlist];
@@ -603,7 +610,7 @@ function Rule_Handle(subs, Pout, Pin) {
                         if (Pntf0 != 0) {
                                 $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
                         }
-                } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
+                } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
                 return [...dlist, ...nlist];
         } else {  //if Tin
                 return cnt.map(Rule_Policy)
@@ -963,7 +970,7 @@ function Filter(servers, Pin, Pout) {
                         $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
                 }
         } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-                $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
+                $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
         }
         return Nlist
 }
@@ -978,7 +985,7 @@ function FilterScript(servers, script) {
                 const IN = filter(nodes);
                 const res = servers.filter((_, i) => IN[i]);
                 if (res.length === 0) {
-                        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
+                        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
                 }
                 return res;
         } catch (err) {
@@ -1461,8 +1468,8 @@ function YAMLFix(cnt){
         cnt = cnt.replace(/{name: /g,"{name: \"").replace(/, server:/g,"\", server:")
         cnt = cnt.replace(/{|}/g,"").replace(/,/g,"\n   ")
     }
-    cnt = cnt.replace(/  -\n.*name/g,"  - name")
-    console.log(cnt)
+    cnt = cnt.replace(/  -\n.*name/g,"  - name").replace(/\$|\`/g,"").split("proxy-providers:")[0].split("proxy-groups:")[0]
+    //console.log(cnt)
     return cnt
 }
 
@@ -1471,6 +1478,7 @@ function Clash2QX(cnt) {
     const yaml = new YAML()
     var aa = JSON.stringify(yaml.parse(YAMLFix(cnt)))
     var bb = JSON.parse(aa).proxies
+    //$notify("YAML Parse", "content", JSON.stringify(bb))
     //console.log(bb)
     var nl = bb.length
     var nodelist=[]
@@ -1584,7 +1592,7 @@ function CH2QX(cnt){
         pwd = cnt.password ? "password=" + cnt.password : ""
         tls = cnt.tls ? "over-tls=true" : ""
         cert = cnt["skip-cert-verify"] && cnt.tls ? "tls-verification=false" : ""
-        if (Pcert0 == 0 && cnt.tls) { cert = "tls-verification=false" }
+        if (Pcert0 == 0) { cert = "tls-verification=false" }
         node = "http="+[ipt, uname, pwd, tls, cert, tag].filter(Boolean).join(", ")
         //console.log(node)
         return node
