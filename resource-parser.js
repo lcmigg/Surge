@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-29 17:19⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-08-29 19:00⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -156,7 +156,7 @@ function SubFlow() {
                 //var message = total + "\n" + usd + ", " + left;
                 var message=usd+"\n"+left+", "+total;
                 ntf_flow = 1;
-                $notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
+                //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
                 $notify("👉魅影极速", epr, message, my_link)
         }
 }
