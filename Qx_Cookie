@@ -1,5 +1,5 @@
 #Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn,maying.co
 
 ;hostname = new.api.hdcj.9w9.com
 #京东签到获取cookie
@@ -46,3 +46,6 @@ https?:\/\/m\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-r
 
 # 太好购
 ^https://cxdng\.cpic\.com\.cn/taieshop/api/CustomerFansInfo/GetFansInfo url script-request-header https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.cookie.js
+
+#  > 机场签到Cookie
+^https:\/\/maying\.co url script-request-header https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
