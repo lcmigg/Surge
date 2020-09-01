@@ -1,12 +1,12 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-09-01 08:29⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-09-01 13:59⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
-☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
+⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
 ❖ 本地资源片段引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行 ❖
 
 1️⃣ ⟦𝐬𝐞𝐫𝐯𝐞𝐫 节点⟧ ➠ 参数说明:
@@ -202,9 +202,9 @@ if (type0 == "Subs-B64Encode") {
     flag = -1;
 } else { flag = 0 }
 
-if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
 
 if (flag == 1) { //server 类型统一处理
+    total = total.filter(Boolean)
     if (Pinfo == 1 && ntf_flow == 0) { //假节点类型的流量通知
         flowcheck(total)
     }
@@ -232,8 +232,9 @@ if (flag == 1) { //server 类型统一处理
     if (Psort0) {
         total = QXSort(total, Psort0);
     }
+    if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
     total = TagCheck_QX(total) //节点名检查
-    //if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
+    if (Pcnt == 1) {$notify("final content" , "Nodes", total)}
     if (flag == 1) { total = Base64.encode(total.join("\n")) } //强制节点类型 base64 加密后再导入 Quantumult X
     $done({ content: total });
 } else { $done({ content: total });}
@@ -261,7 +262,7 @@ function flowcheck(cnt) {
 // regex 后的检查
 function RegCheck(total, typen, regpara) {
 	if(total.length == 0){ 
-		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
+		$notify("‼️ " + typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
 	}else if((typen != "节点订阅" && Pntf0 !=0) || (typen == "节点订阅" && Pntf0 ==1)){
 		var nolist = total.length <= 10 ? emojino[total.length] : total.length
 		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余以下" + nolist + "个匹配项 \\n ⨷ " + total.join("\n ⨷ "))
@@ -291,11 +292,11 @@ function Type_Check(subs) {
         type = "Clash";
         //console.log(type)
         content0 = Clash2QX(subs)
-    } else if ( (subi.indexOf("[Script]") != -1 || subi.indexOf("[Rule]") != -1 || subs.indexOf("[URL Rewrite]") != -1 || subs.indexOf("[Map Local]") != -1 || subs.indexOf("[MITM]") != -1 || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) ) { // Surge 类型 module /rule-set(含url-regex) 类型
+    } else if ( (subi.indexOf("[Script]") != -1 || subi.indexOf("[Rule]") != -1 || subs.indexOf("[URL Rewrite]") != -1 || subs.indexOf("[Map Local]") != -1 || subs.indexOf("[MITM]") != -1 || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) && subs.indexOf("[Proxy]") == -1) { // Surge 类型 module /rule-set(含url-regex) 类型
         type = "sgmodule"
     } else if (subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck)) {
         type = "rewrite" //Quantumult X 类型 rewrite
-    } else if (RuleK.some(RuleCheck) && subs.indexOf(html) == -1) {
+    } else if (RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && subs.indexOf("[Proxy]") == -1) {
         type = "Rule";
     } else if (DomainK.some(RuleCheck)) {
         type = "Rule";
@@ -501,11 +502,11 @@ function HostNamecheck(content, parain, paraout) {
                         nname.push(hname[i])
                     } else {
                         dname.push(hname[i])
-                    } //Pin 未命中🎯️的记录
+                    } //Pin 未命中的记录
                 } else { nname.push(hname[i]) }	//无in 参数		
             } else { dname.push(hname[i]) } //out 参数命中
         } else if (parain && parain != "") { //不存在 out，但有 in 参数时
-            if (parain.some(excludehn)) { //Pin 命中🎯️
+            if (parain.some(excludehn)) { //Pin 命中
                 nname.push(hname[i])
             } else { dname.push(hname[i]) }
         } else {
@@ -969,6 +970,7 @@ function Filter(servers, Pin, Pout) {
     var Nlist = [];
     var Delist = [];
     var Nname = [];
+    servers = servers.filter(Boolean)
     for (var i = 0; i < servers.length; i++) {
         if (Scheck(servers[i], Pin) != 0 && Scheck(servers[i], Pout) != 1) {
             Nlist.push(servers[i])
