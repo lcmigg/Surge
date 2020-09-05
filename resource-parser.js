@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-09-03 10:39⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-09-05 14:49⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -157,7 +157,7 @@ function SubFlow() {
         //var message = total + "\n" + usd + ", " + left;
         var message=usd+"\n"+left+", "+total;
         ntf_flow = 1;
-        //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
+        //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
         $notify("👉魅影极速", epr, message)
     }
 }
@@ -192,11 +192,11 @@ if (type0 == "Subs-B64Encode") {
     RegCheck(total, "分流引用", Preg)} 
     total = total.join("\n")
 } else if (content0.trim() == "") {
-    $notify("‼️ 引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "⁉️ 点通知跳转以确认链接是否失效", para.split("#")[0]);
+    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
     $done({ content: "" })
 } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "⚠️ 将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
     $done({ content: content0 });
     flag = -1;
 } else { flag = 0 }
@@ -232,7 +232,7 @@ if (flag == 1) { //server 类型统一处理
         total = QXSort(total, Psort0);
     }
     if (total.length > 0){
-      if (Pcnt == 1) {$notify("final content" , "Nodes:" +total.length, total)}
+      if (Pcnt == 1) {$notify("Final Content" , "Nodes: " +total.length, total)}
       total = TagCheck_QX(total).join("\n") //节点名检查
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
@@ -265,7 +265,7 @@ function flowcheck(cnt) {
 // regex 后的检查
 function RegCheck(total, typen, regpara) {
 	if(total.length == 0){ 
-		$notify("‼️ " + typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
+		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
 	}else if((typen != "节点订阅" && Pntf0 !=0) || (typen == "节点订阅" && Pntf0 ==1)){
 		var nolist = total.length <= 10 ? emojino[total.length] : total.length
 		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余以下" + nolist + "个匹配项 \\n ⨷ " + total.join("\n ⨷ "))
@@ -290,7 +290,7 @@ function Type_Check(subs) {
     const RewriteCheck = (item) => subs.indexOf(item) != -1;
     var subsn = subs.split("\n")
     if (subs.indexOf(html) != -1) {
-      $notify("‼️ 该链接返回内容有误", "⁉️ 点通知跳转以确认链接是否失效", link0);
+      $notify("该链接返回内容有误", "点通知跳转以确认链接是否失效", link0);
       type = "web";
     }  else if (ClashK.some(NodeCheck)){ // Clash 类型节点转换
       type = "Clash";
@@ -858,13 +858,13 @@ function Pobfs(jsonl, Pcert, Ptls13) {
     if (jsonl.net == "ws" && jsonl.tls == "tls") {
         obfs0 = "obfs=wss, " + tcert + ", " + tls13 + ", ";
         uri0 = jsonl.path && jsonl.path != "" ? "obfs-uri=" + jsonl.path : "obfs-uri=/";
-        host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + "," : "";
+        host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + ", " : "";
         obfsi.push(obfs0 + host0 + uri0)
         return obfsi.join(", ")
     } else if (jsonl.net == "ws") {
         obfs0 = "obfs=ws";
         uri0 = jsonl.path && jsonl.path != "" ? "obfs-uri=" + jsonl.path : "obfs-uri=/";
-        host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + "," : "";
+        host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + ", " : "";
         obfsi.push(obfs0, host0 + uri0);
         return obfsi.join(", ")
     } else if (jsonl.tls == "tls" && jsonl.net == "tcp") { // 过滤掉 h2/http 等类型 
@@ -944,7 +944,7 @@ function Filter(servers, Pin, Pout) {
 }
 
 function FilterScript(servers, script) {
-    $notify("🤖 启用脚本进行筛选", "", script);
+    $notify("启用脚本进行筛选", "", script);
     try {
         const $ = Tools();
         eval(script);
@@ -957,7 +957,7 @@ function FilterScript(servers, script) {
         }
         return res;
     } catch (err) {
-        $notify("❌ 脚本筛选出现错误", "", err);
+        $notify("脚本筛选出现错误", "", err);
         return servers;
     }
 }
@@ -1191,7 +1191,7 @@ function Rename(str) {
 }
 
 function RenameScript(servers, script) {
-    $notify("🤖 启用脚本进行重命名", "", script);
+    $notify("启用脚本进行重命名", "", script);
     try {
         const $ = Tools().rename;
         // extract server tags
@@ -1201,7 +1201,7 @@ function RenameScript(servers, script) {
         // rename nodes
         return servers.map((s, i) => s.split("tag=")[0] + "tag=" + newNames[i]);
     } catch (err) {
-        $notify("❌ 脚本重命名出现错误", "", err);
+        $notify("脚本重命名出现错误", "", err);
         return servers;
     }
 
@@ -1488,14 +1488,14 @@ function CSS2QX(cnt) {
   mtd = "method="+ cnt.cipher
   udp = cnt.udp ? "udp-relay=true" : "udp-relay=false"
   tfo = cnt.tfo ? "fast-open=true" : "fast-open=false"
-  obfs = cnt.plugin == "obfs"? "obfs=" + cnt["plugin-opts"].mode : ""
-  ohost = cnt.plugin == "obfs"? "obfs-host=" + cnt["plugin-opts"].host : ""
+  obfs = cnt["plugin-opts"] ? "obfs=" + cnt["plugin-opts"].mode : ""
+  ohost = cnt["plugin-opts"] ? "obfs-host=" + cnt["plugin-opts"].host : ""
   ouri = ""
   cert = ""
-  if (cnt.plugin == "v2ray-plugin") {
-    obfs = cnt["plugin-opts"].tls? "obfs=wss" : "obfs=ws"
-    ohost = cnt["plugin-opts"].host? "obfs-host=" + cnt["plugin-opts"].host:""
-    ouri = cnt["plugin-opts"].path? "obfs-uri=" + cnt["plugin-opts"].path: ""
+  if (obfs.indexOf("websocket") != -1) {
+      obfs = cnt["plugin-opts"].tls? "obfs=wss" : "obfs=ws"
+      ohost = cnt["plugin-opts"].host? "obfs-host=" + cnt["plugin-opts"].host:""
+      ouri = cnt["plugin-opts"].path? "obfs-uri=" + cnt["plugin-opts"].path: ""
     if (obfs == "obfs=wss") { // tls verification
       cert = Pcert0 == 1? "" : "tls-verification =false"}
   }
