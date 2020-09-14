@@ -1,5 +1,5 @@
 #Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn,maying.co,www.baimaa.com
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn,maying.co,www.baimaa.com,wq.jd.com
 
 ;hostname = new.api.hdcj.9w9.com
 #京东签到获取cookie
@@ -52,3 +52,6 @@ https?:\/\/m\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-r
 
 # 打卡Cookie
 ^https:\/\/www\.baimaa\.com\/* url script-request-header https://raw.githubusercontent.com/sngxpro/scripts/master/yydkziye.js
+
+# 京喜
+https:\/\/wq\.jd\.com\/pgcenter\/sign\/QueryPGDetail\?sceneval=2&pageSize url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
