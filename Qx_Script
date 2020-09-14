@@ -1,5 +1,5 @@
 #hostname
-;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com, wq.jd.com
+;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
 
 #JS
 #微信公众号
@@ -33,8 +33,6 @@
 ;^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-request-header https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 ;^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
-# 京喜
-https:\/\/wq\.jd\.com\/pgcenter\/sign\/QueryPGDetail\?sceneval=2&pageSize url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
 # JD 去广告
 ;^https?://api\.m\.jd\.com/client\.action\?functionId=(start|myOrderInfo|orderTrackBusiness) url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/JDAdRemove.js
 # JD Price
