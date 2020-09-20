@@ -76,6 +76,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^http://iadmusicmat\.music\.126\.net/.*jpg$ url reject-img
 ^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$ url reject
 ^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ url reject
 
 # > JD
 ^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
@@ -137,7 +138,8 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 #BiliBili
 ;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
-;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
+^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash url reject-200
 
 #ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
