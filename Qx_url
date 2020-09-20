@@ -26,8 +26,6 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004 url reject-200
 ^(http|https):\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 url reject-200
 ^(http|https):\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_ url reject-200
-# > Tencent News - r.inews.qq.com
-^(http|https):\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) url reject-200
 # > Tencent Sports - news.ssp.qq.com
 ^(http|https):\/\/news\.ssp\.qq\.com\/app url reject-200
 
@@ -41,10 +39,8 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_ url reject
 ^https?:\/\/.+\.youtube\.com\/get_midroll_ url reject
 ^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite url reject
-;^https?:\/\/.+\.youtube\.com\/api\/stats\/ads url reject
-;^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat url reject
-;^https?:\/\/.+\.youtube\.com\/pagead\/ url reject
-;^https?:\/\/.+\.youtube\.com\/ptracking url reject
+^https?:\/\/\w+\.youtube\.com\/api\/stats\/ads url reject
+^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) url reject
 
 #爱奇艺
 ;^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject
@@ -65,10 +61,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^(http|https):\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
 ^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.exposure\.get\/ url reject
 
-#163
+#163 mail
 https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
-
 
 #163 Music
 ^https?://interface[1-9]\.music\.163\.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
@@ -133,8 +128,8 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload) url reject
 
 #zhihu
-;^https:\/\/pic\d\.zhimg\.com\/70\/ url reject
-;^https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)|brand\/questions\/\d+\/activity\/answers\/red-packet(\/|\?|$)) url reject-200
+^https:\/\/pic\d\.zhimg\.com\/70\/ url reject
+^https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)|brand\/questions\/\d+\/activity\/answers\/red-packet(\/|\?|$)) url reject-200
 
 #BiliBili
 ;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/advert|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
@@ -173,6 +168,3 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 #微信小程序，交作业app
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
-
-#云闪付开屏(不能用)
-;^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/large\/kjp\d+\.png$ url reject-200
