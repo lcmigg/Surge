@@ -99,6 +99,11 @@ ip-cidr, 101.227.200.11/32, reject
 ip-cidr, 101.227.200.28/32, reject
 ip-cidr, 124.192.153.42/32, reject
 
+# > Hupu
+DOMAIN,adx.hupu.com,REJECT
+DOMAIN,adx-api.hupu.com,REJECT
+DOMAIN,goblin.hupu.com,REJECT
+
 # > NetEase
 host-suffix, dsp.youdao.com, reject
 host-suffix, union.youdao.com, reject
@@ -154,9 +159,6 @@ host, ad.12306.cn, reject
 host, iflyad.bj.openstorage.cn, reject
 host, ads.voiceads.cn, reject
 
-# 黑匣子
-#host-suffix, adview.cn, reject
-#host-suffix, admaster.com.cn, reject
 # bilibili
 host, dataflow.biliapi.com, reject
 host, data.bilibili.com, reject
@@ -181,7 +183,6 @@ host-suffix, appcloud2.in.zhihu.com, reject
 
 # KEYWORD
 host-keyword, admarvel, reject
-#host-keyword, admaster, reject
 host-keyword, adsage, reject
 host-keyword, adsmogo, reject
 host-keyword, adsrvmedia, reject
@@ -192,7 +193,6 @@ host-keyword, guanggao, reject
 host-keyword, openx, reject
 host-keyword, pingfore, reject
 host-keyword, supersonicads, reject
-#host-keyword, tracking, reject
 host-keyword, uedas, reject
 host-keyword, umeng.co, reject
 host-keyword, usage, reject
@@ -285,19 +285,23 @@ host, sugar.zhihu.com, reject
 #host, trackapp.guahao.cn, reject
 #host, traffic.mogujie.com, reject
 host, wmlog.meituan.com, reject
+
 #weibo
 ;user-agent, Moke*, CN|Proxy
 host-suffix, weibocdn.com, CN|Proxy
 host-suffix, weibo.com, CN|Proxy
 host-suffix, weibo.cn, CN|Proxy
 host-suffix, sinaimg.cn, CN|Proxy
+
 #Netease_Music
 host-suffix, music.163.com, Netease_Music
 host-suffix, interface.music.163.com, Netease_Music
+
 #QQSports
 user-agent, QQSportsV3*, CN|Proxy
 host-suffix, video.qq.com, CN|Proxy
 host-suffix, sports.qq.com, CN|Proxy
+
 # cnProxy
 user-agent, WeChat*, direct
 user-agent, MicroMessenger*, direct
