@@ -1,5 +1,6 @@
 #hostname
 ;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
+hostname = api.hulusaas.com
 
 #JS
 #微信公众号
@@ -57,3 +58,8 @@
 #克拉壁纸
 ;^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/clarity.js
 
+#彩云天气 Vip  biz.caiyunapp.com
+;^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/ColorWeather.js
+
+#keep
+;^https:\/\/api\.gotokeep\.com\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js
