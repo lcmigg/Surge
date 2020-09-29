@@ -1,5 +1,5 @@
 #hostname
-hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn
+hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com,new.api.hdcj.9w9.com,wallet.95516.com,dxy.com,*.dxy.cn,newdrugs.dxy.cn
 
 # header-rewrite
@@ -49,17 +49,10 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ;^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject
 
 #Alibaba
-# > Taobao - gw.alicdn.com,heic.alicdn.com
-^(http|https):\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) url reject
-# > Xianyu - acs.m.taobao.com
-^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
-# > Fliggy - acs.m.taobao.com
-^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ url reject
-# > koubei - acs.m.taobao.com
-^(http|https):\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
-^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ url reject
-^(http|https):\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
-^(http|https):\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.exposure\.get\/ url reject
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtopadvertiseapi)\.querytmsresources|(taobao\.idle\.home|aliyun\.mobile)\.welcome(page)?|.*?\.ads?\.) url reject
+^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt) url reject
+^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
 
 #163 mail
 https?:\/\/clientlog3\.music\.163\.com url reject-dict
