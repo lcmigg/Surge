@@ -74,6 +74,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 # 拼多多
 ^http:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash url reject-200
+^https?:\/\/t00img\.yangkeduo\.com\/goods\/[\d-]+\/[A-Za-z0-9]+\.jpeg\?imageView2\/format\/webp$ url reject
 
 #广发证券&发现精彩
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d+\.(png|jpg) url reject-img
