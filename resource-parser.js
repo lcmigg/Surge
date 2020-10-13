@@ -1,9 +1,13 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-10-01 00:01⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-10-11 10:32⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
+
+主要功能: 
+❶ 将其它格式的服务器订阅解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
+☑︎ 支持 𝗩𝗺𝗲𝘀𝘀/𝗦𝗦(𝗥/𝗗)/𝗛𝗧𝗧𝗣(𝗦)/𝗧𝗿𝗼𝗷𝗮𝗻/𝗤𝘂𝗮𝗻𝘁𝘂𝗺𝘂𝗹𝘁(𝗫)/𝗦𝘂𝗿𝗴𝗲/𝐂𝐥𝐚𝐬𝐡/𝐒𝐡𝐚𝐝𝐨𝐰𝐫𝐨𝐜𝐤𝐞𝐭/𝐋𝐨𝐨𝐧 格式
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
 ⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
@@ -15,18 +19,17 @@
 ⦿ 𝗶𝗻𝗳𝗼=1, 开启通知提示机场 ✈️ 流量信息(如有提供);
 ⦿ 𝗲𝗺𝗼𝗷𝗶=1(国行设备用2)/-1, 添加/删除节点名内地区旗帜;
 ⦿ 𝘂𝗱𝗽=1/-1, 𝘁𝗳𝗼=1/-1, 分别强制开启(关闭) 𝐮𝐝𝐩-𝐫𝐞𝐥𝐚𝐲/𝐟𝐚𝐬𝐭-𝐨𝐩𝐞𝐧;
-⦿ 𝘁𝗹𝘀13=1, 𝗰𝗲𝗿𝘁=1, 分别开启 𝐭𝐥𝐬1.3 及 "𝐭𝐥𝐬-𝐯𝐞𝐫𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧=𝐭𝐫𝐮𝐞" 证书验证(默认关闭);
+⦿ 𝘁𝗹𝘀13=1, 𝗰𝗲𝗿𝘁=1, 分别开启 𝐭𝐥𝐬1.3 及 𝐭𝐥𝐬 证书验证(默认关闭);
 ⦿ 𝗶𝗻, 𝗼𝘂𝘁, 𝗿𝗲𝗴𝗲𝘅 分别为 保留、删除、正则筛选 节点;
   ❖ 𝗶𝗻, 𝗼𝘂𝘁 中多参数(逻辑"或")用 "+", 逻辑"与"用 "." 表示;
-  ❖ 示范: "𝐢𝐧=香港.0\.2倍率+台湾&𝐨𝐮𝐭=香港%20𝐁𝐆𝐏"
-  ❖ 𝗿𝗲𝗴𝗲𝘅 可与 𝗶𝗻/𝗼𝘂𝘁 参数搭配使用, 𝗶𝗻/𝗼𝘂𝘁 会优先执行;
-  ❖ 𝗿𝗲𝗴𝗲𝘅 会对节点的完整信息进行匹配(类型、端口、加密等)
+  ❖ 𝗿𝗲𝗴𝗲𝘅 会对节点的完整信息进行匹配(类型、端口、加密等);
+  ❖ 示范: "𝐢𝐧=香港.0\.2倍率+台湾&𝐨𝐮𝐭=香港%20𝐁𝐆𝐏&𝐫𝐞𝐠𝐞𝐱=(?𝐢)𝐢𝐩𝐥𝐜"
 ⦿ 𝗿𝗲𝗻𝗮𝗺𝗲 重命名, "旧名@新名", "前缀@", "@后缀", 用 "+" 连接多个参数;
   ❖ 删除字段: "字段1.字段2☠️", 想删除 "." 时用 "\." 替代
   ❖ 示范: "𝐫𝐞𝐧𝐚𝐦𝐞=香港@𝐇𝐊+[𝐒𝐒]@+@[1𝐗]+流量.0\.2☠️"
-  ❖ 默认emoji 先生效, 如想更改顺序, 请用 𝗿𝗿𝗻𝗮𝗺𝗲 参数
+  ❖ 默认 emoji 先生效, 如想调换顺序, 请用 𝗿𝗿𝗻𝗮𝗺𝗲 参数
 ⦿ 𝗱𝗲𝗹𝗿𝗲𝗴, 利用正则表达式来删除 "节点名" 中的字段(⚠️ 慎用)
-⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换 𝐬𝐞𝐫𝐯𝐞𝐫 中内容, 可用于重命名/更改加密方式等
+⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换节点中内容, 可用于重命名/更改加密方式等
   ❖ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲=𝗿𝗲𝗴𝗲𝘅1@𝘀𝘁𝗿1+𝗿𝗲𝗴𝗲𝘅2@𝘀𝘁𝗿2
   ❖ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲=𝗿𝗲𝗴𝗲𝘅1@ 则等效于 𝗱𝗲𝗹𝗿𝗲𝗴 参数
 ⦿ 𝘀𝗼𝗿𝘁=1/-1/x/指定规则, 分别按节点名 正/逆/随机/指定规则 排序
@@ -59,6 +62,7 @@
 ----------------------------------------------------------
 */
 
+
 /**
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
@@ -70,6 +74,7 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 4️⃣ 填入上述链接, 并打开的资源解析器开关
 ------------------------------
 */
+
 var content0 = $resource.content;
 var link0 = $resource.link;
 //debug
@@ -99,8 +104,10 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
+
 SubFlow() //流量通知
-    
+
+
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
 var Pout0 = mark0 && para1.indexOf("out=") != -1 ? (para1.split("out=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -134,69 +141,15 @@ var exptime = "";
 var type0 = Type_Check(content0); //  类型判断
 //$notify(type0,"hh",content0)
 
-//响应头流量处理部分
-function SubFlow() {
-    if (Pinfo == 1 && subinfo) {
-        var sinfo = subinfo.replace(/ /g, "").toLowerCase();
-        var total = "总流量: " + (parseFloat(sinfo.split("total=")[1].split(",")[0]) / (1024 ** 3)).toFixed(2) + "GB";
-        var usd = "已用流量: " + ((parseFloat(sinfo.indexOf("upload")!=-1?sinfo.split("upload=")[1].split(",")[0]:"0") + parseFloat(sinfo.split("download=")[1].split(",")[0])) / (1024 ** 3)).toFixed(2) + "GB"
-        var left = "剩余流量: " + ((parseFloat(sinfo.split("total=")[1].split(",")[0]) / (1024 ** 3)) - ((parseFloat(sinfo.indexOf("upload")!=-1?sinfo.split("upload=")[1].split(",")[0]:"0") + parseFloat(sinfo.split("download=")[1].split(",")[0])) / (1024 ** 3))).toFixed(2) + "GB"
-        if (sinfo.indexOf("expire=") != -1) {
-            var epr = new Date(parseFloat(sinfo.split("expire=")[1].split(",")[0]) * 1000);
-            var year = epr.getFullYear();  // 获取完整的年份(4位,1970)
-            var mth = epr.getMonth() + 1 < 10 ? '0' + (epr.getMonth() + 1) : (epr.getMonth() + 1);  // 获取月份(0-11,0代表1月,用的时候记得加上1)
-            var day = epr.getDate() < 10 ? "0" + (epr.getDate()) : epr.getDate();
-            epr = "过期时间: " + year + "-" + mth + "-" + day
-        } else {
-            epr = ""; //"过期时间: ✈️ 未提供該信息" //没过期时间的显示订阅链接
-        }
-        //var message = total + "\n" + usd + ", " + left;
-        var message=usd+"\n"+left+", "+total;
-        ntf_flow = 1;
-        //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
-        $notify("👉魅影极速", epr, message)
-    }
-}
-
 //flag=1,2,3分别为 server、rewrite、rule 类型
+const errornode=""
 var flag = 1
-if (type0 == "Subs-B64Encode") {
-    total = Subs2QX(Base64.decode(content0), Pudp0, Ptfo0, Pcert0, PTls13);
-} else if (type0 == "Subs") {
-    total = Subs2QX(content0, Pudp0, Ptfo0, Pcert0, PTls13);
-} else if (type0 == "QuanX" || type0 == "Clash") {
-    total = isQuanX(content0);
-} else if (type0 == "Surge") {
-    total = Surge2QX(content0);
-} else if (type0 == "sgmodule") { // surge module 模块/含 url-regex 的 rule-set
-    flag = 2 
-    total = SGMD2QX(content0) // 转换 
-    total = Rewrite_Filter(total, Pin0, Pout0); // 筛选过滤
-    if (Preplace) { total = ReplaceReg(total, Preplace) }
-    total = total.join("\n")
-} else if (type0 == "rewrite") { // rewrite 类型
-    flag = 2;
-    total = Rewrite_Filter(content0.split("\n"), Pin0, Pout0);
-    if (Preplace) { total = ReplaceReg(total, Preplace) }
-    total = total.join("\n")
-} else if (type0 == "Rule") {  // rule 类型, 已处理完毕
-    flag = 3;
-    total = Rule_Handle(content0.split("\n"), Pout0, Pin0).filter(Boolean);
-    if (Preg && total.length!=0) { // 正则筛选规则 filter
-    total = total.map(Regex).filter(Boolean).join("\n") 
-    if (Preplace) { total = ReplaceReg(total, Preplace) }
-    RegCheck(total, "分流引用", Preg)} 
-    total = total.join("\n")
-} else if (content0.trim() == "") {
-    $notify("‼️ 引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
-    flag = 0;
-    $done({ content: "" })
-} else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug" + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
-    $done({ content: content0 });
-    flag = -1;
-} else { flag = 0 }
 
+try {
+  ResourceParse();
+} catch (err) {
+    $notify("❌ 解析出现错误", "", err);
+}
 
 if (flag == 1) { //server 类型统一处理
     total = total.filter(Boolean)
@@ -233,15 +186,80 @@ if (flag == 1) { //server 类型统一处理
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示", "解析后无有效内容", "请自行检查, 或者点击通知跳转反馈")
+      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $done({ content: errornode })
     }
-    
+} else if (flag == 0){
+  $done({ content: errornode })
+} else if (flag == -1){
+  $done({ content: content0 })
 } else { $done({ content: total });}
 
 /**
 # 以下为具体的 function
 
 */
+
+function ResourceParse() {
+  if (type0 == "Subs-B64Encode") {
+    total = Subs2QX(Base64.decode(content0), Pudp0, Ptfo0, Pcert0, PTls13);
+  } else if (type0 == "Subs") {
+    total = Subs2QX(content0, Pudp0, Ptfo0, Pcert0, PTls13);
+  } else if (type0 == "QuanX" || type0 == "Clash") {
+    total = isQuanX(content0);
+  } else if (type0 == "Surge") {
+    total = Surge2QX(content0);
+  } else if (type0 == "sgmodule") { // surge module 模块/含 url-regex 的 rule-set
+    flag = 2 
+    total = SGMD2QX(content0) // 转换 
+    total = Rewrite_Filter(total, Pin0, Pout0); // 筛选过滤
+    if (Preplace) { total = ReplaceReg(total, Preplace) }
+    total = total.join("\n")
+  } else if (type0 == "rewrite") { // rewrite 类型
+    flag = 2;
+    total = Rewrite_Filter(content0.split("\n"), Pin0, Pout0);
+    if (Preplace) { total = ReplaceReg(total, Preplace) }
+    total = total.join("\n")
+  } else if (type0 == "Rule") {  // rule 类型, 已处理完毕
+    flag = 3;
+    total = Rule_Handle(content0.split("\n"), Pout0, Pin0).filter(Boolean);
+    if (Preg && total.length!=0) { // 正则筛选规则 filter
+    total = total.map(Regex).filter(Boolean).join("\n") 
+    if (Preplace) { total = ReplaceReg(total, Preplace) }
+    RegCheck(total, "分流引用", Preg)} 
+    total = total.join("\n")
+  } else if (content0.trim() == "") {
+    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
+    flag = 0;
+  } else if (type0 == "unknown") {
+    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    flag = -1;
+  } else { flag = 0 }
+}
+
+//响应头流量处理部分
+function SubFlow() {
+  if (Pinfo == 1 && subinfo) {
+    var sinfo = subinfo.replace(/ /g, "").toLowerCase();
+    var total = "总流量: " + (parseFloat(sinfo.split("total=")[1].split(",")[0]) / (1024 ** 3)).toFixed(2) + "GB";
+    var usd = "已用流量: " + ((parseFloat(sinfo.indexOf("upload")!=-1?sinfo.split("upload=")[1].split(",")[0]:"0") + parseFloat(sinfo.split("download=")[1].split(",")[0])) / (1024 ** 3)).toFixed(2) + "GB"
+    var left = "剩余流量: " + ((parseFloat(sinfo.split("total=")[1].split(",")[0]) / (1024 ** 3)) - ((parseFloat(sinfo.indexOf("upload")!=-1?sinfo.split("upload=")[1].split(",")[0]:"0") + parseFloat(sinfo.split("download=")[1].split(",")[0])) / (1024 ** 3))).toFixed(2) + "GB"
+    if (sinfo.indexOf("expire=") != -1) {
+      var epr = new Date(parseFloat(sinfo.split("expire=")[1].split(",")[0]) * 1000);
+      var year = epr.getFullYear();  // 获取完整的年份(4位,1970)
+      var mth = epr.getMonth() + 1 < 10 ? '0' + (epr.getMonth() + 1) : (epr.getMonth() + 1);  // 获取月份(0-11,0代表1月,用的时候记得加上1)
+      var day = epr.getDate() < 10 ? "0" + (epr.getDate()) : epr.getDate();
+      epr = "过期时间: " + year + "-" + mth + "-" + day
+    } else {
+      epr = ""; //"过期时间: ✈️ 未提供該信息" //没过期时间的显示订阅链接
+    }
+    //var message = total + "\n" + usd + ", " + left;
+    var message=usd+"\n"+left+", "+total;
+    ntf_flow = 1;
+    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
+    $notify("👉魅影极速", epr, message)
+  }
+}
 
 //flowcheck-fake-server
 function flowcheck(cnt) {
@@ -275,7 +293,7 @@ function Type_Check(subs) {
     var QuanXK = ["shadowsocks=", "trojan=", "vmess=", "http="];
     var SurgeK = ["=ss,", "=vmess,", "=trojan,", "=http,", "=custom,", "=https,", "=shadowsocks", "=shadowsocksr"];
     var ClashK = ["proxies:"]
-    var SubK = ["dm1lc3M", "c3NyOi8v", "dHJvamFu", "c3M6Ly", "c3NkOi8v", "c2hhZG93"];
+    var SubK = ["dm1lc3M", "c3NyOi8v", "CnNzOi8", "dHJvamFu", "c3M6Ly", "c3NkOi8v", "c2hhZG93"];
     var RewriteK = [" url "]
     var SubK2 = ["ss://", "vmess://", "ssr://", "trojan://", "ssd://", "https://"];
     var ModuleK = ["[Script]", "[Rule]", "[URL Rewrite]", "[Map Local]", "[MITM]", "\nhttp-r"]
@@ -512,7 +530,7 @@ function HostNamecheck(content, parain, paraout) {
                         nname.push(hname[i])
                     } else {
                         dname.push(hname[i])
-                    } //Pin 未命中的记录
+                    } //Pin 未命中🎯️的记录
                 } else { nname.push(hname[i]) }	//无in 参数		
             } else { dname.push(hname[i]) } //out 参数命中
         } else if (parain && parain != "") { //不存在 out，但有 in 参数时
@@ -959,11 +977,11 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
-        $notify("脚本筛选出现错误", "", err);
+        $notify("❌ 脚本筛选出现错误", "", err);
         return servers;
     }
 }
@@ -1009,6 +1027,7 @@ function TJ2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
     pwd = "password=" + cnt.split("@")[0];
     obfs = "over-tls=true";
     pcert = cnt.indexOf("allowInsecure=0") != -1 ? "tls-verification=true" : "tls-verification=false";
+    thost = cnt.indexOf("sni=") != -1? "tls-host="+cnt.split("sni=")[1].split("&")[0]:""
     ptls13 = Ptls13 == 1 ? "tls13=true" : "tls13=false"
     if (Pcert == 0) { pcert = "tls-verification=false" }
     pudp = Pudp == 1 ? "udp-relay=true" : "udp-relay=false";
@@ -1246,7 +1265,7 @@ function RenameScript(servers, script) {
         // rename nodes
         return servers.map((s, i) => s.split("tag=")[0] + "tag=" + newNames[i]);
     } catch (err) {
-        $notify("脚本重命名出现错误", "", err);
+        $notify("❌ 脚本重命名出现错误", "", err);
         return servers;
     }
 
@@ -1499,7 +1518,7 @@ function YAMLFix(cnt){
     }
     cnt = cnt.replace(/  -\n.*name/g,"  - name").replace(/\$|\`/g,"").split("proxy-providers:")[0].split("proxy-groups:")[0].replace(/\"(name|type|server|port|cipher|password|)\"/g,"$1")
     //console.log(cnt)
-    cnt = cnt.indexOf("proxies:") == -1? "proxies:\n" + cnt :cnt
+    cnt = cnt.indexOf("proxies:") == -1? "proxies:\n" + cnt :"proxies:"+cnt.split("proxies:")[1]
     return cnt
 }
 
