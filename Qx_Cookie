@@ -1,5 +1,5 @@
 #Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn,maying.co,www.baimaa.com,wq.jd.com,clientaccess.10086.cn
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,sf-integral-sign-in.weixinjia.net,iphone.myzaker.com,draw.jdfcloud.com,api-hdcj.9w9.com,api.1sapp.com,user-api-prd-mx.wandafilm.com,m.manmanbuy.com,cxdng.cpic.com.cn,maying.co,www.baimaa.com,wq.jd.com,clientaccess.10086.cn,youhui.95516.com
 
 ;hostname = new.api.hdcj.9w9.com
 #京东签到获取cookie
@@ -56,3 +56,6 @@ https:\/\/wq\.jd\.com\/pgcenter\/sign\/QueryPGDetail\?sceneval=2&pageSize url sc
 # 10086查话费
 ^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
 ^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+
+#云闪付签到
+https://youhui.95516.com/newsign/public/app/index.html url script-request-header https://gitee.com/passerby-b/javascript/raw/master/unipay.js
