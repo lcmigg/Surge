@@ -294,8 +294,8 @@ host-suffix, weibo.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, sinaimg.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 
 #Netease_Music
-host-suffix, music.163.com, Netease_Music
-host-suffix, interface.music.163.com, Netease_Music
+host-suffix, music.163.com, 𝙉𝙚𝙩𝙚𝙖𝙨𝙚𝙈𝙪𝙨𝙞𝙘
+host-suffix, interface.music.163.com, 𝙉𝙚𝙩𝙚𝙖𝙨𝙚𝙈𝙪𝙨𝙞𝙘
 
 #QQSports
 user-agent, QQSportsV3*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
