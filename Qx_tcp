@@ -27,27 +27,27 @@ user-agent, *siri*, direct
 ;host, cn-smp-paymentservices.apple.com, direct
 ;host, smp-device.apple.com, direct
 #appstore转圈
-host, p14-buy.itunes.apple.com, JT|Proxy
+host, p14-buy.itunes.apple.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # Apple
-host, appleiphonecell.com, CN|Proxy
-;user-agent, AppStore*, CN|Proxy
-host-keyword, icloud, CN|Proxy
-host-keyword, itunes, CN|Proxy
-host-suffix, aaplimg.com, CN|Proxy
-host-suffix, apple.co, CN|Proxy
-host-suffix, apple.com, CN|Proxy
-host-suffix, appsto.re, CN|Proxy
-host-suffix, cdn-apple.com, CN|Proxy
-host-suffix, me.com, CN|Proxy
-host-suffix, mzstatic.com, CN|Proxy
-host-suffix, icloud.com, CN|Proxy
-host-suffix, icloud-content.com, CN|Proxy
-host-suffix, itunes.com, CN|Proxy
-host-suffix, itunes-apple.com.akadns.net, CN|Proxy
+host, appleiphonecell.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;user-agent, AppStore*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-keyword, icloud, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-keyword, itunes, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, aaplimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, apple.co, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, apple.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, appsto.re, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, cdn-apple.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, me.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, mzstatic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, icloud.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, icloud-content.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, itunes.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, itunes-apple.com.akadns.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 # AVGLE
-host-suffix, aaplimg.com, JT|Proxy
-host-suffix, avgle.com, JT|Proxy
-host-suffix, ahcdn.com, JT|Proxy
+host-suffix, aaplimg.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, avgle.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ahcdn.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 
 # ME
 host-suffix, umengcloud.com, reject
@@ -287,344 +287,344 @@ host, sugar.zhihu.com, reject
 host, wmlog.meituan.com, reject
 
 #weibo
-;user-agent, Moke*, CN|Proxy
-host-suffix, weibocdn.com, CN|Proxy
-host-suffix, weibo.com, CN|Proxy
-host-suffix, weibo.cn, CN|Proxy
-host-suffix, sinaimg.cn, CN|Proxy
+;user-agent, Moke*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, weibocdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, weibo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, weibo.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sinaimg.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 
 #Netease_Music
 host-suffix, music.163.com, Netease_Music
 host-suffix, interface.music.163.com, Netease_Music
 
 #QQSports
-user-agent, QQSportsV3*, CN|Proxy
-host-suffix, video.qq.com, CN|Proxy
-host-suffix, sports.qq.com, CN|Proxy
+user-agent, QQSportsV3*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, video.qq.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sports.qq.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 
 # cnProxy
 user-agent, WeChat*, direct
 user-agent, MicroMessenger*, direct
-;user-agent, Moke*, CN|Proxy
-#user-agent, WeiboOverseas*, CN|Proxy
-#user-agent, PUClient*, CN|Proxy
-user-agent, QQ*, CN|Proxy
-#user-agent, QDaily*, CN|Proxy
+;user-agent, Moke*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#user-agent, WeiboOverseas*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#user-agent, PUClient*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+user-agent, QQ*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#user-agent, QDaily*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 #user-agent, AliBank*, direct
 #user-agent, CallWatch*, direct
-user-agent, Tweetbot*, JT|Proxy
-#user-agent, Twitter*, JT|Proxy
-user-agent, *ou?ube*, JT|Proxy
-user-agent, *telegra*, JT|Proxy
-#user-agent, Hyperbase*, JT|Proxy
-#user-agent, kiwi*, CN|Proxy
+user-agent, Tweetbot*, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#user-agent, Twitter*, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+user-agent, *ou?ube*, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+user-agent, *telegra*, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#user-agent, Hyperbase*, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#user-agent, kiwi*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 #user-agent, OneTravel*, direct
-user-agent, Speedtest*, JT|Proxy
-host-keyword, speedtest, JT|Proxy
-host-suffix, ooklaserver.net, JT|Proxy
-host-suffix, fast.com, JT|Proxy
-host-suffix, luojilab.com, CN|Proxy
-host-suffix, igetget.com, CN|Proxy
-host, stats.mlinks.cc, CN|Proxy
-host-suffix, ctrip.com, CN|Proxy
-host-suffix, tieyou.com, CN|Proxy
-host-suffix, zhixingapp, CN|Proxy
+user-agent, Speedtest*, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-keyword, speedtest, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ooklaserver.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, fast.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, luojilab.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, igetget.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host, stats.mlinks.cc, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ctrip.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tieyou.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, zhixingapp, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-keyword, lastpass, direct
 host-suffix, paypal.com, direct
-host-suffix, hockeyapp.net, CN|Proxy
-host, zhibo.gameday.ren, CN|Proxy
-host, espnzhibo.com, CN|Proxy
+host-suffix, hockeyapp.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host, zhibo.gameday.ren, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host, espnzhibo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, 95508.com, direct
 host-suffix, ccb.com, direct
-host-suffix, jingoal.com, CN|Proxy
-host-suffix, yikeweiqi.com, CN|Proxy
-host-suffix, golinksworld.com, CN|Proxy
-;host-suffix, qingmang.mobi, CN|Proxy
-;host-suffix, qingmang.me, CN|Proxy
-host-suffix, veryzhun.com, CN|Proxy
-host-suffix, i.meituan.com, CN|Proxy
-host-suffix, ruguoapp.com, CN|Proxy
+host-suffix, jingoal.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, yikeweiqi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, golinksworld.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, qingmang.mobi, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, qingmang.me, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, veryzhun.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, i.meituan.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ruguoapp.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, servicewechat.com, direct
-host-suffix, dji.com, CN|Proxy
-host-suffix, djicdn.com, CN|Proxy
-host, dove.589669.xyz, JT|Proxy
-host-suffix, lzdxedu.com, CN|Proxy
+host-suffix, dji.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, djicdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host, dove.589669.xyz, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, lzdxedu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host, news.ssp.qq.com, reject
-host, huyaimg.msstatic.com, CN|Proxy
-host-suffix, coding.me, CN|Proxy
-host-suffix, flurry.com, JT|Proxy
-#host-suffix, xonline.tv, JT|Proxy
-#host-suffix, xonlinehd.com, JT|Proxy
-#host-suffix, xonline.vip, JT|Proxy
+host, huyaimg.msstatic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, coding.me, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, flurry.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, xonline.tv, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, xonlinehd.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, xonline.vip, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 #
-host-suffix, cn, CN|Proxy
-host-suffix, ccgslb.com, CN|Proxy
-host-suffix, ccgslb.net, CN|Proxy
-host-suffix, dl.google.com, CN|Proxy
-host, accounts.google.com, JT|Proxy, force-remote-dns
-host-suffix, appspot.com, JT|Proxy, force-remote-dns
-host-suffix, cdninstagram.com, JT|Proxy, force-remote-dns
-host-suffix, facebook.com, JT|Proxy, force-remote-dns
-host-suffix, fb.com, JT|Proxy, force-remote-dns
-host-suffix, fb.me, JT|Proxy, force-remote-dns
-host-suffix, fbcdn.net, JT|Proxy, force-remote-dns
-host-suffix, gmail.com, JT|Proxy, force-remote-dns
-host-suffix, googleapis.com, JT|Proxy, force-remote-dns
-host-suffix, instagram.com, JT|Proxy, force-remote-dns
-host-suffix, scdn.co, JT|Proxy, force-remote-dns
-host-suffix, t.co, JT|Proxy, force-remote-dns
-host-suffix, twimg.com, JT|Proxy, force-remote-dns
-host-suffix, twitpic.com, JT|Proxy, force-remote-dns
-host-suffix, twitter.com, JT|Proxy, force-remote-dns
-host-suffix, youtube-nocookie.com, JT|Proxy
-host-suffix, youtube.com, JT|Proxy, force-remote-dns
-host-keyword, googlevideo, JT|Proxy
-host-keyword, google, JT|Proxy, force-remote-dns
-#host-keyword, -cn, CN|Proxy
+host-suffix, cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ccgslb.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ccgslb.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, dl.google.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host, accounts.google.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, appspot.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, cdninstagram.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, facebook.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, fb.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, fb.me, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, fbcdn.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, gmail.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, googleapis.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, instagram.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, scdn.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, t.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, twimg.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, twitpic.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, twitter.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, youtube-nocookie.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, youtube.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-keyword, googlevideo, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-keyword, google, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+#host-keyword, -cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 # RRTV
-;host-suffix, rr.tv, CN|Proxy
-;host-suffix, app-measurement.com, JT|Proxy
+;host-suffix, rr.tv, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, app-measurement.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # Bootstrap中文网
 host-suffix, bootcss.com, reject
 # 点量视频解析
-#host-suffix, flvurl.cn, CN|Proxy
-host-suffix, xycdn.com, CN|Proxy
+#host-suffix, flvurl.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xycdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 #115导航
-host-suffix, p2cdn.com, CN|Proxy
+host-suffix, p2cdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 # 点量科技
-#host-suffix, dolit.cn, CN|Proxy
+#host-suffix, dolit.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 # 数美科技
 host-suffix, fengkongcloud.com, reject
 # 易博DSP
 host-suffix, emarbox.com, reject
 # 乐播投屏
-#host-suffix, hpplay.cn, CN|Proxy
-host-suffix, wuxiang.io, CN|Proxy
-host-suffix, didiaokan.com, CN|Proxy
-host-suffix, zhuishushenqi.com, CN|Proxy
-host-suffix, xiaojukeji.com, CN|Proxy
-host-suffix, alipayobjects.com, CN|Proxy
-host-suffix, jrszhibo.com, CN|Proxy
-host-suffix, tmiaoo.com, CN|Proxy
-host-suffix, yinyuetao.com, CN|Proxy
-#host-suffix, cntv.dnion.com, CN|Proxy
-#host-suffix, letving.com, CN|Proxy
-#host-suffix, 24zbw.com, CN|Proxy
-#host-suffix, 5chajian.com, CN|Proxy
-#host-suffix, rr.tv, CN|Proxy
-host-suffix, 126.net, CN|Proxy
-host-suffix, 127.net, CN|Proxy
-#host-suffix, cx580.com, CN|Proxy
+#host-suffix, hpplay.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, wuxiang.io, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, didiaokan.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, zhuishushenqi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xiaojukeji.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, alipayobjects.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, jrszhibo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tmiaoo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, yinyuetao.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, cntv.dnion.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, letving.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, 24zbw.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, 5chajian.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, rr.tv, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, 126.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, 127.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, cx580.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, qiye.163.com, direct
-host-suffix, 163.com, CN|Proxy
-host-suffix, 360.com, CN|Proxy
-host-suffix, 360buy.com, CN|Proxy
-host-suffix, 360buyimg.com, CN|Proxy
-host-suffix, 36kr.com, CN|Proxy
-#host-suffix, abercrombie.com, CN|Proxy
-host-suffix, acfun.tv, CN|Proxy
-host-suffix, acgvideo.com, CN|Proxy
-host-suffix, aixifan.com, CN|Proxy
+host-suffix, 163.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, 360.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, 360buy.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, 360buyimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, 36kr.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, abercrombie.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, acfun.tv, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, acgvideo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, aixifan.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, alicdn.com, direct
 host-suffix, dingtalk.com, direct
 host-suffix, aliyuncs.com, direct
-host-suffix, alipay.com, CN|Proxy
-host-suffix, amap.com, CN|Proxy
-host-suffix, appstore.com, CN|Proxy
-host-suffix, baidu.com, CN|Proxy
-host-suffix, autonavi.com, CN|Proxy
-host-suffix, bababian.com, CN|Proxy
-#host-suffix, battle.net, CN|Proxy
-host-suffix, bbs.feng.com, CN|Proxy
-host-suffix, bdimg.com, CN|Proxy
-host-suffix, bdstatic.com, CN|Proxy
-host-suffix, bilibili.com, CN|Proxy
-host-suffix, bing.com, CN|Proxy
-#host-suffix, blizzard.com, CN|Proxy
-host-suffix, caiyunapp.com, CN|Proxy
-host-suffix, chinacache.net, CN|Proxy
-host-suffix, clouddn.com, CN|Proxy
-host-suffix, coding.net, CN|Proxy
-#host-suffix, cmfu.com, CN|Proxy
-#host-suffix, cnbeta.com, CN|Proxy
-host-suffix, cnbetacdn.com, CN|Proxy
-host-suffix, didialift.com, CN|Proxy
-host-suffix, douban.com, CN|Proxy
-host-suffix, doubanio.com, CN|Proxy
-#host-suffix, duokan.com, CN|Proxy
-#host-suffix, duoshuo.com, CN|Proxy
-#host-suffix, dytt8.net, CN|Proxy
-#host-suffix, easou.com, CN|Proxy
-host-suffix, ecitic.com, CN|Proxy
-host-suffix, gtimg.com, CN|Proxy
-#host-suffix, haibian.com, CN|Proxy
-host-suffix, hdslb.com, CN|Proxy
-#host-suffix, hongxiu.com, CN|Proxy
-host-suffix, hxcdn.net, CN|Proxy
-host-suffix, iciba.com, CN|Proxy
-host-suffix, ifeng.com, CN|Proxy
-host-suffix, ifengimg.com, CN|Proxy
-host-suffix, ipip.net, CN|Proxy
-host-suffix, iqiyi.com, CN|Proxy
-host-suffix, jd.com, CN|Proxy
-host-suffix, jianshu.com, CN|Proxy
-host-suffix, jianshu.io, CN|Proxy
-host-suffix, jianshuapi.com, CN|Proxy
-host-suffix, lecloud.com, CN|Proxy
-host-suffix, lemicp.com, CN|Proxy
-#host-suffix, letv.com, CN|Proxy
-#host-suffix, letvcloud.com, CN|Proxy
-host-suffix, lxdns.com, CN|Proxy
-host-suffix, mi.com, CN|Proxy
-host-suffix, miaopai.com, CN|Proxy
-host-suffix, miui.com, CN|Proxy
-host-suffix, miwifi.com, CN|Proxy
-host-suffix, myqcloud.com, CN|Proxy
-host-suffix, myunlu.com, CN|Proxy
-host-suffix, myzaker.com, CN|Proxy
-host-suffix, netease.com, CN|Proxy
-host-suffix, qbox.me, CN|Proxy
-host-suffix, qcloud.com, CN|Proxy
-host-suffix, qdaily.com, CN|Proxy
-host-suffix, qhimg.com, CN|Proxy
-host-suffix, qidian.com, CN|Proxy
-host-suffix, qihucdn.com, CN|Proxy
-host-suffix, qin.io, CN|Proxy
-host-suffix, qiniucdn.com, CN|Proxy
-host-suffix, qiniudn.com, CN|Proxy
-host-suffix, qiyi.com, CN|Proxy
-host-suffix, qiyipic.com, CN|Proxy
-host-suffix, weixin.qq.com, CN|Proxy
-host-suffix, qq.com, CN|Proxy
-host-suffix, qqurl.com, CN|Proxy
-host-suffix, rrmj.tv, CN|Proxy
-host-suffix, sandai.net, CN|Proxy
-host-suffix, sinaapp.com, CN|Proxy
-host-suffix, so.com, CN|Proxy
-host-suffix, sogou.com, CN|Proxy
-host-suffix, sogoucdn.com, CN|Proxy
-host-suffix, sohu.com, CN|Proxy
-host-suffix, soso.com, CN|Proxy
-host-suffix, sspai.com, CN|Proxy
-host-suffix, huya.com, CN|Proxy
-host-suffix, suning.com, CN|Proxy
-host-suffix, taobao.com, CN|Proxy
-host-suffix, tenpay.com, CN|Proxy
-host-suffix, tmall.com, CN|Proxy
-host-suffix, tudou.com, CN|Proxy
+host-suffix, alipay.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, amap.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, appstore.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, baidu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, autonavi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bababian.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, battle.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bbs.feng.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bdimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bdstatic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bilibili.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bing.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, blizzard.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, caiyunapp.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, chinacache.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, clouddn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, coding.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, cmfu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, cnbeta.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, cnbetacdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, didialift.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, douban.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, doubanio.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, duokan.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, duoshuo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, dytt8.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, easou.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ecitic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, gtimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, haibian.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, hdslb.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, hongxiu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, hxcdn.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, iciba.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ifeng.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ifengimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ipip.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, iqiyi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, jd.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, jianshu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, jianshu.io, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, jianshuapi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, lecloud.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, lemicp.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, letv.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, letvcloud.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, lxdns.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, mi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, miaopai.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, miui.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, miwifi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, myqcloud.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, myunlu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, myzaker.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, netease.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qbox.me, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qcloud.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qdaily.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qhimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qidian.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qihucdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qin.io, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qiniucdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qiniudn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qiyi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qiyipic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, weixin.qq.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qq.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, qqurl.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, rrmj.tv, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sandai.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sinaapp.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, so.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sogou.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sogoucdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sohu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, soso.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, sspai.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, huya.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, suning.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, taobao.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tenpay.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tmall.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tudou.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 //又拍云
-;host-suffix, upaiyun.com, CN|Proxy
-;host-suffix, upyun.com, CN|Proxy
-#host-suffix, weibo.com, CN|Proxy
-;host-suffix, weiphone.com, CN|Proxy
-;host-suffix, weiphone.net, CN|Proxy
-host-suffix, xiami.com, CN|Proxy
-host-suffix, xiami.net, CN|Proxy
-host-suffix, xiaomi.com, CN|Proxy
-host-suffix, xiaomi.net, CN|Proxy
-host-suffix, ximalaya.com, CN|Proxy
-host-suffix, xitek.com, CN|Proxy
-host-suffix, xmcdn.com, CN|Proxy
-host-suffix, xunlei.com, CN|Proxy
-#host-suffix, yach.me, CN|Proxy
-host-suffix, yhd.com, CN|Proxy
-host-suffix, yinxiang.com, CN|Proxy
-host-suffix, ykimg.com, CN|Proxy
-host-suffix, youdao.com, CN|Proxy
-host-suffix, youku.com, CN|Proxy
-host-suffix, zealer.com, CN|Proxy
-host-suffix, zhihu.com, CN|Proxy
-host-suffix, zhimg.com, CN|Proxy
+;host-suffix, upaiyun.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, upyun.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, weibo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, weiphone.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, weiphone.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xiami.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xiami.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xiaomi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xiaomi.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ximalaya.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xitek.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xmcdn.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xunlei.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, yach.me, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, yhd.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, yinxiang.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ykimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, youdao.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, youku.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, zealer.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, zhihu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, zhimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 # Netflix
-;host-suffix, netflix.com, JT|Proxy
-;host-suffix, netflix.net, JT|Proxy
-;host-suffix, nflxext.com, JT|Proxy
-;host-suffix, nflximg.com, JT|Proxy
-;host-suffix, nflximg.net, JT|Proxy
-;host-suffix, nflxvideo.net, JT|Proxy
+;host-suffix, netflix.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, netflix.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, nflxext.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, nflximg.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, nflximg.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+;host-suffix, nflxvideo.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 #tiktokv
-host, api-h2.tiktokv.com, JT|Proxy
-host, api2-16-h2.musical.ly, JT|Proxy
+host, api-h2.tiktokv.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host, api2-16-h2.musical.ly, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 #香蕉视频
-host, apple.fuliapps.com, JT|Proxy
+host, apple.fuliapps.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # Proxy
-host-suffix, adobe.com, JT|Proxy
-host-suffix, adobedtm.com, JT|Proxy
-host-suffix, amazon.com, JT|Proxy
-host-suffix, amazonaws.com, JT|Proxy
-host-suffix, apple-dns.net, JT|Proxy
-host-suffix, appledaily.com, JT|Proxy
-host-suffix, crashlytics.com, JT|Proxy
-host-suffix, dropbox.com, JT|Proxy
-host-suffix, dropboxapi.com, JT|Proxy
-host-suffix, dropboxstatic.com, JT|Proxy
-host-suffix, dropboxusercontent.com, JT|Proxy
-host-suffix, droplr.com, JT|Proxy
-host-suffix, duckduckgo.com, JT|Proxy
-#host-suffix, dueapp.com, JT|Proxy
-host-suffix, feedly.com, JT|Proxy
-host-suffix, g.co, JT|Proxy
-host-suffix, ggpht.com, JT|Proxy
-host-suffix, git.io, JT|Proxy
-host-suffix, githubusercontent.com, JT|Proxy
-host-suffix, github.com, JT|Proxy
-host-suffix, github.io, JT|Proxy
-host-suffix, githubapp.com, JT|Proxy
-host-suffix, goo.gl, JT|Proxy
-host-suffix, goodreaders.com, JT|Proxy
-host-suffix, goodreads.com, JT|Proxy
-host-suffix, gstatic.com, JT|Proxy
-host-suffix, hotmail.com, JT|Proxy
-host-suffix, hyperapp.fun, JT|Proxy
-#host-suffix, icons8.com, JT|Proxy
-host-suffix, ift.tt, JT|Proxy
-host-suffix, ifttt.com, JT|Proxy
-host-suffix, live.com, JT|Proxy
-host-suffix, live.net, JT|Proxy
-host-suffix, outlook.com, JT|Proxy, force-remote-dns
-host, www.pornhd.com, JT|Proxy, force-remote-dns
-host-suffix, surge.run, JT|Proxy
-host-suffix, symcb.com, JT|Proxy
-host-suffix, symcd.com, JT|Proxy
-host-suffix, t.me, JT|Proxy
-host-suffix, telegra.ph, JT|Proxy
-host-suffix, telegram.org, JT|Proxy
-host-suffix, microsofttranslator.com, JT|Proxy
-host-suffix, time.com, JT|Proxy
-host-suffix, tmblr.co, JT|Proxy
-host-suffix, trello.com, JT|Proxy
-host-suffix, tumblr.co, JT|Proxy
-host-suffix, tumblr.com, JT|Proxy
-host-suffix, tweetdeck.com, JT|Proxy
-host-suffix, tweetmarker.net, JT|Proxy
-host-suffix, twimg.co, JT|Proxy
-host-suffix, v2ex.co, JT|Proxy
-host-suffix, v2ex.com, JT|Proxy
-host-suffix, vimeo.com, JT|Proxy
-host-suffix, vimeocdn.com, JT|Proxy
-#host-suffix, vine.co, JT|Proxy
-#host-suffix, vsco.co, JT|Proxy
-host-suffix, weather.com, JT|Proxy
-host-suffix, wikileaks.org, JT|Proxy
-host-suffix, wikimedia.org, JT|Proxy
-host-suffix, wikipedia.com, JT|Proxy
-host-suffix, wikipedia.org, JT|Proxy
-host-suffix, wikiwand.com, JT|Proxy
-#host-suffix, workflowy.com, JT|Proxy
-host-suffix, xeeno.com, JT|Proxy
-host-suffix, yimg.com, JT|Proxy
-host-suffix, ying.com, JT|Proxy
-host-suffix, youtu.be, JT|Proxy
-host-suffix, ytimg.com, JT|Proxy
-host-suffix, rottentomatoes.com, JT|Proxy
-host-suffix, telegram.me, JT|Proxy
-host-suffix, workflow.is, JT|Proxy
+host-suffix, adobe.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, adobedtm.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, amazon.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, amazonaws.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, apple-dns.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, appledaily.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, crashlytics.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, dropbox.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, dropboxapi.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, dropboxstatic.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, dropboxusercontent.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, droplr.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, duckduckgo.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, dueapp.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, feedly.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, g.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ggpht.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, git.io, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, githubusercontent.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, github.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, github.io, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, githubapp.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, goo.gl, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, goodreaders.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, goodreads.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, gstatic.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, hotmail.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, hyperapp.fun, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, icons8.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ift.tt, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ifttt.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, live.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, live.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, outlook.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host, www.pornhd.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, force-remote-dns
+host-suffix, surge.run, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, symcb.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, symcd.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, t.me, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, telegra.ph, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, telegram.org, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, microsofttranslator.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, time.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tmblr.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, trello.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tumblr.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tumblr.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tweetdeck.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, tweetmarker.net, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, twimg.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, v2ex.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, v2ex.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, vimeo.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, vimeocdn.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, vine.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, vsco.co, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, weather.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, wikileaks.org, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, wikimedia.org, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, wikipedia.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, wikipedia.org, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, wikiwand.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+#host-suffix, workflowy.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, xeeno.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, yimg.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ying.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, youtu.be, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, ytimg.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, rottentomatoes.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, telegram.me, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host-suffix, workflow.is, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # TELEGRAM
-ip-cidr, 91.108.56.111/32, JT|Proxy, no-resolve
-ip-cidr, 149.154.167.0/24, JT|Proxy, no-resolve
-ip-cidr, 149.154.175.0/24, JT|Proxy, no-resolve
-ip-cidr, 149.154.171.5/32, JT|Proxy, no-resolve
-ip-cidr, 91.108.56.200/32, JT|Proxy
+ip-cidr, 91.108.56.111/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+ip-cidr, 149.154.167.0/24, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+ip-cidr, 149.154.175.0/24, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+ip-cidr, 149.154.171.5/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+ip-cidr, 91.108.56.200/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # TB price
 ;ip-cidr, 203.119.144.0/23, reject
 ;ip-cidr, 203.119.175.0/24, reject
@@ -633,8 +633,8 @@ ip-cidr, 91.108.56.200/32, JT|Proxy
 # 腾讯
 ip-cidr, 182.254.116.0/24, direct
 # END
-IP-cidr, 119.28.28.28/32, CN|Proxy
-IP-cidr, 119.29.29.29/32, CN|Proxy
+IP-cidr, 119.28.28.28/32, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+IP-cidr, 119.29.29.29/32, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
 ip-cidr, 172.16.0.0/12, direct
@@ -642,5 +642,5 @@ ip-cidr, 192.168.0.0/16, direct
 ip-cidr, 224.0.0.0/24, direct
 ip-cidr, 100.64.0.0/10, direct
 ip-cidr, 45.77.187.26/32, direct
-geoip, CN, CN|Proxy
-;final, JT|Proxy
+geoip, CN, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+;final, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
