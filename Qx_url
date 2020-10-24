@@ -130,6 +130,11 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash url reject-200
 
+# > SMZDM - ap*.smzdm.com
+^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject
+^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject
+^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
+
 #ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
 ^http:\/\/hmma\.baidu\.com url reject-dict
