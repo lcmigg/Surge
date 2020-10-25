@@ -1,5 +1,5 @@
 #hostname
-;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
+;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com,weibo.cn,weixin110.qq.com
 ;hostname = api.hulusaas.com
 
 #JS
@@ -34,6 +34,12 @@ https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key 
 
 #白描
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/Baimiao.js
+
+;微信 App 内被屏蔽链接快捷跳转
+^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
+
+;微博 App 内第三方链接快捷跳转
+^https?:\/\/weibo\.cn\/sinaurl url script-request-header https://raw.githubusercontent.com/HotKids/Rules/master/Script/weibourl.js
 
 #葫芦时刻
 ;^https:\/\/api\.hulusaas\.com\/api\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/hulu.js
