@@ -1,16 +1,12 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-10-11 10:32⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-10-25 21:59⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
-
-主要功能: 
-❶ 将其它格式的服务器订阅解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
-☑︎ 支持 𝗩𝗺𝗲𝘀𝘀/𝗦𝗦(𝗥/𝗗)/𝗛𝗧𝗧𝗣(𝗦)/𝗧𝗿𝗼𝗷𝗮𝗻/𝗤𝘂𝗮𝗻𝘁𝘂𝗺𝘂𝗹𝘁(𝗫)/𝗦𝘂𝗿𝗴𝗲/𝐂𝐥𝐚𝐬𝐡/𝐒𝐡𝐚𝐝𝐨𝐰𝐫𝐨𝐜𝐤𝐞𝐭/𝐋𝐨𝐨𝐧 格式
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
-⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
+☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
 ❖ 本地资源片段引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行 ❖
 ❖ 🚦 支持中文, "操作" 以下特殊字符时请先替换 🚦
   ∎ "+"⇒"%2B", 空格⇒"%20", "@"⇒"%40", "&"⇒"%26", "."⇒"\."
@@ -62,7 +58,6 @@
 ----------------------------------------------------------
 */
 
-
 /**
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
@@ -75,8 +70,13 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 ------------------------------
 */
 
-var content0 = $resource.content;
 var link0 = $resource.link;
+var content0 = $resource.content;
+const subinfo = $resource.info;
+const subtag = $resource.tag != undefined ? $resource.tag : "";
+// 非 raw 链接的沙雕情形
+content0 = content0.indexOf("DOCTYPE html") != -1 && link0.indexOf("github.com") != -1 ? ToRaw(content0) : content0 ;
+
 //debug
 //const $resource={}
 //const $done=function(snt){return snt}
@@ -85,8 +85,6 @@ var link0 = $resource.link;
 var para = (link0.indexOf("http") != -1 && link0.indexOf("://") != -1) ? link0 : link0 + content0.split("\n")[0];
 var para1 = para.slice(para.indexOf("#") + 1) //防止参数中其它位置也存在"#"
 var mark0 = para.indexOf("#") != -1 ? true : false;
-const subinfo = $resource.info;
-const subtag = $resource.tag != undefined ? $resource.tag : "";
 var Pinfo = mark0 && para1.indexOf("info=") != -1 ? para1.split("info=")[1].split("&")[0] : 0;
 var ntf_flow = 0;
 //常用量
@@ -186,7 +184,7 @@ if (flag == 1) { //server 类型统一处理
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈", bug_link)
       $done({ content: errornode })
     }
 } else if (flag == 0){
@@ -229,10 +227,10 @@ function ResourceParse() {
     RegCheck(total, "分流引用", Preg)} 
     total = total.join("\n")
   } else if (content0.trim() == "") {
-    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
+    $notify("‼️ 引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "⁉️ 点通知跳转以确认链接是否失效", para.split("#")[0], nan_link);
     flag = 0;
   } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈", bug_link);
     flag = -1;
   } else { flag = 0 }
 }
@@ -256,7 +254,7 @@ function SubFlow() {
     //var message = total + "\n" + usd + ", " + left;
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
-    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
+    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
     $notify("👉魅影极速", epr, message)
   }
 }
@@ -279,7 +277,7 @@ function flowcheck(cnt) {
 // regex 后的检查
 function RegCheck(total, typen, regpara) {
 	if(total.length == 0){ 
-		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
+		$notify("‼️ " + typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余项为 0️⃣ , 请检查正则参数及原始链接")
 	}else if((typen != "节点订阅" && Pntf0 !=0) || (typen == "节点订阅" && Pntf0 ==1)){
 		var nolist = total.length <= 10 ? emojino[total.length] : total.length
 		$notify(typen + "  ➟ " + "⟦" + subtag + "⟧", "筛选正则: regex=" + regpara, "筛选后剩余以下" + nolist + "个匹配项 \\n ⨷ " + total.join("\n ⨷ "))
@@ -303,8 +301,8 @@ function Type_Check(subs) {
     const NodeCheck = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) != -1;
     const RewriteCheck = (item) => subs.indexOf(item) != -1;
     var subsn = subs.split("\n")
-    if (subs.indexOf(html) != -1) {
-      $notify("‼️ 该链接返回内容有误", "点通知跳转以确认链接是否失效", link0);
+    if (subs.indexOf(html) != -1 && link0.indexOf("github.com" == -1)) {
+      $notify("该链接返回内容有误", "点通知跳转以确认链接是否失效", link0);
       type = "web";
     }  else if (ClashK.some(NodeCheck)){ // Clash 类型节点转换
       type = "Clash";
@@ -378,6 +376,22 @@ function TagCheck_QX(content) {
 function Trim(item) {
     return item.trim()
 }
+
+// 用于某些奇葩用户不使用 raw 链接的问题
+function rawtest(cnt) {
+  var Preg0 = RegExp(".*js-file-line\".*?\<\/td\>", "i")
+  if (Preg0.test(cnt)) {
+    return cnt.replace(/(.*js-file-line\"\>)(.*?)(\<\/td\>)/g,"$2").trim()
+  }
+}
+
+function ToRaw(cnt) {
+  cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
+  var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
+  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "❌ 你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+  return cnt
+}
+
 
 //url-regex 转换成 Quantumult X
 function URX2QX(subs) {
@@ -524,9 +538,9 @@ function HostNamecheck(content, parain, paraout) {
         dd = hname[i]
         const excludehn = (item) => dd.indexOf(item) != -1;
         if (paraout && paraout != "") { //存在 out 参数时
-            if (!paraout.some(excludehn)) { //out 未命中
+            if (!paraout.some(excludehn)) { //out 未命中🎯️
                 if (parain && parain != "") {
-                    if (parain.some(excludehn)) { //Pin 命中
+                    if (parain.some(excludehn)) { //Pin 命中🎯️
                         nname.push(hname[i])
                     } else {
                         dname.push(hname[i])
@@ -534,7 +548,7 @@ function HostNamecheck(content, parain, paraout) {
                 } else { nname.push(hname[i]) }	//无in 参数		
             } else { dname.push(hname[i]) } //out 参数命中
         } else if (parain && parain != "") { //不存在 out，但有 in 参数时
-            if (parain.some(excludehn)) { //Pin 命中
+            if (parain.some(excludehn)) { //Pin 命中🎯️
                 nname.push(hname[i])
             } else { dname.push(hname[i]) }
         } else {
@@ -977,7 +991,7 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+            $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
@@ -1362,13 +1376,13 @@ function SCT2QX(content) {
         pobfs = pobfs + ", " + phost
     }
     var ptfo = paraCheck(cnt, "tfo") == "true" ? "fast-open=true" : "fast-open=false";
-    var pudp = paraCheck(cnt, "udp") == "true" ? "udp-relay=true" : "udp-relay=false";
+    var pudp = paraCheck(cnt, "udp-relay") == "true" ? "udp-relay=true" : "udp-relay=false";
     var nserver = pobfs != "" ? "shadowsocks= " + [ipport, pmtd, pwd, pobfs, ptfo, pudp, tag].join(", ") : "shadowsocks= " + [ipport, pmtd, pwd, ptfo, pudp, tag].join(", ");
     return nserver
 }
 
 
-// surge 中的 SS 类型
+// surge3 中的 SS 类型
 function SSS2QX(content) {
     var cnt = content;
     var tag = "tag=" + cnt.split("=")[0].trim();
@@ -1383,7 +1397,7 @@ function SSS2QX(content) {
         pobfs = pobfs + ", " + phost
     }
     var ptfo = paraCheck(cnt, "tfo") == "true" ? "fast-open=true" : "fast-open=false";
-    var pudp = paraCheck(cnt, "udp") == "true" ? "udp-relay=true" : "udp-relay=false";
+    var pudp = paraCheck(cnt, "udp-relay") == "true" ? "udp-relay=true" : "udp-relay=false";
     var nserver = pobfs != "" ? "shadowsocks= " + [ipport, pmtd, pwd, pobfs, ptfo, pudp, tag].join(", ") : "shadowsocks= " + [ipport, pmtd, pwd, ptfo, pudp, tag].join(", ");
     return nserver
 }
