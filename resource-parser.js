@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-10-25 21:59⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-11-04 14:39⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -102,9 +102,7 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
-
 SubFlow() //流量通知
-
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -184,7 +182,7 @@ if (flag == 1) { //server 类型统一处理
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈", bug_link)
+      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
       $done({ content: errornode })
     }
 } else if (flag == 0){
@@ -227,10 +225,10 @@ function ResourceParse() {
     RegCheck(total, "分流引用", Preg)} 
     total = total.join("\n")
   } else if (content0.trim() == "") {
-    $notify("‼️ 引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "⁉️ 点通知跳转以确认链接是否失效", para.split("#")[0], nan_link);
+    $notify("‼️ 引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "⁉️ 点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈", bug_link);
+    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
     flag = -1;
   } else { flag = 0 }
 }
@@ -254,7 +252,7 @@ function SubFlow() {
     //var message = total + "\n" + usd + ", " + left;
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
-    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
+    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
     $notify("👉魅影极速", epr, message)
   }
 }
@@ -388,7 +386,7 @@ function rawtest(cnt) {
 function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
-  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "❌ 你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
   return cnt
 }
 
@@ -430,9 +428,9 @@ function SCP2QX(subs) {
         const notecheck = (item) => subs[i].indexOf(item) == 0
         if (!NoteK.some(notecheck)){
           if (SC.every(sccheck)) { // surge js 新格式
-            ptn = subs[i].split("pattern=")[1].split(",")[0]
-            js = subs[i].split("script-path=")[1].split(",")[0]
-            type = subs[i].split("type=")[1].split(",")[0].trim()
+            ptn = subs[i].replace(/\s/gi,"").split("pattern=")[1].split(",")[0]
+            js = subs[i].replace(/\s/gi,"").split("script-path=")[1].split(",")[0]
+            type = subs[i].replace(/\s/gi,"").split("type=")[1].split(",")[0].trim()
             if (type == "http-response" && subs[i].indexOf("requires-body=1") != -1) {
               type = "script-response-body "
             } else if (type == "http-response" && subs[i].indexOf("requires-body=1") == -1) {
@@ -456,9 +454,9 @@ function SCP2QX(subs) {
             rw = subs[i].split(" ")[0] + " url reject-200"
             nrw.push(rw)
           } else if (subs[i].indexOf("script-path") != -1) { //surge js 旧写法
-            type = subs[i].split(" ")[0]
+            type = subs[i].replace(/\s+/g," ").split(" ")[0]
             js = subs[i].split("script-path")[1].split("=")[1].split(",")[0]
-            ptn = subs[i].split(" ")[1]
+            ptn = subs[i].replace(/\s+/g," ").split(" ")[1]
             if (type == "http-response" && subs[i].indexOf("requires-body=1") != -1) {
               type = "script-response-body "
             } else if (type == "http-response" && subs[i].indexOf("requires-body=1") == -1) {
@@ -770,13 +768,15 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
             } else if (LoonK.some(NodeCheck)) {
                 node = Loon2QX(list0[i])
             }
-            node = Pudp != 0 ? XUDP(node,Pudp) : node
-            node = Ptfo != 0 ? XTFO(node,Ptfo) : node
             if (node instanceof Array) {
                 for (var j in node) {
+                  node[j] = Pudp != 0 ? XUDP(node[j],Pudp) : node[j]
+                  node[j] = Ptfo != 0 ? XTFO(node[j],Ptfo) : node[j]
                     QXlist.push(node[j])
                 }
             } else if (node != "") {
+              node = Pudp != 0 ? XUDP(node,Pudp) : node
+              node = Ptfo != 0 ? XTFO(node,Ptfo) : node
                 QXlist.push(node)
             }
         }
@@ -976,7 +976,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -991,7 +991,7 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
@@ -1524,7 +1524,9 @@ function LoonSSR2QX(cnt) {
 
 // fix yaml parse mistakes
 function YAMLFix(cnt){
+  
   if (cnt.indexOf("{") != -1){
+    cnt = cnt.replace(/\"/g,"")
       cnt = cnt.replace(/(^|\n)- /g, "$1  - ").replace(/    - /g,"  - ").replace(/:(?!\s)/g,": ").replace(/\,\"/g,", \"").replace(/: {/g, ": {,     ").replace(/, (host|path|tls|mux|skip)/g,",     $1")
       //console.log(cnt)
       cnt = cnt.replace(/{name: /g,"{name: \"").replace(/, server:/g,"\", server:")
