@@ -1,5 +1,5 @@
 #hostname
-;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
+;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
 ;hostname = api.hulusaas.com,weibo.cn,weixin110.qq.com
 
 #JS
@@ -11,12 +11,6 @@
 
 #bilibili
 ;^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js
-https://app.bilibili.com/x/resource/show/tab\?access_key url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-https://app.bilibili.com/x/v2/feed/index\?access_key url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-https://app.bilibili.com/x/v2/account/mine\?access_key url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-https://app.bilibili.com/x/v2/view\?access_key url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-https://api.bilibili.com/x/v2/reply/main\?access_key url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
-https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
 #bilibili 1080P
 ^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js
 
