@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-11-10 14:29⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-11-12 19:19⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -775,7 +775,7 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
                   node[j] = Ptfo != 0 ? XTFO(node[j],Ptfo) : node[j]
                     QXlist.push(node[j])
                 }
-            } else if (node != "") {
+            } else if (node != ""  && node) {
               node = Pudp != 0 ? XUDP(node,Pudp) : node
               node = Ptfo != 0 ? XTFO(node,Ptfo) : node
                 QXlist.push(node)
