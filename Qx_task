@@ -1,49 +1,113 @@
-[task_local]
+#京东星推官
+1 0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js, tag=京东星推官, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=false
+
 #京东签到
-;3,9 0 * * * JS/jd_auto.js, enabled=false
-4,8 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东领豆, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=true
+9 30 7 * * * JD_DailyBonus.js, tag=京东领豆, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=false
+15 1 0,9 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东领豆, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=true
 
-#京东618
-10,20,30,40,50 0 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jd/jd.618.js, tag=京东618, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=true
+#10086查话费
+9 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js, tag=10086-查话费, img-url=cmcc.png, enabled=true
 
+#京喜
+10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js, tag=京喜, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, enabled=true
 #京东到家签到
-10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, tag=京东到家, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jddj.png, enabled=true
-
-#微信小程序-来客有礼
-10 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, tag=来客有礼, img-url=lkyl.png, enabled=true
+10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, tag=京东到家, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jddj.png, enabled=false
 
 #rrtv
 11 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, tag=rrtv签到, img-url=rrtv.png, enabled=true
 
-#微信小程序活动抽奖
-30 7,20 * * * https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js, tag=活动抽奖小程序, img-url=hdcj.png, enabled=true
-
 #网易云音乐&百度贴吧
-;13 8 * * * neteasemusic.js, tag=网易云音乐, img-url=music.png, enabled=true
-13 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url=music.png, enabled=true
-13 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/tieba.png, enabled=true
+12 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url=music.png, enabled=true
+13 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js, tag=百度贴吧, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/tieba.png, enabled=true
+
+#什么值得买签到
+12 8 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js, tag=什么值得买每日签到, img-url=smzdm.PNG, enabled=true
 
 #加油广东
 14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js, tag=加油广东, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/gdoil.png, enabled=true
 
 #顺丰速运
-14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰速运, img-url=sfexpress.png, enabled=true
+0 14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰签到, img-url=sfexpress.png, enabled=false
 
 #ZAKER新闻
-15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, tag=ZAKER新闻, img-url=zaker.png, enabled=true
-
-#魅影签到
-16 8 * * * JS/checkin_maying.js, tag=魅影签到, img-url=魅影.png, enabled=true
+0 15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, tag=ZAKER新闻, img-url=zaker.png, enabled=true
 
 #github更新
-16 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/github.js, tag=github更新, img-url=github.png, enabled=true
+0 16 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/github.js, tag=github更新, img-url=github.png, enabled=false
 
-#每日一言(钉钉签到)
-55 7,17 * * 1-6 https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js, tag=每日一言, img-url=一言.png, enabled=false
+#慢慢买签到
+17 8 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, tag=慢慢买签到, img-url=manman.png, enabled=true
 
+#bilibili签到
+17 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili签到, img-url=bilibili.png, enabled=true
+# 如需银瓜子转硬币，添加以下内容 
+17 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili瓜子, img-url=bilibili.png, enabled=false
 
-;*/1 * * * * sample-task.js
-;30 7 * * 1-5 nzw9314/yichahucha/cron_daily.js
-;32 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jddj.js, enabled=true
-;40 7,12 * * * JS/weather-sky.js
-;5 18 * * * JS/weather-tqt.js
+#京东价格提醒&取消关注
+17 8 * * * https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=false
+
+#云闪付签到
+17 8 * * * https://gitee.com/passerby-b/javascript/raw/master/unipay.js, tag=云闪付签到, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/unionpay.png, enabled=true
+
+#京东取消关注
+0 11 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js, tag=取消关注, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, enabled=false
+
+# 切换会话
+5 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png, enabled=false
+
+# 京东农场 (By liuxiaoyucc、lxk0301 & iepngs)
+#京东摇钱树
+13 */8 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js, tag=京东摇钱树, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyqs.png, enabled=true
+#jd免费水果
+6 6-18/6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js, tag=东东农场, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdnc.png, enabled=true
+
+#东东萌宠
+7 6-18/6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js, tag=东东萌宠, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png, enabled=true
+
+#种豆得豆
+7 7-21/2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js, tag=种豆得豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png, enabled=true
+
+#天天加速
+8 */3 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, tag=京东天天加速, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdjs.png, enabled=true
+
+#京东宠汪汪
+8 */2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js, tag=京东宠汪汪, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+
+#京小超
+9 1-23/5 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=京小超, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
+
+#宠汪汪积分兑换奖品
+59 59 23,7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js, tag=宠汪汪积分兑换奖品, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+
+#京小超领蓝币
+59 59 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京小超兑奖品, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxc.png, enabled=true
+
+#宠汪汪偷好友积分与狗粮
+10 0,6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js, tag=宠汪汪偷好友积分与狗粮, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+
+# 宠汪汪邀请助力与赛跑助力
+15 10 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js, tag=宠汪汪邀请助力与赛跑助力, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+
+#京东进店领豆
+10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=进店领豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+
+#摇京豆
+15 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js, tag=摇京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+
+#京东手机狂欢城
+3 11 0-18/6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_818.js, tag=京东手机狂欢城, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=false
+
+#京豆变动通知
+29 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+
+#京东抽奖机
+16 0,9,21 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+
+#京东排行榜
+2 0 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+
+#来客有礼
+20,22,24 8 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, tag=来客有礼, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=false
+
+#小米运动
+10 19 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js, tag=小米运动, img-url=mi.PNG, enabled=true
