@@ -19,6 +19,8 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_Cookie
 
 [Qx_task(不能订阅)]
 https://raw.githubusercontent.com/lcmigg/Surge/master/Qx_task
+[Qx_task(订阅)]
+https://raw.githubusercontent.com/lcmigg/Surge/master/QX_Task.json
 ```
 
 - [x] **Script均取自github**  
