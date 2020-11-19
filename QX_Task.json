@@ -38,6 +38,8 @@
         "29 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png",
         "16 0,9,21 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png",
         "2 0 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png",
+        "2 0 * * * https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_paopao.js, tag=京东泡泡大战, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png",
+        "3 3 */3 * * https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_factory.js, tag=东东工厂, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png",
         "10 19 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js, tag=小米运动, img-url=mi.PNG",
     ]
 }   
