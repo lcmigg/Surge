@@ -84,7 +84,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 #中国银行 mbs.boc.cn
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? url reject-200
-^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject 
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject
 
 ;工商银行
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
