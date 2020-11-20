@@ -52,4 +52,4 @@ https://youhui.95516.com/newsign/public/app/index.html url script-request-header
 ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js
 
 # 东东小窝
-^https\:\/\/lkyl\.dianpusoft\.cn\/api\/user\-info\/login url script-response-body https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.cookie.js
+;^https\:\/\/lkyl\.dianpusoft\.cn\/api\/user\-info\/login url script-response-body https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.cookie.js
