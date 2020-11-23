@@ -1,5 +1,6 @@
 # Apple
 # 定位相关
+host, ocsp.apple.com, reject
 user-agent, com.apple.geod*, direct
 user-agent, com.apple.Maps, direct
 user-agent, FindMyFriends*, direct
