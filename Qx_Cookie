@@ -53,3 +53,6 @@ https://youhui.95516.com/newsign/public/app/index.html url script-request-header
 
 # 东东小窝
 ;^https\:\/\/lkyl\.dianpusoft\.cn\/api\/user\-info\/login url script-response-body https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.cookie.js
+
+# 京东赚赚
+^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
