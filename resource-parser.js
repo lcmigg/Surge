@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-11-21 12:12⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-11-25 08:08⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -65,7 +65,7 @@
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
+⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
 1️⃣ 假设原始订阅连接为: https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt , 
 2️⃣ 假设你想要保留的参数为 in=tls+ss, 想要过滤的参数为 out=http+2, 请注意下面订阅链接后一定要加 ”#“ 符号
 3️⃣ 则填入 Quanx 节点引用的的总链接为  https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
@@ -73,9 +73,7 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 ------------------------------
 */
 
-var link0 = $resource.link;
-var content0 = $resource.content;
-const subinfo = $resource.info;
+let [link0, content0, subinfo] = [$resource.link, $resource.content, $resource.info]
 const subtag = $resource.tag != undefined ? $resource.tag : "";
 // 非 raw 链接的沙雕情形
 content0 = content0.indexOf("DOCTYPE html") != -1 && link0.indexOf("github.com") != -1 ? ToRaw(content0) : content0 ;
@@ -105,9 +103,7 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
-
 SubFlow() //流量通知
-
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -144,58 +140,18 @@ var type0 = Type_Check(content0); //  类型判断
 //$notify(type0,"hh",content0)
 
 //flag=1,2,3分别为 server、rewrite、rule 类型
-const errornode=""
+let [errornode, total] = ""
 var flag = 1
 
 try {
-  ResourceParse();
+  total = ResourceParse();
+  
 } catch (err) {
-    $notify("解析出现错误", "", err);
+    $notify("解析出现错误", "请点击发送链接反馈", err);
 }
 
-if (flag == 1) { //server 类型统一处理
-    total = total.filter(Boolean)
-    if (Pinfo == 1 && ntf_flow == 0) { //假节点类型的流量通知
-        flowcheck(total)
-    }
-    if (Pin0 || Pout0) { total = Filter(total, Pin0, Pout0) } // in & out 
-    if (Preg) { total = total.map(Regex).filter(Boolean)  // regex
-    	RegCheck(total, "节点订阅", Preg)} 
-    if (Psfilter) { total = FilterScript(total, Psfilter) }
-    if (Prrname) {
-        var Prn = Prrname;
-        total = total.map(Rename);
-    }
-    if (Pemoji) { total = emoji_handle(total, Pemoji); }
-    if (Prname) {
-        var Prn = Prname;
-        total = total.map(Rename);
-    }
-    if (Pregdel) {
-        var delreg = Pregdel
-        total = total.map(DelReg)
-    }
-    if (Preplace) { // server 类型也可用 replace 参数进行重命名操作
-        total = ReplaceReg(total, Preplace)
-    }
-    if (Psrename) { total = RenameScript(total, Psrename) }
-    if (Psort0) {
-        total = QXSort(total, Psort0);
-    }
-    if (total.length > 0){
-      if (Pcnt == 1) {$notify("Final Content" , "Nodes: " +total.length, total)}
-      total = TagCheck_QX(total).join("\n") //节点名检查
-      total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
-      $done({ content: total });
-    } else {
-      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
-      $done({ content: errornode })
-    }
-} else if (flag == 0){
-  $done({ content: errornode })
-} else if (flag == -1){
-  $done({ content: content0 })
-} else { $done({ content: total });}
+$done({ content: total });
+
 
 /**
 # 以下为具体的 function
@@ -203,6 +159,7 @@ if (flag == 1) { //server 类型统一处理
 */
 
 function ResourceParse() {
+  //预处理
   if (type0 == "Subs-B64Encode") {
     total = Subs2QX(Base64.decode(content0), Pudp0, Ptfo0, Pcert0, PTls13);
   } else if (type0 == "Subs") {
@@ -234,9 +191,59 @@ function ResourceParse() {
     $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug ⁉️  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    $notify("未能解析, 可能是 bug" + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
     flag = -1;
   } else { flag = 0 }
+  
+  //开始处理
+  if (flag == 1) { //server 类型统一处理
+    total = total.filter(Boolean)
+    if (Pinfo == 1 && ntf_flow == 0) { //假节点类型的流量通知
+      flowcheck(total)
+    }
+    if (Pin0 || Pout0) { total = Filter(total, Pin0, Pout0) } // in & out 
+    if (Preg) { total = total.map(Regex).filter(Boolean)  // regex
+      RegCheck(total, "节点订阅", Preg)} 
+    if (Psfilter) { total = FilterScript(total, Psfilter) }
+    if (Prrname) {
+      Prn = Prrname;
+      total = total.map(Rename);
+    }
+    if (Pemoji) { total = emoji_handle(total, Pemoji); }
+    if (Prname) {
+      Prn = Prname;
+      total = total.map(Rename);
+    }
+    if (Pregdel) {
+      delreg = Pregdel
+      total = total.map(DelReg)
+    }
+    if (Preplace) { // server 类型也可用 replace 参数进行重命名操作
+      total = ReplaceReg(total, Preplace)
+    }
+    if (Psrename) { total = RenameScript(total, Psrename) }
+    if (Psort0) {
+      total = QXSort(total, Psort0);
+    }
+    if (total.length > 0){
+      if (Pcnt == 1) {$notify("Final Content" , "Nodes: " +total.length, total)}
+      total = TagCheck_QX(total).join("\n") //节点名检查
+      total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
+      //$done({ content: total });
+    } else {
+      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      total = errornode
+      //$done({ content: errornode })
+    }
+  } else if (flag == 0){
+    total = errornode
+    //$done({ content: errornode })
+  } else if (flag == -1){
+    total = content0
+    //$done({ content: content0 })
+  } 
+  return total
+  
 }
 
 //响应头流量处理部分
@@ -258,7 +265,7 @@ function SubFlow() {
     //var message = total + "\n" + usd + ", " + left;
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
-    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
+    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
     $notify("👉魅影极速", epr, message)
   }
 }
@@ -275,7 +282,7 @@ function flowcheck(cnt) {
             exptime = nm
         }
     }
-    if (flow != "") { $notify("流量信息: ⟦" + subtag + "⟧", flow, exptime) }
+    if (flow != "") { $notify("流量信息: ⟦" + subtag + "⟧", flow, exptime, subinfo_link1) }
 }
 
 // regex 后的检查
@@ -445,9 +452,11 @@ function SCP2QX(subs) {
               type = "script-request-body "
             } else if (type == "http-request" && subs[i].indexOf("requires-body=1") == -1) {
               type = "script-request-header "
+            } else {type = "" }
+            if (type != "") {
+              rw = ptn + " url " + type + js
+              nrw.push(rw)
             }
-            rw = ptn + " url " + type + js
-            nrw.push(rw)
           } else if (subs[i].indexOf(" 302") != -1 || subs[i].indexOf(" 307") != -1) { //rewrite 302&307 复写
             rw = subs[i].split(" ")[0] + " url " + subs[i].split(" ")[2] + " " + subs[i].split(" ")[1]
             nrw.push(rw)
@@ -471,9 +480,12 @@ function SCP2QX(subs) {
               type = "script-request-body "
             } else if (type == "http-request" && subs[i].indexOf("requires-body=1") == -1) {
               type = "script-request-header "
+            } else {type = "" }
+            if (type != "") {
+              rw = ptn + " url " + type + js
+              nrw.push(rw)
             }
-            rw = ptn + " url " + type + js
-            nrw.push(rw)
+            
           }
         }
 
@@ -985,7 +997,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -1000,7 +1012,7 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
@@ -1077,7 +1089,7 @@ function SS2QX(subs, Pudp, Ptfo) {
         }
         pwd = "password=" + pwdmtd[1];
         mtd = "method=" + pwdmtd[0];
-        obfs = cnt.split("obfs%3D")[1] != null ? ", obfs=" + cnt.split("obfs%3D")[1].split("%3B")[0] : "";
+        obfs = cnt.split("obfs%3D")[1] != null ? ", obfs=" + cnt.split("obfs%3D")[1].split("%3B")[0].split("#")[0] : "";
         obfshost = cnt.split("obfs-host%3D")[1] != null ? ", obfs-host=" + cnt.split("obfs-host%3D")[1].split("&")[0].split("#")[0] : "";
         tag = "tag=" + decodeURIComponent(cnt.split("#")[1])
         pudp = Pudp == 1 ? "udp-relay=true" : "udp-relay=false";
