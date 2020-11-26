@@ -1,5 +1,5 @@
 #hostname
-;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com, biz.caiyunapp.com
+;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com
 hostname = weixin110.qq.com
 
 #JS
@@ -63,7 +63,7 @@ hostname = weixin110.qq.com
 ;^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/clarity.js
 
 #彩云天气 Vip  biz.caiyunapp.com
-https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/caiyun_svip.js
+;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/caiyun_svip.js
 
 #keep
 ;^https:\/\/api\.gotokeep\.com\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js
