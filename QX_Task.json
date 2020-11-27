@@ -15,7 +15,7 @@
         "15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, tag=ZAKER新闻, img-url=zaker.png",
         "16 8 * * * https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js, tag=伊利乳品, img-url=https://raw.githubusercontent.com/id77/QuantumultX/master/icon/yiLi.png",
         "16 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/github.js, tag=github更新, img-url=github.png",
-        "16 8 * * * https://raw.githubusercontent.com/jidesheng6/Loon_TrainScriptSelf/main/%E7%8B%97%E4%B8%9C%E7%AD%BE%E5%88%B0/TenStreetSign.js, tag=微信小程序十元街, img-url=lkyl.png",
+        "16 8 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js, tag=十元街, enabled=true, img-url=lkyl.png",
         "17 8 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, tag=慢慢买签到, img-url=manman.png",
         "17 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili签到, img-url=bilibili.png",
         "17 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili瓜子, img-url=bilibili.png",
