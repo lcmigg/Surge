@@ -24,11 +24,11 @@ const petCode1 = 'MTAxODc2NTEzOTAwMDAwMDAyODk4ODY4MQ=='
 const beanCode0 = 'gkk4336xszaegeuoy5ggnx3nesrpbavnyhehdci'
 const beanCode1 ='nuxd2i4axqw55dcsmp7jj6whp4'
 //东东工厂
-//const ddfactory0 = ''
-//const ddfactory1 =''
+const ddfactory0 = 'P04z54XCjVWnYaS5mlbVWL43H9LkQ'
+const ddfactory1 ='P04z54XCjVWnYaS5m9cZwmKoiEC7Ka9CNnojw'
 //京喜工厂
-//const jxfactory0 = ''
-//const jxfactory1 =''
+const jxfactory0 = 'RaaxfhOhJfAsKpJg7xwfLQ=='
+const jxfactory1 ='tvwIEw0Hl-evGtNOU5yerA=='
 //京喜工厂厂长
 //const jxgoldmanager0 = ''
 
@@ -38,10 +38,10 @@ join(farmURL, farmCode0, "农场0")
 join(farmURL, farmCode1, "农场1")
 join(petURL, petCode0, "萌宠0")
 join(petURL, petCode1, "萌宠1")
-//join(ddfactoryURL, ddfactory0, "东东工厂0")
-//join(ddfactoryURL, ddfactory1, "东东工厂1")
-//join(jxfactoryURL, jxfactory0, "京喜工厂0")
-//join(jxfactoryURL, jxfactory1, "京喜工厂1")
+join(ddfactoryURL, ddfactory0, "东东工厂0")
+join(ddfactoryURL, ddfactory1, "东东工厂1")
+join(jxfactoryURL, jxfactory0, "京喜工厂0")
+join(jxfactoryURL, jxfactory1, "京喜工厂1")
 
 function join(url,code,tip){
     $.http.get(url + code + "/").then(res => {
