@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/lcmigg/Surge/master/QX_Task.json
 
 - [x] **Script均取自github**  
 #
-<img src="https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&icon_color=FFFFFF&text_color=B5CAA0&hide_title=true" height="150">  
+<img src="https://github-readme-stats.vercel.app/api?username=lcmigg&show_icons=true&icon_color=FFFFFF&text_color=B5CAA0&bg_color=4D5139&hide_title=true" height="150">  
 
 **访问次数**  
 <img src="http://profile-counter.glitch.me/lcmigg/count.svg"> 
