@@ -53,7 +53,7 @@
         "0 */4 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js, tag=京喜工厂plus, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdgc.png, enabled=true",
         "6 6 10,20,30 * * https://raw.githubusercontent.com/lcmigg/Surge/master/jdsharecode.js, tag=互助上车, img-url=lkyl.png",
         "31 23 * * * https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js, tag=京喜财富岛, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true",
-        "10 7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js, tag=秒杀红包雨, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_ms_redrain.png, enabled=true",
-        "10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_split.js, tag=金榜年终奖, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_ms_redrain.png, enabled=true",
+        "10 7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js, tag=秒杀红包雨, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true",
+        "10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_split.js, tag=金榜年终奖, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true",
     ]
 }   
