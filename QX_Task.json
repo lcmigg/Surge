@@ -47,7 +47,7 @@
         "1 0 0,20 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js, tag=点点券, img-url=lkyl.png",
         "6 */3 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_woHome.js, tag=东东小窝, img-url=lkyl.png",
         "10 19 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js, tag=小米运动, img-url=mi.PNG",
-        "8 */1 * * * https://raw.githubusercontent.com/xingliuchao/jd/main/QQread.js, tag=QQ读书, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/qqread.png, enabled=true",
+        "8 */1 * * * https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js, tag=QQ读书, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/qqread.png, enabled=true",
         "7 0 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory.js, tag=京喜工厂, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, enabled=true",
         "10 * * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js, tag=京喜金牌厂长, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdgc.png, enabled=true",
         "0 */4 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js, tag=京喜工厂plus, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdgc.png, enabled=true",
