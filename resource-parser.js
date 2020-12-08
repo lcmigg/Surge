@@ -1,12 +1,12 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-06 09:59⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-07 14:59⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
-⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
+☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
 ❖ 本地资源片段引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行 ❖
 ❖ 🚦 支持中文, "操作" 以下特殊字符时请先替换 🚦
   ∎ "+"⇒"%2B", 空格⇒"%20", "@"⇒"%40", "&"⇒"%26", "."⇒"\."
@@ -145,7 +145,7 @@ try {
   total = ResourceParse();
   
 } catch (err) {
-    $notify("❌ 解析出现错误", "⚠️请点击发送链接反馈", err);
+    $notify("解析出现错误", "请点击发送链接反馈", err);
 }
 
 $done({ content: total });
@@ -182,14 +182,14 @@ function ResourceParse() {
     total = Rule_Handle(content0.split("\n"), Pout0, Pin0).filter(Boolean);
     if (Preg && total.length!=0) { // 正则筛选规则 filter
     total = total.map(Regex).filter(Boolean).join("\n") 
-    if (Preplace) { total = ReplaceReg(total, Preplace) }
     RegCheck(total, "分流引用", Preg)} 
+    if (Preplace) { total = ReplaceReg(total, Preplace) }
     total = total.join("\n")
   } else if (content0.trim() == "") {
     $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug" + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    $notify("未能解析, 可能是 bug " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
     flag = -1;
   }
   
@@ -318,9 +318,9 @@ function Type_Check(subs) {
       content0 = Clash2QX(subs)
     } else if ( ((ModuleK.some(RewriteCheck) || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) && subs.indexOf("[Proxy]") == -1) || typeU == "module") { // Surge 类型 module /rule-set(含url-regex) 类型
       type = "sgmodule"
-    } else if ((subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck)) && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1 && subs.indexOf("\nhttp-r") == -1 && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1 || subi.indexOf("pattern=") != -1) {
+    } else if ((subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck) || subi.indexOf("pattern=") != -1) && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1 && subs.indexOf("\nhttp-r") == -1 && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1) {
       type = "rewrite" //Quantumult X 类型 rewrite/ Surge Script/
-    } else if ((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1) || typeU == "rule") {
+    } else if ((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1) || typeU == "rule" ||para1.indexOf("dst=filter")!=-1) {
       type = "Rule";
     } else if ((DomainK.some(RuleCheck) || typeU == "domain-set") && subs.indexOf("[Proxy]") == -1 ) {
       type = "Rule";
@@ -995,7 +995,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -1010,11 +1010,11 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
+            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
-        $notify("❌ 脚本筛选出现错误", "", err);
+        $notify("脚本筛选出现错误", "", err);
         return servers;
     }
 }
@@ -1320,7 +1320,7 @@ function RenameScript(servers, script) {
         // rename nodes
         return servers.map((s, i) => s.split("tag=")[0] + "tag=" + newNames[i]);
     } catch (err) {
-        $notify("❌ 脚本重命名出现错误", "", err);
+        $notify("脚本重命名出现错误", "", err);
         return servers;
     }
 
