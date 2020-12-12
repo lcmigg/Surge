@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-07 14:59⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-11 13:59⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -65,7 +65,7 @@
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
+⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
 1️⃣ 假设原始订阅连接为: https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt , 
 2️⃣ 假设你想要保留的参数为 in=tls+ss, 想要过滤的参数为 out=http+2, 请注意下面订阅链接后一定要加 ”#“ 符号
 3️⃣ 则填入 Quanx 节点引用的的总链接为  https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
@@ -136,7 +136,7 @@ let [flow, exptime, errornode, total] = "";
 
 var typeU = para1.indexOf("type=") != -1 ? para1.split("type=")[1].split("&")[0] : "";
 var type0 = Type_Check(content0); //  类型判断
-//$notify(type0,"hh",content0)
+//$notify(type0,"hh")
 
 //flag=1,2,3分别为 server、rewrite、rule 类型
 var flag = 1
@@ -189,7 +189,7 @@ function ResourceParse() {
     $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    $notify("未能解析, 可能是 bug" + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
     flag = -1;
   }
   
@@ -316,10 +316,10 @@ function Type_Check(subs) {
     }  else if (ClashK.some(NodeCheck) || typeU == "clash"){ // Clash 类型节点转换
       type = "Clash";
       content0 = Clash2QX(subs)
+    } else if ((subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck) || subi.indexOf("pattern=") != -1) && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1 && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1) {
+      type = "rewrite" //Quantumult X 类型 rewrite/ Surge Script/
     } else if ( ((ModuleK.some(RewriteCheck) || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) && subs.indexOf("[Proxy]") == -1) || typeU == "module") { // Surge 类型 module /rule-set(含url-regex) 类型
       type = "sgmodule"
-    } else if ((subi.indexOf("hostname=") != -1 || RewriteK.some(RewriteCheck) || subi.indexOf("pattern=") != -1) && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1 && subs.indexOf("\nhttp-r") == -1 && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1) {
-      type = "rewrite" //Quantumult X 类型 rewrite/ Surge Script/
     } else if ((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && subs.indexOf("[Proxy]") == -1 && subs.indexOf("[server_local]") == -1) || typeU == "rule" ||para1.indexOf("dst=filter")!=-1) {
       type = "Rule";
     } else if ((DomainK.some(RuleCheck) || typeU == "domain-set") && subs.indexOf("[Proxy]") == -1 ) {
@@ -397,7 +397,7 @@ function rawtest(cnt) {
 function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
-  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n✅ 正确链接："+rawlink, {"open-url":rawlink})
   return cnt
 }
 
@@ -1168,22 +1168,28 @@ function isQuanXRewrite(content) {
   cnt = content
   cnt0=[]
   for (var i = 0; i< cnt.length; i++){
-    var cnti = cnt[i]
-    if (cnti.indexOf("pattern")!=-1 && cnti.indexOf("type")!=-1) {
-      cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
-      //console.log(cnti)
-    }else if ((cnti.indexOf(" 302")!=-1 || cnti.indexOf(" 307")!=-1) && cnti.indexOf(" url ")==-1){
-      
-      cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
-      //console.log("sss",cnti)
-    }else if(cnti.indexOf("URL_REGEX")!=-1){
-      cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
+    if(cnt[i]){
+      var cnti = cnt[i]
+      if (cnti.indexOf("pattern")!=-1 && cnti.indexOf("type")!=-1 || cnti.indexOf("http-r")!=-1) {
+        cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
+        //console.log(cnti)
+      }else if ((cnti.indexOf(" 302")!=-1 || cnti.indexOf(" 307")!=-1) && cnti.indexOf(" url ")==-1){
+        cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
+        //console.log("sss",cnti)
+      }else if(cnti.indexOf("URL-REGEX")!=-1 || cnti.indexOf(" header")!=-1 || cnti.replace(/ /g,"").indexOf("hostname=")!=-1){
+        cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
+      }else if(cnti.indexOf(" data=")!=-1){
+        cnti=cnti.replace(/ /g, "").split("data=")[0] + " url " + "reject-dict"
+      }
+      if (cnti.trim()[0]!="[" && cnti.indexOf("RULE-SET")==-1) {
+        cnt0.push(cnti)
+      }
     }
-    cnt0.push(cnti)
   }
   //console.log(cnt0)
   return cnt0
 }
+
 
 //根据节点名排序(不含emoji 部分)
 function QXSort(content, para) {
