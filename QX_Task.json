@@ -62,5 +62,6 @@
         "10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_apple_live.js, tag=苹果抽奖机, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_lotteryMachine.png, enabled=true",
         "20 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pubg.js, tag=PUBG, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true",
         "10-20/5 12 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live.js, tag=京东直播, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jd_live_redrain.png , enabled=true",
+        "50 6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jr_sign.js, tag=金融打卡领年终奖, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true",
     ]
 }   
