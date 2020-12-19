@@ -69,5 +69,8 @@
         "8 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js, tag=京东赚赚, img-url=lkyl.png, enabled=true",
         "10 8 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdh.js, tag=京东健康, img-url=lkyl.png, enabled=true",
         "10 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_watch.js, tag=京东看一看, img-url=lkyl.png, enabled=true",
+        "0 9 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/upgrade-product.js, tag=升级商品, img-url=https://raw.githubusercontent.com/Xirou/Script/master/jxc.PNG, enabled=true"
+        "0 9 */2 * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/upgrade-shelf.js, tag=升级货架, img-url=https://raw.githubusercontent.com/Xirou/Script/master/jxc.PNG, enabled=true"
+        "10 0 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_collectBlueCoin.js, tag=京小超领蓝币, img-url=https://raw.githubusercontent.com/Xirou/Script/master/jxc.PNG, enabled=true"
     ]
 }   
