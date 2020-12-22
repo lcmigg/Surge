@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-21 21:21⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-22 00:00⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -60,7 +60,7 @@
   ❖ 当解析器未能正确识别类型时, 可尝试使用此参数强制指定
 ----------------------------------------------------------
 */
-;''
+
 /**
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
@@ -145,10 +145,11 @@ try {
   total = ResourceParse();
   
 } catch (err) {
-    $notify("解析出现错误", "⚠️请点击发送链接反馈", err);
+    $notify("解析出现错误", "请点击发送链接反馈", err);
 }
 
 $done({ content: total });
+
 
 /**
 # 以下为具体的 function
@@ -265,6 +266,9 @@ function SubFlow() {
     //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
     $notify("👉魅影极速", epr, message)
   }
+//  } else if (Pinfo ==1){
+//    $notify("流量信息: ⟦" + subtag + "⟧", "", "该订阅链接未返回任何流量信息")
+//  }
 }
 
 //flowcheck-fake-server
@@ -279,6 +283,8 @@ function flowcheck(cnt) {
             exptime = nm
         }
     }
+  flow = flow? flow:"该订阅未返回任何流量信息"
+  exptime = exptime? exptime:"该订阅未返回套餐时间信息"
     if (flow != "") { $notify("流量信息: ⟦" + subtag + "⟧", flow, exptime) }
 }
 
@@ -994,7 +1000,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
