@@ -1,12 +1,12 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-22 00:00⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-23 23:23⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
-☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
+⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
 ❖ 本地资源片段引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行 ❖
 ❖ 🚦 支持中文, "操作" 以下特殊字符时请先替换 🚦
   ∎ "+"⇒"%2B", 空格⇒"%20", "@"⇒"%40", "&"⇒"%26", "."⇒"\."
@@ -65,7 +65,7 @@
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
+⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
 1️⃣ 假设原始订阅连接为: https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt , 
 2️⃣ 假设你想要保留的参数为 in=tls+ss, 想要过滤的参数为 out=http+2, 请注意下面订阅链接后一定要加 ”#“ 符号
 3️⃣ 则填入 Quanx 节点引用的的总链接为  https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
@@ -123,6 +123,7 @@ var Prrname = mark0 && para1.indexOf("rrname=") != -1 ? para1.split("rrname=")[1
 var Ppolicy = mark0 && para1.indexOf("policy=") != -1 ? decodeURIComponent(para1.split("policy=")[1].split("&")[0]) : "Shawn";
 var Pcert0 = mark0 && para1.indexOf("cert=") != -1 ? para1.split("cert=")[1].split("&")[0] : 0;
 var Psort0 = mark0 && para1.indexOf("sort=") != -1 ? para1.split("sort=")[1].split("&")[0] : 0;
+var PsortX = mark0 && para1.indexOf("sortx=") != -1 ? para1.split("sortx=")[1].split("&")[0] : 0;
 var PTls13 = mark0 && para1.indexOf("tls13=") != -1 ? para1.split("tls13=")[1].split("&")[0] : 0;
 var Pntf0 = mark0 && para1.indexOf("ntf=") != -1 ? para1.split("ntf=")[1].split("&")[0] : 2;
 var Pb64 = mark0 && para1.indexOf("b64=") != -1 ? para1.split("b64=")[1].split("&")[0] : 0;
@@ -145,11 +146,10 @@ try {
   total = ResourceParse();
   
 } catch (err) {
-    $notify("解析出现错误", "请点击发送链接反馈", err);
+    $notify("解析出现错误", "⚠️请点击发送链接反馈", err);
 }
 
 $done({ content: total });
-
 
 /**
 # 以下为具体的 function
@@ -267,7 +267,7 @@ function SubFlow() {
     $notify("👉魅影极速", epr, message)
   }
 //  } else if (Pinfo ==1){
-//    $notify("流量信息: ⟦" + subtag + "⟧", "", "该订阅链接未返回任何流量信息")
+//    $notify("流量信息: ⟦" + subtag + "⟧", "", "该订阅链接未返回任何流量信息", subinfo_link)
 //  }
 }
 
@@ -1246,6 +1246,7 @@ function shuffle(arr) {
 function Sort_KWD (cnt,strs) {
   strlist = strs.indexOf("<") != -1 ? strs.split("<"):strs.split(">")
   regj = strlist.map(item => RegExp(item, "i"))
+  //dir = PsortX
   dir = strs.indexOf("<") != -1 ? -1:1
   var arr =  new Array(strlist.length+1);   //表格有n行
   for(var i = 0;i < arr.length; i++){
@@ -1264,6 +1265,8 @@ function Sort_KWD (cnt,strs) {
       arr[strlist.length].push(cnt[i]) } // 不匹配项
   }
   //console.log(arr)
+  arr = PsortX == -1? arr.map(item => item.sort(ToTagR)):arr
+  arr = PsortX == 1? arr.map(item => item.sort(ToTag)):arr
   newarr = MixArr(arr,dir)
   return newarr
 }
