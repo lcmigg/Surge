@@ -1,9 +1,10 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-24 00:00⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2020-12-25 20:20⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
+
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
 ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
@@ -154,6 +155,7 @@ try {
 
 $done({ content: total });
 
+
 /**
 # 以下为具体的 function
 
@@ -189,10 +191,10 @@ function ResourceParse() {
     if (Preplace) { total = ReplaceReg(total, Preplace) }
     total = total.join("\n")
   } else if (content0.trim() == "") {
-    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
+    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "⁉️ 点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
-    $notify("未能解析, 可能是 bug  " + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
+    $notify("未能解析, 可能是 bug" + "⟦" + subtag + "⟧", "本解析器 暂未支持/未能识别 该订阅格式", "将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈");
     flag = -1;
   }
   
@@ -405,7 +407,7 @@ function rawtest(cnt) {
 function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
-  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+  $notify( "⚠️将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
   return cnt
 }
 
@@ -541,9 +543,9 @@ function Rewrite_Filter(subs, Pin, Pout) {
         nowrite = dwrite.length <= 10 ? emojino[dwrite.length] : dwrite.length
         no1write = Nlist.length <= 10 ? emojino[Nlist.length] : Nlist.length
         if (Pin0 && no1write != " 0️⃣ ") { //有 in 参数就通知保留项目
-            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "☠️ 重写 rewrite 中保留以下" + no1write + "个匹配项:" + "\n ⨷ " + Nlist.join("\n ⨷ "))
+            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中保留以下" + no1write + "个匹配项:" + "\n ⨷ " + Nlist.join("\n ⨷ "))
         } else if (dwrite.length > 0) {
-            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "☠️ 重写 rewrite 中已禁用以下" + nowrite + "个匹配项:" + "\n ⨷ " + dwrite.join("\n ⨷ "))
+            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中已禁用以下" + nowrite + "个匹配项:" + "\n ⨷ " + dwrite.join("\n ⨷ "))
         }
     }
     if (Nlist.length == 0) { $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") }
@@ -584,9 +586,9 @@ function HostNamecheck(content, parain, paraout) {
             var noname = dname.length <= 10 ? emojino[dname.length] : dname.length
             var no1name = nname.length <= 10 ? emojino[nname.length] : nname.length
             if (parain && no1name != " 0️⃣ ") {
-                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "☠️ 主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","))
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","))
             } else if (dname.length > 0) {
-                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "☠️ 主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","))
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","))
             }
         }
     }
@@ -644,7 +646,7 @@ function Rule_Handle(subs, Pout, Pin) {
         }//for cnt
         var no = dlist.length <= 10 ? emojino[dlist.length] : dlist.length
         if (dlist.length > 0) {
-            if (Pntf0 != 0) { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "☠️ 已禁用以下" + no + "条匹配规则:" + "\n ⨷ " + dlist.join("\n ⨷ ")) }
+            if (Pntf0 != 0) { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "已禁用以下" + no + "条匹配规则:" + "\n ⨷ " + dlist.join("\n ⨷ ")) }
         } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "未发现任何匹配项, 请检查参数或原始链接") }
         if (Tin != "" && Tin != null) {  //有 in 跟 out 参数时
             if (nlist.length > 0) {
@@ -1000,12 +1002,12 @@ function Filter(servers, Pin, Pout) {
     var no1 = Nlist.length <= 10 ? emojino[Nlist.length] : Nlist.length;
     if (Pntf0 == 1 && Delist.length >= 1) {//通知部分
         if (Pin && no1 > 0) { //有 in 参数就通知保留部分
-            $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "☠️ 已保留以下 " + no1 + "个节点\n" + Nname.join(", "));
+            $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已保留以下 " + no1 + "个节点\n" + Nname.join(", "));
         } else if (Pout && no > 0) {
-            $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "☠️ 已删除以下 " + no + "个节点\n" + Delist.join(", "));
+            $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -1723,7 +1725,7 @@ function CH2QX(cnt){
     pwd = cnt.password ? "password=" + cnt.password : ""
     tls = cnt.tls ? "over-tls=true" : ""
     cert = cnt["skip-cert-verify"] && cnt.tls ? "tls-verification=false" : ""
-    if (Pcert0 == 0) { cert = "tls-verification=false" }
+    if (Pcert0 == 0 && cnt.tls) { cert = "tls-verification=false" }
     node = "http="+[ipt, uname, pwd, tls, cert, tag].filter(Boolean).join(", ")
     //console.log(node)
     return node
