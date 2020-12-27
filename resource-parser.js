@@ -482,7 +482,8 @@ function SCP2QX(subs) {
             type = subs[i].replace(/\s+/g," ").split(" ")[0]
             js = subs[i].split("script-path")[1].split("=")[1].split(",")[0]
             ptn = subs[i].replace(/\s+/g," ").split(" ")[1]
-            if (type == "http-response" && subs[i].indexOf("requires-body=1") != -1) {
+            subsi = subs[i].replace(/ /g,"").replace(/\=true/g,"=1")
+	    if (type == "http-response" && subs[i].indexOf("requires-body=1") != -1) {
               type = "script-response-body "
             } else if (type == "http-response" && subs[i].indexOf("requires-body=1") == -1) {
               type = "script-response-header "
