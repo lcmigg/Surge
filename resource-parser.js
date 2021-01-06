@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-01-05 12:59⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-01-06 21:21⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -176,7 +176,7 @@ function ParseUnkown(cnt){
   try {
     cnt = JSON.parse(cnt)
     if(cnt) {
-      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
+      $notify("链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
     }
     
   } catch(err) {
@@ -299,7 +299,7 @@ function SubFlow() {
     $notify("👉魅影极速", epr, message)
   }
 //  } else if (Pinfo ==1){
-//    $notify("流量信息: ⟦" + subtag + "⟧", "", "⚠️ 该订阅链接未返回任何流量信息")
+//    $notify("流量信息: ⟦" + subtag + "⟧", "", "该订阅链接未返回任何流量信息")
 //  }
 }
 
@@ -385,9 +385,10 @@ function Type_Check(subs) {
     return type
 }
 
-// 检查节点名字(重复以及空名)等QuanX 不允许的情形
+// 检查节点名字(重复以及空名)等QuanX 不允许的情形，以及多个空格等“不规范”方式
 function TagCheck_QX(content) {
-    var Olist = content
+    var Olist = content.map(item =>item.trim().replace(/\s{2,}/g," "))
+    //$notify("","",Olist)
     var [Nlist, nmlist] = [ [], [] ]
     var [nulllist,duplist] = [ [], [] ]; //记录空名字节点&重名节点
     var no = 0;
@@ -782,7 +783,7 @@ function Rule_Policy(content) { //增加、替换 policy
             ply0 = Ppolicy != "Shawn" ? Ppolicy : cnt[2]
             nn = cnt[0] + ", " + cnt[1] + ", " + ply0 + ", " + cnt[3]
         } else if (!RuleK.some(RuleCheck) && content) {
-            //$notify("未能解析" + "⟦" + subtag + "⟧" + "其中部分规则:", content, nan_link);
+            //$notify("未能解析" + "⟦" + subtag + "⟧" + "其中部分规则:", content);
             return ""
         } else { return "" }
         if (cnt[0].indexOf("URL-REGEX") != -1 || cnt[0].indexOf("PROCESS") != -1) {
@@ -1084,7 +1085,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -1392,9 +1393,9 @@ function Rename(str) {
                 var nemoji = emoji_del(name)
                 if ((Pemoji == 1 || Pemoji == 2) && Prname ) { //判断是否有重复 emoji，有则删除旧有
                     name = name.replace(name.split(" ")[0] + " ", name.split(" ")[0] + " " + oname)
-                } else { name = oname + name }
+                } else { name = oname + name.trim() }
             } else if (nname && oname == "") {//后缀
-                name = name + nname
+                name = name.trim() + nname
             } else if (oname && oname.indexOf("☠️") != -1) { //删除特定字符，多字符用.连接
                 hh = Dot2(oname.slice(0, oname.length - 2)).split(".") //符号.的特殊处理
                 for (j = 0; j < hh.length; j++) {
@@ -1805,7 +1806,7 @@ function CH2QX(cnt){
     tag = "tag="+cnt.name.replace(/\\U.+?\s{1}/gi," ")
     ipt = cnt.server+":"+cnt.port
     uname = cnt.username ? "username=" + cnt.username : ""
-    pwd = cnt.password ? "password=" + cnt.password : ""
+    pwd = cnt.password && typeof(cnt.password) == "string" ? "password=" + cnt.password : ""
     tls = cnt.tls ? "over-tls=true" : ""
     cert = cnt["skip-cert-verify"] && cnt.tls ? "tls-verification=false" : ""
     if (Pcert0 == 0 && cnt.tls) { cert = "tls-verification=false" }
