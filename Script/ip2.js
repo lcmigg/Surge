@@ -24,7 +24,7 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var title = flags.get(obj['countryCode']) + ' '+ obj['country'];
 //var subtitle =(obj['isp'])+ " ➠ "+'('+obj['city']+')';
-var subtitle ="™ " + (obj['isp'])+ " ➠ ";
+var subtitle =(obj['isp'])+"™ "+" ➠ ";
 var ip = obj['query'];
 var description = obj['country'] + '-' +(obj['city']) + '\n' + obj['org'] + '\n'+obj['ipName']+ '\n' + obj['query'];
 
