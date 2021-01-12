@@ -79,5 +79,6 @@
         "10 0 8,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bookshop.js, tag=口袋书店, img-url=lkyl.png, enabled=true",
         "3 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jx_sign.js, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, tag=京喜签到, enabled=true",
         "0 7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_cash.js, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jdlxj.png, tag=签到领现金, enabled=true",
+        "1 7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_nh.js, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, tag=京东年货节, enabled=true",
     ]
 }   
