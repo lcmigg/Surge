@@ -77,5 +77,7 @@
         "10 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_watch.js, tag=京东看一看, img-url=lkyl.png, enabled=true",
         "11 6 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_crazyJoy.js, tag=疯狂的Joy, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true",
         "10 0 8,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bookshop.js, tag=口袋书店, img-url=lkyl.png, enabled=true",
+        "3 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jx_sign.js, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, tag=京喜签到, enabled=true",
+        "0 7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_cash.js, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jdlxj.png, tag=签到领现金, enabled=true",
     ]
 }   
