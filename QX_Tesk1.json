@@ -1,0 +1,22 @@
+{
+    "name": "Lcmig 签到 Task",
+    "description": "QX Task 签到",
+    "task": [
+        "9 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js, tag=10086-查话费, img-url=cmcc.png",
+        "11 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, tag=rrtv签到, img-url=rrtv.png",
+        "12 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js, tag=网易云音乐, img-url=music.png",
+        "13 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js, tag=百度贴吧, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/tieba.png",
+        "12 8 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js, tag=什么值得买每日签到, img-url=smzdm.PNG",
+        "14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js, tag=加油广东, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/gdoil.png",
+        "14 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, tag=顺丰签到, img-url=sfexpress.png",
+        "15 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, tag=ZAKER新闻, img-url=zaker.png",
+        "16 8 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/github.js, tag=github更新, img-url=github.png",
+        "16 8 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, tag=慢慢买签到, img-url=manman.png",
+        "17 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=bilibili签到, img-url=bilibili.png",
+        "17 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js, tag=bilibili瓜子, img-url=bilibili.png",
+        "17 8 * * * https://gitee.com/passerby-b/javascript/raw/master/unipay.js, tag=云闪付签到, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/unionpay.png",
+        "5 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话, img-url=https://raw.githubusercontent.com/Orz-3/task/master/box.png",
+        "8 */1 * * * https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js, tag=QQ读书, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/qqread.png, enabled=true",
+        "10 19 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js, tag=小米运动, img-url=mi.PNG",
+    ]
+}   
