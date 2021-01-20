@@ -67,6 +67,7 @@
         "10 0 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jd_collectBlueCoin.js, tag=京小超领蓝币, img-url=https://raw.githubusercontent.com/Xirou/Script/master/jxc.PNG, enabled=true",
         "3 6 10,20,30 * * https://raw.githubusercontent.com/lcmigg/Surge/master/jdshare/jdzl-1.js, tag=互助上车1, img-url=lkyl.png",
         "4 6 10,20,30 * * https://raw.githubusercontent.com/lcmigg/Surge/master/jdshare/jdzl-2.js, tag=互助上车2, img-url=lkyl.png",
+        "0 8 * * * https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js, tag=京东神仙书院, enabled=true",
         "57 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js, tag=注销京东会员卡, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jd_unbind.png, enabled=true",
         "20 13 * * 6 https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_get_share_code.js, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jd.png, tag=获取互助码, enabled=true"
     ]
