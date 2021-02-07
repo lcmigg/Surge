@@ -1,12 +1,13 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-01-20 11:45⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-01-22 20:29⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
+
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
-⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
+☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
 ❖ 本地资源片段引用, 请将参数 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行 ❖
 ❖ 🚦 支持中文, "操作" 以下特殊字符时请先替换 🚦
   ∎ "+"⇒"%2B", 空格⇒"%20", "@"⇒"%40", "&"⇒"%26", "."⇒"\."
@@ -68,17 +69,19 @@
 ----------------------------------------------------------
 */
 
+
 /**
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
+⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
 1️⃣ 假设原始订阅连接为: https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt , 
 2️⃣ 假设你想要保留的参数为 in=tls+ss, 想要过滤的参数为 out=http+2, 请注意下面订阅链接后一定要加 ”#“ 符号
 3️⃣ 则填入 Quanx 节点引用的的总链接为  https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
 4️⃣ 填入上述链接, 并打开的资源解析器开关
 ------------------------------
 */
+
 
 //beginning 解析器正常使用，調試註釋此部分
 
@@ -109,7 +112,9 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
+
 SubFlow() //流量通知
+
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -144,6 +149,8 @@ var Pcnt =  para1.indexOf("cnt=") != -1 ? para1.split("cnt=")[1].split("&")[0] :
 let [flow, exptime, errornode, total] = "";
 
 var typeU = para1.indexOf("type=") != -1 ? para1.split("type=")[1].split("&")[0] : "";
+
+
 
 
 var type0=""
@@ -297,7 +304,8 @@ function SubFlow() {
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
     //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
-    $notify("👉魅影极速", epr, message)
+    //$notify("👉魅影极速", epr, message)
+    $notify("👉" + subtag, epr, message)
   }
 //  } else if (Pinfo ==1){
 //    $notify("流量信息: ⟦" + subtag + "⟧", "", "⚠️ 该订阅链接未返回任何流量信息", subinfo_link)
@@ -317,7 +325,7 @@ function flowcheck(cnt) {
         }
     }
   flow = flow? flow:"⚠️ 该订阅未返回任何流量信息"
-  exptime = exptime? exptime:"⚠️ 该订阅未返回套餐时间信息"
+  exptime = exptime? exptime:"该订阅未返回套餐时间信息"
     if (flow != "") { $notify("流量信息: ⟦" + subtag + "⟧", flow, exptime) }
 }
 
@@ -502,9 +510,14 @@ function rawtest(cnt) {
 function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
-  $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+  if (cnt) {
+    $notify( "将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+  } else if(content0.indexOf("gridcell")!=-1) {
+    $notify( "解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
+  }
   return cnt
 }
+
 
 
 //url-regex 转换成 Quantumult X
@@ -640,7 +653,7 @@ function Rewrite_Filter(subs, Pin, Pout) {
         nowrite = dwrite.length <= 10 ? emojino[dwrite.length] : dwrite.length
         no1write = Nlist.length <= 10 ? emojino[Nlist.length] : Nlist.length
         if (Pin0 && no1write != " 0️⃣ ") { //有 in 参数就通知保留项目
-            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中保留以下" + no1write + "个匹配项:" + "\n ⨷ " + Nlist.join("\n ⨷ "))
+            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "☠️ 重写 rewrite 中保留以下" + no1write + "个匹配项:" + "\n ⨷ " + Nlist.join("\n ⨷ "))
         } else if (dwrite.length > 0) {
             $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中已禁用以下" + nowrite + "个匹配项:" + "\n ⨷ " + dwrite.join("\n ⨷ "))
         }
@@ -753,11 +766,11 @@ function Rule_Handle(subs, Pout, Pin) {
                     $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
                 }
             } else {
-                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
             }
         } else {// if Tin (No Tin)
             if (nlist.length == 0) {
-                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
             }
         }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
@@ -780,7 +793,7 @@ function Rule_Handle(subs, Pout, Pin) {
             if (Pntf0 != 0) {
                 $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
             }
-        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
+        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
       return nlist;
     } else {  //if Tin
@@ -861,43 +874,48 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
     var SurgeK = ["=ss", "=vmess", "=trojan", "=http", "=custom"];
     var LoonK = ["=shadowsocks", "=shadowsocksr"]
     var QXlist = [];
+    var failedList = [];
     for (var i = 0; i < list0.length; i++) {
         var node = ""
         if (list0[i].trim().length > 3) {
             var type = list0[i].split("://")[0].trim()
             var listi = list0[i].replace(/ /g, "")
             const NodeCheck = (item) => listi.toLowerCase().indexOf(item) != -1;
-            if (type == "vmess" && list0[i].indexOf("remarks=") == -1) {
-                var bnode = Base64.decode(list0[i].split("vmess://")[1])
-                if (bnode.indexOf("over-tls=") == -1) { //v2rayN
-                    node = V2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
-                } else { //quantumult 类型
-                    node = VQ2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+            try {
+                if (type == "vmess" && list0[i].indexOf("remarks=") == -1) {
+                    var bnode = Base64.decode(list0[i].split("vmess://")[1])
+                    if (bnode.indexOf("over-tls=") == -1) { //v2rayN
+                        node = V2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+                    } else { //quantumult 类型
+                        node = VQ2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+                    }
+                } else if (type == "vmess" && list0[i].indexOf("remarks=") != -1) { //shadowrocket 类型
+                    node = VR2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+                } else if (type == "ssr") {
+                    node = SSR2QX(list0[i], Pudp, Ptfo)
+                } else if (type == "ss") {
+                    node = SS2QX(list0[i], Pudp, Ptfo)
+                } else if (type == "ssd") {
+                    node = SSD2QX(list0[i], Pudp, Ptfo)
+                } else if (type == "trojan") {
+                    node = TJ2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+                } else if (type == "https" && list0[i].indexOf(",") == -1) {
+                    if (listi.indexOf("@") != -1) {
+                        node = HPS2QX(list0[i], Ptfo, Pcert, Ptls13)
+                    } else {
+                        var listh = Base64.decode(listi.split("https://")[1].split("#")[0])
+                        listh = "https://" + listh + "#" + listi.split("https://")[1].split("#")[1]
+                        node = HPS2QX(listh, Ptfo, Pcert, Ptls13)
+                    }
+                } else if (QuanXK.some(NodeCheck)) {
+                    node = isQuanX(list0[i])[0]
+                } else if (SurgeK.some(NodeCheck)) {
+                    node = Surge2QX(list0[i])[0]
+                } else if (LoonK.some(NodeCheck)) {
+                    node = Loon2QX(list0[i])
                 }
-            } else if (type == "vmess" && list0[i].indexOf("remarks=") != -1) { //shadowrocket 类型
-                node = VR2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
-            } else if (type == "ssr") {
-                node = SSR2QX(list0[i], Pudp, Ptfo)
-            } else if (type == "ss") {
-                node = SS2QX(list0[i], Pudp, Ptfo)
-            } else if (type == "ssd") {
-                node = SSD2QX(list0[i], Pudp, Ptfo)
-            } else if (type == "trojan") {
-                node = TJ2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
-            } else if (type == "https" && list0[i].indexOf(",") == -1) {
-                if (listi.indexOf("@") != -1) {
-                  node = HPS2QX(list0[i], Ptfo, Pcert, Ptls13)
-            } else {
-                var listh = Base64.decode(listi.split("https://")[1].split("#")[0])
-                listh = "https://" + listh + "#" + listi.split("https://")[1].split("#")[1]
-                node = HPS2QX(listh, Ptfo, Pcert, Ptls13)
-                }
-            } else if (QuanXK.some(NodeCheck)) {
-                node = isQuanX(list0[i])[0]
-            } else if (SurgeK.some(NodeCheck)) {
-                node = Surge2QX(list0[i])[0]
-            } else if (LoonK.some(NodeCheck)) {
-                node = Loon2QX(list0[i])
+            } catch (e) {
+                failedList.push(`<<<\nContent: ${list0[i]}\nError: ${e}`)
             }
             if (node instanceof Array) {
                 for (var j in node) {
@@ -912,7 +930,10 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
             }
         }
     }
-    return QXlist
+    if (failedList.length > 0 && Pntf0 != 0) {
+        $notify(`有 ${failedList.length} 条数据解析出错, 已跳过`, "出错内容", failedList.join("\n"));
+    }
+    return QXlist;
 }
 
 //将sip008格式的订阅转换成quanx格式
@@ -1130,7 +1151,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -1145,7 +1166,7 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "请自行检查原始链接以及筛选参数", link0);
+            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
