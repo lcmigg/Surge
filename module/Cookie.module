@@ -5,7 +5,7 @@
 [Script]
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
-JD_DailyBonus.js = type=http-request,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,max-size=0,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex)
+获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # > 百度贴吧
 # 用浏览器访问并登录: https://tieba.baidu.com/index/
@@ -18,21 +18,8 @@ neteasemusic.cookie.js = script-path=https://raw.githubusercontent.com/chavyleun
 # > 人人视频
 rrtv.cookie.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js,pattern=^https:\/\/api\.rr\.tv\/user\/profile
 
-# > 顺丰速运
-sfexpress.cookie.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,pattern=^https:\/\/sf-integral-sign-in.weixinjia.net\/app\/index
-sfexpress.cookie.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,pattern=^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/(.*?)Redirect
-
 # > 加油广东
 gdoil.cookie.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js,pattern=^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign
-
-# > 京东到家 (By @barrymchen, @GideonSenku & @Macsuny)
-jddj.js = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,pattern=https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin
-
-# > 微信小程序 来客有礼
-lkyl.js = type=http-request,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?
-
-# > 微信小程序 活动抽奖 (By @makexp & @zZPiglet)
-WeChatLottery_new.js = type=http-request,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js,pattern=^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign
 
 # > zaker app
 zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js,pattern= ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php
@@ -49,11 +36,11 @@ CMCC = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/B
 什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
 
 # > 企鹅读书获取更新body
-企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js, 
-企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js, 
+企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qqreads.js
+企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qqreads.js 
 
 # > 京东赚赚cookie
-京东赚赚cookie = type=http-request,pattern=^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
+#京东赚赚cookie = type=http-request,pattern=^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
 
 
 # > 小米运动获取Token
