@@ -36,8 +36,13 @@ CMCC = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/B
 什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
 
 # > 企鹅读书获取更新body
-企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qqreads.js
-企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qqreads.js 
+#企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qqreads.js
+#企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qqreads.js 
+
+企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path= https://raw.githubusercontent.com/photonmang/quantumultX/master/cache/qqreadck.js
+企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path= https://raw.githubusercontent.com/photonmang/quantumultX/master/cache/qqreadck.js
+
+
 
 # > 京东赚赚cookie
 #京东赚赚cookie = type=http-request,pattern=^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
