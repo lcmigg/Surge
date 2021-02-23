@@ -50,8 +50,8 @@ crazyJoy任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=3600,scrip
 东东小窝 = type=cron,cronexp="6 */3 * * *",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_woHome.js
 京东泡泡大战 = type=cron,cronexp="2 0 * * *",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_paopao.js
 女装盲盒 = type=cron,cronexp="0 7 19-25 2 *",wake-system=1,timeout=120,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_nzmh.js
-京东极速版红包 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_speed_redpocke.js
-京东极速版 = type=cron,cronexp="10 5 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_speed_sign.js
+京东极速版红包 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_redpocke.js
+京东极速版 = type=cron,cronexp="10 5 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_sign.js
 
 [MITM]
 hostname = %APPEND% wq.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, wq.jd.com
