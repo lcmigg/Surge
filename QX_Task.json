@@ -11,6 +11,7 @@
         "10 8 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.js, tag=京东到家, img-url=https://raw.githubusercontent.com/lcmigg/Surge/master/img/jddj.png",
         "0 9,12,20,21 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global.js, tag=环球挑战赛, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/lxk0301/jd_global.png, enabled=true",
         "0 0,6,12,18 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_5g.js, tag=5G狂欢城, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true",
+        "0 9,12,20,21 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global_mh.js, tag=京东国际盲盒, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/lxk0301/jd_global_mh.png, enabled=true",
         "5 7 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xg.js, tag=小鸽有礼, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xg.jpg, enabled=true",
         "2 7 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_mh.js, tag=盲盒抽京豆, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_mh.jpg, enabled=true",
         "1 7 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_sx.js, tag=海产新年抽奖, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true",
