@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-02-22 14:29⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-01 19:19⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -19,7 +19,7 @@
 ⦿ 𝘁𝗹𝘀13=1, 𝗰𝗲𝗿𝘁=1, 分别开启 𝐭𝐥𝐬1.3 及 𝐭𝐥𝐬 证书验证(默认关闭);
 ⦿ 𝗶𝗻, 𝗼𝘂𝘁, 𝗿𝗲𝗴𝗲𝘅 分别为 保留、删除、正则筛选 节点;
   ❖ 𝗶𝗻, 𝗼𝘂𝘁 中多参数(逻辑"或")用 "+", 逻辑"与"用 "." 表示;
-  ❖ 𝗿𝗲𝗴𝗲𝘅 会对节点的完整信息进行匹配(类型、端口、加密等);
+  ❖ 𝗶𝗻/𝗼𝘂𝘁/𝗿𝗲𝗴𝗲𝘅 均对节点的完整信息进行匹配(类型、端口、加密等);
   ❖ 示范: "𝐢𝐧=香港.0\.2倍率+台湾&𝐨𝐮𝐭=香港%20𝐁𝐆𝐏&𝐫𝐞𝐠𝐞𝐱=(?𝐢)𝐢𝐩𝐥𝐜"
 ⦿ 𝗿𝗲𝗻𝗮𝗺𝗲 重命名, "旧名@新名", "前缀@", "@后缀", 用 "+" 连接多个参数;
   ❖ 删除字段: "字段1.字段2☠️", 想删除 "." 时用 "\." 替代
@@ -30,7 +30,6 @@
     ∎ 样式分别为 "𝐬𝐬","𝐒𝐒","🅢🅢","🆂🆂","ⓢⓢ","🅂🅂"
   ❖ $emoji1/2 占位符，将节点地区emoji(🇭🇰 🇯🇵 等)作为可操作参数，如
     ∎ 𝐫𝐞𝐧𝐚𝐦𝐞=@「$emoji1」
-⦿ 𝗱𝗲𝗹=0, 有重名节点时，默认删除重复节点, 此参数为 0 则保留所有重名节点
 ⦿ 𝘀𝘂𝗳𝗳𝗶𝘅=-1/1 将节点类型做为前缀/后缀 添加在节点名中, 如 「𝗌𝗌」 「𝖵𝗆𝖾𝗌𝗌」
 ⦿ 𝗱𝗲𝗹𝗿𝗲𝗴, 利用正则表达式来删除 "节点名" 中的字段(⚠️ 慎用)
 ⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换节点中内容, 可用于重命名/更改加密方式等
@@ -83,7 +82,6 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 ------------------------------
 */
 
-
 //beginning 解析器正常使用，調試註釋此部分
 
 let [link0, content0, subinfo] = [$resource.link, $resource.content, $resource.info]
@@ -113,9 +111,7 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
-
 SubFlow() //流量通知
-
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -301,12 +297,12 @@ function SubFlow() {
     //var message = total + "\n" + usd + ", " + left;
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
-    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
+    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
     //$notify("👉魅影极速", epr, message)
     $notify("👉" + subtag, epr, message)
   }
 //  } else if (Pinfo ==1){
-//    $notify("流量信息: ⟦" + subtag + "⟧", "", "⚠️ 该订阅链接未返回任何流量信息")
+//    $notify("流量信息: ⟦" + subtag + "⟧", "", "⚠️ 该订阅链接未返回任何流量信息", subinfo_link)
 //  }
 }
 
@@ -436,9 +432,9 @@ function TagCheck_QX(content) {
     if (duplist.length >= 1) {
         no = duplist.length <= 10 ? emojino[duplist.length] : duplist.length;
       if (Pdel==0){
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个重复节点名 ", "已添加⌘符号作为区分:", " ⨁ " + duplist.join("\n ⨁ "))
+        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已添加⌘符号作为区分:", " ⨁ " + duplist.join("\n ⨁ "))
       } else {
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个重复节点名 ", "已全部删除:", " ⨁ " + duplist.join("\n ⨁ "))
+        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已全部删除处理，如需保留请添加参数 del=0:", " ⨁ " + duplist.join("\n ⨁ "))
       }
     }
     return Nlist
@@ -521,7 +517,6 @@ function ToRaw(cnt) {
   }
   return cnt
 }
-
 
 
 //url-regex 转换成 Quantumult X
@@ -1560,28 +1555,33 @@ function emoji_handle(servers, Pemoji) {
 
 //Surge2QX 转换主函数
 function Surge2QX(conf) {
-    var QXlist = conf.split("\n").map(isSurge).filter(Boolean)
-    var Nlist = []
-    var node=""
-    for (var i = 0; i < QXlist.length; i++) {
-        var cnt = QXlist[i];
-        if (cnt.split("=")[1].split(",")[0].indexOf("trojan") != -1) {
-            node = Strojan2QX(cnt)//surge 3的trojan
-        } else if (cnt.split("=")[1].split(",")[0].indexOf("http") != -1) {
-            node = Shttp2QX(cnt) //surge 3的http
-        } else if (cnt.split("=")[1].split(",")[0].indexOf("vmess") != -1) {
-            node = SVmess2QX(cnt) //surge 3的Vmess
-        } else if (cnt.split("=")[1].split(",")[0].indexOf("ss") != -1) {
-            node = SSS2QX(cnt) //surge 3的SS
-        } else if (cnt.split("=")[1].split(",")[0].indexOf("custom") != -1) {
-            node = SCT2QX(cnt) //surge2写法
-        }
-        node = Pudp0 != 0 ? XUDP(node,Pudp0) : node
-        node = Ptfo0 != 0 ? XTFO(node,Ptfo0) : node
-        Nlist.push(node)
+  var QXlist = conf.split("\n").map(isSurge).filter(Boolean)
+  var Nlist = []
+  var node=""
+  for (var i = 0; i < QXlist.length; i++) {
+    var cnt = QXlist[i];
+    if (cnt.split("=")[1].split(",")[0].indexOf("trojan") != -1) {
+      node = Strojan2QX(cnt)//surge 3的trojan
+    } else if (cnt.split("=")[1].split(",")[0].indexOf("http") != -1) {
+      node = Shttp2QX(cnt) //surge 3的http
+    } else if (cnt.split("=")[1].split(",")[0].indexOf("vmess") != -1) {
+      node = SVmess2QX(cnt) //surge 3的Vmess
+    } else if (cnt.split("=")[1].split(",")[0].indexOf("ss") != -1) {
+      node = SSS2QX(cnt) //surge 3的SS
+    } else if (cnt.split("=")[1].split(",")[0].indexOf("custom") != -1) {
+      node = SCT2QX(cnt) //surge2写法
     }
-    return (Nlist)
+    node = Pudp0 != 0 ? XUDP(node,Pudp0) : node
+    node = Ptfo0 != 0 ? XTFO(node,Ptfo0) : node
+    if (cnt.indexOf("test-url") !=-1) {
+      var checkurl = ", server_check_url" + cnt.split("test-url")[1].split(",")[0]
+      node = node.replace(/\,(\s)*tag/, checkurl + ", tag")
+    }
+    Nlist.push(node)
+  }
+  return (Nlist)
 }
+
 
 // surge2 中的 SS 类型写法(custom)
 //🇷🇺 俄罗斯 GIA = custom, ip, 152, aes-128-gcm, password123, https://xxx/download/SSEncrypt.module, obfs=tls, obfs-host=xxx.windows.com, udp-relay=true
