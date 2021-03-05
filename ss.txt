@@ -1,0 +1,49 @@
+
+shadowsocks=hkg.1.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-01
+shadowsocks=hkg.2.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-02
+shadowsocks=hkg.3.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-03
+shadowsocks=hkg.4.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-04
+shadowsocks=hkg.5.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-05
+shadowsocks=hkg.6.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-06
+shadowsocks=hkg.7.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-07
+shadowsocks=hkg.8.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-08
+shadowsocks=hkg.9.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-09
+shadowsocks=hkg.10.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=A-香港-10
+shadowsocks=usa.1.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=B-美国-01
+shadowsocks=usa.2.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=B-美国-02
+shadowsocks=usa.3.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=B-美国-03
+shadowsocks=usa.4.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=B-美国-04
+shadowsocks=usa.5.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=B-美国-05
+shadowsocks=jp.n.1.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=C-日本-01
+shadowsocks=jp.n.2.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=C-日本-02
+shadowsocks=jp.n.3.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=C-日本-03
+shadowsocks=taip.1.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=D-台湾-01
+shadowsocks=taip.2.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=D-台湾-02
+shadowsocks=taip.3.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=D-台湾-03
+shadowsocks=sgp.1.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=E-新加坡-01
+shadowsocks=sgp.2.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=E-新加坡-02
+shadowsocks=sgp.3.me.net:10086, method=rc4-md5, password=me, ssr-protocol=auth_sha1_v4, ssr-protocol-param=, obfs=http_simple, obfs-host="www.jd.hk, tag=E-新加坡-03
+shadowsocks=hkg.1.me.net:10086, method=rc4-md5, password=me, tag=A-香港-01
+shadowsocks=hkg.2.me.net:10086, method=rc4-md5, password=me, tag=A-香港-02
+shadowsocks=hkg.3.me.net:10086, method=rc4-md5, password=me, tag=A-香港-03
+shadowsocks=hkg.4.me.net:10086, method=rc4-md5, password=me, tag=A-香港-04
+shadowsocks=hkg.5.me.net:10086, method=rc4-md5, password=me, tag=A-香港-05
+shadowsocks=hkg.6.me.net:10086, method=rc4-md5, password=me, tag=A-香港-06
+shadowsocks=hkg.7.me.net:10086, method=rc4-md5, password=me, tag=A-香港-07
+shadowsocks=hkg.8.me.net:10086, method=rc4-md5, password=me, tag=A-香港-08
+shadowsocks=hkg.9.me.net:10086, method=rc4-md5, password=me, tag=A-香港-09
+shadowsocks=hkg.10.me.net:10086, method=rc4-md5, password=me, tag=A-香港-10
+shadowsocks=usa.1.me.net:10086, method=rc4-md5, password=me, tag=B-美国-01
+shadowsocks=usa.2.me.net:10086, method=rc4-md5, password=me, tag=B-美国-02
+shadowsocks=usa.3.me.net:10086, method=rc4-md5, password=me, tag=B-美国-03
+shadowsocks=usa.4.me.net:10086, method=rc4-md5, password=me, tag=B-美国-04
+shadowsocks=usa.5.me.net:10086, method=rc4-md5, password=me, tag=B-美国-05
+shadowsocks=jp.n.1.me.net:10086, method=rc4-md5, password=me, tag=C-日本-01
+shadowsocks=jp.n.2.me.net:10086, method=rc4-md5, password=me, tag=C-日本-02
+shadowsocks=jp.n.3.me.net:10086, method=rc4-md5, password=me, tag=C-日本-03
+shadowsocks=taip.1.me.net:10086, method=rc4-md5, password=me, tag=D-台湾-01
+shadowsocks=taip.2.me.net:10086, method=rc4-md5, password=me, tag=D-台湾-02
+shadowsocks=taip.3.me.net:10086, method=rc4-md5, password=me, tag=D-台湾-03
+shadowsocks=sgp.1.me.net:10086, method=rc4-md5, password=me, tag=E-新加坡-01
+shadowsocks=sgp.2.me.net:10086, method=rc4-md5, password=me, tag=E-新加坡-02
+shadowsocks=sgp.3.me.net:10086, method=rc4-md5, password=me, tag=E-新加坡-03
