@@ -137,7 +137,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ;^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject
 ;^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
-^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner) url reject-200
+;^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner) url reject-200
 
 #ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
