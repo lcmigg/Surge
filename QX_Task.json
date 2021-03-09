@@ -82,6 +82,7 @@
         "40 * * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js, tag=个护爱消除, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xxl_gh.png, enabled=true",
         "57 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js, tag=注销京东会员卡, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jd_unbind.png, enabled=true",
         "20 13 * * 6 https://jdsharedresourcescdn.azureedge.net/jdresource/jd_get_share_code.js, tag=获取互助码, img-url=https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/jd_get_share_code.png, enabled=true",
+        "15 7,15 * * * https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Jd/jd_cash_reward.js, tag=领现金自动获得酬劳, img-url= lkyl.png, enabled=true",
         "3 10 * * * https://raw.githubusercontent.com/i-chenzhe/qx/main/z_marketLottery.js, tag=京东超市-大转盘, img-url= lkyl.png, enabled=true",
         "10 10,11 * * 2-5 https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js, tag=百变大咖秀, img-url= lkyl.png, enabled=true",
         "3 20 * * * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_shake.js, tag=摇一摇, img-url= lkyl.png, enabled=true",
