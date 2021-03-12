@@ -1,10 +1,9 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-01 19:19⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-12 22:22⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
-
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
 ⚠️ ☞ 𝐡𝐭𝐭𝐩𝐬://𝐦𝐲𝐬𝐮𝐛.𝐜𝐨𝐦#𝙚𝙢𝙤𝙟𝙞=1&𝙩𝙛𝙤=1&𝙞𝙣=香港+台湾
@@ -82,6 +81,7 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 ------------------------------
 */
 
+
 //beginning 解析器正常使用，調試註釋此部分
 
 let [link0, content0, subinfo] = [$resource.link, $resource.content, $resource.info]
@@ -147,7 +147,6 @@ let [flow, exptime, errornode, total] = "";
 var Pdel = mark0 && para1.indexOf("del=") != -1 ? para1.split("del=")[1].split("&")[0] : 1; //删除重复节点
 var typeU = para1.indexOf("type=") != -1 ? para1.split("type=")[1].split("&")[0] : "";
 
-
 var type0=""
 //flag=1,2,3分别为 server、rewrite、rule 类型
 var flag = 1
@@ -169,7 +168,6 @@ if (typeof($resource)!=="undefined") {
   Parser()
   $done({ content: total })
 }
-
 
 /**
 # 以下为具体的 function
@@ -263,7 +261,7 @@ function ResourceParse() {
             total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       //$done({ content: total });
     } else {
-      $notify("友情提示", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $notify("友情提示", "⚠️解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
       total = errornode
       //$done({ content: errornode })
     }
@@ -518,7 +516,6 @@ function ToRaw(cnt) {
   return cnt
 }
 
-
 //url-regex 转换成 Quantumult X
 function URX2QX(subs) {
     var nrw = []
@@ -762,7 +759,7 @@ function Rule_Handle(subs, Pout, Pin) {
             if (nlist.length > 0) {
                 var noin0 = nlist.length <= 10 ? emojino[nlist.length] : nlist.length
                 if (Pntf0 != 0) {
-                    $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
+                    $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "🎯 已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
                 }
             } else {
                 $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
@@ -790,7 +787,7 @@ function Rule_Handle(subs, Pout, Pin) {
         if (nlist.length > 0) {
             var noin = nlist.length <= 10 ? emojino[nlist.length] : nlist.length
             if (Pntf0 != 0) {
-                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "🎯 已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
             }
         } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
@@ -907,9 +904,9 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
                         node = HPS2QX(listh, Ptfo, Pcert, Ptls13)
                     }
                 } else if (QuanXK.some(NodeCheck)) {
-                    node = isQuanX(list0[i])[0]
+                    node = QX_TLS(isQuanX(list0[i])[0])
                 } else if (SurgeK.some(NodeCheck)) {
-                    node = Surge2QX(list0[i])[0]
+                    node = QX_TLS(Surge2QX(list0[i])[0])
                 } else if (LoonK.some(NodeCheck)) {
                     node = Loon2QX(list0[i])
                 }
@@ -933,6 +930,17 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
         $notify(`⚠️ 有 ${failedList.length} 条数据解析出错, 已跳过`, "出错内容", failedList.join("\n"));
     }
     return QXlist;
+}
+
+// qx 类型 tls 验证问题
+function QX_TLS(cnt,Pcert,Ptls13) {
+  var cert0 = Pcert == 1? "tls-verification=true, " : "tls-verification=false, "
+  if(cnt.indexOf("tls-verification") != -1){
+    cnt = cnt.replace(RegExp("tls\-verification.*?\,", "gmi"), cert0)
+  }else if(cnt.indexOf("obfs=over-tls")!=-1 || cnt.indexOf("obfs=wss")!=-1){
+    cnt = cnt.replace(new RegExp("tag.*?\=", "gmi"), cert0+"tag=")
+  }
+  return cnt
 }
 
 //将sip008格式的订阅转换成quanx格式
