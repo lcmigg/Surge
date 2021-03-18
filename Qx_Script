@@ -70,4 +70,4 @@ hostname = weixin110.qq.com
 ;^https:\/\/api\.gotokeep\.com\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js
 
 #faceapp
-^https:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body https://raw.githubusercontent.com/ackakakaka/QuantumultX/master/faceapp.js
+^https:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/faceapp.js
