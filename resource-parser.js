@@ -1,9 +1,10 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-27 00:19⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-28 11:39⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
+
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
 ⚠️ ☞ https://mysub.com#emoji=1&tfo=1&in=香港+台湾
@@ -71,6 +72,7 @@
 ----------------------------------------------------------
 */
 
+
 /**
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
@@ -82,6 +84,7 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 4️⃣ 填入上述链接, 并打开的资源解析器开关
 ------------------------------
 */
+
 
 //beginning 解析器正常使用，調試註釋此部分
 
@@ -112,7 +115,9 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
+
 SubFlow() //流量通知
+
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -163,6 +168,7 @@ pat[6] = ["ⓐ","ⓑ","ⓒ","ⓓ","ⓔ","ⓕ","ⓖ","ⓗ","ⓘ","ⓙ","ⓚ","ⓛ
 //pat[5] = ["𝔸","𝔹","ℂ","𝔻","𝔼","𝔽","𝔾","ℍ","𝕀","𝕁","𝕂","𝕃","𝕄","ℕ","𝕆","ℙ","𝕂","ℝ","𝕊","𝕋","𝕌","𝕍","𝕎","𝕏","𝕐","ℤ"]
 //pat[6] = ["𝕒","𝕓","𝕔","𝕕","𝕖","𝕗","𝕘","𝕙","𝕚","𝕛","𝕜","𝕝","𝕞","𝕟","𝕠","𝕡","𝕜","𝕣","𝕤","𝕥","𝕦","𝕧","𝕨","𝕩","𝕪","𝕫"]
 
+
 var type0=""
 //flag=1,2,3分别为 server、rewrite、rule 类型
 var flag = 1
@@ -202,6 +208,7 @@ function ParseUnkown(cnt){
     $notify("未能识别该订阅格式：  " + "⟦" + subtag + "⟧",  "⚠️ 将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈", "链接返回内容:\n"+cnt);
   }
 }
+
 
 
 function ResourceParse() {
@@ -280,7 +287,7 @@ function ResourceParse() {
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示", "⚠️ 解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $notify("友情提示", "⚠️解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
       total = errornode
       $done({ content: errornode })
     }
@@ -556,6 +563,12 @@ function getnode_emoji(item,ind){
   if(item.indexOf("tag=")!=-1) {
     return get_emoji(ind,item.split("tag=")[1])[1]
   }
+}
+
+// 用于单条 URI 的 tag 参数, 直接指定节点名
+function URI_TAG(cnt0,tag0) {
+  cnt0 = cnt0.split("tag=")[0] + "tag=" + tag0
+  return cnt0
 }
 
 // 用于某些奇葩用户不使用 raw 链接的问题
@@ -950,6 +963,8 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
         if (list0[i].trim().length > 3 && !/\;|\/|\#/.test(list0[i][0])) {
             var type = list0[i].split("://")[0].trim()
             var listi = list0[i].replace(/ /g, "")
+            var tag0 = list0[i].indexOf("tag=")!=-1 ? list0[i].split(/\&*(emoji|udp|tf0|cert|rename|replace)\=/)[0].split("tag=")[1] : ""
+            list0[i] = (type == "vmess" || type=="ssr") ? list0[i].split("#")[0] : list0[i]
             const NodeCheck = (item) => listi.toLowerCase().indexOf(item) != -1;
             try {
                 if (type == "vmess" && list0[i].indexOf("remarks=") == -1) {
@@ -959,23 +974,30 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
                     } else { //quantumult 类型
                         node = VQ2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
                     }
+                  node = tag0 != "" ? URI_TAG(node, tag0) : node
                 } else if (type == "vmess" && list0[i].indexOf("remarks=") != -1) { //shadowrocket 类型
                     node = VR2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+                    node = tag0 != "" ? URI_TAG(node, tag0) : node
                 } else if (type == "ssr") {
                     node = SSR2QX(list0[i], Pudp, Ptfo)
+                    node = tag0 != "" ? URI_TAG(node, tag0) : node
                 } else if (type == "ss") {
                     node = SS2QX(list0[i], Pudp, Ptfo)
+                    node = tag0 != "" ? URI_TAG(node, tag0) : node
                 } else if (type == "ssd") {
                     node = SSD2QX(list0[i], Pudp, Ptfo)
                 } else if (type == "trojan") {
                     node = TJ2QX(list0[i], Pudp, Ptfo, Pcert, Ptls13)
+                    node = tag0 != "" ? URI_TAG(node, tag0) : node
                 } else if (type == "https" && list0[i].indexOf(",") == -1) {
                     if (listi.indexOf("@") != -1) {
                         node = HPS2QX(list0[i], Ptfo, Pcert, Ptls13)
+                        node = tag0 != "" ? URI_TAG(node, tag0) : node
                     } else {
                         var listh = Base64.decode(listi.split("https://")[1].split("#")[0])
                         listh = "https://" + listh + "#" + listi.split("https://")[1].split("#")[1]
                         node = HPS2QX(listh, Ptfo, Pcert, Ptls13)
+                        node = tag0 != "" ? URI_TAG(node, tag0) : node
                     }
                 } else if (QuanXK.some(NodeCheck)) {
                     node = QX_TLS(isQuanX(list0[i])[0])
