@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-04-12 12:20⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-04-14 09:20⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -40,7 +40,7 @@
   ❖ 指定规则是正则表达式或简单关键词, 用"<" 或 ">" 连接
   ❖ sort=🇭🇰>🇸🇬>🇯🇵>🇺🇸 , 靠前排序
   ❖ sort=IEPL<IPLC<BGP , 靠后排序
-⦿ del=0, 当有重名节点时, 用此参数保留重名节点
+⦿ del=1, 当有重名节点时, 用此参数删除重复节点(默认改名并保留)
 ⦿ ⟦进阶参数⟧: 𝘀𝗳𝗶𝗹𝘁𝗲𝗿/𝘀𝗿𝗲𝗻𝗮𝗺𝗲, 传入一段 base64 编码的脚本, 可用于更为复杂的[过滤/重命名] 需求
   ❖ 说明: https://github.com/KOP-XIAO/QuantumultX/pull/9
 
@@ -154,7 +154,7 @@ var Pptn = para1.indexOf("ptn=") != -1 ? para1.split("ptn=")[1].split("&")[0] : 
 var Pnptn = para1.indexOf("npt=") != -1 ? para1.split("npt=")[1].split("&")[0] : ""; //花式数字
 var Pcdn = para1.indexOf("cdn=") != -1 ? para1.split("cdn=")[1].split("&")[0] : "";
 let [flow, exptime, errornode, total] = "";
-var Pdel = mark0 && para1.indexOf("del=") != -1 ? para1.split("del=")[1].split("&")[0] : 1; //删除重复节点
+var Pdel = mark0 && para1.indexOf("del=") != -1 ? para1.split("del=")[1].split("&")[0] : 0; //删除重复节点
 var typeU = para1.indexOf("type=") != -1 ? para1.split("type=")[1].split("&")[0] : "";
 
 //花漾字 pattern
@@ -447,8 +447,8 @@ function TagCheck_QX(content) {
             }
             var ni = 0
             while (nmlist.indexOf(nm) != -1) { //重名情形
-                nm = ni <= 10 ? nm.split(" ⌘")[0] + " ⌘" + emojino[ni] : nm.split(" ⌘")[0] + " ⌘" + ni
-                item = Pdel == 0 ? item.split("tag")[0] + "tag=" + nm : ""
+                nm = nm+ NoReplace(ni+1)
+                item = Pdel != 1 ? item.split("tag")[0] + "tag=" + nm : ""
                 ni = ni + 1
             }
             if (ni != 0) { duplist.push(nm) }
@@ -473,31 +473,45 @@ function TagCheck_QX(content) {
     }
     if (duplist.length >= 1) {
         no = duplist.length <= 10 ? emojino[duplist.length] : duplist.length;
-      if (Pdel==0){
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已添加⌘符号作为区分:", " ⨁ " + duplist.join("\n ⨁ "))
+      if (Pdel!=1){
+        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已添加数字区分, 删除请添加参数 del=1:", " ⨁ " + duplist.join("\n ⨁ "))
       } else {
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已全部删除处理，如需保留请添加参数 del=0:", " ⨁ " + duplist.join("\n ⨁ "))
+        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已全部删除，如需保留请去除参数 del=1:", " ⨁ " + duplist.join("\n ⨁ "))
       }
     }
     return Nlist
 }
 
+//节点名重名时添加数字序号替换
+function NoReplace(cnt) {
+  if(cnt){
+    for (var i=0;i<10;i++) {
+      cnt = cnt.toString().replace(new RegExp(patn[0][i], "gmi"),patn[5][i])
+    }
+    return " " + cnt + " "
+  }
+}
+
+
 // 对节点名pattern化操作
 function PatternN(cnt, para,npara) {
-  if(para!=""){//字符
-  for (var i=0;i<26;i++) {
-    cnt = cnt.toLowerCase()
-    cnt = cnt.replace(new RegExp(pat[0][i], "gmi"),pat[para][i])
+  if(cnt){
+    if(para!=""){//字符
+      for (var i=0;i<26;i++) {
+        cnt = cnt.toLowerCase()
+        cnt = cnt.replace(new RegExp(pat[0][i], "gmi"),pat[para][i])
+      }
+    }
+    if(npara!=""){ //数字
+      for (var i=0;i<10;i++) {
+        cnt = cnt.replace(new RegExp(patn[0][i], "gmi"),patn[npara][i])
+      }
+    }
+    console.log(cnt)
+    return cnt
   }
-  }
-  if(npara!=""){ //数字
-  for (var i=0;i<10;i++) {
-    cnt = cnt.replace(new RegExp(patn[0][i], "gmi"),patn[npara][i])
-  }
-  }
-  console.log(cnt)
-  return cnt
 }
+
 
 function Pattern(cnt,para,npara) {
   if (para != "" || npara != "") {
@@ -1637,7 +1651,7 @@ function emoji_del(str) {
 
 //为节点名添加 emoji
 function get_emoji(emojip, sname) {
-    var Lmoji = { "🏳️‍🌈": ["流量", "时间", "应急", "过期", "Bandwidth", "expire"], "🇦🇹": ["奥地利", "Austria", "维也纳"], "🇦🇺": ["AU", "Australia", "Sydney", "澳大利亚", "澳洲", "墨尔本", "悉尼" ,"土澳", "京澳","廣澳","滬澳"], "🇧🇪": ["BE", "比利时"], "🇧🇬": ["保加利亚", "Bulgaria"], "🇵🇰":["巴基斯坦"], "🇰🇭":["柬埔寨"], "🇺🇦":["烏克蘭","乌克兰"], "🇨🇦": ["Canada","CANADA", "CAN", "Waterloo", "加拿大", "蒙特利尔", "温哥华", "楓葉", "枫叶", "滑铁卢", "多伦多"], "🇨🇭": ["瑞士", "苏黎世", "Switzerland"], "🇨🇿": ["Czechia", "捷克"], "🇩🇪": ["DE", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德"], "🇩🇰": ["DK","DNK","丹麦","丹麥"], "🇪🇸": ["ES", "西班牙", "Spain"], "🇪🇺": ["EU", "欧盟", "欧罗巴"], "🇫🇮": ["Finland", "芬兰", "赫尔辛基"], "🇫🇷": ["FR", "France", "法国", "法國", "巴黎"], "🇬🇧": ["UK", "GB", "England", "United Kingdom", "英国", "伦敦", "英"], "🇲🇴": ["MO", "Macao", "澳门", "澳門", "CTM"], "🇰🇿": ["哈萨克斯坦"], "🇭🇺": ["匈牙利", "Hungary"], "🇭🇰": ["HK", "Hongkong", "Hong Kong", "HongKong", "HONG KONG","香港", "深港", "沪港", "呼港", "HKT", "HKBN", "HGC", "WTT", "CMI", "穗港", "京港", "港"], "🇮🇩": ["Indonesia", "印尼", "印度尼西亚", "雅加达"], "🇮🇪": ["Ireland", "IRELAND", "爱尔兰", "愛爾蘭", "都柏林"], "🇮🇱": ["Israel", "以色列"], "🇮🇳": ["India", "IND", "INDIA","印度", "孟买", "Mumbai"], "🇮🇸":["IS","ISL", "冰岛","冰島"],"🇰🇵": ["KP", "朝鲜"], "🇰🇷": ["KR", "Korea", "KOR", "韩国", "首尔", "韩", "韓"], "🇱🇻": ["Latvia", "Latvija", "拉脱维亚"], "🇲🇽️": ["MEX", "MX", "墨西哥"],"🇮🇲":["馬恩島", "曼島" ,"曼岛"], "🇲🇾": ["MY", "Malaysia","MALAYSIA", "马来西亚", "大馬", "馬來西亞", "吉隆坡"], "🇳🇱": ["NL", "Netherlands", "荷兰", "荷蘭", "尼德蘭", "阿姆斯特丹"], "🇵🇭": ["PH", "Philippines", "菲律宾", "菲律賓"], "🇷🇴": ["RO", "罗马尼亚"], "🇷🇺": ["RU", "Russia", "俄罗斯", "俄国", "俄羅斯", "伯力", "莫斯科", "圣彼得堡", "西伯利亚", "新西伯利亚", "京俄", "杭俄","廣俄","滬俄"], "🇸🇦": ["沙特", "迪拜"], "🇸🇪": ["SE", "Sweden", "瑞典"], "🇸🇬": ["SG", "Singapore","SINGAPORE", "新加坡", "狮城", "沪新", "京新", "泉新", "穗新", "深新", "杭新", "广新","廣新","滬新"], "🇹🇭": ["TH", "Thailand", "泰国", "泰國", "曼谷"], "🇹🇷": ["TR", "Turkey", "土耳其", "伊斯坦布尔"], "🇹🇼": ["TW", "Taiwan","TAIWAN", "台湾", "台北", "台中", "新北", "彰化", "CHT", "台", "HINET"], "🇺🇸": ["US", "USA", "America", "United States", "美国", "美", "京美", "波特兰", "达拉斯", "俄勒冈", "凤凰城", "费利蒙", "硅谷", "矽谷", "拉斯维加斯", "洛杉矶", "圣何塞", "圣克拉拉", "西雅图", "芝加哥", "沪美", "哥伦布", "纽约"], "🇻🇳": ["VN", "越南", "胡志明市"], "🇮🇹": ["Italy", "IT", "Nachash", "意大利", "米兰", "義大利"], "🇿🇦": ["South Africa", "南非"], "🇦🇪": ["United Arab Emirates", "阿联酋"], "🇧🇷": ["BR", "Brazil", "巴西", "圣保罗"], "🇯🇵": ["JP", "Japan","JAPAN", "日", "日本", "东京", "大阪", "埼玉", "沪日", "穗日", "川日", "中日", "泉日", "杭日", "深日", "辽日", "广日"], "🇦🇷": ["AR", "阿根廷"], "🇳🇴": ["Norway", "挪威", "NO"], "🇨🇳": ["CN", "China", "回国", "中国", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],"🇵🇱": ["PL", "POL", "波兰"], "🇨🇱": ["智利"],"🇳🇿":["新西蘭","新西兰"] }
+    var Lmoji = { "🏳️‍🌈": ["流量", "时间", "应急", "过期", "Bandwidth", "expire"], "🇦🇹": ["奥地利", "Austria", "维也纳"], "🇦🇺": ["AU", "Australia", "Sydney", "澳大利亚", "澳洲", "墨尔本", "悉尼" ,"土澳", "京澳","廣澳","滬澳"], "🇧🇪": ["BE", "比利时"], "🇧🇬": ["保加利亚", "Bulgaria"], "🇵🇰":["巴基斯坦"], "🇰🇭":["柬埔寨"], "🇺🇦":["烏克蘭","乌克兰"], "🇨🇦": ["Canada","CANADA", "CAN", "Waterloo", "加拿大", "蒙特利尔", "温哥华", "楓葉", "枫叶", "滑铁卢", "多伦多"], "🇨🇭": ["瑞士", "苏黎世", "Switzerland"], "🇨🇿": ["Czechia", "捷克"], "🇩🇪": ["DE", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德"], "🇩🇰": ["DK","DNK","丹麦","丹麥"], "🇪🇸": ["ES", "西班牙", "Spain"], "🇪🇺": ["EU", "欧盟", "欧罗巴"], "🇫🇮": ["Finland", "芬兰", "赫尔辛基"], "🇫🇷": ["FR", "France", "法国", "法國", "巴黎"], "🇬🇧": ["UK", "GB", "England", "United Kingdom", "英国", "伦敦", "英"], "🇲🇴": ["MO", "Macao", "澳门", "澳門", "CTM"], "🇰🇿": ["哈萨克斯坦"], "🇭🇺": ["匈牙利", "Hungary"], "🇭🇰": ["HK", "Hongkong", "Hong Kong", "HongKong", "HONG KONG","香港", "深港", "沪港", "呼港", "HKT", "HKBN", "HGC", "WTT", "CMI", "穗港", "京港", "港"], "🇮🇩": ["Indonesia", "印尼", "印度尼西亚", "雅加达"], "🇮🇪": ["Ireland", "IRELAND", "爱尔兰", "愛爾蘭", "都柏林"], "🇮🇱": ["Israel", "以色列"], "🇮🇳": ["India", "IND", "INDIA","印度", "孟买", "Mumbai"], "🇮🇸":["IS","ISL", "冰岛","冰島"],"🇰🇵": ["KP", "朝鲜"], "🇰🇷": ["KR", "Korea", "KOR", "韩国", "首尔", "韩", "韓"], "🇱🇻": ["Latvia", "Latvija", "拉脱维亚"], "🇲🇽️": ["MEX", "MX", "墨西哥"],"🇮🇲":["馬恩島", "曼島" ,"曼岛"], "🇲🇾": ["MY", "Malaysia","MALAYSIA", "马来西亚", "大馬", "馬來西亞", "吉隆坡"], "🇳🇱": ["NL", "Netherlands", "荷兰", "荷蘭", "尼德蘭", "阿姆斯特丹"], "🇵🇭": ["PH", "Philippines", "菲律宾", "菲律賓"], "🇷🇴": ["RO", "罗马尼亚"], "🇷🇺": ["RU", "Russia", "俄罗斯", "俄国", "俄羅斯", "伯力", "莫斯科", "圣彼得堡", "西伯利亚", "新西伯利亚", "京俄", "杭俄","廣俄","滬俄"], "🇸🇦": ["沙特", "迪拜"], "🇸🇪": ["SE", "Sweden", "瑞典"], "🇸🇬": ["SG", "Singapore","SINGAPORE", "新加坡", "狮城", "沪新", "京新", "泉新", "穗新", "深新", "杭新", "广新","廣新","滬新"], "🇹🇭": ["TH", "Thailand", "泰国", "泰國", "曼谷"], "🇹🇷": ["TR", "Turkey", "土耳其", "伊斯坦布尔"], "🇹🇼": ["TW", "Taiwan","TAIWAN", "台湾", "台北", "台中", "新北", "彰化", "CHT", "台", "HINET"], "🇺🇸": ["US", "USA", "America", "United States", "美国", "美", "京美", "波特兰", "达拉斯", "俄勒冈", "凤凰城", "费利蒙", "硅谷", "矽谷", "拉斯维加斯", "洛杉矶", "圣何塞", "圣克拉拉", "西雅图", "芝加哥", "沪美", "哥伦布", "纽约"], "🇻🇳": ["VN", "越南", "胡志明市"], "🇮🇹": ["Italy", "IT", "Nachash", "意大利", "米兰", "義大利"], "🇿🇦": ["South Africa", "南非"], "🇦🇪": ["United Arab Emirates", "阿联酋"], "🇧🇷": ["BR", "Brazil", "巴西", "圣保罗"], "🇯🇵": ["JP", "Japan","JAPAN", "日", "日本", "东京", "大阪", "埼玉", "沪日", "穗日", "川日", "中日", "泉日", "杭日", "深日", "辽日", "广日"], "🇦🇷": ["AR", "阿根廷"], "🇳🇴": ["Norway", "挪威", "NO"], "🇨🇳": ["CN", "China", "回国", "中国", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],"🇵🇱": ["PL", "POL", "波兰","波蘭"], "🇨🇱": ["智利"],"🇳🇿":["新西蘭","新西兰"] }
     str1 = JSON.stringify(Lmoji)
     aa = JSON.parse(str1)
     bb = JSON.parse(str1.replace(/🇹🇼/g, " 🇨🇳"))
@@ -1924,7 +1938,7 @@ function Clash2QX(cnt) {
       node = Ptfo0 != 0 ? XTFO(node,Ptfo0) : node
       nodelist.push(node)
     }catch (e) {
-      $notify(`⚠️该节点解析错误, 暂时已忽略处理`,`可点击通知反馈至 bot`,node )
+      $notify(`⚠️该节点解析错误, 暂时已忽略处理`,`可点击通知反馈至 bot`,node)
     }
   }
   return nodelist.join("\n")
