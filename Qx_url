@@ -72,10 +72,11 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ url reject
 
 # > JD
-^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
-^(http|https):\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
-^(http|https):\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject
-^(http|https):\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start url reject
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts url reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
 
 # 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
