@@ -122,28 +122,20 @@ host, nex.163.com, reject
 host, yt-adp.nosdn.127.net, reject
 host, yt-adp.ws.126.net, reject
 
-# > Tencent
-host-suffix, bugly.qq.com, reject
+# Tencent
 host-suffix, e.qq.com, reject
 host-suffix, gdt.qq.com, reject
 host-suffix, l.qq.com, reject
-host-suffix, rqd.qq.com, reject
-host, adsmind.tc.qq.com, reject
 host, adsmind.apdcdn.tc.qq.com, reject
 host, adsmind.gdtimg.com, reject
-host, btrace.qq.com, reject
-host, mtrace.qq.com, reject
-host, pgdt.ugdtimg.com, reject
-host, oth.eve.mdt.qq.com, reject
+host, adsmind.tc.qq.com, reject
 host, pgdt.gtimg.cn, reject
 host, pgdt.gtimg.com, reject
-host, pingma.qq.com, reject
-host, pingtcss.qq.com, reject
+host, pgdt.ugdtimg.com, reject
 host, splashqqlive.gtimg.com, reject
-host, tajs.qq.com, reject
+host, wa.gtimg.com, reject
 host, wxsnsdy.wxs.qq.com, reject
 host, wxsnsdythumb.wxs.qq.com, reject
-host, wa.gtimg.com, reject
 
 # > MI
 host-suffix, ad.intl.xiaomi.com, reject
