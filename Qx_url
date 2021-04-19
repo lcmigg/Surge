@@ -30,10 +30,10 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 # > Tencent Sports - news.ssp.qq.com
 ^(http|https):\/\/news\.ssp\.qq\.com\/app url reject-200
 
-#Apple
+# Apple
 ^https?://a\.applovin\.com/.+/ad url reject
 
-#Google
+# Google
 #^https?:\/\/.+\.googlevideo\.com\/.+&oad url reject
 #^https?:\/\/.+\.googlevideo\.com\/.+ctier url reject
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_ url reject
@@ -43,23 +43,23 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 ^https?:\/\/\w+\.youtube\.com\/api\/stats\/ads url reject
 ^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) url reject
 
-#爱奇艺
+# 爱奇艺
 ;^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject
 ;^https?:\/\/.+\/(mixer|track2)\? url reject
 ;^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show.do url reject
 ;^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject
 
-#Alibaba
+# Alibaba
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtopadvertiseapi)\.querytmsresources|(taobao\.idle\.home|aliyun\.mobile)\.welcome(page)?|.*?\.ads?\.) url reject
 ^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt) url reject
 ^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
 
-#163 mail
+# 163 mail
 https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
 
-#FUTU
+# FUTU
 ^https?:\/\/api\.futunn\.com\/v\d\/ad\/ url reject
 ^https?:\/\/api\d\.futunn\.com\/ad\/ url reject
 
@@ -82,31 +82,31 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 ^https?:\/\/t00img\.yangkeduo\.com\/goods\/[\d-]+\/[A-Za-z0-9]+\.jpeg\?imageView2\/format\/webp$ url reject
 
-#广发证券&发现精彩
+# 广发证券&发现精彩
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d+\.(png|jpg) url reject-img
 ^http:\/\/cdn\.gfzq\.cn/store\/mobile\/ad_mobile.json url reject
 ^http:\/\/apm.gf.com.cn:8081\/uploadMobile.+ url reject
 ^https:\/\/config\.gf\.com.cn\/ytj_config/.+\?ad.+ url reject
 
-#中国银行 mbs.boc.cn
+# 中国银行 mbs.boc.cn
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? url reject-200
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject
 
 ;工商银行
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
 
-#小米
+# 小米
 ^(http|https):\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
 ^(http|https):\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
 ^(http|https):\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
 ^(http|https):\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? url reject-200
 
 
-# >> 新浪微博
+# 新浪微博
 ;^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
 ;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
 
-# >> 新浪微博国际版
+# 新浪微博国际版
 ;^https:\/\/weibointl\.api\.weibo.cn\/portal\.php\?a=get_coopen_ads url reject-200
 
 #高德
