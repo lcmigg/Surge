@@ -74,3 +74,6 @@
 #ulike
 ;^https:\/\/commerce-i18n-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Scripting/master/ulike.js
 ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js
+
+#𝘽𝙞𝙡𝙞_𝘼𝙪𝙩𝙤_𝙍𝙚𝙜𝙞𝙤𝙣𝙨
+^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
