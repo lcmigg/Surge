@@ -13,7 +13,8 @@ hostname = ap?.bilibili.com
 ^https?://app\.bilibili\.com/x/v\d/splash/list url script-response-body https://raw.githubusercontent.com/srk24/profile/master/js/bilibili_splash.js
 ;^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js
 #bilibili 1080P
-^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js
+;^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js
+^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Sunert/Script/master/Script/Bilibili/BiliHD.js
 
 #用药助手
 ;^https?:\/\/newdrugs\.dxy\.cn\/app\/user\/(p(ay\/checkIntroOfferPeriod|ro\/stat)|init)\? url script-response-body JS/yyzs_2.js
