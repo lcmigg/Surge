@@ -93,5 +93,6 @@
         "15 15 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/monk_shop_follow_sku.js, tag=关注有礼,  enabled=true",
         "3 0,10,23 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/monk_shop_lottery.js, tag=店铺大转盘,  enabled=true",
         "15 8 9-13 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js, tag=探秘无限星空,  enabled=true",
+        "15 8 7-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js, tag=海尔_欢乐大逃亡,  enabled=true",
     ]
 }
