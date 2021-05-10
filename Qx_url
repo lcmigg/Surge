@@ -1,5 +1,5 @@
 #hostname
-hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,mbs.boc.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi
+hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,mbs.boc.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc
 
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com,new.api.hdcj.9w9.com,wallet.95516.com,dxy.com,*.dxy.cn,newdrugs.dxy.cn
 
@@ -141,32 +141,32 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
 ;^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner) url reject-200
 
-#ohter
+# ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
 ^http:\/\/hmma\.baidu\.com url reject-dict
 
-#奕客围棋
+# 奕客围棋
 ;^http://image.golinksworld.com/res/adv/ url reject-img
 
 # 印象笔记
 ^https?:\/\/app\.yinxiang\.com\/ads\/getAdsInfo$ url reject-200
 
-#10086
+# 10086
 ^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver url reject
 #ChinaMobile - clientaccess.10086.cn
 ^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
 
-#票根
+# 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
 
-#虎牙
+# 虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
 ;^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ;^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
 ;^http://business.msstatic.com/advertiser/ url reject-200
 
-#zaker
+# zaker
 ^http:\/\/zkres\.myzaker\.com\/img_upload\/editor\/img_upload\/ url reject
 
 # 人人视频
@@ -174,5 +174,8 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ;^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
 ;^https?:\/\/api\.rr\.tv\/ad\/ url reject
 
-#微信小程序，交作业app
+# 微信小程序，交作业app
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
+
+# 作业帮
+^https?:\/\/img.zuoyebang.cc\/zyb-image[\s\S]*?.jpg - reject
