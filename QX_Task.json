@@ -96,7 +96,6 @@
         "15 8,13,18 17-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js, tag=京享值PK,  enabled=true",
         "25 9 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js, tag=赢一加新品手机,  enabled=true",
         "15 9 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js, tag=飞利浦电视成长记,  enabled=true",
-       
-        
+        "20 9 20-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_martin.js, tag=人头马x博朗,  enabled=true",
     ]
 }
