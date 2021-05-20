@@ -80,7 +80,7 @@
         "10 10 * 4 * https://share.r2ray.com/dust/i-chenzhe/z_xmf.js, tag=京东小魔方,  enabled=true",
         "3 10 * * * https://share.r2ray.com/dust/i-chenzhe/z_fanslove.js, tag=粉丝互动,  enabled=true",
         "3 10 * * * https://share.r2ray.com/dust/i-chenzhe/z_marketLottery.js, tag=京东超市-大转盘,  enabled=true",
-        "5 8,14,20 6-12 5 * https://share.r2ray.com/dust/i-chenzhe/z_mother_jump.js, tag=母婴-跳一跳, enabled=true",
+        "5 8,14,20 19-25 5 *  https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js, tag=母婴-跳一跳, enabled=true",
         "25 3 * * 2 https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js, tag=超级无线组队分奖品,  enabled=true",
         "1 0-23/1 * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, tag=整点京豆雨, enabled=true",
         "5 8-23/1 * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_live_lottery_social.js, tag=直播间抽奖（全局）, enabled=true",
@@ -94,5 +94,9 @@
         "15 8 9-13 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js, tag=探秘无限星空,  enabled=true",
         "15 8 7-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js, tag=海尔_欢乐大逃亡,  enabled=true",
         "15 8,13,18 17-31 5 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_pk.js, tag=京享值PK,  enabled=true",
+        "25 9 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js, tag=赢一加新品手机,  enabled=true",
+        "15 9 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js, tag=飞利浦电视成长记,  enabled=true",
+       
+        
     ]
 }
