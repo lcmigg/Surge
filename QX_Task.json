@@ -80,7 +80,7 @@
         "10 10 * 4 * https://share.r2ray.com/dust/i-chenzhe/z_xmf.js, tag=京东小魔方,  enabled=true",
         "3 10 * * * https://share.r2ray.com/dust/i-chenzhe/z_fanslove.js, tag=粉丝互动,  enabled=true",
         "3 10 * * * https://share.r2ray.com/dust/i-chenzhe/z_marketLottery.js, tag=京东超市-大转盘,  enabled=true",
-        "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jump.js, tag=跳跳乐瓜分京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
+        "1 0,11,21 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jump.js, tag=跳跳乐瓜分京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
         "5 8,14,20 19-25 5 *  https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js, tag=母婴-跳一跳, enabled=true",
         "25 3 * * 2 https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js, tag=超级无线组队分奖品,  enabled=true",
         "1 0-23/1 * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js, tag=整点京豆雨, enabled=true",
