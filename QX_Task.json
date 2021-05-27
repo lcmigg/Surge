@@ -107,5 +107,7 @@
         "15 9,20 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_superbox.js, tag=京东超级盒子,  enabled=true",
         "14 9,20 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_newInteraction.js, tag=618大势新品赏,  enabled=true",
         "13 9 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_jxhb.js, tag=京喜阶梯红包,  enabled=true",
+        "0 0 0 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js, tag=家电星推官, enabled=true",
+        "0 0 0 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/jd_xtg_help.js, tag=家电星推官好友互助, enabled=true"，
     ]
 }
