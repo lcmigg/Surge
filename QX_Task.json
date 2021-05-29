@@ -109,5 +109,6 @@
         "13 9 * 5,6 * https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_jxhb.js, tag=京喜阶梯红包,  enabled=true",
         "0 0 0 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js, tag=家电星推官, enabled=true",
         "0 0 0 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/jd_xtg_help.js, tag=家电星推官好友互助, enabled=true",
+        "13 1,22 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_gold_creator.js, tag=金榜创造营, enabled=true",
     ]
 }
