@@ -110,5 +110,6 @@
         "0 0 0 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js, tag=家电星推官, enabled=true",
         "0 0 0 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/jd_xtg_help.js, tag=家电星推官好友互助, enabled=true",
         "13 1,22 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_gold_creator.js, tag=金榜创造营, enabled=true",
+        "55,1 21-23/1 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/jd_party_night.js, enabled=true",
     ]
 }
