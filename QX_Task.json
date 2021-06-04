@@ -112,5 +112,6 @@
         "13 1,22 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_gold_creator.js, tag=金榜创造营, enabled=true",
         "55,1 21-23/1 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/jd_party_night.js, enabled=true",
         "4 10 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_mcxhd.js, tag=新潮品牌狂欢, enabled=true",
+        "5 10 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxlhb.js, tag=京喜领88元红包, enabled=true",
     ]
 }
