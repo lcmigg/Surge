@@ -114,5 +114,6 @@
         "55,1 21-23/1 * * * https://raw.githubusercontent.com/lcmigg/Surge/master/Script/jd/jd_party_night.js, enabled=true",
         "4 10 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_mcxhd.js, tag=新潮品牌狂欢, enabled=true",
         "5 10 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxlhb.js, tag=京喜领88元红包, enabled=true",
+        "20 0-23/3 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxmc.js, tag=惊喜牧场, enabled=true",
     ]
 }
