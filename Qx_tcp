@@ -173,6 +173,15 @@ host, sugar.zhihu.com, reject
 host-suffix, appcloud2.zhihu.com, reject
 host-suffix, appcloud2.in.zhihu.com, reject
 
+# > Ximalaya
+host, ad.ximalaya.com, reject
+host, adbs.ximalaya.com, reject
+host, adse.ximalaya.com, reject
+host, adse.wsa.ximalaya.com, reject
+host, adbehavior.wsa.ximalaya.com, reject
+host, adbehavior.ximalaya.com, reject
+host, adsebs.ximalaya.com, reject
+
 # KEYWORD
 host-keyword, admarvel, reject
 host-keyword, adsage, reject
