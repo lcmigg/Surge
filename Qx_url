@@ -164,6 +164,10 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
 
+# > Ximalaya FM
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime url reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/ url reject
+
 # 虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
 ;^https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
