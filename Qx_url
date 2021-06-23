@@ -115,10 +115,10 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?\/\/page\.amap\.com\/ws\/page\/upload\/ url reject-img
 
 # 丁香园
-;^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
-;^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id= url reject-200
-;^https?:\/\/drugs\.dxy\.cn\/api\/ad\?productType= url reject-200
-;^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac= url reject-200
+^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
+^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id= url reject-200
+^https?:\/\/drugs\.dxy\.cn\/api\/ad\?productType= url reject-200
+^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac= url reject-200
 
 #美团
 #^https?:\/\/img\.meituan\.net\/midas\/ url reject
