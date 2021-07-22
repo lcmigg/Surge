@@ -1,6 +1,6 @@
 #hostname
 ;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com, api.faceapp.io, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, testflight.apple.com
-hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com
+hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com
 
 #JS
 #微信公众号
@@ -91,3 +91,6 @@ https://apivip.zybang.com/vipols/vip/viphomev1?.+ url script-response-body https
 
 #我奥篮球 解锁付费回放及下载
 http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/walq.js
+
+#企信通小程序
+^https://miniapp.elecredit.com/ucenter_info/ url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js
