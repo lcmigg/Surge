@@ -177,6 +177,9 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 # zaker
 ^http:\/\/zkres\.myzaker\.com\/img_upload\/editor\/img_upload\/ url reject
 
+# > Keep - api.gotokeep.com
+^https?:\/\/api\.gotokeep\.com\/ads url reject
+
 # 人人视频
 ;^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
 ;^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
