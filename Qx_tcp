@@ -144,6 +144,17 @@ host-suffix, admob.xiaomi.com, reject
 host, adv.sec.intl.miui.com, reject
 host, adv.sec.miui.com, reject
 
+# > migu
+host, aikanvod.miguvideo.com, reject
+host-suffix, crystalapp.miguvideo.com, reject
+host-suffix, migu.kssws.ks-cdn.com, reject
+host-suffix, v.miguvideo.com, reject
+host-suffix, ggv.cmvideo.cn, reject
+host-suffix, ggc.cmvideo.cn, reject
+host-suffix, ggx.cmvideo.cn, reject
+host-suffix, ggx05.cmvideo.cn, reject
+host-suffix, ad.cmvideo.cn, reject
+
 # 12306
 host, ad.12306.cn, reject
 
