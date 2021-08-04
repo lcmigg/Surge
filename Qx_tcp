@@ -411,6 +411,8 @@ host-suffix, fengkongcloud.com, reject
 host-suffix, emarbox.com, reject
 # 乐播投屏
 #host-suffix, hpplay.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, miguvideo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, cmvideo.cn, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, wuxiang.io, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, didiaokan.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, zhuishushenqi.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
