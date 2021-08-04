@@ -1,5 +1,5 @@
 #hostname
-hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,mbs.boc.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc,mpcs.suning.com,gg*.cmvideo.cn
+hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd.com,img*.360buyimg.com,api.jr.mi.comimg*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,gw.alicdn.com,api.m.mi.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,api.m.jd.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,api.rr.tv,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,mbs.boc.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc,mpcs.suning.com,gg*.cmvideo.com,gg*.cmvideo.cn
 
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com,new.api.hdcj.9w9.com,wallet.95516.com,dxy.com,*.dxy.cn,newdrugs.dxy.cn
 
@@ -189,7 +189,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
 
 # migu gg*.cmvideo.cn
-^https?:\/\/gg.+\.cmvideo\.cn\/(ad|v1/iflyad) url reject
+^https?:\/\/gg.+\.cmvideo\.(cn|com)\/(ad|v1/iflyad) url reject
 
 # 作业帮
 ^https?:\/\/img.zuoyebang.cc\/zyb-image[\s\S]*?.jpg - reject
