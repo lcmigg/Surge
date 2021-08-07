@@ -102,7 +102,7 @@ https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/ta
 ^https?:\/\/gateway-api\.dushu365\.com url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/dushu365.js
 
 #微信读书
-^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary.* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/WxRead.js
+^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary.* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/wxread.js
 
 #菜谱大全
 ^https?:\/\/apiios_dq\.xiangha\.com url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/xiangha.js
