@@ -75,6 +75,7 @@
 ----------------------------------------------------------
 */
 
+
 /**
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
@@ -117,7 +118,9 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
+
 SubFlow() //流量通知
+
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -261,7 +264,7 @@ function ResourceParse() {
     if (Ppolicyset) {total = policy_sets(total, Ppolicyset)}
     total = total.join("\n")
   } else if (content0.trim() == "") {
-    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
+    $notify("‼️ 引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
     ParseUnknown(content0)
@@ -307,7 +310,7 @@ function ResourceParse() {
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "⚠️解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
       total = errornode
       $done({ content: errornode })
     }
@@ -343,7 +346,6 @@ function SubFlow() {
     ntf_flow = 1;
     //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
     $notify("👉" + subtag, epr, message)
-
   }
 //  } else if (Pinfo ==1){
 //    $notify("流量信息: ⟦" + subtag + "⟧", "", "⚠️ 该订阅链接未返回任何流量信息", subinfo_link)
@@ -395,7 +397,7 @@ function Type_Check(subs) {
     const RewriteCheck = (item) => subs.indexOf(item) != -1;
     var subsn = subs.split("\n")
     if (subs.indexOf(html) != -1 && link0.indexOf("github.com" == -1)) {
-      $notify("该链接返回网页内容,无有效订阅"+ " ➟ " + "⟦" + subtag + "⟧", "点通知跳转以确认链接是否失效\n"+link0, subs);
+      $notify("‼️ 该链接返回网页内容,无有效订阅"+ " ➟ " + "⟦" + subtag + "⟧", "点通知跳转以确认链接是否失效\n"+link0, subs);
       type = "web";
     } else if (typeU == "nodes") {
       type = "Subs-B64Encode"
@@ -636,9 +638,9 @@ function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
   if (cnt) {
-    $notify( "⚠️将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+    $notify( "⚠️ 将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
   } else if(content0.indexOf("gridcell")!=-1) {
-    $notify( "⚠️解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
+    $notify( "⚠️ 解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
   }
   return cnt
 }
@@ -792,12 +794,12 @@ function Rewrite_Filter(subs, Pin, Pout,Preg) {
         nowrite = dwrite.length <= 10 ? emojino[dwrite.length] : dwrite.length
         no1write = Nlist.length <= 10 ? emojino[Nlist.length] : Nlist.length
         if (Pin0 && no1write != " 0️⃣ ") { //有 in 参数就通知保留项目
-            $notify(重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中保留以下" + no1write + "个匹配项:" + "\n ⨷ " + Nlist.join("\n ⨷ "))
+            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中保留以下" + no1write + "个匹配项:" + "\n ⨷ " + Nlist.join("\n ⨷ "))
         } else if (dwrite.length > 0) {
-            $notify(重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中已禁用以下" + nowrite + "个匹配项:" + "\n ⨷ " + dwrite.join("\n ⨷ "))
+            $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "重写 rewrite 中已禁用以下" + nowrite + "个匹配项:" + "\n ⨷ " + dwrite.join("\n ⨷ "))
         }
     }
-    if (Nlist.length == 0) { $notify(重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "⚠️ 筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") }
+    if (Nlist.length == 0) { $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "⚠️ 筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") }
     if(Preg){ Nlist = Nlist.map(Regex).filter(Boolean) // regex to filter rewrites
     	RegCheck(Nlist, "重写引用", Preg) }
     if (hostname != "") { Nlist.push(hostname) }
@@ -836,14 +838,14 @@ function HostNamecheck(content, parain, paraout) {
             var noname = dname.length <= 10 ? emojino[dname.length] : dname.length
             var no1name = nname.length <= 10 ? emojino[nname.length] : nname.length
             if (parain && no1name != " 0️⃣ ") {
-                $notify(重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "️ 主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","))
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已保留以下" + no1name + "个匹配项:" + "\n ⨷ " + nname.join(","))
             } else if (dname.length > 0) {
-                $notify(重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "️ 主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","))
+                $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中已删除以下" + noname + "个匹配项:" + "\n ⨷ " + dname.join(","))
             }
         }
     }
     if (nname.length == 0) {
-        $notify(重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
+        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
     }
     if(Preg){ nname = nname.map(Regex).filter(Boolean)
     	RegCheck(nname, "主机名hostname", Preg) }
@@ -897,20 +899,20 @@ function Rule_Handle(subs, Pout, Pin) {
         }//for cnt
         var no = dlist.length <= 10 ? emojino[dlist.length] : dlist.length
         if (dlist.length > 0) {
-            if (Pntf0 != 0) { $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "已禁用以下" + no + "条匹配规则:" + "\n ⨷ " + dlist.join("\n ⨷ ")) }
-        } else { $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 未发现任何匹配项, 请检查参数或原始链接") }
+            if (Pntf0 != 0) { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "已禁用以下" + no + "条匹配规则:" + "\n ⨷ " + dlist.join("\n ⨷ ")) }
+        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 未发现任何匹配项, 请检查参数或原始链接") }
         if (Tin != "" && Tin != null) {  //有 in 跟 out 参数时
             if (nlist.length > 0) {
                 var noin0 = nlist.length <= 10 ? emojino[nlist.length] : nlist.length
                 if (Pntf0 != 0) {
-                    $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
+                    $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
                 }
             } else {
-                $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
             }
         } else {// if Tin (No Tin)
             if (nlist.length == 0) {
-                $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
             }
         }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
@@ -931,9 +933,9 @@ function Rule_Handle(subs, Pout, Pin) {
         if (nlist.length > 0) {
             var noin = nlist.length <= 10 ? emojino[nlist.length] : nlist.length
             if (Pntf0 != 0) {
-                $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
             }
-        } else { $notify(分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
+        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
       return nlist;
     } else {  //if Tin
@@ -961,7 +963,7 @@ function Rule_Policy(content) { //增加、替换 policy
             ply0 = Ppolicy != "Shawn" ? Ppolicy : cnt[2]
             nn = cnt[0] + ", " + cnt[1] + ", " + ply0 + ", " + cnt[3]
         } else if (!RuleK.some(RuleCheck) && content) {
-            //$notify("未能解析" + "⟦" + subtag + "⟧" + "其中部分规则:", content);
+            //$notify("未能解析" + "⟦" + subtag + "⟧" + "其中部分规则:", content, nan_link);
             return ""
         } else { return "" }
         if (cnt[0].indexOf("URL-REGEX") != -1 || cnt[0].indexOf("PROCESS") != -1) {
@@ -1393,7 +1395,7 @@ function FilterScript(servers, script) {
         const IN = filter(nodes);
         const res = servers.filter((_, i) => IN[i]);
         if (res.length === 0) {
-            $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
+            $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
         }
         return res;
     } catch (err) {
@@ -2120,7 +2122,7 @@ function Clash2QX(cnt) {
       node = Ptfo0 != 0 ? XTFO(node,Ptfo0) : node
       nodelist.push(node)
     }catch (e) {
-      $notify(`⚠️该节点解析错误, 暂时已忽略处理`,`可点击通知反馈至 bot` )
+      $notify(`⚠️该节点解析错误, 暂时已忽略处理`,`可点击通知反馈至 bot`,node)
     }
   }
   return nodelist.join("\n")
