@@ -5,7 +5,7 @@
 [Script]
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
-获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+获取京东Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # > 百度贴吧
 # 用浏览器访问并登录: https://tieba.baidu.com/index/
@@ -15,36 +15,11 @@ tieba.cookie.js = type=http-request,script-path=https://raw.githubusercontent.co
 # 浏览器访问并登录: https://music.163.com/m/login
 neteasemusic.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,type=http-request,pattern=^https?:\/\/music\.163\.com\/?.?
 
-# > 人人视频
-rrtv.cookie.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js,pattern=^https:\/\/api\.rr\.tv\/user\/profile
-
 # > 加油广东
 gdoil.cookie.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js,pattern=^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign
 
 # > zaker app
 zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js,pattern= ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php
 
-# > 慢慢买
-慢慢买_获取cookie = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,type=http-request,requires-body=true,pattern=https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx)
-
-# > 10086查话费
-CMCC = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
-CMCC = type=http-request,pattern=^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js,requires-body=true,debug=true
-
-# > 什么值得买
-什么值得买_获取cookie = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
-什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
-
-# > 企鹅读书获取更新body
-企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/cache/qqreads1.js
-//企鹅读书获取时长cookie
-企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/cache/qqreads1.js
-
-# > 京东赚赚cookie
-京东赚赚cookie = type=http-request,pattern=^https\:\/\/api\.m\.jd\.com\/client\.action\?functionId\=interactIndex,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.cookie.js
-
-# > bilibili签到
-bilibili签到 = type=http-response,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
-
 [MITM]
-hostname = %APPEND% tieba.baidu.com, api-hdcj.9w9.com, draw.jdfcloud.com, daojia.jd.com, m.gdoil.cn, mcs-mimp-web.sf-express.com, sf-integral-sign-in.weixinjia.net, music.163.com, iphone.myzaker.com, apph5.manmanbuy.com, clientaccess.10086.cn, zhiyou.smzdm.com, user-api.smzdm.com, mqqapi.reader.qq.com, *.bilibili.com, mqqapi.reader.qq.com, apph5.manmanbuy.com
+hostname = %APPEND% tieba.baidu.com, m.gdoil.cn, music.163.com, iphone.myzaker.com, mqqapi.reader.qq.com
