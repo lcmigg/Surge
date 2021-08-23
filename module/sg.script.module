@@ -21,5 +21,21 @@ workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https
 //document
 documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
 
+//轻颜相机
+轻颜相机 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js,script-update-interval=-1,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user
+
+//作业帮解锁付费音频
+作业帮 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js,script-update-interval=-1,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?.+
+作业帮 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js,script-update-interval=-1,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+
+
+//企信通小程序
+企信通小程序 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js,script-update-interval=-1,pattern=^https://miniapp.elecredit.com/ucenter_info/
+
+//KEEP
+KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/keep.js,script-update-interval=-1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
+
+#樊登读书
+樊登读书 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/dushu365.js,script-update-interval=-1,pattern=^https?:\/\/gateway-api\.dushu365\.com
+
 [MITM]
-hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com
+hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com
