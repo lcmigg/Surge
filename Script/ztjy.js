@@ -9,9 +9,13 @@ var body = $response.body;
 var obj = JSON.parse(body);
 
 obj.expirTime = 1882785945
-obj.userExpList.expId = 2
-obj.userExpList.businessIsolId = 2
-obj.userExpList.globalIsolId = 1
-obj.userExpList.levelId = 9
+obj."userExpList" : [
+      {
+        "expId" : 2,
+        "expGroupId" : 6,
+        "businessIsolId" : 2,
+        "globalIsolId" : 2,
+        "levelId" : 9
+      }
 
 $done({body: JSON.stringify(obj)});
