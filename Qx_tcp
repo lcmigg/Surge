@@ -62,6 +62,8 @@ host, dongfeng.alicdn.com, reject
 host, dditscdn.com, reject
 host, mqtt.zhihu.com, reject
 host-suffix, xdrig.com, reject
+#掌通家园
+host, ad.fhtre.com, reject
 
 # > Apple
 host-suffix, iadsdk.apple.com, reject
