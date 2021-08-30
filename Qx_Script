@@ -1,6 +1,6 @@
 #hostname
 ;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com, api.faceapp.io, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, testflight.apple.com
-hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, api.gotokeep.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.weread.qq.com, *.xiangha.com
+hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, api.gotokeep.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.weread.qq.com, *.xiangha.com, zths.szy.cn
 
 #JS
 #微信公众号
@@ -107,4 +107,7 @@ http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.c
 
 #菜谱大全
 ^https?:\/\/apiios_dq\.xiangha\.com url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/xiangha.js
+
+#掌通家园
+^https://zths.szy.cn/api/(getExpInfo|getUserExpList) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ztjy.js
 
