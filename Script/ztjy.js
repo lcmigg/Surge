@@ -10,7 +10,8 @@ var obj = JSON.parse(body);
 
 obj.data.expirTime = 1882785945
 obj.data.userExpList.expId = 2
-obj.data.userExpList.businessIsolId = 1
+obj.data.userExpList.businessIsolId = 2
 obj.data.userExpList.globalIsolId = 1
+obj.data.userExpList.levelId = 9
 
 $done({body: JSON.stringify(obj)});
