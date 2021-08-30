@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-08-28 11:11⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-08-29 23:15⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -84,7 +84,7 @@
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
+⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
 1️⃣ 假设原始订阅连接为: https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt , 
 2️⃣ 假设你想要保留的参数为 in=tls+ss, 想要过滤的参数为 out=http+2, 请注意下面订阅链接后一定要加 ”#“ 符号
 3️⃣ 则填入 Quanx 节点引用的的总链接为  https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
@@ -203,7 +203,7 @@ function Parser() {
       total = ResourceParse();
       
     } catch (err) {
-      $notify("解析出现错误", "⚠️ 请点击发送链接反馈", err);
+      $notify("解析出现错误", "⚠️ 请点击发送链接反馈", err, bug_link);
     }
   } else {
     total=""
@@ -227,7 +227,7 @@ function ParseUnknown(cnt){
   try {
     cnt = JSON.parse(cnt)
     if(cnt) {
-      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
+      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","⁉️ 请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
     }
     
   } catch(err) {
@@ -277,7 +277,7 @@ function ResourceParse() {
   
   //开始处理
   if (flag == 1) { //server 类型统一处理
-    total = total.filter(Boolean)
+    total = isQuanX(total.filter(Boolean).join("\n"))
     if (Pinfo == 1 && ntf_flow == 0) { //假节点类型的流量通知
       flowcheck(total)
     }
@@ -302,20 +302,20 @@ function ResourceParse() {
       total = total.map(Rename);
     }
     if (Psrename) { total = RenameScript(total, Psrename) }
-    if (Psort0) {
-      total = QXSort(total, Psort0);
-    }
     if (total.length > 0){
       if (Psuffix==1 || Psuffix==-1) {total = Psuffix == 1? total.map(type_suffix):total.map(type_prefix)
       }
-      total = total.map(type_handle).map(emoji_prefix_handle).map(tag_handle)
-      total = para1.indexOf("node_index_prefix")!=-1 ?index_handle(total):total
+      total = total.map(type_handle).map(emoji_prefix_handle).map(tag_handle) //各类节点名操作
+      if (Psort0) { //排序操作
+        total = QXSort(total, Psort0);
+      }
+      total = para1.indexOf("node_index_prefix")!=-1 ?index_handle(total):total // 节点序号操作
       total = TagCheck_QX(total).join("\n") //节点名检查
       if (Pcnt == 1) {$notify("解析后最终返回内容" , "节点数量: " +total.split("\n").length, total)}
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "⚠️⚠️ 解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "⚠️解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
       total = errornode
       $done({ content: errornode })
     }
@@ -660,9 +660,9 @@ function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
   if (cnt) {
-    $notify( "⚠️⚠️ 将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+    $notify( "⚠️将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
   } else if(content0.indexOf("gridcell")!=-1) {
-    $notify( "⚠️⚠️ 解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
+    $notify( "⚠️解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
   }
   return cnt
 }
@@ -1552,11 +1552,12 @@ function SSD2QX(subs, Pudp, Ptfo) {
 
 // 纠正部分不规范的写法(没有把 tag 写在最后)
 function QXFix(cntf) {
+  //console.log("hh"+cntf)
   var cnti = cntf.replace(/tag\s+\=/,"tag=").replace("chacha20-poly","chacha20-ietf-poly")
   var hd = cnti.split("tag=")[0]
   var tag = "tag="+cnti.split("tag=")[1].split(",")[0]
   var tail = cnti.split(tag+",")
-  cnti = tail.length<=1?  cntf : cntf //String(hd + tail[1] +"," + tag)
+  cnti = tail.length<=1?  cntf : String(hd + tail[1].split("\r")[0] +"," + tag)
   return cnti
 }
 
@@ -1780,6 +1781,7 @@ function get_emoji(emojip, sname) {
     "🇳🇬": ["尼日利亚", "NG", "尼日利亞","拉各斯"],
     "🇨🇿": ["Czechia", "捷克"],
     "🇸🇰": ["斯洛伐克", "SK"],
+    "🇸🇮": ["斯洛文尼亚"],
     "🇷🇸": ["RS", "塞尔维亚"],
     "🇲🇩": ["摩爾多瓦","MD","摩尔多瓦"],
     "🇩🇪": ["DE", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德","沪德","广德"],
@@ -1789,7 +1791,7 @@ function get_emoji(emojip, sname) {
     "🇫🇮": ["Finland", "芬兰","芬蘭","赫尔辛基"],
     "🇫🇷": ["FR", "France", "法国", "法國", "巴黎"],
     "🇬🇧": ["UK", "GB", "England", "United Kingdom", "英国", "伦敦", "英"],
-    "🇲🇴": ["MO", "Macao", "澳门", "澳門", "CTM"],
+    "🇲🇴": ["MO", "Macao", "MAC", "澳门", "澳門", "CTM"],
     "🇰🇿": ["哈萨克斯坦"],
     "🇭🇺": ["匈牙利", "Hungary"],
     "🇱🇹": ["立陶宛"],
