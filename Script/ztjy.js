@@ -2,7 +2,6 @@
 
 https://zths.szy.cn/api/(getExpInfo|getUserExpList) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ztjy.js
 hostname = zths.szy.cn
-
 */
 
 var body = $response.body;
