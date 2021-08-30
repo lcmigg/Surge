@@ -96,7 +96,8 @@ http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.c
 ^https://miniapp.elecredit.com/ucenter_info/ url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js
 
 #KEEP
-https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/keep.js
+;https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/keep.js
+^https:\/\/api\.gotokeep\.com\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js
 
 #樊登读书
 ^https?:\/\/gateway-api\.dushu365\.com url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/dushu365.js
