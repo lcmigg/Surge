@@ -4,17 +4,19 @@ https://zths.szy.cn/api/(getExpInfo|getUserExpList) url script-response-body htt
 hostname = zths.szy.cn
 */
 
-var body = $response.body;
-var obj = JSON.parse(body);
+let obj = JSON.parse($response.body);
 
-obj.expirTime = 1882785945
-obj."userExpList" : [
+obj = {
+  "expirTime" : 1882785945
+  "userExpList" : [
       {
         "expId" : 2,
         "expGroupId" : 6,
-        "businessIsolId" : 2,
-        "globalIsolId" : 2,
-        "levelId" : 9
+        "businessIsolId" : 1,
+        "globalIsolId" : 1,
+        "levelId" : 3
       }
-]
+    ],
+}
+
 $done({body: JSON.stringify(obj)});
