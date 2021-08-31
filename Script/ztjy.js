@@ -16,5 +16,5 @@ obj."userExpList" : [
         "globalIsolId" : 2,
         "levelId" : 9
       }
-
+]
 $done({body: JSON.stringify(obj)});
