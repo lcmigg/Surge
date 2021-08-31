@@ -2,9 +2,6 @@
 #!desc=掌通家园去广告
 #!system=ios
 
-[Script]
-ztjy = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ztjy.js,script-update-interval=-1,pattern=^https://zths.szy.cn/api/(getExpInfo|getUserExpList)
-
 [URL Rewrite]
 ^https://adlog-ztjy.szy.cn/ad/ - reject
 ^https://api-access.pangolin-sdk-toutiao.com/api/ad/ - reject
@@ -13,4 +10,4 @@ ztjy = type=http-response,requires-body=1,max-size=0,script-path=https://raw.git
 ^https://ztjy.cn-hangzhou.log.aliyuncs.com/logstores/ztjy_ad/ - reject
 
 [MITM]
-hostname = %APPEND% adlog-ztjy.szy.cn, api-access.pangolin-sdk-toutiao.com, snsimg.ztjystore.cn, ztjy.cn-hangzhou.log.aliyuncs.com, zths.szy.cn
+hostname = %APPEND% adlog-ztjy.szy.cn, api-access.pangolin-sdk-toutiao.com, snsimg.ztjystore.cn, ztjy.cn-hangzhou.log.aliyuncs.com
