@@ -4,9 +4,14 @@ https://zths.szy.cn/api/(getExpInfo|getUserExpList) url script-response-body htt
 hostname = zths.szy.cn
 */
 
-let obj = JSON.parse($response.body);
+const path1 = "/getUserExpList";
+const path2 = "/getExpInfo";
 
-obj = {
+let url = $request.url;
+let body = JSON.parse($response.body);
+
+if (url.indexOf(path1) != -1) {
+    body = {
     "expirTime" : 1882785945,
     "userExpList" : [
       {
@@ -18,5 +23,10 @@ obj = {
       }
     ],
 }
-
-$done({body: JSON.stringify(obj)});
+}
+if (url.indexOf(path2) != -1) {
+    body = {
+    "expirTime" : 1882785945,
+    }
+}
+$done({body: JSON.stringify(body)});
