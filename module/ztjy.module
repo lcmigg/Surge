@@ -2,9 +2,9 @@
 #!desc=掌通家园去广告
 #!system=ios
 
-[Script]
+//[Script]
 //掌通家园
-掌通家园 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ztjy.js,script-update-interval=-1,pattern=https://zths.szy.cn/api/(getExpInfo|getUserExpList)
+//掌通家园 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ztjy.js,script-update-interval=-1,pattern=https://zths.szy.cn/api/(getExpInfo|getUserExpList)
 
 [URL Rewrite]
 ^https://adlog-ztjy.szy.cn/ad/ - reject
