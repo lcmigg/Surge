@@ -15,10 +15,10 @@ if (url.indexOf(path1) != -1) {
     "expirTime" : 1882785945,
     "userExpList" : [
       {
-        "expId" : 3,
+        "expId" : 2,
         "expGroupId" : 6,
         "businessIsolId" : 1,
-        "globalIsolId" : 0,
+        "globalIsolId" : 1,
         "levelId" : 3
       }
     ],
