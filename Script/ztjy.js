@@ -8,7 +8,7 @@ const path1 = "/getUserExpList";
 const path2 = "/getExpInfo";
 
 let url = $request.url;
-let body = JSON.parse($response.obj);
+let obj = JSON.parse($response.body);
 
 if (url.indexOf(path1) != -1) {
     obj."expirTime" = 1882785945;
