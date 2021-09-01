@@ -8,25 +8,18 @@ const path1 = "/getUserExpList";
 const path2 = "/getExpInfo";
 
 let url = $request.url;
-let body = JSON.parse($response.body);
+let body = JSON.parse($response.obj);
 
 if (url.indexOf(path1) != -1) {
-    body = {
-    "expirTime" : 1882785945,
-    "userExpList" : [
-      {
-        "expId" : 2,
-        "expGroupId" : 6,
-        "businessIsolId" : 1,
-        "globalIsolId" : 1,
-        "levelId" : 3
-      }
-    ],
+    obj."expirTime" = 1882785945;
+    obj."userExpList"."expId" = 2
+    obj."userExpList"."expGroupId" = 6
+    obj."userExpList"."businessIsolId" = 1
+    obj."userExpList"."globalIsolId" = 1
+    obj."userExpList"."levelId" = 1
 }
-}
+
 if (url.indexOf(path2) != -1) {
-    body = {
-    "expirTime" : 1882785945,
-    }
+    obj."expirTime" = 1882785945;
 }
 $done({body: JSON.stringify(body)});
