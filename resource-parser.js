@@ -1,10 +1,9 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-09-12 09:09⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-09-13 20:20⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
 🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM, @vinewx, @love4taylor, @shadowdogy 
-
 ----------------------------------------------------------
 0️⃣ 在 ⟦订阅链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
 ⚠️ ☞ https://mysub.com#emoji=1&tfo=1&in=香港+台湾
@@ -20,7 +19,7 @@
 ⦿ in, out, regex, regout 分别为 保留、删除、正则保留、正则删除 节点;
   ❖ in, out 中多参数(逻辑"或")用 "+", 逻辑"与"用 "." 表示;
   ❖ in/out/regex/regout 均对节点的完整信息进行匹配(类型、端口、加密等);
-  ❖ 示范: "in=香港.0\.2倍率+台湾&out=香港%20BGP&regex=(?i)iplc"
+  ❖ 示范: "in=香港.0\.2倍率+台湾&out=BGP&regex=iplc"
 ⦿ rename 重命名, "旧名@新名", "前缀@", "@后缀", 用 "+" 连接多个参数;
   ❖ 删除字段: "字段1.字段2☠️", 想删除 "." 时用 "\." 替代
   ❖ 示范: "rename=香港@𝐇𝐊+[𝐒𝐒]@+@[1𝐗]+流量.0\.2☠️"
@@ -31,22 +30,23 @@
   ❖ $index0/1/2/3/4/5/6 占位符，将节点的序号作为可操作参数，如
     ∎ rename=@「$index1」
     ∎ 样式分别为 1\①\❶\⓵\𝟙\¹\₁
-  ❖ $emoji1/2 占位符，将节点地区emoji(🇭🇰 🇯🇵 等)作为可操作参数，如
+  ❖ $emoji1/2 占位符, 将emoji(🇭🇰 等)作为可操作参数
     ∎ rename=@「$emoji1」
   ❖ $tag 占位符，将订阅的 tag 作为可操作参数，如
-    ∎ rename=@「$tag」
+    ∎ 可接数字以单独给 tag 添加字母/数字样式
+    ∎ rename=@「$tag34」, 样式同下边的 ptn/npt
 ⦿ suffix=-1/1 将节点类型做为前缀/后缀 添加在节点名中, 如 「𝗌𝗌」 「𝖵𝗆𝖾𝗌𝗌」
-⦿ ptn=1-6, 分别将节点名中的英文替换成花样字 ⇒ 🅰/🄰/𝐀/𝗮/𝔸/𝕒
-⦿ npt=1-6, 分别将节点名中的数字替换成花样数字 ⇒ ①\❶\⓵\𝟙\¹\₁
+⦿ ptn=1-6, 将节点名中的英文替换成花样字 ⇒ 🅰/🄰/𝐀/𝗮/𝔸/𝕒
+⦿ npt=1-6, 将节点名中的数字替换成花样数字 ⇒ ①\❶\⓵\𝟙\¹\₁
 ⦿ delreg, 利用正则表达式来删除 "节点名" 中的字段(⚠️ 慎用)
 ⦿ replace 参数, 正则替换节点中内容, 可用于重命名/更改加密方式等
   ❖ replace=regex1@𝘀𝘁𝗿1+regex2@𝘀𝘁𝗿2
   ❖ replace=𝗿𝗲𝗴𝗲𝘅1@ 则等效于 𝗱𝗲𝗹𝗿𝗲𝗴 参数
-⦿ sort=1/-1/x/指定规则, 分别按节点名 正/逆/随机/指定规则 排序
-  ❖ 指定规则是正则表达式或简单关键词, 用"<" 或 ">" 连接
+⦿ sort=1/-1/x/参数规则, 按节点名 正/逆/随机/参数规则 排序
+  ❖ 参数规则是正则表达式或简单关键词, 用"<" 或 ">" 连接
   ❖ sort=🇭🇰>🇸🇬>🇯🇵>🇺🇸 , 靠前排序
   ❖ sort=IEPL<IPLC<BGP , 靠后排序
-⦿ del=1, 当有重名节点时, 用此参数删除重复节点(默认改名并保留)
+⦿ del=1, 有重名节点时用此参数删除重复节点(默认改名保留)
 ⦿ ⟦进阶参数⟧: 𝘀𝗳𝗶𝗹𝘁𝗲𝗿/𝘀𝗿𝗲𝗻𝗮𝗺𝗲, 传入一段 base64 编码的脚本, 可用于更为复杂的[过滤/重命名] 需求
   ❖ 说明: https://github.com/KOP-XIAO/QuantumultX/pull/9
 
@@ -89,6 +89,7 @@ resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/mas
 ------------------------------
 */
 
+
 //beginning 解析器正常使用，調試註釋此部分
 
 let [link0, content0, subinfo] = [$resource.link, $resource.content, $resource.info]
@@ -118,7 +119,9 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/Shawn_KOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
+
 SubFlow() //流量通知
+
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -231,6 +234,7 @@ function ParseUnknown(cnt){
 }
 
 
+
 function ResourceParse() {
   //预处理，分流/重写等处理完成
   if (type0 == "Subs-B64Encode") {
@@ -316,7 +320,7 @@ function ResourceParse() {
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
       $done({ content: total });
     } else {
-      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "⚠️解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
+      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转反馈")
       total = errornode
       $done({ content: errornode })
     }
@@ -350,7 +354,7 @@ function SubFlow() {
     //var message = total + "\n" + usd + ", " + left;
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
-    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message, subinfo_link)
+    $notify("流量信息: ⟦" + subtag + "⟧", epr, message)
     $notify("👉" + subtag, epr, message)
   }
 //  } else if (Pinfo ==1){
@@ -533,12 +537,14 @@ function PatternN(cnt, para,npara) {
   }
 }
 
+
 function Pattern(cnt,para,npara) {
   if (para != "" || npara != "") {
     cnt = cnt.split("tag=")[0] +"tag="+ PatternN(cnt.split("tag=")[1],para,npara)
   }
   return cnt 
 }
+
 
 //大小写
 function Capitalize(cnt,para) {
@@ -633,10 +639,14 @@ function getnode_emoji(item,ind){
 }
 
 // 操作订阅的 tag
-
 function tag_handle(item) {
   if(item.indexOf("node_tag_prefix")!=-1) {
-    item = item.replace(/node_tag_prefix/g,subtag)
+    //item = item.replace(/node_tag_prefix/g,subtag)
+    //console.log(item.split("node_tag_prefix")[1][1])
+    ptnn = /\d/.test(item.split("node_tag_prefix")[1][0])? item.split("node_tag_prefix")[1][0]:""
+    nptnn = /\d/.test(item.split("node_tag_prefix")[1][1])? item.split("node_tag_prefix")[1][1]:""
+    //console.log(ptnn)
+    item = item.replace(/node_tag_prefix\d{0,2}/g,PatternN(subtag,ptnn,nptnn))
   }
   return item
 }
@@ -659,9 +669,9 @@ function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
   if (cnt) {
-    $notify( "⚠️将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+    $notify( "⚠️ 将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
   } else if(content0.indexOf("gridcell")!=-1) {
-    $notify( "⚠️解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
+    $notify( "⚠️ 解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
   }
   return cnt
 }
@@ -988,7 +998,7 @@ function Rule_Policy(content) { //增加、替换 policy
             ply0 = Ppolicy != "Shawn" ? Ppolicy : cnt[2]
             nn = cnt[0] + ", " + cnt[1] + ", " + ply0 + ", " + cnt[3]
         } else if (!RuleK.some(RuleCheck) && content) {
-            //$notify("未能解析" + "⟦" + subtag + "⟧" + "其中部分规则:", content);
+            //$notify("未能解析" + "⟦" + subtag + "⟧" + "其中部分规则:", content, nan_link);
             return ""
         } else { return "" }
         if (cnt[0].indexOf("URL-REGEX") != -1 || cnt[0].indexOf("PROCESS") != -1) {
@@ -1859,6 +1869,7 @@ function get_emoji(emojip, sname) {
     "🇨🇷": ["哥斯达黎加"],
     "🇹🇳": ["突尼斯"],
     "🇵🇦": ["巴拿马","巴拿馬"],
+    "🇮🇷": ["伊朗"],
     "🇨🇳": ["CN", "China", "回国", "中国","中國", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],
   }
     str1 = JSON.stringify(Lmoji)
