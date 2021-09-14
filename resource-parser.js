@@ -354,7 +354,7 @@ function SubFlow() {
     //var message = total + "\n" + usd + ", " + left;
     var message=usd+"\n"+left+", "+total;
     ntf_flow = 1;
-    $notify("流量信息: ⟦" + subtag + "⟧", epr, message)
+    //$notify("流量信息: ⟦" + subtag + "⟧", epr, message)
     $notify("👉" + subtag, epr, message)
   }
 //  } else if (Pinfo ==1){
