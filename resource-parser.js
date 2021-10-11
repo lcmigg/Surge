@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-09-23 10:05⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-10-09 18:05⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -7,7 +7,7 @@
 ----------------------------------------------------------
 0️⃣ 在 ⟦订阅链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接 
 ⚠️ ☞ https://mysub.com#emoji=1&tfo=1&in=香港+台湾
-❖ 本地资源片段引用, 请将参数如 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行 ❖
+❖ 本地资源片段引用, 请将参数如 "#𝗶𝗻=𝘅𝘅𝘅." 填入文件第 ① 行
 ❖ 🚦 支持中文, "操作" 以下特殊字符时请先替换 🚦
   ∎ "+"⇒"%2B", 空格⇒"%20", "@"⇒"%40", "&"⇒"%26", "."⇒"\."
 
@@ -38,8 +38,8 @@
   ❖ $tag 占位符，将订阅的 tag 作为可操作参数，如
     ∎ 可接数字以单独给 tag 添加字母/数字样式
     ∎ rename=@「$tag34」, 样式同下边的 ptn/npt
-⦿ ptn=1-8, 将节点名中的英文替换成花样字 ⇒ 🅰/🄰/𝐀/𝗮/𝔸/𝕒/ᵃ/ᴬ
-⦿ npt=1-8, 将节点名中的数字替换成花样数字 ⇒ ①\❶\⓵\𝟙\¹\₁\𝟏\𝟷
+⦿ ptn=1-8, 将节点名英文替换成样式 ⇒ 🅰/🄰/𝐀/𝗮/𝔸/𝕒/ᵃ/ᴬ
+⦿ npt=1-8, 将节点名数字替换成样式 ⇒ ①\❶\⓵\𝟙\¹\₁\𝟏\𝟷
 ⦿ delreg, 利用正则表达式来删除 "节点名" 中的字段(⚠️ 慎用)
 ⦿ sort=1/-1/x/参数规则, 按节点名 正/逆/随机/参数规则 排序
   ❖ 参数规则是正则表达式或简单关键词, 用"<" 或 ">" 连接
@@ -68,6 +68,7 @@
   ❖ ⚠️ 把 𝗿𝘂𝗹𝗲-𝘀𝗲𝘁 中 𝐮𝐫𝐥-𝐫𝐞𝐠𝐞𝐱 转成重写时, 必须要加 dst=rewrite;
   ❖ ⚠️ 把 𝐦𝐨𝐝𝐮𝐥𝐞 中的分流规则转换时, 必须要加 dst=filter
 ⦿ cdn=1, 将 github 脚本的地址转换成免翻墙cdn.jsdelivr.net
+⦿ fcr=1, 为分流规则添加 force-cellular参数，强制移动数据
 
 3⃣️ 其他参数
 ⦿ 通知参数 ntf=0/1, 用于 关闭/打开 资源解析器的提示通知
@@ -78,7 +79,6 @@
 ⦿ 隐藏参数 hide=1, 隐藏筛除的分流/重写，默认方式为禁用
 ----------------------------------------------------------
 */
-
 
 /**
 * 使用说明，
@@ -163,6 +163,7 @@ var Pcdn = para1.indexOf("cdn=") != -1 ? para1.split("cdn=")[1].split("&")[0] : 
 let [flow, exptime, errornode, total] = "";
 var Pdel = mark0 && para1.indexOf("del=") != -1 ? para1.split("del=")[1].split("&")[0] : 0; //删除重复节点
 var typeU = para1.indexOf("type=") != -1 ? para1.split("type=")[1].split("&")[0] : "";
+var Pfcr = para1.indexOf("fcr=") != -1 ? para1.split("fcr=")[1].split("&")[0] : ""; // force-cellular 参数
 
 //花漾字 pattern
 var pat=[]
@@ -206,7 +207,7 @@ function Parser() {
       total = ResourceParse();
       
     } catch (err) {
-      $notify("解析出现错误", "⚠️ 请点击发送链接反馈", err);
+      $notify("解析出现错误", "请点击发送链接反馈", err);
     }
   } else {
     total=""
@@ -230,7 +231,7 @@ function ParseUnknown(cnt){
   try {
     cnt = JSON.parse(cnt)
     if(cnt) {
-      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
+      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","请自行检查原始链接，返回内容 👇️",JSON.stringify(cnt))
     }
     
   } catch(err) {
@@ -276,7 +277,7 @@ function ResourceParse() {
     if (Ppolicyset) {total = policy_sets(total, Ppolicyset)}
     total = total.join("\n")
   } else if (content0.trim() == "") {
-    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0], nan_link);
+    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "unknown") {
     ParseUnknown(content0)
@@ -674,9 +675,9 @@ function ToRaw(cnt) {
   cnt = cnt.split("\n").map(rawtest).filter(Boolean).join("\n")
   var rawlink = link0.replace("github.com","raw.githubusercontent.com").replace("/blob","")
   if (cnt) {
-    $notify( "⚠️将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
+    $notify( "⚠️ 将尝试解析该资源" + "⟦" + subtag + "⟧" , "请正确使用GitHub的 raw 链接" , "你的链接："+link0+"\n正确链接："+rawlink, {"open-url":rawlink})
   } else if(content0.indexOf("gridcell")!=-1) {
-    $notify( "⚠️解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
+    $notify( "⚠️ 解析该资源" + " ⟦" + subtag + "⟧ 失败" , "你的链接似乎是目录，而不是文件" , "你的链接："+link0, {"open-url":link0})
   }
   return cnt
 }
@@ -956,7 +957,7 @@ function Rule_Handle(subs, Pout, Pin) {
             }
         }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
-        return nlist;
+        //return nlist;
     } else if (Tin != "" && Tin != null) { //if Tout
         var dlist = [];
         for (var i = 0; i < cnt.length; i++) {
@@ -977,19 +978,22 @@ function Rule_Handle(subs, Pout, Pin) {
             }
         } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
-      return nlist;
+      //return nlist;
     } else {  //if Tin
-        return cnt.map(Rule_Policy)
+      nlist = cnt.map(Rule_Policy)
+        //return cnt.map(Rule_Policy)
     }
+  nlist = Pfcr == 1? nlist.filter(Boolean).map(item => item+", force-cellular") : nlist.filter(Boolean)
+  return nlist
 }
 
 function Rule_Policy(content) { //增加、替换 policy
     var cnt = content.replace(/^\s*\-\s/g,"").replace(/REJECT-TINYGIF/gi,"reject").trim().split("//")[0].split(",");
-    var RuleK = ["//", "#", ";"];
+    var RuleK = ["//", "#", ";","[","/"];
     var RuleK1 = ["host", "domain", "ip-cidr", "geoip", "user-agent", "ip6-cidr"];
     const RuleCheck = (item) => cnt[0].trim().toLowerCase().indexOf(item) == 0; //无视注释行
     const RuleCheck1 = (item) => cnt[0].trim().toLowerCase().indexOf(item) != -1; //无视 quanx 不支持的规则类别
-    if (RuleK1.some(RuleCheck1)) {
+    if (RuleK1.some(RuleCheck1) && !RuleK.some(RuleCheck)) {
         if (cnt.length == 3 && cnt.indexOf("no-resolve") == -1) {
             ply0 = Ppolicy != "Shawn" ? Ppolicy : cnt[2]
             nn = cnt[0] + ", " + cnt[1] + ", " + ply0
@@ -1010,7 +1014,24 @@ function Rule_Policy(content) { //增加、替换 policy
             nn = ""
         } else { nn = nn.replace("IP-CIDR6", "ip6-cidr") }
         return nn
+    } else if (cnt.length == 1 && !RuleK.some(RuleCheck)) { // 纯域名/ip 列表
+      return rule_list_handle(cnt[0])
     } else { return "" }//if RuleK1 check	
+}
+
+// 处理纯列表
+function rule_list_handle(cnt) {
+  if(cnt.indexOf(":")!=-1 && cnt.indexOf("/")!=-1) { // ip-v6?
+    cnt = "ip6-cidr, " + cnt
+    cnt = Ppolicy == "Shawn" ? cnt+", Shawn" : cnt+", "+Ppolicy
+  } else if (cnt.split("/").length == 2) {//ip-cide
+    cnt = "ip-cidr, " + cnt
+    cnt = Ppolicy == "Shawn" ? cnt+", Shawn" : cnt+", "+Ppolicy
+  } else if (cnt) { //host - suffix
+    cnt = "host-suffix, " + cnt
+    cnt = Ppolicy == "Shawn" ? cnt+", Shawn" : cnt+", "+Ppolicy
+  }
+  return cnt
 }
 
 // Domain-Set
@@ -1819,7 +1840,7 @@ function get_emoji(emojip, sname) {
     "🇫🇮": ["Finland", "芬兰","芬蘭","赫尔辛基"],
     "🇫🇷": ["FR", "France", "法国", "法國", "巴黎"],
     "🇬🇧": ["UK", "GB", "England", "United Kingdom", "英国", "伦敦", "英"],
-    "🇲🇴": ["MO", "Macao", "MAC", "澳门", "澳門", "CTM"],
+    "🇲🇴": ["MO", "Macao","Macau", "MAC", "澳门", "澳門", "CTM"],
     "🇰🇿": ["哈萨克斯坦"],
     "🇭🇺": ["匈牙利", "Hungary"],
     "🇱🇹": ["立陶宛"],
@@ -1837,7 +1858,7 @@ function get_emoji(emojip, sname) {
     "🇲🇾": ["MY", "Malaysia","MALAYSIA", "马来西亚", "大馬", "馬來西亞", "吉隆坡"],
     "🇳🇱": ["NL", "Netherlands", "荷兰", "荷蘭", "尼德蘭", "阿姆斯特丹"],
     "🇵🇭": ["PH", "Philippines", "菲律宾", "菲律賓"],
-    "🇷🇴": ["RO", "罗马尼亚"],
+    "🇷🇴": [" RO ", "罗马尼亚"],
     "🇧🇾": ["BY","白俄罗斯","白俄羅斯"],
     "🇷🇺": ["RU", "Russia", "俄罗斯", "俄国", "俄羅斯", "伯力", "莫斯科", "圣彼得堡", "西伯利亚", "新西伯利亚", "京俄", "杭俄","廣俄","滬俄","广俄","沪俄"],
     "🇸🇦": ["沙特", "迪拜"],
@@ -1876,6 +1897,9 @@ function get_emoji(emojip, sname) {
     "🇵🇦": ["巴拿马","巴拿馬"],
     "🇮🇷": ["伊朗"],
     "🇯🇴": ["约旦"],
+    "🇺🇾": ["乌拉圭"],
+    "🇰🇪": ["肯尼亚"],
+    "🇰🇬": ["吉尔吉斯坦","吉尔吉斯斯坦"],
     "🇨🇳": ["CN", "China", "回国", "中国","中國", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],
   }
     str1 = JSON.stringify(Lmoji)
