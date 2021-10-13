@@ -1,4 +1,4 @@
-hostname = buy.itunes.apple.com,*.buy.itunes.apple.com
+hostname = buy.itunes.apple.com,*buy.itunes.apple.com
 
 #发型多多
 ^https://buy.itunes.apple.com/verifyReceipt url script-response-body https://raw.githubusercontent.com/Alex0510/surge/master/Script/fxdd.js
