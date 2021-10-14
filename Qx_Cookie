@@ -55,3 +55,6 @@ https://napi.zuoyebang.com/napi/signin/signinpage url script-request-body https:
 
 #叮咚买菜
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+
+#高德地图
+https:\/\/.+\.amap\.com\/ws\/.+ url script-request-header https://raw.githubusercontent.com/Antiscientist/quantumultX/731ebc475b2fe529fc18db5150edfefa8352880c/scripts/gddt_garden.js
