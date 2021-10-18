@@ -40,5 +40,14 @@ KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.git
 //海豚记账 (by @superuv)
 海豚记账 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js,script-update-interval=-1,pattern=^https:\/\/book\.haitunwallet\.com\/app\/vip\/status
 
+//斑马海报
+斑马海报 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bmhb.js,script-update-interval=-1,pattern=^https://zebra.maka.im/api/user/info
+
+//财新周刊
+财新周刊 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/cxzk.js,script-update-interval=-1,pattern=^http://ipadcms.caixin.com/tmp/articles/*
+
+//每日艺术
+每日艺术= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/mrys.js,script-update-interval=-1,pattern=^https://panel.getdailyart.com/APIMobile/users/single
+
 [MITM]
 hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com
