@@ -19,7 +19,7 @@ luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.
 workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/education\.github\.com\/api\/user$
 
 //document
-documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
+documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
 
 //轻颜相机
 轻颜相机 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js,script-update-interval=-1,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user
@@ -35,10 +35,10 @@ documents.js = type=http-response,requires-body=1,max-size=0,script-path=https:/
 KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/keep.js,script-update-interval=-1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
 
 //樊登读书
-樊登读书 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/dushu365.js,script-update-interval=-1,pattern=^https?:\/\/gateway-api\.dushu365\.com
+樊登读书 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/fdds.js,script-update-interval=-1,pattern=https://api.dushu.io/Album/Info
 
 //海豚记账 (by @superuv)
 海豚记账 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js,script-update-interval=-1,pattern=^https:\/\/book\.haitunwallet\.com\/app\/vip\/status
 
 [MITM]
-hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com
+hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com
