@@ -101,7 +101,6 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^(http|https):\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
 ^(http|https):\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? url reject-200
 
-
 # 新浪微博
 ;^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
 ;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
