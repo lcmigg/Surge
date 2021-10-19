@@ -77,6 +77,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject
 ^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
+https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 
 # 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
