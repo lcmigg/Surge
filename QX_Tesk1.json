@@ -25,5 +25,6 @@
         "40 12 * * * https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scripts/cron-sync-artifacts.js, tag=Sub-Store, img-url=https://raw.githubusercontent.com/58xinian/icon/master/Sub-Store1.png, enabled=true",
         "20 6 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/unicom_signin.min.js, tag=联通_签到与抽奖, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/10010/10010.png, enabled=true",
         "20 6 * * * https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js, tag=叮咚买菜_每日签到, enabled=true",
+        "0 0 * * * https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_sign.js, tag=京东金融签到, enabled=true",
     ]
 }   
