@@ -6,3 +6,4 @@
 途虎养车 = type=cron,cronexp=15 12 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.js
 作业帮 = type=cron,cronexp=15 13 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.js
 加油广东 = type=cron,cronexp=15 13 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js
+金融领豆 = type=cron,cronexp=1 0 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_sign.js
