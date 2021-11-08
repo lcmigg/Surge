@@ -43,7 +43,7 @@ https://youhui.95516.com/newsign/public/app/index.html url script-request-header
 
 # 小米运动获取Token
 ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSports.js
-^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSportsCookieTask.js
+^https:\/\/.*?\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSportsCookieTask.js
 
 
 #途虎养车Cookie（打开途虎APP：依次打开 我的->每日免费领积分）
