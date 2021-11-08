@@ -27,5 +27,8 @@ zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavy
 # > 作业帮
 作业帮.js = type=http-request,script-path=https://gitee.com/photonmang/quantumultX/raw/master/zyb.js,pattern= https://napi.zuoyebang.com/napi/signin/signinpage
 
+# > 小米运动
+小米运动获取Token = type=http-request,pattern=https:\/\/account(\-cn2)?\.huami\.com(.*)\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/dompling/Script/master/xmSportsCookieTask.js
+
 [MITM]
-hostname = %APPEND% tieba.baidu.com, m.gdoil.cn, music.163.com, iphone.myzaker.com, mqqapi.reader.qq.com, napi.zuoyebang.com, api.tuhu.cn
+hostname = %APPEND% tieba.baidu.com, m.gdoil.cn, music.163.com, iphone.myzaker.com, mqqapi.reader.qq.com, napi.zuoyebang.com, api.tuhu.cn, *.huami.com
