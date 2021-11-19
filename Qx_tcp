@@ -159,6 +159,8 @@ host-suffix, ad.cmvideo.cn, reject
 
 # 12306
 host, ad.12306.cn, reject
+# huya
+host, business.msstatic.com, reject
 
 # 搜书阁
 host, iflyad.bj.openstorage.cn, reject
