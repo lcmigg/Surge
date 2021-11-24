@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-11-15 15:15⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-11-22 13:15⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -414,7 +414,7 @@ function Type_Check(subs) {
     var QuanXK = ["shadowsocks=", "trojan=", "vmess=", "http="];
     var SurgeK = ["=ss,", "=vmess,", "=trojan,", "=http,", "=custom,", "=https,", "=shadowsocks", "=shadowsocksr"];
     var ClashK = ["proxies:"]
-    var SubK = ["dm1lc3M", "c3NyOi8v", "CnNzOi8", "dHJvamFu", "c3M6Ly", "c3NkOi8v", "c2hhZG93",,"aHR0c"];
+    var SubK = ["dm1lc3M", "c3NyOi8v", "CnNzOi8", "dHJvamFu", "c3M6Ly", "c3NkOi8v", "c2hhZG93",,"aHR0c", "CnRyb2phbjo"];
     var RewriteK = [" url "]
     var SubK2 = ["ss://", "vmess://", "ssr://", "trojan://", "ssd://", "https://"];
     var ModuleK = ["[Script]", "[Rule]", "[URL Rewrite]", "[Map Local]", "[MITM]", "\nhttp-r"]
@@ -422,6 +422,7 @@ function Type_Check(subs) {
     var subi = subs.replace(/ /g, "")
     const RuleCheck = (item) => subi.toLowerCase().indexOf(item) != -1;
     const NodeCheck = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) != -1;
+    const NodeCheck1 = (item) => subi.toLowerCase().indexOf(item.toLowerCase()) != -1; //b64加密的订阅类型
     const RewriteCheck = (item) => subs.indexOf(item) != -1;
     var subsn = subs.split("\n")
     if (subs.indexOf(html) != -1 && link0.indexOf("github.com" == -1)) {
@@ -441,10 +442,10 @@ function Type_Check(subs) {
     } else if ((DomainK.some(RuleCheck) || typeU == "domain-set") && subs.indexOf("[Proxy]") == -1 && typeU != "nodes") {
       type = (typeQ == "unsupported" || typeQ =="filter")? "Rule":"wrong-field";
       content0 = Domain2Rule(content0) // 转换 domain-set
+    } else if (typeQ == "filter") { // 纯 list类型？
+      type = "Rule"
     } else if (subsn.length >= 1 && SubK2.some(NodeCheck) && !/\[(Proxy|filter_local)\]/.test(subs)) { //未b64加密的多行URI 组合订阅
       type = (typeQ == "unsupported" || typeQ =="server"||typeQ =="uri") ? "Subs":"wrong-field"
-    } else if (SubK.some(NodeCheck)) {  //b64加密的订阅类型
-      type = (typeQ == "unsupported" || typeQ =="server")? "Subs-B64Encode":"wrong-field"
     } else if ((subi.indexOf("tag=") != -1 && QuanXK.some(NodeCheck) && !/\[(Proxy|filter_local)\]/.test(subs)) || typeU =="list") {
       type = (typeQ == "unsupported" || typeQ =="server")? "Subs":"wrong-field" // QuanX list
     } else if (subs.indexOf("[Proxy]") != -1) {
@@ -459,6 +460,8 @@ function Type_Check(subs) {
       //type = "QuanX"
       type = (typeQ == "unsupported" || typeQ =="server")? "Subs":"wrong-field"
       content0 = SIP2QuanX(content0)
+    } else if (SubK.some(NodeCheck1)) {  //b64加密的订阅类型
+      type = (typeQ == "unsupported" || typeQ =="server")? "Subs-B64Encode":"wrong-field"
     } 
   // 用于通知判断类型，debug
   if(typeU == "X"){
@@ -867,13 +870,13 @@ function HostNamecheck(content, parain, paraout) {
         dd = hname[i]
         const excludehn = (item) => dd.indexOf(item) != -1;
         if (paraout && paraout != "") { //存在 out 参数时
-            if (!paraout.some(excludehn)) { //out 未命中
+            if (!paraout.some(excludehn)) { //out 未命中🎯️
                 if (parain && parain != "") {
-                    if (parain.some(excludehn)) { //Pin 命中
+                    if (parain.some(excludehn)) { //Pin 命中🎯️
                         nname.push(hname[i])
                     } else {
                         dname.push(hname[i])
-                    } //Pin 未命中的记录
+                    } //Pin 未命中🎯️的记录
                 } else { nname.push(hname[i]) }	//无in 参数		
             } else { dname.push(hname[i]) } //out 参数命中
         } else if (parain && parain != "") { //不存在 out，但有 in 参数时
@@ -1471,7 +1474,7 @@ function Filter(servers, Pin, Pout) {
             $notify("引用" + "⟦" + subtag + "⟧" + " 开始节点筛选", "筛选关键字: " + pfi + pfo, "已删除以下 " + no + "个节点\n" + Delist.join(", "));
         }
     } else if (no1 == 0 || no1 == null) { //无剩余节点时强制通知
-        $notify("‼️ ⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
+        $notify("⟦" + subtag + "⟧" + "筛选后节点数为0️⃣", "⚠️ 请自行检查原始链接以及筛选参数", link0);
     }
     return Nlist
 }
@@ -2166,7 +2169,7 @@ function LoonSSR2QX(cnt) {
 function YAMLFix(cnt){
   cnt = cnt.replace(/\[/g,"yaml@bug1")
   if (cnt.indexOf("{") != -1){
-    cnt = cnt.replace(/(^|\n)- /g, "$1  - ").replace(/    - /g,"  - ").replace(/:(?!\s)/g,": ").replace(/\,\"/g,", \"").replace(/: {/g, ": {,     ").replace(/, (Host|host|path|tls|mux|skip)/g,", $1")
+    cnt = cnt.replace(/(^|\n)- /g, "$1  - ").replace(/    - /g,"  - ").replace(/:(?!\s)/g,": ").replace(/\,\"/g,", \"").replace(/: {/g, ": {,   ").replace(/, (Host|host|path|tls|mux|skip)/g,",   $1")
     //console.log(cnt)
     cnt = cnt.replace(/{\s*name: /g,"{name: \"").replace(/, server:/g,"\", server:")
     cnt = cnt.replace(/{|}/g,"").replace(/,/g,"\n   ")
