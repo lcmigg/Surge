@@ -210,6 +210,7 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 
 # > Hdo  api.vungle.com,events.api.vungle.com,iosads4-7.adcolony.com,a.applovin.com
 ^https:\/\/api\.vungle\.com\/api\/v5\/ads url reject-200
+^https:\/\/api\.vungle\.com\/api\/v5\/report_ad url reject-200
 ^https:\/\/events.api\.vungle\.com\/api\/v5\/tpat\?adv* url reject-200
 ^https:\/\/iosads4-7.adcolony.com\/configure url reject-200
 ^https:\/\/a.applovin.com\/4.0\/ad\?* url reject-200
