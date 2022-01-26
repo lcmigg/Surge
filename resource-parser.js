@@ -1,9 +1,9 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-01-16 16:16⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-01-17 21:15⟧
 ----------------------------------------------------------
-🛠 发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
-⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
-🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM, @vinewx, @love4taylor, @shadowdogy 
+发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
+关注 🆃🅶 相关频道: https://t.me/QuanX_API
+🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM, @vinewx, @love4taylor, @shadowdogy 
 ----------------------------------------------------------
 0️⃣ 在 ⟦订阅链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接 
 ⚠️ ☞ “你的订阅连接”#emoji=1&tfo=1&in=香港+台湾
@@ -86,11 +86,10 @@
 * 使用说明，
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
-⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
+⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
 
 ------------------------------
 */
-
 
 //beginning 解析器正常使用，調試註釋此部分
 
@@ -121,9 +120,7 @@ const nan_link = { "open-url": link1, "media-url": qxpng } // nan error link
 const bug_link = { "open-url": "https://t.me/ShawnKOP_bot", "media-url": "https://shrtm.nu/obcB" } // bug link
 const sub_link = { "open-url": link1, "media-url": "https://shrtm.nu/ebAr" } // server link
 
-
 SubFlow() //流量通知
-
 
 // 参数获取
 var Pin0 = mark0 && para1.indexOf("in=") != -1 ? (para1.split("in=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
@@ -171,8 +168,6 @@ var Paead = para1.indexOf("aead=") != -1 ? para1.split("aead=")[1].split("&")[0]
 
 var typeQ = $resource.type? $resource.type:"unsupported"   //返回 field 类型参数
 
-
-
 //花漾字 pattern
 var pat=[]
 pat[0] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","k","r","s","t","u","v","w","x","y","z"]
@@ -198,7 +193,6 @@ patn[5] = [ '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹' ]
 patn[6] = [ '₀', '₁', '₂', '₃', '₄', '₅', '₆', '₇', '₈', '₉' ]
 patn[7] = ["𝟎","𝟏","𝟐","𝟑","𝟒","𝟓","𝟔","𝟖","𝟗"]
 patn[8] = ["𝟶","𝟷","𝟸","𝟹","𝟺","𝟻","𝟼","𝟽","𝟾","𝟿"]
-
 
 var type0=""
 //flag=1,2,3分别为 server、rewrite、rule 类型
@@ -234,7 +228,6 @@ if (typeof($resource)!=="undefined") {
   $done({ content: total })
 }
 
-
 /**
 # 以下为具体的 function
 
@@ -251,7 +244,6 @@ function ParseUnknown(cnt){
     $notify("未能识别该订阅格式：  " + "⟦" + subtag + "⟧",  "⚠️ 将直接导入Quantumult X \n 如认为是 BUG, 请点通知跳转反馈", "链接返回内容:\n"+cnt);
   }
 }
-
 
 
 function ResourceParse() {
@@ -1220,6 +1212,7 @@ function AeadVmess(cnt) {
 
 // qx 类型 tls/udp 验证问题t
 function QX_TLS(cnt,Pcert0,PTls13) {
+  cnt =cnt.replace(/tag\s*\=/gm,"tag=") //
   var cert0 = Pcert0 == 1? "tls-verification=true, " : "tls-verification=false, "
   var tls13 = PTls13 == 1? "tls13=true, " : ""
   if(cnt.indexOf("tls-verification") != -1){
@@ -1424,7 +1417,7 @@ function Pobfs(jsonl, Pcert0, PTls13) {
     return obfsi.join(", ")
   } else if (jsonl.net !="tcp"){ // 过滤掉 h2/http 等类型
     return "NOT-SUPPORTTED"
-  } else if (jsonl.net =="tcp" && jsonl.type != "none") {
+  } else if (jsonl.net =="tcp" && jsonl.type != "none" && jsonl.type != "") {
     return "NOT-SUPPORTTED"
   } else {return ""}
 }
