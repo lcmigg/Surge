@@ -8,3 +8,9 @@ hostname = buy.itunes.apple.com,*buy.itunes.apple.com
 
 #CPU Dasher破解(需要ios13 恢复购买后禁用掉 By @s y)
 ^https:\/\/p.+-buy\.itunes\.apple\.com\/WebObjects\/MZFinance.woa\/wa\/inAppRegrantPurchaseHistory url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cupdasher.js
+
+# > SaveFile LifeTime会员
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SaveFilePro.js
+
+# > 克拉壁纸解锁订阅
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityWallpaperProCrack.js
