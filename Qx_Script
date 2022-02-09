@@ -1,6 +1,6 @@
 #hostname
 ;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com, api.faceapp.io, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, testflight.apple.com
-hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, api.gotokeep.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com
+hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com,biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip,aiqicha.baidu.com
 
 #JS
 #微信公众号
@@ -31,10 +31,6 @@ hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elec
 ;微信 App 内被屏蔽链接快捷跳转
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
 
-#葫芦时刻
-;^https:\/\/api\.hulusaas\.com\/api\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/hulu.js
-
-
 # JD 去广告
 ;^https?://api\.m\.jd\.com/client\.action\?functionId=(start|myOrderInfo|orderTrackBusiness) url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/JDAdRemove.js
 # JD Price
@@ -42,9 +38,6 @@ hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elec
 
 # Weibo国际版
 ;^https?://api\.weibo\.cn/2/(statuses|groups)/(unread_hot_|friends_)?timeline url script-response-body JS/weibointl/weibointl_timeline.js
-
-#克拉壁纸
-;^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) url script-response-body https://raw.githubusercontent.com/lcmigg/QuantumultX/master/Script/clarity.js
 
 #faceapp
 ^https:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/faceapp.js
@@ -82,9 +75,6 @@ http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.c
 https:\/\/book\.haitunwallet\.com\/app\/vip\/status url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js
 #https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/UnlockApp.conf
 
-#彩云天气
-https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
-
 # > 023 樊登读书 （20201026） by ddgksf2013
 https://api.dushu.io/Album/Info url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/fdds.js
 
@@ -103,3 +93,50 @@ https://zebra.maka.im/api/user/info url script-response-body https://raw.githubu
 
 # > 046 财新周刊（20210320） by ddgksf2013
 http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/cxzk.js
+
+#丁香医生VIP
+^https:\//dxy.com\/app\/i\/user\/ask\/account\?ac url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js
+
+#彩云天气
+^https:\//biz.caiyunapp.com\/v2\/user\?app_name=weather url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/caiyun.js
+
+# > 拦截100解锁超级会员
+^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js
+
+# > 菜谱大全(2022.01.19)
+^https?:\/\/apiios_dq\.xiangha\.com\/v\d\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js
+^https?:\/\/appweb_dq\.xiangha\.com\/center\/pay\/home url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js
+
+# > 流利说·阅读(2022.01.16)
+//会员时长到2030年，破解的标志是打开阅读🈚️限制，不会提示会员才能看🎉
+//⚠️⚠️⚠️，如果没有显示会员，剩余天数999。必须卸载重装！
+^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
+
+# > SaveFile下载限制
+^https?:\/\/raw\.githubusercontent\.com\/koanapple\/lock_checker\/main\/ConfigSaveFrom\.json$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SaveFile.js
+
+# > 新语听书解锁会员
+^https?:\/\/i\.xinyulib\.com\.cn\/api\/querytoken.+ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/XinYuLibraryProCrack.js
+
+# 录屏大师解锁会员
+^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js
+
+# keep解锁会员
+^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep
+
+# 傲软抠图解锁会员
+^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt
+
+# 扫描全能王
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
+
+#波波视频
+http://api.wscdn.vip(.+) url script-response-body https://cdn.jsdelivr.net/gh/Zhuliyer/ADGai-nai@master/Quantumult%20X/Scripts/bobo
+
+# > 闪电下载(2022.01.17)
+#一直点小房子按钮，知道出现下方时间显示2030年
+#软件名字：Transmission浏览器
+^https?:\/\/bt\.flashdown365\.com\/resource2\?data\=\w{0,500}$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/ShanDianXiaZai.js
+
+# 爱企查vip
+^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js
