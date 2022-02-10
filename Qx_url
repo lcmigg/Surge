@@ -59,18 +59,14 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,ms.jr.jd
 https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
 
-# FUTU
-^https?:\/\/api\.futunn\.com\/v\d\/ad\/ url reject
-^https?:\/\/api\d\.futunn\.com\/ad\/ url reject
-
 #163 Music
 ^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
 ^https?://interface[1-9]\.music\.163\.com/(store|eapi/(ad|usersafe|theme|skin|banner|sp|cloudvideo|webcache|experiment|socialsquare|comment|weixin|share|hot|mlivestream|mlog|v1/user/info|appcustomconfig|search/(specialkeyword|defaultkeyword|hot))) url reject-200
-^https?://admusicpic\.music\.126\.net/* url reject
-^http://iadmusicmat\.music\.126\.net/.*jpg$ url reject-img
-^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$ url reject
-^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ url reject
+;^https?://admusicpic\.music\.126\.net/* url reject
+;^http://iadmusicmat\.music\.126\.net/.*jpg$ url reject-img
+;^http:\/\/iad.*mat\.[a-z]*\.12[67]\.net/\w+\.(jpg|mp4)$ url reject
+;^http:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
+;^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ url reject
 
 #  京东
 ^https:\/\/.+\/client?functionId=lauch\/lauchConfig&appName=paidaojia url reject
@@ -79,11 +75,16 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https:\/\/img12.360buyimg.com.+width=\d{4}&height=\d{4} url reject
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url reject
 ^https:\/\/106.39.169.231\/client\.action\?functionId=start url reject
-
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=start url reject-img
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=queryMaterialAdverts url reject
 
 # 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
 ^https?:\/\/t00img\.yangkeduo\.com\/goods\/[\d-]+\/[A-Za-z0-9]+\.jpeg\?imageView2\/format\/webp$ url reject
+
+# FUTU
+^https?:\/\/api\.futunn\.com\/v\d\/ad\/ url reject
+^https?:\/\/api\d\.futunn\.com\/ad\/ url reject
 
 # 广发证券&发现精彩
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d+\.(png|jpg) url reject-img
@@ -104,13 +105,6 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^(http|https):\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
 ^(http|https):\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
 ^(http|https):\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? url reject-200
-
-# 新浪微博
-;^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
-;^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
-
-# 新浪微博国际版
-;^https:\/\/weibointl\.api\.weibo.cn\/portal\.php\?a=get_coopen_ads url reject-200
 
 # 高德
 ^http:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
@@ -140,10 +134,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
 
 # > SMZDM - ap*.smzdm.com
-;^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading url reject
-;^https?:\/\/app-api\.smzdm\.com\/util\/loading url reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
-;^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner) url reject-200
 
 # > Suning - mpcs.suning.com
 ^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject
@@ -198,11 +189,6 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 
 # > Keep - api.gotokeep.com
 ^https?:\/\/api\.gotokeep\.com\/ads url reject
-
-# 人人视频
-;^https?:\/\/msspjh\.emarbox\.com\/getAdConfig url reject
-;^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising url reject
-;^https?:\/\/api\.rr\.tv\/ad\/ url reject
 
 # 微信小程序，交作业app
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
