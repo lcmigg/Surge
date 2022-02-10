@@ -1,6 +1,4 @@
-#hostname
-;hostname = mp.weixin.qq.com, api.zhihu.com, www.zhihu.com, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, trade-acs.m.taobao.com, amdc.m.taobao.com, api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, vira.llsapp.com, ios.prod.ftl.netflix.com, api.faceapp.io, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, testflight.apple.com
-hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com,biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip,aiqicha.baidu.com
+hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, vira.llsapp.com, i.xinyulib.com.cn, luping.cushuikeji.cn, *.gotokeep.com, gw.aoscdn.com, *.intsig.net, bt.flashdown365.com, api.wscdn.vip, aiqicha.baidu.com
 
 #JS
 #微信公众号
@@ -63,10 +61,6 @@ http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.c
 
 #企信通小程序
 ^https://miniapp.elecredit.com/ucenter_info/ url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js
-
-#KEEP
-;https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/keep.js
-;^https:\/\/api\.gotokeep\.com\/* url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js
 
 #微信读书
 ^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary.* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/wxread.js
