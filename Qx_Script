@@ -1,31 +1,18 @@
 hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, vira.llsapp.com, i.xinyulib.com.cn, luping.cushuikeji.cn, *.gotokeep.com, gw.aoscdn.com, *.intsig.net, bt.flashdown365.com, api.wscdn.vip, aiqicha.baidu.com, *.wallpaperscraft.com
 #JS
-#微信公众号
+# 微信公众号
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
 
-#知乎
-;^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type|limit)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend) url script-response-body https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js
-
-#bilibili
-;^https?://app\.bilibili\.com/x/v\d/splash/list url script-response-body https://raw.githubusercontent.com/srk24/profile/master/js/bilibili_splash.js
-#bilibili 1080P
-;^https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Sunert/Script/master/Script/Bilibili/BiliHD.js
-# > 小破站动态广告
-^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ url script-response-body https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js
-
-#用药助手
-;^https?:\/\/newdrugs\.dxy\.cn\/app\/user\/(p(ay\/checkIntroOfferPeriod|ro\/stat)|init)\? url script-response-body JS/yyzs_2.js
-
-#陆琪故事
+# 陆琪故事
 ^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body JS/luqi.js
 
-#workingcopy
+# workingcopy
 ^https:\/\/education\.github\.com\/api\/user$ url script-response-body JS/workingcopy.js
 
-#白描
+# 白描
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/Baimiao.js
 
-;微信 App 内被屏蔽链接快捷跳转
+# 微信 App 内被屏蔽链接快捷跳转
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
 
 # JD 去广告
