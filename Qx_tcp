@@ -169,6 +169,7 @@ host, ads.voiceads.cn, reject
 # bilibili
 host, dataflow.biliapi.com, reject
 host, data.bilibili.com, reject
+host-suffix, grpc.biliapi.net, reject
 
 # 滴滴出行
 host, ct.xiaojukeji.com, reject
