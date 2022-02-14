@@ -106,6 +106,9 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ;工商银行
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
 
+# 云闪付 ads.95516.com
+^https?+:\/\/(analytics|tysdk|ads)\.95516\.com url reject-200
+
 # 小米
 ^https:\//home.mi.com\/cgi-op\/api\/v1\/recommendation\/banner* url reject
 ^(http|https):\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
@@ -148,7 +151,6 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
 
 # ohter
-^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
 ^http:\/\/hmma\.baidu\.com url reject-dict
 ^https://tagit.hyhuo.com/recover/list url reject
 
@@ -172,9 +174,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
 
-# > Ximalaya FM
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime url reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/ url reject
+
 
 # 虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
@@ -191,7 +191,6 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https:\/\/i1.hoopchina.com.cn\/blogfile\/.+_\d{3}x\d{4} url reject
 ^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(interfaceAdMonitor|interfaceAd)\/ url reject
 ^https://goblin\.hupu\.com/[^/]+/[^/]+/interfaceAd/ url reject
-
 
 # zaker
 ^http:\/\/zkres\.myzaker\.com\/img_upload\/editor\/img_upload\/ url reject
@@ -256,7 +255,10 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https:\/\/fdfs.xmcdn.com\/group24\/M03\/E6\/09\/ url reject
 ^https:\/\/fdfs.xmcdn.com\/group24\/M07\/C4\/3D\/ url reject
 ^https:\/\/fdfs.xmcdn.com\/group25\/M05\/92\/D1\/ url reject
+# > Ximalaya FM
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime url reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/ url reject
+^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
 
 #KFC
 ^https?:\/\/res\.kfc\.com\.cn\/advertisement\/ url reject-img
-HOST,kfc.i.illuminationes.com url reject
