@@ -147,6 +147,7 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 # ohter
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
 ^http:\/\/hmma\.baidu\.com url reject-dict
+^https://tagit.hyhuo.com/recover/list url reject
 
 # 奕客围棋
 ;^http://image.golinksworld.com/res/adv/ url reject-img
