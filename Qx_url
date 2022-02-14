@@ -82,8 +82,8 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture url reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo url reject
 # 极速版JD
-;^https://api.m.jd.com/client.action?functionId=lite_advertising
-^https://api.m.jd.com/client.action?functionId=.+advertising
+;^https://api.m.jd.com/client.action?functionId=lite_advertising url reject
+^https://api.m.jd.com/client.action?functionId=.+advertising url reject
 
 # 拼多多
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
