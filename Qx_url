@@ -110,7 +110,9 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 ^https?+:\/\/(analytics|tysdk|ads)\.95516\.com url reject-200
 
 # 小米
+^https:\/\/home\.mi\.com\/newoperation\/recommendNames url reject
 ^https:\//home.mi.com\/cgi-op\/api\/v1\/recommendation\/banner* url reject
+^https:\/\/api2\.mina\.mi\.com\/banner\/get url reject
 ^(http|https):\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
 ^(http|https):\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
 ^(http|https):\/\/api\.jr\.mi\.com\/jr\/api\/playScreen url reject-200
@@ -173,8 +175,6 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
-
-
 
 # 虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
