@@ -1,7 +1,7 @@
 hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, vira.llsapp.com, i.xinyulib.com.cn, luping.cushuikeji.cn, *.gotokeep.com, gw.aoscdn.com, *.intsig.net, bt.flashdown365.com, api.wscdn.vip, aiqicha.baidu.com, *.wallpaperscraft.com
 #JS
 # 微信公众号
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body JS/WeChat.js
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad) url script-response-body https://raw.githubusercontent.com/iepngs/Script/master/weixin/ad.js
 
 # 陆琪故事
 ^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body JS/luqi.js
