@@ -2,9 +2,11 @@
 #!desc=信息面板
 
 [Panel]
-#Surge Pro标题,可显示启动时间,点击刷新为重载配置
-SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
+策略面板 = script-name=缓存开关,update-interval=15
+策略面板 = script-name=奈飞查询,update-interval=3600
+策略面板 = script-name=代理选择,update-interval=60
 
 [Script]
-#附带重载配置,Surge Pro标题,可显示启动时间,点击刷新为重载配置
-SurgePro_ReloadProfile = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js ,argument=icon=crown.fill&color=#f6c970
+缓存开关 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/surgepro_flushdns.js,argument=icon=power.circle&color=#FF2121&title=𝘚𝘶𝘳𝘨𝘦｜2023-02-20
+奈飞查询 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/nf_check.js, argument=title=𝘗𝘳𝘰𝘹𝘺
+代理选择 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js,argument=icon=bolt.circle&color=#157EFB&group=𝘗𝘳𝘰𝘹𝘺
