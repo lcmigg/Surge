@@ -1,0 +1,16 @@
+#!name=自用去开屏广告
+#!desc=极速版JD、KFC、加油广东
+
+[URL Rewrite]
+
+# 极速版JD
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=.+advertising url reject
+# 微信小程序，交作业app
+^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
+#KFC
+^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ url reject
+# gdoil
+^https:\/\/m\.gdoil\.cn\/gd\/sys\/getStartUpAd url reject
+
+[MITM]
+hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn
