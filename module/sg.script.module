@@ -49,5 +49,44 @@ KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.git
 //每日艺术
 每日艺术= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/mrys.js,script-update-interval=-1,pattern=^https://panel.getdailyart.com/APIMobile/users/single
 
+//丁香医生VIP
+丁香医生VIP= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js,script-update-interval=-1,pattern=^https:\/\/dxy.com\/app\/i\/user\/ask\/account\?ac
+
+//彩云天气
+彩云天气= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/caiyun.js,script-update-interval=-1,pattern=^https:\//biz.caiyunapp.com\/v2\/user\?app_name=weather
+
+//拦截100解锁超级会员
+拦截100= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js,script-update-interval=-1,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$
+
+// > 菜谱大全(2022.01.19)
+菜谱大全= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js,script-update-interval=-1,pattern=^https?:\/\/apiios_dq\.xiangha\.com\/v\d\/
+菜谱大全= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js,script-update-interval=-1,pattern=^https?:\/\/appweb_dq\.xiangha\.com\/center\/pay\/home
+
+// > 流利说·阅读(2022.01.16)
+//会员时长到2030年，破解的标志是打开阅读🈚️限制，不会提示会员才能看🎉
+//⚠️⚠️⚠️，如果没有显示会员，剩余天数999。必须卸载重装！
+流利说·阅读= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js,script-update-interval=-1,pattern=^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$
+
+// > 新语听书解锁会员
+新语听书= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/XinYuLibraryProCrack.js,script-update-interval=-1,pattern=^https?:\/\/i\.xinyulib\.com\.cn\/api\/querytoken.+
+
+// 录屏大师解锁会员
+录屏大师= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js,script-update-interval=-1,pattern=^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info
+
+// keep解锁会员
+keep解锁= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep,script-update-interval=-1,pattern=^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans)
+
+// 傲软抠图解锁会员
+傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
+
+// 扫描全能王
+扫描全能王= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,script-update-interval=-1,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
+
+// 爱企查vip
+爱企查vip= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js,script-update-interval=-1,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax
+
+// > WallCraft解锁专业版
+WallCraft解锁= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WallCraftFProCrack.js,script-update-interval=-1,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/verify_receipt\/remove_ads$
+
 [MITM]
-hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com
+hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, api.intsig.net,api-cs.intsig.net, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com
