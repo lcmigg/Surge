@@ -88,5 +88,8 @@ keep解锁= type=http-response,requires-body=1,max-size=0,script-path=https://ra
 // > WallCraft解锁专业版
 WallCraft解锁= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WallCraftFProCrack.js,script-update-interval=-1,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/verify_receipt\/remove_ads$
 
+# > vsco解锁
+滤镜破解 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
+
 [MITM]
-hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, api.intsig.net,api-cs.intsig.net, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com
+hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, api.intsig.net,api-cs.intsig.net, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com, api.revenuecat.com
