@@ -42,8 +42,10 @@ https://youhui.95516.com/newsign/public/app/index.html url script-request-header
 ^https:\/\/(www|live)\.bilibili\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
 
 # 小米运动获取Token
-^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSports.js
-^https:\/\/.*?\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSportsCookieTask.js
+;^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSports.js
+;^https:\/\/.*?\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/xmSportsCookieTask.js
+# 小米运动 app登陆时获取
+^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js
 
 
 #途虎养车Cookie（打开途虎APP：依次打开 我的->每日免费领积分）
