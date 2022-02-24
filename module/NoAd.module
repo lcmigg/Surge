@@ -4,13 +4,17 @@
 [URL Rewrite]
 
 # 极速版JD
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=.+advertising url reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=.+advertising reject
 # 微信小程序，交作业app
-^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
+^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ reject
 #KFC
-^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ url reject
+^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ reject
 # gdoil
-^https:\/\/m\.gdoil\.cn\/gd\/sys\/getStartUpAd url reject
+^https:\/\/m\.gdoil\.cn\/gd\/sys\/getStartUpAd reject
+# > top widget@ddgksf2013
+https://top-widgets-api.xiaozujian.com/api/ad/config reject
+# > 攔截100@ddgksf2013
+https://tagit.hyhuo.com/recover/list reject
 
 [MITM]
-hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn
+hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn,top-widgets-api.xiaozujian.com,tagit.hyhuo.com
