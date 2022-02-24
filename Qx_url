@@ -260,9 +260,15 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^http:\/\/api\.ximalaya\.com\/oauth2\/ url reject
 
 #KFC
-^https?:\/\/res\.kfc\.com\.cn\/advertisement\/ url reject-img
+^https?:\/\/res\.kfc\.com\.cn\/advertisement\/ url reject-200
 ^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ url reject
 
 # gdoil
 ^https:\/\/m\.gdoil\.cn\/gd\/sys\/getStartUpAd url reject
+
+# > 64 top widget@ddgksf2013
+https://top-widgets-api.xiaozujian.com/api/ad/config url reject
+
+# > 65 攔截100@ddgksf2013
+https://tagit.hyhuo.com/recover/list url reject
 
