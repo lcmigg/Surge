@@ -642,11 +642,13 @@ host-suffix, rottentomatoes.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 host-suffix, telegram.me, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 host-suffix, workflow.is, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # TELEGRAM
-ip-cidr, 91.108.56.111/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+ip-cidr, 91.108.56.0/24, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+;ip-cidr, 91.108.56.111/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
+;ip-cidr, 91.108.56.184/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
 ip-cidr, 149.154.167.0/24, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
 ip-cidr, 149.154.175.0/24, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
 ip-cidr, 149.154.171.5/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮, no-resolve
-ip-cidr, 91.108.56.200/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+;ip-cidr, 91.108.56.200/32, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # TB price
 ;ip-cidr, 203.119.144.0/23, reject
 ;ip-cidr, 203.119.175.0/24, reject
