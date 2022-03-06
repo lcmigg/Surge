@@ -4,7 +4,8 @@
 [URL Rewrite]
 
 # 极速版JD
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=.+advertising reject
+;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=.+advertising reject
+^https://api.m.jd.com/client.action?functionId=lite_advertising reject
 # 微信小程序，交作业app
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ reject
 #KFC
