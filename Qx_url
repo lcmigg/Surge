@@ -211,8 +211,8 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https:\/\/ggic*.miguvideo.com/ad/ url reject
 ^https:\/\/ggv.cmvideo.cn\/v1\/iflyad\/ url reject
 ^http:\//ggc.cmvideo.cn\/v1\/iflyad\/ url reject
-^https:\//v.miguvideo.com\/ability\/v2\/member-info url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/memberinfo.js
-^https:\//v.miguvideo.com\/ability\/v url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/ability.js
+;^https:\//v.miguvideo.com\/ability\/v2\/member-info url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/memberinfo.js
+;^https:\//v.miguvideo.com\/ability\/v url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/ability.js
 
 # 作业帮
 ^https?:\/\/img.zuoyebang.cc\/zyb-image[\s\S]*?.jpg - reject
