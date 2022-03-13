@@ -447,10 +447,10 @@ host-suffix, 36kr.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, acfun.tv, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, acgvideo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, aixifan.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, alicdn.com, direct
-host-suffix, dingtalk.com, direct
+host-suffix, alicdn.com, direct, multi-interface-balance
+host-suffix, dingtalk.com,, multi-interface-balance
 host-suffix, aliyuncs.com, direct
-host-suffix, alipay.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, alipay.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮, multi-interface-balance
 host-suffix, amap.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, appstore.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, baidu.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
@@ -460,7 +460,8 @@ host-suffix, bababian.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, bbs.feng.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, bdimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, bdstatic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, bilibili.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
+host-suffix, bilibili.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮, multi-interface-balance
+host-suffix, bilivideo.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮, multi-interface-balance
 host-suffix, bing.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 #host-suffix, blizzard.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
 host-suffix, caiyunapp.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
