@@ -107,6 +107,8 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 
 # 云闪付 ads.95516.com
 ^https?+:\/\/(analytics|tysdk|ads)\.95516\.com url reject-200
+# 掌上生活
+^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/ url reject
 
 # 小米
 ^https:\/\/home\.mi\.com\/newoperation\/recommendNames url reject
