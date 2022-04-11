@@ -29,25 +29,21 @@ user-agent, *siri*, direct
 #appstore转圈
 host, p14-buy.itunes.apple.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
 # Apple
-host, appleiphonecell.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-;user-agent, AppStore*, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-keyword, icloud, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-keyword, itunes, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, aaplimg.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, apple.co, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, apple.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, appsto.re, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, cdn-apple.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, me.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, mzstatic.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, icloud.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, icloud-content.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, itunes.com, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-host-suffix, itunes-apple.com.akadns.net, 𝘾𝙉-𝙋𝙧𝙤𝙭𝙮
-# AVGLE
-host-suffix, aaplimg.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
-host-suffix, avgle.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
-host-suffix, ahcdn.com, 𝙅𝙏-𝙋𝙧𝙤𝙭𝙮
+host, appleiphonecell.com, direct
+;user-agent, AppStore*, direct
+host-keyword, icloud, direct
+host-keyword, itunes, direct
+host-suffix, aaplimg.com, direct
+host-suffix, apple.co, direct
+host-suffix, apple.com, direct
+host-suffix, appsto.re, direct
+host-suffix, cdn-apple.com, direct
+host-suffix, me.com, direct
+host-suffix, mzstatic.com, direct
+host-suffix, icloud.com, direct
+host-suffix, icloud-content.com, direct
+host-suffix, itunes.com, direct
+host-suffix, itunes-apple.com.akadns.net, direct
 
 # ME
 host-suffix, umengcloud.com, reject
