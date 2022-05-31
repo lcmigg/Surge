@@ -105,7 +105,7 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 ^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep
 
 # 傲软抠图解锁会员
-^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt
+^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js
 
 # 扫描全能王
 ^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
