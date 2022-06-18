@@ -58,6 +58,10 @@ host, dongfeng.alicdn.com, reject
 host, dditscdn.com, reject
 host-suffix, xdrig.com, reject
 
+#HBO
+host-suffix, applovin.com, reject
+host-suffix, applvn.com, reject
+
 #掌通家园
 host, ad.fhtre.com, reject
 
