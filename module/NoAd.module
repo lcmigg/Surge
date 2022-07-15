@@ -21,6 +21,15 @@ https://tagit.hyhuo.com/recover/list - reject
 ^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor url reject-img
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
 ^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
+# > 100 车来了@ddgksf2013
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub url reject-dict
+# > 44 车来了
+^https?:\/\/api.chelaile.net.cn\/adpub\/ url reject
+^https?:\/\/api.chelaile.net.cn\/goocity\/advert\/ url reject
+^https?:\/\/atrace.chelaile.net.cn\/adpub\/ url reject
+^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image url reject
+^https?:\/\/pic1.chelaile.net.cn\/adv\/ url reject
+
 
 [MITM]
-hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn,top-widgets-api.xiaozujian.com,tagit.hyhuo.com
+hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,goblin.hupu.com
