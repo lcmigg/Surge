@@ -15,6 +15,12 @@
 https://top-widgets-api.xiaozujian.com/api/ad/config - reject
 # > 攔截100@ddgksf2013
 https://tagit.hyhuo.com/recover/list - reject
+# > 02 虎扑@ddgksf2013
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ url reject-img
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. url reject-img
+^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor url reject-img
+^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
 
 [MITM]
 hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn,top-widgets-api.xiaozujian.com,tagit.hyhuo.com
