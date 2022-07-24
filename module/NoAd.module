@@ -16,20 +16,20 @@ https://top-widgets-api.xiaozujian.com/api/ad/config - reject
 # > 攔截100@ddgksf2013
 https://tagit.hyhuo.com/recover/list - reject
 # > 02 虎扑@ddgksf2013
-^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ url reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. url reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor url reject-img
-^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther url reject
-^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} url reject-img
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ - reject
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. - reject
+^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor url - reject
+^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther - reject
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} - reject
 # > 100 车来了@ddgksf2013
-^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub url reject-dict
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub - reject
 # > 44 车来了
-^https?:\/\/api.chelaile.net.cn\/adpub\/ url reject
-^https?:\/\/api.chelaile.net.cn\/goocity\/advert\/ url reject
-^https?:\/\/atrace.chelaile.net.cn\/adpub\/ url reject
-^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image url reject
-^https?:\/\/pic1.chelaile.net.cn\/adv\/ url reject
+^https?:\/\/api.chelaile.net.cn\/adpub\/ - reject
+^https?:\/\/api.chelaile.net.cn\/goocity\/advert\/ - reject
+^https?:\/\/atrace.chelaile.net.cn\/adpub\/ - reject
+^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image - reject
+^https?:\/\/pic1.chelaile.net.cn\/adv\/ - reject
 
 
 [MITM]
-hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,goblin.hupu.com
+hostname = %APPEND% mp.nezhazy.cn,res.kfc.com,m.gdoil.cn,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,goblin.hupu.com,*.hoopchina.com,games.mobileapi.hupu.com,api.chelaile.net.cn,atrace.chelaile.net.cn,top-widgets-api.xiaozujian.com
