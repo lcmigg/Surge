@@ -4,10 +4,10 @@ hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elec
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad) url script-response-body https://raw.githubusercontent.com/iepngs/Script/master/weixin/ad.js
 
 # 陆琪故事
-^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body JS/luqi.js
+^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/luqi.js
 
 # workingcopy
-^https:\/\/education\.github\.com\/api\/user$ url script-response-body JS/workingcopy.js
+;^https:\/\/education\.github\.com\/api\/user$ url script-response-body JS/workingcopy.js
 
 # 白描
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/Baimiao.js
