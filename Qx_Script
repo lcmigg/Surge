@@ -31,9 +31,9 @@ hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elec
 ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js
 
 #𝘽𝙞𝙡𝙞_𝘼𝙪𝙩𝙤_𝙍𝙚𝙜𝙞𝙤𝙣𝙨
-^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/view\/(v\d\/)?app|x(\/v\d)?\/view\/video)\/(season|online)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 #可选, 适用于搜索指定地区的番剧
-^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+;^https:\/\/app\.bilibili\.com\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 
 #作业帮 解锁付费音频
 ;https://mall.zuoyebang.com/mall/goods/audio/voice/list?.+ url script-response-body https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js
