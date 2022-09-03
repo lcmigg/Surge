@@ -110,8 +110,6 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 # 扫描全能王
 ^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
 
-#波波视频
-http://api.wscdn.vip(.+) url script-response-body https://cdn.jsdelivr.net/gh/Zhuliyer/ADGai-nai@master/Quantumult%20X/Scripts/bobo
 
 # > 闪电下载(2022.01.17)
 #一直点小房子按钮，知道出现下方时间显示2030年
