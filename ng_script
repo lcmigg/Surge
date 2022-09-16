@@ -27,3 +27,6 @@ hostname = buy.itunes.apple.com,*buy.itunes.apple.com
 
 # plane vpn恢复订阅@king
 ;^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/plane%20vpn.js
+
+# Picsew解锁
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/Picsew.js
