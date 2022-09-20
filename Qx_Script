@@ -129,3 +129,6 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 
 # > 蜗牛睡眠 解锁vip音频
 ^https://(.+)/snail-music url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js
+
+# ✅ Nicegram
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
