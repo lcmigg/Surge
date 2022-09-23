@@ -77,7 +77,7 @@ KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.git
 keep解锁= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep,script-update-interval=-1,pattern=^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans)
 
 // 傲软抠图解锁会员
-傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
+傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
 
 // 扫描全能王
 扫描全能王= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,script-update-interval=-1,pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
