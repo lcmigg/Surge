@@ -1,4 +1,5 @@
-hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, vira.llsapp.com, i.xinyulib.com.cn, luping.cushuikeji.cn, *.gotokeep.com, gw.aoscdn.com, *.intsig.net, bt.flashdown365.com, api.wscdn.vip, aiqicha.baidu.com, *.wallpaperscraft.com, *.snailsleep.net, top-widgets-api.xiaozujian.com, cn.pornhubpremium.com
+hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,apiios_dq.xiangha.com,appweb_dq.xiangha.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com, gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com,*.wallpaperscraft.com,*.snailsleep.net,top-widgets-api.xiaozujian.com,cn.pornhubpremium.com
+
 #JS
 # 微信公众号
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad) url script-response-body https://raw.githubusercontent.com/iepngs/Script/master/weixin/ad.js
@@ -109,9 +110,9 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 ^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js
 
 # 扫描全能王
-;^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
+^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
 #扫描全能王-手机扫描仪+解锁VIP
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
+;^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
 
 
 # > 闪电下载(2022.01.17)
