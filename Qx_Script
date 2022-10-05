@@ -1,4 +1,4 @@
-hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, vira.llsapp.com, i.xinyulib.com.cn, luping.cushuikeji.cn, *.gotokeep.com, gw.aoscdn.com, *.intsig.net, bt.flashdown365.com, api.wscdn.vip, aiqicha.baidu.com, *.wallpaperscraft.com, *.snailsleep.net
+hostname = ap?.bilibili.com, mall.zuoyebang.com, apivip.zybang.com, miniapp.elecredit.com, 59.110.149.231, 129.211.156.213, *.dushu365.com, *.xiangha.com, zths.szy.cn, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com, apiios_dq.xiangha.com, appweb_dq.xiangha.com, vira.llsapp.com, i.xinyulib.com.cn, luping.cushuikeji.cn, *.gotokeep.com, gw.aoscdn.com, *.intsig.net, bt.flashdown365.com, api.wscdn.vip, aiqicha.baidu.com, *.wallpaperscraft.com, *.snailsleep.net, top-widgets-api.xiaozujian.com
 #JS
 # 微信公众号
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(getappmsgext|getappmsgad) url script-response-body https://raw.githubusercontent.com/iepngs/Script/master/weixin/ad.js
@@ -133,3 +133,6 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 
 # ✅ Nicegram
 https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
+
+#TopWidgets-小组件+解锁订阅
+^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js
