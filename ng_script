@@ -1,7 +1,7 @@
 hostname = buy.itunes.apple.com,*buy.itunes.apple.com
 
 # 通用破解
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/verify_receipt.js
+;^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/verify_receipt.js
 
 #发型多多
 ;^https://buy.itunes.apple.com/verifyReceipt url script-response-body https://raw.githubusercontent.com/Alex0510/surge/master/Script/fxdd.js
