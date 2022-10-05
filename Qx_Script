@@ -142,3 +142,9 @@ https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-res
 
 # > PornHub Unlock Premium By Hausd0rff
 ^https?:\/\/cn\.pornhubpremium\.com\/ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js
+
+#搜图神器+解锁VIP
+http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/stsq.js
+
+#迅雷-你的专享云盘+解锁VIP
+https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js
