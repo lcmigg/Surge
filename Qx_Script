@@ -135,7 +135,8 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 ^https://(.+)/snail-music url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js
 
 # ✅ Nicegram
-https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
+;https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Nicegram.js
 
 #TopWidgets-小组件+解锁订阅
 ^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js
