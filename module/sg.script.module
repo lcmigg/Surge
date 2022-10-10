@@ -91,5 +91,18 @@ WallCraft解锁= type=http-response,requires-body=1,max-size=0,script-path=https
 # > vsco解锁
 滤镜破解 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
 
+# > 蜗牛睡眠 解锁vip音频
+蜗牛睡眠 = type=http-response,pattern=^https://(.+)/snail-music,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js,script-update-interval=0
+
+# ✅ Nicegram
+Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10},requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Nicegram.js,script-update-interval=0
+
+# > TopWidgets-小组件+解锁订阅
+TopWidgets = type=http-response,pattern=^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js,script-update-interval=0
+
+#迅雷-你的专享云盘+解锁VIP
+迅雷 = type=http-response,pattern=^https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js,script-update-interval=0
+
+
 [MITM]
-hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, api.intsig.net,api-cs.intsig.net, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com, api.revenuecat.com
+hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, api.intsig.net,api-cs.intsig.net, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com, api.revenuecat.com, restore-access.indream.app, top-widgets-api.xiaozujian.com, xluser-ssl.xunlei.com, *.snailsleep.net
