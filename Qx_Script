@@ -152,3 +152,6 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 
 #看理想-看见另一种可能+解锁VIP
 ^https:\/\/api\.vistopia\.com\.cn url script-request-header https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/kanlixiang.js
+
+#percento-轻松管理你的资产+解锁订阅 api.revenuecat.com
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/percento.js
