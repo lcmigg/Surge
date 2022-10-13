@@ -2,6 +2,7 @@
 #!desc=revenuecaty订阅解锁 percento Usage PDFViewer等
 #!system=ios
 
+[Script]
 #percento-轻松管理你的资产+解锁订阅 api.revenuecat.com
 #percento = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/percento.js,script-update-interval=0
 
