@@ -103,8 +103,5 @@ TopWidgets = type=http-response,pattern=^https:\/\/top-widgets-api\.xiaozujian\.
 #迅雷-你的专享云盘+解锁VIP
 迅雷 = type=http-response,pattern=^https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js,script-update-interval=0
 
-#percento-轻松管理你的资产+解锁订阅 api.revenuecat.com
-#percento = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/percento.js,script-update-interval=0
-
 [MITM]
 hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, api.intsig.net,api-cs.intsig.net, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com, api.revenuecat.com, restore-access.indream.app, top-widgets-api.xiaozujian.com, xluser-ssl.xunlei.com, *.snailsleep.net
