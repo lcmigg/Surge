@@ -92,7 +92,8 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 # > 流利说·阅读(2022.01.16)
 //会员时长到2030年，破解的标志是打开阅读🈚️限制，不会提示会员才能看🎉
 //⚠️⚠️⚠️，如果没有显示会员，剩余天数999。必须卸载重装！
-^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
+#^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/LiuLiShuo-YueDu.js
+^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js
 
 # > SaveFile下载限制
 ^https?:\/\/raw\.githubusercontent\.com\/koanapple\/lock_checker\/main\/ConfigSaveFrom\.json$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SaveFile.js
