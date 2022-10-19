@@ -182,8 +182,10 @@ https?:\/\/clientlog3\.music\.163\.com url reject-dict
 https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ;^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
 ;^http://business.msstatic.com/advertiser/ url reject-200
-# > Huya - business.msstatic.com
-^https?:\/\/business\.msstatic\.com\/advertiser\/ url reject-200
+# > 虎牙直播开屏广告
+^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject
+# > 虎牙直播
+^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject-dict
 
 # 虎扑
 ^https:\/\/i\d.hoopchina.com.cn\/blogfile\/\/d+\/\/d+\/BbsImg.(?<=(big.(png|jpg)))$ url reject
