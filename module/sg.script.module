@@ -16,10 +16,10 @@ WeChat.js = type=http-response,requires-body=1,max-size=0,script-path=https://ra
 luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/luqi.js,script-update-interval=-1,pattern=^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get
 
 //workingcopy
-workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/education\.github\.com\/api\/user$
+workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh
 
 //document
-documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
+documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
 
 //轻颜相机
 轻颜相机 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js,script-update-interval=-1,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user
