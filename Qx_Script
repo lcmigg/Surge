@@ -141,6 +141,8 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 
 # > 蜗牛睡眠 解锁vip音频
 #^https://(.+)/snail-music url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js
+
+^https:\/\/music\.snailsleep\.net\/snail-music\/music\/natural\/sound\/list url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/wnsm1.js
 ^https:\/\/music\.snailsleep\.net url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/wnsm.js
 
 # ✅ Nicegram
