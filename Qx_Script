@@ -1,4 +1,4 @@
-hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com,*.wallpaperscraft.com,*.snailsleep.net,top-widgets-api.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io
+hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com,*.wallpaperscraft.com,music.snailsleep.net,top-widgets-api.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io
 
 #JS
 # 微信公众号
@@ -140,7 +140,8 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 ;^https:\//v.miguvideo.com\/ability\/v2\/member-info url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/memberinfo.js
 
 # > 蜗牛睡眠 解锁vip音频
-^https://(.+)/snail-music url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js
+#^https://(.+)/snail-music url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js
+^https:\/\/music\.snailsleep\.net url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/wnsm.js
 
 # ✅ Nicegram
 ;https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
