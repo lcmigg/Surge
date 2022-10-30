@@ -175,6 +175,10 @@ host-suffix, ad.cmvideo.cn, reject
 host, ad.12306.cn, reject
 # huya
 host, business.msstatic.com, reject
+# 车来了
+host-suffix, atrace.chelaile.net.cn, reject
+host, logs.chelaile.net.cn, reject
+host, ad.chelaile.net.cn, reject
 
 # 搜书阁
 host, iflyad.bj.openstorage.cn, reject
