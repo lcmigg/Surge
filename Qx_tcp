@@ -57,6 +57,7 @@ host, logs.amap.com, reject
 host, dongfeng.alicdn.com, reject
 host, dditscdn.com, reject
 host-suffix, xdrig.com, reject
+host-suffix,realsrv.com, reject
 
 #HBO
 host-suffix, applovin.com, reject
