@@ -1,0 +1,7 @@
+[rewrite_local]
+
+^https?:\/\/.*\.example\.com url script-analyze-echo-response https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/ali.js
+
+[mitm]
+
+hostname = *example.com
