@@ -1,4 +1,4 @@
-hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io
+hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com
 
 #JS
 # 微信公众号
@@ -154,3 +154,6 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 
 #Enpass解锁
 ^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Enpass/enpass.js
+
+#小猿搜题
+^https:\/\/xyst\.yuanfudao\.com\/solar-vip\/(api|iphone)\/users/* url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/xyst.js
