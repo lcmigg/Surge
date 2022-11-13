@@ -52,21 +52,21 @@ https:\/\/book\.haitunwallet\.com\/app\/vip\/status url script-response-body htt
 #https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/UnlockApp.conf
 
 # > 027 Document （20201108） by ddgksf2013
-;https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$) url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/documents.js
+;https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$) url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/documents.js
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/documents.js
 
 # > 032 每日艺术 （20201123） by ddgksf2013
 https://panel.getdailyart.com/APIMobile/users/single url response-body account_type":"0 response-body account_type":"2
 
 # > 051 作业帮 （20210407） by photonmang
-https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+ url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/zyb.js
-https://apivip.zybang.com/vipols/vip/viphomev1?.+ url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/zyb.js
+https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+ url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/zyb.js
+https://apivip.zybang.com/vipols/vip/viphomev1?.+ url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/zyb.js
 
 # > 042 斑马海报 （20210130） by ddgksf2013
-https://zebra.maka.im/api/user/info url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/bmhb.js
+https://zebra.maka.im/api/user/info url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bmhb.js
 
 # > 046 财新周刊（20210320） by ddgksf2013
-http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/cxzk.js
+http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/cxzk.js
 
 #丁香医生VIP
 ^https:\/\/dxy.com\/app\/i\/user\/ask\/account\?ac url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js
@@ -100,7 +100,7 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://gitlab
 #^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep
 #^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
 # keep去广告
-^https?:\/\/api\.gotokeep\.com\/(athena\/v\d\/people\/my|config\/v\d\/basic) url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/keepStyle.js
+^https?:\/\/api\.gotokeep\.com\/(athena\/v\d\/people\/my|config\/v\d\/basic) url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/keepStyle.js
 # keep解锁会员
 ^https:\/\/api\.gotokeep\.com url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/keep.js
 
@@ -138,7 +138,7 @@ https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-res
 
 #TopWidgets-小组件+解锁订阅
 #^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js
-^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Crack/topwidgets.js
+^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/topwidgets.js
 
 # > PornHub Unlock Premium By Hausd0rff
 ^https?:\/\/cn\.pornhubpremium\.com\/ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js
