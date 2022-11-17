@@ -39,10 +39,10 @@ KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.git
 海豚记账 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js,script-update-interval=-1,pattern=^https:\/\/book\.haitunwallet\.com\/app\/vip\/status
 
 //斑马海报
-斑马海报 = type=http-response,requires-body=1,max-size=0,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bmhb.js,script-update-interval=-1,pattern=^https://zebra.maka.im/api/user/info
+斑马海报 = type=http-response,requires-body=1,max-size=0,script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bmhb.js,script-update-interval=-1,pattern=^https://zebra.maka.im/api/user/info
 
 //财新周刊
-财新周刊 = type=http-response,requires-body=1,max-size=0,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/cxzk.js,script-update-interval=-1,pattern=^http://ipadcms.caixin.com/tmp/articles/*
+财新周刊 = type=http-response,requires-body=1,max-size=0,script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/cxzk.js,script-update-interval=-1,pattern=^http://ipadcms.caixin.com/tmp/articles/*
 
 //每日艺术
 每日艺术= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/mrys.js,script-update-interval=-1,pattern=^https://panel.getdailyart.com/APIMobile/users/single
