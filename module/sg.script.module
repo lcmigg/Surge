@@ -74,7 +74,7 @@ keep解锁= type=http-response,requires-body=1,max-size=0,script-path=https://ra
 傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
 
 // 扫描全能王
-扫描全能王= type=http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/CamScanner.js
+扫描全能王= type=http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/camscanner.js
 
 // 爱企查vip
 爱企查vip= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js,script-update-interval=-1,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax
