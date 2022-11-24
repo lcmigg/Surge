@@ -94,14 +94,6 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://ocd052
 # 录屏大师解锁会员
 ^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js
 
-# keep解锁会员
-#^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep
-#^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans) url script-response-body https://raw.githubusercontent.com/zwf234/rules/master/js/keep.js
-# keep去广告
-^https?:\/\/api\.gotokeep\.com\/(athena\/v\d\/people\/my|config\/v\d\/basic) url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/keepStyle.js
-# keep解锁会员
-^https:\/\/api\.gotokeep\.com url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/keep.js
-
 
 # 傲软抠图解锁会员
 #^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js
