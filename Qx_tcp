@@ -173,7 +173,8 @@ host, adv.sec.miui.com, reject
 host-suffix, ad.cmvideo.cn, reject
 
 # 12306
-host, ad.12306.cn, reject
+#host, ad.12306.cn, reject
+
 # huya
 host, business.msstatic.com, reject
 # 车来了
