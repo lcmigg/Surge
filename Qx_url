@@ -41,12 +41,18 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 ^https?:\/\/\w+\.youtube\.com\/api\/stats\/ads url reject
 ^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) url reject
 
+# > 12123@kyle
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery url reject
 
 # Alibaba
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtopadvertiseapi)\.querytmsresources|(taobao\.idle\.home|aliyun\.mobile)\.welcome(page)?|.*?\.ads?\.) url reject
 ^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt) url reject
 ^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
+# > alibaba
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
+# > aliyunpan
+^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/alidrive.js
 
 # 163 mail
 ^https?:\/\/clientlog3\.music\.163\.com url reject-dict
@@ -110,8 +116,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 # 高德
 ^http:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
 ^https?\/\/page\.amap\.com\/ws\/page\/upload\/ url reject-img
-^https:\/\/m5.amap.com\/ws\/valueadded\/ url reject
 ^https:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
+# > gaode
+^https?:\/\/m5.amap.com\/ws\/valueadded\/ url rejec
 
 # 丁香园
 ^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
@@ -124,15 +131,14 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 #^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|linglong|mmc|wmbanner)\/ url reject
 #^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/ url reject
 
-# 滴滴出行
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload) url reject
+# > dingdongmaicai
+^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
 
-#zhihu
-;^https:\/\/pic\d\.zhimg\.com\/70\/ url reject
-;^https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)|brand\/questions\/\d+\/activity\/answers\/red-packet(\/|\?|$)) url reject-200
-
-#BiliBili
-;^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)) url reject-200
+# 滴滴出行 didichuxing@ddgksf2013
+https?://res\.xiaojukeji\.com\/resapi\/activity\/mget url reject-dict
+https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
+# > didachuxing
+^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\? url reject
 
 # > SMZDM - ap*.smzdm.com
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
@@ -209,10 +215,13 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 # 作业帮
 ^https?:\/\/img.zuoyebang.cc\/zyb-image[\s\S]*?.jpg - reject
 
-# > 车来了
-^https?:\/\/api\.chelaile\.net\.cn\/adpub\/ url reject-200
-^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ url reject-200
-^https?:\/\/pic\d\.chelaile\.net\.cn\/adv\/ url reject-200
+# > chelaile@ddgksf2013
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub url reject-dict
+^https?:\/\/api.chelaile.net.cn\/adpub\/ url reject
+^https?:\/\/api.chelaile.net.cn\/goocity\/advert\/ url reject
+^https?:\/\/atrace.chelaile.net.cn\/adpub\/ url reject
+^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image url reject
+^https?:\/\/pic1.chelaile.net.cn\/adv\/ url reject
 
 # > Hdo  api.vungle.com,events.api.vungle.com,iosads4-7.adcolony.com,a.applovin.com
 ;^https:\/\/api\.vungle\.com\/api\/v5\/ads url reject-200
