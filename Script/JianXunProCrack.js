@@ -19,7 +19,7 @@
 [rewrite_local]
   
 # ～ 简讯解锁会员权限（2022-12-03）@ddgksf2013
-^https?:\/\/api\.tipsoon\.com\/api\/v1\/user\/info url script-response-body JianXunProCrack.js
+^https?:\/\/api\.tipsoon\.com\/api\/v1\/user\/info url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/JianXunProCrack.js
 
 
 [mitm] 
