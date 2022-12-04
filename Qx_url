@@ -127,9 +127,10 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 ^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac= url reject-200
 
 #美团
-#^https?:\/\/img\.meituan\.net\/midas\/ url reject
-#^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|linglong|mmc|wmbanner)\/ url reject
-#^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/ url reject
+^https?:\/\/img\.meituan\.net\/(bizad|brandCpt)\/\w+\.(png|jpg) url reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo\? url reject
+^https?:\/\/wmapi\.meituan\.com\/api\/v\d\/startpicture url reject
+^https?:\/\/www\.meituan\.com\/api\/v\d\/appstatus\?ad url reject
 
 # > dingdongmaicai
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
