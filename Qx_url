@@ -118,7 +118,7 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 ^https?\/\/page\.amap\.com\/ws\/page\/upload\/ url reject-img
 ^https:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 # > gaode
-^https?:\/\/m5.amap.com\/ws\/valueadded\/ url rejec
+^https?:\/\/m5.amap.com\/ws\/valueadded\/ url reject
 
 # 丁香园
 ^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch url reject-200
