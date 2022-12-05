@@ -4,7 +4,7 @@
 [rewrite_local]
 
 # 群报数
-^https:\/\/qunoss1\.qun100\.com\/PCNF/config\.json url script-response-body https://github.com/
+^https:\/\/qunoss1\.qun100\.com\/PCNF/config\.json url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qbs.js
 [mitm] 
 
 hostname=qunoss1.qun100.com
