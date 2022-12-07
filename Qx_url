@@ -251,7 +251,11 @@ https://top-widgets-api.xiaozujian.com/api/ad/config url reject
 https://tagit.hyhuo.com/recover/list url reject
 
 #555影视
-^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo url reject
+#^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo url reject
+
+新增【555】APP去广告
+^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo url reject-200
+^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGOOGAdvert url reject-200
 
 # > dashixiong  sdk.alibaba.com.ailbaba.me
 ^http?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version url reject-200
