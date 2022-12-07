@@ -43,7 +43,7 @@ http://api.woaoo.net/.+ url script-response-body https://raw.githubusercontent.c
 ^https://miniapp.elecredit.com/ucenter_info/ url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js
 
 #微信读书
-^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary.* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/wxread.js
+#^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary.* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/wxread.js
 
 #海豚记账 (by @superuv)
 https:\/\/book\.haitunwallet\.com\/app\/vip\/status url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js
