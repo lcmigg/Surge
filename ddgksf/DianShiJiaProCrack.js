@@ -18,7 +18,7 @@
 [rewrite_local]
   
 # ～ 电视家 解锁会员权限（2022-12-10）@ddgksf2013
-^https?:\/\/123\.56\.125\.184\/api\/v\d\/user\/info url script-response-body DianShiJiaProCrack.js
+^https?:\/\/123\.56\.125\.184\/api\/v\d\/user\/info url script-response-body https://github.com/lcmigg/Surge/blob/master/ddgksf/DianShiJiaProCrack.js
 
 [mitm] 
 
