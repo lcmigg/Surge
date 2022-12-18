@@ -12,17 +12,11 @@ WeChat.js = type=http-response,requires-body=1,max-size=0,script-path=https://ra
 //用药助手
 //luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/yyzs.js,script-update-interval=-1,pattern=^https?:\/\/newdrugs\.dxy\.cn\/app\/user\/(p(ay\/checkIntroOfferPeriod|ro\/stat)|init)\?
 
-//陆琪讲故事
-luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/luqi.js,script-update-interval=-1,pattern=^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get
-
 //workingcopy
 workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh
 
 //document
 documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
-
-//轻颜相机
-轻颜相机 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/ulike.js,script-update-interval=-1,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user
 
 //作业帮解锁付费音频
 作业帮 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js,script-update-interval=-1,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?.+
@@ -31,21 +25,14 @@ documents.js = type=http-response,requires-body=1,max-size=0,script-path=https:/
 //企信通小程序
 企信通小程序 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js,script-update-interval=-1,pattern=^https://miniapp.elecredit.com/ucenter_info/
 
-//KEEP
-KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/keep.js,script-update-interval=-1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
-
-
 //海豚记账 (by @superuv)
 海豚记账 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js,script-update-interval=-1,pattern=^https:\/\/book\.haitunwallet\.com\/app\/vip\/status
 
 //斑马海报
-斑马海报 = type=http-response,requires-body=1,max-size=0,script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bmhb.js,script-update-interval=-1,pattern=^https://zebra.maka.im/api/user/info
+斑马海报 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/bmhb.js,script-update-interval=-1,pattern=^https://zebra.maka.im/api/user/info
 
 //财新周刊
-财新周刊 = type=http-response,requires-body=1,max-size=0,script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/cxzk.js,script-update-interval=-1,pattern=^http://ipadcms.caixin.com/tmp/articles/*
-
-//每日艺术
-每日艺术= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/mrys.js,script-update-interval=-1,pattern=^https://panel.getdailyart.com/APIMobile/users/single
+财新周刊 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/cxzk.js,script-update-interval=-1,pattern=^http://ipadcms.caixin.com/tmp/articles/*
 
 //丁香医生VIP
 丁香医生VIP= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js,script-update-interval=-1,pattern=^https:\/\/dxy.com\/app\/i\/user\/ask\/account\?ac
@@ -67,14 +54,9 @@ KEEP = type=http-response,requires-body=1,max-size=0,script-path=https://raw.git
 // 录屏大师解锁会员
 录屏大师= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js,script-update-interval=-1,pattern=^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info
 
-// keep解锁会员
-keep解锁= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep,script-update-interval=-1,pattern=^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans)
-
 // 傲软抠图解锁会员
 傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
 
-// 扫描全能王
-扫描全能王= type=http-response https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,max-size=0,script-path=https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/camscanner.js
 
 // 爱企查vip
 爱企查vip= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js,script-update-interval=-1,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax
@@ -84,9 +66,6 @@ WallCraft解锁= type=http-response,requires-body=1,max-size=0,script-path=https
 
 # > vsco解锁
 #滤镜破解 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
-
-# > 蜗牛睡眠 解锁vip音频
-蜗牛睡眠 = type=http-response,pattern=^https://(.+)/snail-music,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js,script-update-interval=0
 
 # ✅ Nicegram
 Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10},requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Nicegram.js,script-update-interval=0
