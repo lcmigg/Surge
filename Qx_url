@@ -1,5 +1,5 @@
 #hostname
-hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,appcloud2.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc,mpcs.suning.com,ggic05.miguvideo.com,business.msstatic.com,m.client.10010.com,*.chelaile.net.cn,api.vungle.com,spire.aarki.net,a.applovin.com, cmvideo.cn, v.miguvideo.com, hoopchina.com.cn, games.mobileapi.hupu.com, amap.com, *nstool.netease.com, bdsp-x.jd.com, api.m.jd.com, m.360buyimg.com, img*.360buyimg.com, storage.360buyimg.com, dsp-x.jd.com, ms.jr.jd.com, home.mi.com, api.m.mi.com, goblin.hupu.com, res.kfc.com.cn, m.gdoil.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com,vip7.fzwdyy.cn,*.realsrv.com,*.ktkjmp.com,vv.video.qq.com,sdk.alibaba.com.ailbaba.me, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net
+hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,interface.music.163.com,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,appcloud2.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc,mpcs.suning.com,ggic05.miguvideo.com,business.msstatic.com,m.client.10010.com,*.chelaile.net.cn,api.vungle.com,spire.aarki.net,a.applovin.com, cmvideo.cn, v.miguvideo.com, hoopchina.com.cn, games.mobileapi.hupu.com, amap.com, *nstool.netease.com, bdsp-x.jd.com, api.m.jd.com, m.360buyimg.com, img*.360buyimg.com, storage.360buyimg.com, dsp-x.jd.com, ms.jr.jd.com, home.mi.com, api.m.mi.com, goblin.hupu.com, res.kfc.com.cn, m.gdoil.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com,vip7.fzwdyy.cn,*.realsrv.com,*.ktkjmp.com,vv.video.qq.com,sdk.alibaba.com.ailbaba.me, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, gd.10086.cn, client.app.coc.10086.cn, lban.spdb.com.cn
 
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com,new.api.hdcj.9w9.com,wallet.95516.com,dxy.com,*.dxy.cn,newdrugs.dxy.cn
 
@@ -102,6 +102,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? url reject-200
 ^https:\/\/mbs\.boc\.cn\/ubas-mgateway-webapp url reject
 
+# > pufayinhang
+^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/(getAdvList|prefetchAdvList)\.ah url reject-200
+
 ;工商银行
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
 
@@ -180,6 +183,11 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # >中国移动营业厅 - clientaccess.10086.cn,wap.js.10086.cn
 ^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
+# > zhongguoyidong
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject-200
+# > zhongguoyidongguangdong
+^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 url reject-200
 
 # > 中国联通营业厅 - m.client.10010.com
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject
@@ -187,6 +195,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
+
 
 # 虎牙
 ;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
