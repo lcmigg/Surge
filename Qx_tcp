@@ -88,6 +88,7 @@ host-suffix, unityads.unity3d.com, reject
 
 # > Alibaba
 host, tunion-api.m.taobao.com, reject
+host, amdc.m.taobao.com, reject
 
 # > Baidu
 host-suffix, cpro.baidu.com, reject
