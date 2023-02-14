@@ -2,9 +2,9 @@
 hostname = api.aliyundrive.com
 [rewrite]
 # 配置后，关闭阿里云盘重新进入获取refreshToken，获取后关闭脚本
-^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body qx_pan.js
+^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qx_pan.js
 
-^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response qx_pan.js
+^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/lcmigg/Surge/master/Script/qx_pan.js
 
 */
 const tk = new ToolKit(`qx_pan`, `qx_pan`, { httpApi: "" });
