@@ -1,4 +1,4 @@
-hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,mobile.flightradar24.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com, dj.palmestore.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com,rdp.duetdisplay.com, *lrts*
+hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,mobile.flightradar24.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, biz.caiyunapp.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com, dj.palmestore.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com,rdp.duetdisplay.com, *lrts*, *.x-storm.com
 
 #JS
 # 微信公众号
@@ -155,11 +155,13 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 ^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ne|\/a\.p|v\d\/api\/(user\/in|pay\/vi)|\w{3}\/v\d\/user\/vi|\w{3}\/spi\/ms|\w{3}\/v\d\/the|\w{3}\/enc\/use) url script-response-body https://github.com/ddgksf2013/dev/raw/main/KuWoMusicProCrack.js
 ^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ui) url script-request-header https://github.com/ddgksf2013/dev/raw/main/KuWoMusicProCrack.js
 
-# ✅ 得间小说
-^http[s]?:\/\/dj\.palmestore\.com\/zyuc\/api\/user\/accountInfo\?idfa.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/dejin.js
-
 # ✅ Flightradar24
 ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://github.com/ddgksf2013/dev/raw/main/flightradar24.js
 
 # ✅ FILEBALL挂载网盘
 ^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
+
+# ✅ 获取StormSnifferHeader
+^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$ url script-request-header https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
+# ✅ 解锁StormSniffer
+^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/((user-profile\/)|(auth-device\/list\/))$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
