@@ -98,6 +98,7 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 # 傲软抠图解锁会员
 #^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js
 #^https:\/\/awvp\.aoscdn\.com\/base\/vip\/client\/authorizations url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/arqt.js
+https://awvp.aoscdn.com/base/vip/v2/vips url script-response-body https://raw.githubusercontent.com/ddgksf2013/MoYu/master/apowersoft.js
 # 傲软扫描+解锁VIP  傲软PDF编辑+解锁VIP
 ^https:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/arpdf.js
 # 傲软投屏-+解锁VIP
