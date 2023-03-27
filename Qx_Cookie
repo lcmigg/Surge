@@ -1,5 +1,5 @@
 # Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.aliyundrive.com,api.aliyundrive.com
+hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.aliyundrive.com,api.aliyundrive.com,rewards.bing.com
 
 
 # 网易云音乐 先登录: https://music.163.com/m/login,再访问: https://music.163.com/#/user/level
@@ -32,6 +32,7 @@ https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-heade
 ^https:\/\/auth.aliyundrive.com\/v2\/account\/token url script-response-body https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 # 用于获取aliyun refreshToken 配置后，关闭阿里云盘重新进入获取refreshToken，获取后关闭脚本
-^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
+#^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
 
-
+# Bing积分cookie
+https:\/\/rewards\.bing\.com url script-request-body https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
