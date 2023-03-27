@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-03-26 15:05⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-03-28 18:18⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -363,7 +363,7 @@ function ParseUnknown(cnt){
   try {
     cnt = JSON.parse(cnt)
     if(cnt) {
-      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","⁉️ 请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
+      $notify("⚠️ 链接返回内容并非有效订阅"+ "⟦" + subtag + "⟧","请自行检查原始链接，返回内容 👇️👇️",JSON.stringify(cnt))
     }
     
   } catch(err) {
@@ -417,7 +417,7 @@ function ResourceParse() {
     total = total.length<100? total.filter( (ele,pos)=>total.indexOf(ele) == pos) : total
     total = total.join("\n")
   } else if (content0.trim() == "") {
-    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "⁉️ 点通知跳转以确认链接是否失效", para.split("#")[0]);
+    $notify("引用" + "⟦" + subtag + "⟧" + " 返回內容为空", "点通知跳转以确认链接是否失效", para.split("#")[0]);
     flag = 0;
   } else if (type0 == "sub-http") {
     let url = VCheck(String(Base64.decode(content0.split("sub://")[1].split("#")[0])+", opt-parser=true, tag="+(new Date()).getTime()))
@@ -491,7 +491,7 @@ function ResourceParse() {
       } else { $done({ content: total });}
     } else {
       if(Perror == 0) {
-      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "⚠️ 解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转并发送链接反馈")
+      $notify("友情提示 ➟ "+ "⟦" + subtag + "⟧", "解析后无有效内容", "请自行检查相关参数, 或者点击通知跳转并发送链接反馈")
     }
       total = errornode
       $done({ content: errornode })
@@ -584,7 +584,7 @@ function Type_Check(subs) {
     const ProfileCheck = (item) => subs.indexOf(item) != -1; //是否为quanx配置文件
     var subsn = subs.split("\n")
     if ( (subs.indexOf(html) != -1 || subs.indexOf("doctype html") != -1) && link0.indexOf("github.com" == -1)) {
-      $notify("该链接返回为无效网页内容"+ " ➟ " + "⟦" + subtag + "⟧", "⁉️ 点通知跳转以确认链接是否失效\n"+link0, "返回内容如下⬇️：\n"+subs);
+      $notify("该链接返回为无效网页内容"+ " ➟ " + "⟦" + subtag + "⟧", "点通知跳转以确认链接是否失效\n"+link0, "返回内容如下⬇️：\n"+subs);
       type = "web";
     } else if (typeU == "nodes" && typeQ=="server") { //指定为节点类型
       type = (typeQ == "unsupported" || typeQ =="server")? "Subs":"wrong-field"
@@ -714,14 +714,14 @@ function TagCheck_QX(content) {
     }
     if (nulllist.length >= 1) {
         no = nulllist.length <= 10 ? emojino[nulllist.length] : nulllist.length;
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个空节点名 ", "已将节点“类型+IP”设为节点名", " ⨁ " + nulllist.join("\n ⨁ "))
+        $notify("引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个空节点名 ", "已将节点“类型+IP”设为节点名", " ⨁ " + nulllist.join("\n ⨁ "))
     }
     if (duplist.length >= 1) {
         no = duplist.length <= 10 ? emojino[duplist.length] : duplist.length;
       if (Pdel!=1){
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已添加数字区分, 删除请添加参数 del=1:", " ⨁ " + duplist.join("\n ⨁ "))
+        $notify("引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已添加数字区分, 删除请添加参数 del=1:", " ⨁ " + duplist.join("\n ⨁ "))
       } else {
-        $notify("⚠️ 引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已全部删除，如需保留请去除参数 del=1:", " ⨁ " + duplist.join("\n ⨁ "))
+        $notify("引用" + "⟦" + subtag + "⟧" + " 内有" + no + "个名字重复的节点 ", "已全部删除，如需保留请去除参数 del=1:", " ⨁ " + duplist.join("\n ⨁ "))
       }
     }
     return Nlist
@@ -1184,9 +1184,9 @@ function Rewrite_Filter(subs, Pin, Pout,Preg,Pregout) {
     }
     if (Nlist.length == 0 ) { 
       if ((Pin0 || Pout0 || Phin0 || Phout0 || Pregout || Preg)) {
-        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "⚠️ 筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") 
+        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfi + pfo, "筛选后剩余rewrite规则数为 0️⃣ 条, 请检查参数及原始链接") 
       } else {
-        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "解析后 rewrite 规则数为 0️⃣ 条 " , "⚠️ 请检查参数及原始链接内容") 
+        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "解析后 rewrite 规则数为 0️⃣ 条 " , "请检查参数及原始链接内容") 
       
       }
     }
@@ -1237,7 +1237,7 @@ function HostNamecheck(content, parain, paraout) {
         }
     }
     if (nname.length == 0) {
-        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "⚠️ 主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
+        $notify("重写引用  ➟ " + "⟦" + subtag + "⟧", "筛选参数: " + pfihn + pfohn, "主机名 hostname 中剩余 0️⃣ 项, 请检查参数及原始链接")
     }
     if(Preg){ nname = nname.map(Regex).filter(Boolean)
       RegCheck(nname, "主机名hostname","regex", Preg) }
@@ -1298,7 +1298,7 @@ function Rule_Handle(subs, Pout, Pin) {
         var no = dlist.length <= 10 ? emojino[dlist.length] : dlist.length
         if (dlist.length > 0) {
             if (Pntf0 != 0) { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "已禁用以下" + no + "条匹配规则:" + "\n ⨷ " + dlist.join("\n ⨷ ")) }
-        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 未发现任何匹配项, 请检查参数或原始链接") }
+        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "未发现任何匹配项, 请检查参数或原始链接") }
         if (Tin != "" && Tin != null) {  //有 in 跟 out 参数时
             if (nlist.length > 0) {
                 var noin0 = nlist.length <= 10 ? emojino[nlist.length] : nlist.length
@@ -1306,11 +1306,11 @@ function Rule_Handle(subs, Pout, Pin) {
                     $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin0 + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
                 }
             } else {
-                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin + ",禁用: " + Tout, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
             }
         } else {// if Tin (No Tin)
             if (nlist.length == 0) {
-                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
+                $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "禁用: " + Tout, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接")
             }
         }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
@@ -1334,7 +1334,7 @@ function Rule_Handle(subs, Pout, Pin) {
             if (Pntf0 != 0) {
                 $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "已保留以下 " + noin + "条匹配规则:" + "\n ⨁ " + nlist.join("\n ⨁ "))
             }
-        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "⚠️ 筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
+        } else { $notify("分流引用  ➟ " + "⟦" + subtag + "⟧", "保留:" + Tin, "筛选后剩余规则数为 0️⃣ 条, 请检查参数及原始链接") }
       nlist =Phide ==1? nlist : [...dlist,...nlist]
       //return nlist;
     } else {  //if Tin
