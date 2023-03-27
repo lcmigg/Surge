@@ -35,4 +35,4 @@ https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-heade
 #^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
 
 # Bing积分cookie
-https:\/\/rewards\.bing\.com url script-request-body https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
+https:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
