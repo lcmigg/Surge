@@ -166,3 +166,6 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$ url script-request-header https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
 # ✅ 解锁StormSniffer
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/((user-profile\/)|(auth-device\/list\/))$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
+
+# > kuake
+^https?:\/\/open-cms-api\.uc\.cn\/open-cms url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js
