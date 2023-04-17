@@ -143,14 +143,11 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 #菜谱大全+解锁VIP
 ^https:\/\/apiios_dq\.xiangha\.com url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cpdq.js
 
-#Enpass解锁
-^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Enpass/enpass.js
-
 #小猿搜题
 ^https:\/\/xyst\.yuanfudao\.com\/solar-vip\/(api|iphone)\/users/* url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/xyst.js
 
 #Duet Unlock
-^https:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt$ url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Duet/duet.js
+#^https:\/\/rdp\.duetdisplay\.com\/v1\/users\/validateReceipt$ url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Duet/duet.js
 
 # ✅ 酷我音乐(会员共享)[vip至2023-05-07]
 ^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ne|\/a\.p|v\d\/api\/(user\/in|pay\/vi)|\w{3}\/v\d\/user\/vi|\w{3}\/spi\/ms|\w{3}\/v\d\/the|\w{3}\/enc\/use) url script-response-body https://github.com/ddgksf2013/dev/raw/main/KuWoMusicProCrack.js
