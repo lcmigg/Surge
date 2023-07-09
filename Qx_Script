@@ -120,7 +120,7 @@ https://awvp.aoscdn.com/base/vip/v2/vips url script-response-body https://raw.gi
 
 # > 蜗牛睡眠 解锁vip音频
 #^https://(.+)/snail-music url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/wnsm.js
-^https:\/\/music\.snailsleep\.net url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/wnsm.js
+#^https:\/\/music\.snailsleep\.net url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/wnsm.js
 #^http[s]?:\/\/((.+snailsleep)|(snailsleep)).net.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/woniu.js
 
 # ✅ Nicegram
