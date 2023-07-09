@@ -157,7 +157,7 @@ https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo url script-respon
 ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|\w{9}) url script-echo-response https://github.com/ddgksf2013/dev/raw/main/flightradar24.js
 
 # ✅ FILEBALL挂载网盘
-^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
+#^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
 
 # ✅ 获取StormSnifferHeader
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$ url script-request-header https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
