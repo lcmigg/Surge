@@ -206,12 +206,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
 
-
-# 虎牙
-;^http://bd\.p2p\.huya\.com/huyalive/ url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: HYSDK(iOS, 30000002)_APP(ios&7.8.1&store&13.3)
-https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
-;^https?://cdnfile1.msstatic.com\/cdnfile\/appad\/resource_\d{10,}\.zip url reject
-;^http://business.msstatic.com/advertiser/ url reject-200
 # > 虎牙直播开屏广告
 ^http?:\/\/business\.msstatic\.com\/advertiser\/material url reject
 # > 虎牙直播
@@ -234,20 +228,6 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 # 微信小程序，交作业app
 ^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ url reject
 
-# migu
-^https://ggic05.miguvideo.com/ad url reject
-^https://gg(v|c|x).cmvideo.cn/v1/iflyad url reject
-#  咪咕
-^https:\/\/.+\/img\/ad.union.api\/ url reject
-^https:\/\/.+\/v1\/iflyad\/ url reject
-^https:\/\/ggic.cmvideo.cn\/ad\/ url reject
-^https:\/\/ggic2.cmvideo.cn\/ad\/ url reject
-^https:\/\/ggic*.miguvideo.com/ad/ url reject
-^https:\/\/ggv.cmvideo.cn\/v1\/iflyad\/ url reject
-^http:\//ggc.cmvideo.cn\/v1\/iflyad\/ url reject
-;^https:\//v.miguvideo.com\/ability\/v2\/member-info url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/memberinfo.js
-;^https:\//v.miguvideo.com\/ability\/v url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/migu/ability.js
-
 # 作业帮
 ^https?:\/\/img.zuoyebang.cc\/zyb-image[\s\S]*?.jpg - reject
 
@@ -259,23 +239,6 @@ https?://huyaimg.msstatic.com/cdnimage/roomad/ url reject-img
 ^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image url reject
 ^https?:\/\/pic1.chelaile.net.cn\/adv\/ url reject
 
-# > Hdo  api.vungle.com,events.api.vungle.com,iosads4-7.adcolony.com,a.applovin.com
-;^https:\/\/api\.vungle\.com\/api\/v5\/ads url reject-200
-;^https:\/\/api\.vungle\.com\/api\/v5\/report_ad url reject-200
-;^https:\/\/events.api\.vungle\.com\/api\/v5\/tpat\?adv* url reject-200
-;^https:\/\/iosads4-7.adcolony.com\/configure url reject-200
-;^https:\/\/a.applovin.com\/4.0\/ad\?* url reject-200
-
-^https://api.vungle.com/api/v5/ads url reject
-^https://spire.aarki.net/v1/ads/ url reject
-
-#KFC
-^https?:\/\/res\.kfc\.com\.cn\/advertisement\/ url reject
-^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ url reject
-
-# gdoil
-^https:\/\/m\.gdoil\.cn\/gd\/sys\/getStartUpAd url reject
-
 # > 64 top widget@ddgksf2013
 https://top-widgets-api.xiaozujian.com/api/ad/config url reject
 
@@ -285,9 +248,6 @@ https://tagit.hyhuo.com/recover/list url reject
 # > pikpak
 https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 
-#【555】APP去广告
-^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo url reject-200
-^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGOOGAdvert url reject-200
 
 # > dashixiong  sdk.alibaba.com.ailbaba.me
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/dsx\.php\/v\d\/version url reject
