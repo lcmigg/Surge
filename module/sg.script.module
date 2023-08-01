@@ -9,9 +9,6 @@ Baimiao.js = type=http-response,requires-body=1,max-size=0,script-path=https://r
 //微信去广告
 WeChat.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/WeChat.js,script-update-interval=-1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
 
-//用药助手
-//luqi.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/yyzs.js,script-update-interval=-1,pattern=^https?:\/\/newdrugs\.dxy\.cn\/app\/user\/(p(ay\/checkIntroOfferPeriod|ro\/stat)|init)\?
-
 //workingcopy
 workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh
 
@@ -60,7 +57,6 @@ documents.js = type=http-response,requires-body=1,max-size=0,script-path=https:/
 // 扫描全能王
 扫描全能王= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,script-update-interval=-1,pattern=^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\?
 
-
 // 爱企查vip
 爱企查vip= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js,script-update-interval=-1,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax
 
@@ -79,8 +75,6 @@ TopWidgets = type=http-response,pattern=^https:\/\/top-widgets-api\.xiaozujian\.
 #迅雷-你的专享云盘+解锁VIP
 迅雷 = type=http-response,pattern=^https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js,script-update-interval=0
 
-#迅雷-你的专享云盘+解锁VIP
-菜谱大全 = type=http-response,pattern=^https:\/\/apiios_dq\.xiangha\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cpdq.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com, api.revenuecat.com, restore-access.indream.app, top-widgets-api.xiaozujian.com, xluser-ssl.xunlei.com, *.snailsleep.net, *.intsig.net
