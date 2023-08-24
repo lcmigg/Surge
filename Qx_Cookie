@@ -39,3 +39,6 @@ https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-heade
 
 # Bing积分cookie
 https:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercontent.com/lcmigg/Surge/master/Script/bing.js
+
+# TUHU积分cookie
+https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
