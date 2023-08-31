@@ -1,4 +1,4 @@
-hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,mobile.flightradar24.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com, dj.palmestore.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com,rdp.duetdisplay.com, *lrts*, *.x-storm.com
+hostname = ap?.bilibili.com,mall.zuoyebang.com,apivip.zybang.com,miniapp.elecredit.com,59.110.149.231,129.211.156.213,*.dushu365.com,*.xiangha.com,zths.szy.cn,book.haitunwallet.com,mobile.flightradar24.com,panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, dxy.com, tagit.hyhuo.com,vira.llsapp.com,i.xinyulib.com.cn,luping.cushuikeji.cn,*.gotokeep.com,awvp.aoscdn.com,gw.aoscdn.com,*.intsig.net,bt.flashdown365.com,api.wscdn.vip, aiqicha.baidu.com, dj.palmestore.com,*.wallpaperscraft.com,music.snailsleep.net,*.xiaozujian.com,cn.pornhubpremium.com,wallpaper.soutushenqi.com,xluser-ssl.xunlei.com,restore-access.indream.app,dq.xiangha.com,apiios_dq.xiangha.com,license.enpass.io,xyst.yuanfudao.com,rdp.duetdisplay.com, *lrts*, *.x-storm.com, *.caiyunapp.*, *cyapi*
 
 #JS
 # 微信公众号
@@ -69,9 +69,9 @@ http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.gi
 #丁香医生VIP
 ^https:\/\/dxy.com\/app\/i\/user\/ask\/account\?ac url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js
 
-#彩云天气  , *.caiyunapp.*, *cyapi*
+#彩云天气  
 ;^https:\/\/biz.caiyunapp.com\/v2\/user\?app_name=weather url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/caiyun.js
-;^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/cytq.js
+^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/cytq.js
 
 # > 拦截100解锁超级会员
 ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js
