@@ -60,6 +60,10 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
 # > aliyunpan
 ^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/alidrive.js
+# > amdc
+^http:\/\/amdc\.m\.taobao\.com url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amdc.js
+# > ahfs
+^https?:\/\/.*ahhhhfs\.com\/($|[0-9a-zA-Z_/]+\/$) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ahfs.js
 
 # 163 mail
 ^https?:\/\/clientlog3\.music\.163\.com url reject-dict
@@ -164,6 +168,9 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 # > dingdongmaicai
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
 
+# > kuake
+^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js
+
 # 滴滴出行 didichuxing@ddgksf2013
 https?://res\.xiaojukeji\.com\/resapi\/activity\/mget url reject-dict
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
@@ -172,6 +179,9 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 
 # > SMZDM - ap*.smzdm.com
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
+
+# > Stay
+^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/stay.js
 
 # > Suning - mpcs.suning.com
 ^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject
