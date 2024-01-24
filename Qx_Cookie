@@ -1,5 +1,5 @@
 # Cookie获取订阅
-hostname = interface.music.163.com,tieba.baidu.com,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.alipan.com,auth.aliyundrive.com,rewards.bing.com, sytgate.jslife.com.cn, app.moutai519.com.cn
+hostname = interface.music.163.com, tieba.baidu.com, iphone.myzaker.com, api.tuhu.cn, auth.alipan.com, auth.aliyundrive.com,  rewards.bing.com,sytgate.jslife.com.cn, app.moutai519.com.cn
 
 
 # 网易云音乐 
@@ -18,7 +18,7 @@ hostname = interface.music.163.com,tieba.baidu.com,iphone.myzaker.com,m.manmanbu
 
 
 # 用于获取aliyun refreshToken 配置后，关闭阿里云盘重新进入获取refreshToken，获取后关闭脚本
-^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token url script-request-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js
+^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token url script-request-body https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
 
 # Bing积分cookie
 https:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercontent.com/lcmigg/Surge/master/Script/bing.js
