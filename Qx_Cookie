@@ -1,5 +1,5 @@
 # Cookie获取订阅
-hostname = interface.music.163.com,tieba.baidu.com,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.aliyundrive.com,api.aliyundrive.com,rewards.bing.com, sytgate.jslife.com.cn, app.moutai519.com.cn
+hostname = interface.music.163.com,tieba.baidu.com,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.alipan.com,auth.aliyundrive.com,rewards.bing.com, sytgate.jslife.com.cn, app.moutai519.com.cn
 
 
 # 网易云音乐 
