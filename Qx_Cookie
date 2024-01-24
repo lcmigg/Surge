@@ -1,17 +1,14 @@
 # Cookie获取订阅
-hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.aliyundrive.com,api.aliyundrive.com,rewards.bing.com, sytgate.jslife.com.cn, app.moutai519.com.cn
+hostname = interface.music.163.com,tieba.baidu.com,iphone.myzaker.com,m.manmanbuy.com,apph5.manmanbuy.com,*.bilibili.com,api.tuhu.cn,napi.zuoyebang.com,maicai.api.ddxq.mobi,auth.aliyundrive.com,api.aliyundrive.com,rewards.bing.com, sytgate.jslife.com.cn, app.moutai519.com.cn
 
 
-# 网易云音乐 先登录: https://music.163.com/m/login,再访问: https://music.163.com/#/user/level
-;^https?:\/\/music\.163\.com\/m\/ url  script-request-header neteasemusic.cookie.js
-^https:\/\/music.163.com\/weapi\/user\/level url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.cookie.js
+# 网易云音乐 
+^https:\/\/interface\.music\.163\.com\/weapi\/nmusician\/ url script-request-body https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
 
 # 帖吧文库签到
 ^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
 ;https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
 
-# 加油广东
-;^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js
 
 # ZAKER新闻
 ^https:\/\/iphone\.myzaker\.com\/zaker\/sign_in\/\/api\/sign_in\.php url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js
@@ -19,23 +16,9 @@ hostname = music.163.com,tieba.baidu.com,daojia.jd.com,m.gdoil.cn,iphone.myzaker
 # 获取捷停车userId
 ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info url script-request-body https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js
 
-# 慢慢买每日自动签到
-https?:\/\/(m|apph5)\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
-
-# bilibili直播 *.bilibili.com
-^https:\/\/(www|live)\.bilibili\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
-
-#途虎养车Cookie（打开途虎APP：依次打开 我的->每日免费领积分）
-https://api.tuhu.cn/User/GetUserCurrentAndNextGradeInfo url script-request-header https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.Cookie.js
-
-#叮咚买菜
-^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
-
-#阿里云盘签到cookie
-;^https:\/\/auth.aliyundrive.com\/v2\/account\/token url script-response-body https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 # 用于获取aliyun refreshToken 配置后，关闭阿里云盘重新进入获取refreshToken，获取后关闭脚本
-#^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body https://raw.githubusercontent.com/hhlass/qx_script/main/qx_pan.js
+^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token url script-request-body https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js
 
 # Bing积分cookie
 https:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercontent.com/lcmigg/Surge/master/Script/bing.js
@@ -43,5 +26,3 @@ https:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercon
 # TUHU积分cookie
 https://api.tuhu.cn/User/GetInternalCenterInfo url script-request-header https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js
 
-# # 茅台自动预约cookie
-https://app.moutai519.com.cn/xhr/front/user/info url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/imaotai/imaotai.js
