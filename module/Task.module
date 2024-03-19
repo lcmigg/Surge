@@ -2,9 +2,5 @@
 #!desc=iOS Tasks 模块配置
 
 [Script]
-//京东领豆 = type=cron,cronexp=15 1 0,9 * * *,wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-//途虎养车 = type=cron,cronexp=15 12 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.js
-//作业帮 = type=cron,cronexp=15 13 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/Task/zyb.js
-//加油广东 = type=cron,cronexp=15 13 8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js
-//金融领豆 = type=cron,cronexp=1 0 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_sign.js
-//小米运动 = type=cron,cronexp="15 19 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/dompling/Script/master/xmSports.js
+捷停车签到 = type=cron, cronexp="3 9 * * *", timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
+高德打车签到 = type=cron, cronexp="1 9 * * *", script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, wake-system=1
