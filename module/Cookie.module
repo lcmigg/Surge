@@ -15,4 +15,4 @@ zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavy
 途虎养车 = type=http-request,pattern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 
 [MITM]
-hostname = %APPEND% iphone.myzaker.com, *.amap.com, sytgate.jslife.com.cn, auth.alipan.com,auth.aliyundrive.com
+hostname = %APPEND% iphone.myzaker.com, *.amap.com, sytgate.jslife.com.cn, auth.alipan.com,auth.aliyundrive.com, api.tuhu.cn
