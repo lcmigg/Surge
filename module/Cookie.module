@@ -11,6 +11,8 @@ zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavy
 高德打车获取cookie = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/yuece\/act\/query\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, script-update-interval=0
 # > 阿里云盘签到cookie
 阿里云盘签到cookie = type=http-request,script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js,pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token,max-size=131072,requires-body=true,timeout=10,script-update-interval=0,enable=true
+# > 途虎养车cookie
+途虎养车 = type=http-request,pattern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 
 [MITM]
 hostname = %APPEND% iphone.myzaker.com, *.amap.com, sytgate.jslife.com.cn, auth.alipan.com,auth.aliyundrive.com
