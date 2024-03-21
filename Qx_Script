@@ -56,12 +56,8 @@ https:\/\/book\.haitunwallet\.com\/app\/vip\/status url script-response-body htt
 # > 032 每日艺术 （20201123） by ddgksf2013
 https://panel.getdailyart.com/APIMobile/users/single url response-body account_type":"0 response-body account_type":"2
 
-# > 051 作业帮 （20210407） by photonmang
-https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+ url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/zyb.js
-https://apivip.zybang.com/vipols/vip/viphomev1?.+ url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/zyb.js
-
 # > 042 斑马海报 （20210130） by ddgksf2013
-https://zebra.maka.im/api/user/info url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/bmhb.js
+https://zebra.maka.im/api/user/info url script-response-body https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Crack/bmhb.js
 
 # > 046 财新周刊（20210320） by ddgksf2013
 http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/cxzk.js
