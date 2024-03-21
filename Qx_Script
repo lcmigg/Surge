@@ -60,7 +60,7 @@ https://panel.getdailyart.com/APIMobile/users/single url response-body account_t
 https://zebra.maka.im/api/user/info url script-response-body https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Crack/bmhb.js
 
 # > 046 财新周刊（20210320） by ddgksf2013
-http://ipadcms.caixin.com/tmp/articles/* url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/cxzk.js
+https?:\/\/ipadcms\.caixin\.com\/tmp\/articles url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/CaiXinZhouKanProCrack.js
 
 #丁香医生VIP
 ^https:\/\/dxy.com\/app\/i\/user\/ask\/account\?ac url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js
@@ -127,7 +127,8 @@ https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-res
 
 #TopWidgets-小组件+解锁订阅
 #^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js
-^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/topwidgets.js
+#^https?:\/\/.*xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/topwidgets.js
+^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js
 
 # > PornHub Unlock Premium By Hausd0rff
 ^https?:\/\/cn\.pornhubpremium\.com\/ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/PornHubPremiumCrack.js
