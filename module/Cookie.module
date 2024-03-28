@@ -15,6 +15,8 @@ zaker.js = type=http-request,script-path=https://raw.githubusercontent.com/chavy
 途虎养车 = type=http-request,pattern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js
 # > 顺丰速运cookie
 顺丰速运cookie = type=http-request,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,max-size=131072,requires-body=true,timeout=10,script-update-interval=0,enable=true
+# > 微付金币cookie
+微付金币² = type=http-response,pattern=https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login,requires-body=1,max-size=0,binary-body-mode=0,timeout=30,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% iphone.myzaker.com, *.amap.com, sytgate.jslife.com.cn, auth.alipan.com,auth.aliyundrive.com, api.tuhu.cn, ccsp-egmas.sf-express.com
+hostname = %APPEND% iphone.myzaker.com, *.amap.com, sytgate.jslife.com.cn, auth.alipan.com,auth.aliyundrive.com, api.tuhu.cn, ccsp-egmas.sf-express.com, payapp.weixin.qq.com
