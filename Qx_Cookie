@@ -30,5 +30,5 @@ https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login url script-re
 ^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone url script-request-body https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
 
 # > 顺丰速运获取token
-^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ url script-request-body https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js
+# ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ url script-request-body https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js
 
