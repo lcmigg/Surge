@@ -1,5 +1,5 @@
 # Cookie获取订阅
-hostname = interface.music.163.com, tieba.baidu.com, iphone.myzaker.com, api.tuhu.cn, auth.alipan.com, auth.aliyundrive.com,  rewards.bing.com,sytgate.jslife.com.cn, app.moutai519.com.cn, payapp.weixin.qq.com, *.amap.com
+hostname = interface.music.163.com, tieba.baidu.com, iphone.myzaker.com, api.tuhu.cn, auth.alipan.com, auth.aliyundrive.com,  rewards.bing.com,sytgate.jslife.com.cn, app.moutai519.com.cn, payapp.weixin.qq.com, *.amap.com, game.dominos.com.cn, mcs-mimp-web.sf-express.com
 
 # 网易云音乐 
 ^https:\/\/interface\.music\.163\.com\/weapi\/nmusician\/ url script-request-body https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js
@@ -25,4 +25,10 @@ https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login url script-re
 
 # > 高德打车获取cookie
 ^https:\/\/m5-zb\.amap\.com\/ws\/yuece\/act\/query\? url script-request-body https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+
+# > 达美乐披萨获取token
+^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone url script-request-body https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js
+
+# > 顺丰速运获取token
+^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ url script-request-body https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js
 
