@@ -182,6 +182,8 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 
 # > SMZDM - ap*.smzdm.com
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
+# > shenmezhidemai
+^https?:\/\/app-api\.smzdm\.com\/util\/loading url response-body start_date":"\d{4} response-body start_date":"4099
 
 # > Stay
 ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/stay.js
