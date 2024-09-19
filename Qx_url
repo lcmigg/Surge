@@ -1,5 +1,5 @@
 #hostname
-hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,appcloud2.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com,render.alipay.com,acs.m.taobao.com,trade-acs.m.taobao.com, amdc.m.taobao.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc,mpcs.suning.com,ggic05.miguvideo.com,business.msstatic.com,m.client.10010.com,*.chelaile.net.cn,api.vungle.com,spire.aarki.net,a.applovin.com, cmvideo.cn, v.miguvideo.com, hoopchina.com.cn, games.mobileapi.hupu.com, amap.com, *nstool.netease.com, bdsp-x.jd.com, api.m.jd.com, m.360buyimg.com, img*.360buyimg.com, storage.360buyimg.com, dsp-x.jd.com, ms.jr.jd.com, home.mi.com, api.m.mi.com, goblin.hupu.com, res.kfc.com.cn, m.gdoil.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com,vip7.fzwdyy.cn,*.realsrv.com,*.ktkjmp.com,vv.video.qq.com, sdk.alibaba.com.ailbaba.me, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, gd.10086.cn, client.app.coc.10086.cn, lban.spdb.com.cn, ad.12306.cn, list-app-m.i4.cn, api.caiyunapp.com, access.mypikpak.com, discardrp.umetrip.com, startup.umetrip.com, gg.caixin.com, cn-app.narwaltech.com
+hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126.net,mimg.127.net,client.mail.163.com,admusicpic.music.126.net,*msstatic.com,iface.iqiyi.com,act.vip.iqiyi.com,config.gf.com.cn,i.weread.qq.com,a.applovin.com,api.jr.mi.com,api-mifit*.huami.com,api-mifit-cn2.huami.com,m5.amap.com,*.meituan.net,pss.txffp.com,mp.weixin.qq.com,lens.zhihu.com,api.zhihu.com,www.zhihu.com,link.zhihu.com,appcloud2.zhihu.com,www.luqijianggushi.com,education.github.com,license.pdfexpert.com,gw.alicdn.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com,vira.llsapp.com,ios.prod.ftl.netflix.com,claritywallpaper.com,msspjh.emarbox.com,mp.nezhazy.cn,baimiao.uzero.cn,ap*.smzdm.com,api.yangkeduo.com,api.pinduoduo.com,clientaccess.10086.cn,biz.caiyunapp.com,api*.futunn.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi,img.zuoyebang.cc,mpcs.suning.com,ggic05.miguvideo.com,business.msstatic.com,m.client.10010.com,*.chelaile.net.cn,api.vungle.com,spire.aarki.net,a.applovin.com, cmvideo.cn, v.miguvideo.com, hoopchina.com.cn, games.mobileapi.hupu.com, amap.com, *nstool.netease.com, bdsp-x.jd.com, api.m.jd.com, m.360buyimg.com, img*.360buyimg.com, storage.360buyimg.com, dsp-x.jd.com, ms.jr.jd.com, home.mi.com, api.m.mi.com, goblin.hupu.com, res.kfc.com.cn, m.gdoil.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com,vip7.fzwdyy.cn,*.realsrv.com,*.ktkjmp.com,vv.video.qq.com, sdk.alibaba.com.ailbaba.me, img.meituan.net, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, gd.10086.cn, client.app.coc.10086.cn, lban.spdb.com.cn, ad.12306.cn, list-app-m.i4.cn, api.caiyunapp.com, access.mypikpak.com, discardrp.umetrip.com, startup.umetrip.com, gg.caixin.com, cn-app.narwaltech.com, ad.mcloud.139.com, jzts.cmpassport.com, *api.alipan.com, member.alipan.com
 
 ;hostname = api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,tieba.baidu.com,music.163.com,*youtube.com,new.api.hdcj.9w9.com,wallet.95516.com,dxy.com,*.dxy.cn,newdrugs.dxy.cn
 
@@ -51,19 +51,28 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 # > 12306
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/12306.js
 
-# Alibaba
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtopadvertiseapi)\.querytmsresources|(taobao\.idle\.home|aliyun\.mobile)\.welcome(page)?|.*?\.ads?\.) url reject
-^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt) url reject
-^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json url reject
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ url reject
-# > alibaba
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
-# > aliyunpan
-^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/alidrive.js
-# > amdc
-^http:\/\/amdc\.m\.taobao\.com url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amdc.js
-# > ahfs
-^https?:\/\/.*ahhhhfs\.com\/($|[0-9a-zA-Z_/]+\/$) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ahfs.js
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome url reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources url reject-dict
+^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 url reject-dict
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad url reject-dict
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) url reject-dict
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+# 阿里云盘 //*api.alipan.com, member.alipan.com
+^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders url reject-dict
+^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
+^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js
+^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle url reject-dict
+
 
 # 163 mail
 ^https?:\/\/clientlog3\.music\.163\.com url reject-dict
@@ -131,8 +140,8 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 ^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/ url reject
 
 # 小米
-^https:\/\/home\.mi\.com\/newoperation\/recommendNames url reject
-^https:\//home.mi.com\/cgi-op\/api\/v1\/recommendation\/banner* url reject
+# 米家 //home.mi.com
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) url reject-dict
 ^https:\/\/api2\.mina\.mi\.com\/banner\/get url reject
 ^(http|https):\/\/api\.m\.mi\.com\/v\d\/app\/start url reject-200
 ^(http|https):\/\/api\.jr\.mi\.com\/v\d\/adv\/ url reject-200
@@ -217,6 +226,9 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 中国联通营业厅 - m.client.10010.com
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject
+# 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
+^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js
+^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js
 
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
