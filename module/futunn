@@ -1,0 +1,20 @@
+#!name = 富途牛牛去广告
+#!desc = 移除我的横幅广告、账户和交易横幅广告、首页右下角角标
+#!tag = 去广告
+#!system = IOS
+#!date = 2024-09-21
+
+[URL Rewrite]
+# > 富途牛牛
+# hostname = api*.futunn.com
+# 我的横幅广告
+^https?:\/\/api\.futunn\.com\/v2\/optimus\/my-homepage-config - reject
+# 账户和交易横幅广告
+^https?:\/\/api\.futunn\.com\/v2\/config\/promote-config - reject
+^https?:\/\/api\d\.futunn\.com\/ad\/ - reject
+^https?:\/\/api\.futunn\.com\/v\d\/ad\/ - reject
+# 首页右下角角标
+^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data - reject
+
+[MITM]
+hostname = %APPEND% api*.futunn.com
