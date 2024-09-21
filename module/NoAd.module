@@ -1,5 +1,5 @@
 #!name=自用去开屏广告
-#!desc=极速版JD、KFC、加油广东、去鲸智能
+#!desc=极速版JD、KFC、云鲸智能、富途牛牛、发现精彩
 
 [URL Rewrite]
 # 极速版JD
@@ -20,5 +20,23 @@ https://tagit.hyhuo.com/recover/list - reject
 #云鲸智能 #我的横幅广告 
 ^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=user_center_banner - reject-drop
 
+# > 发现精彩
+# hostname = static.95508.com
+# 开屏广告
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - reject-drop
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads - reject-drop
+
+# > 富途牛牛
+# hostname = api*.futunn.com
+# 我的横幅广告
+^https?:\/\/api\.futunn\.com\/v2\/optimus\/my-homepage-config - reject-drop
+# 账户和交易横幅广告
+^https?:\/\/api\.futunn\.com\/v2\/config\/promote-config - reject-drop
+^https?:\/\/api\d\.futunn\.com\/ad\/ - reject
+^https?:\/\/api\.futunn\.com\/v\d\/ad\/ - reject
+# 首页右下角角标
+^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data -l reject
+
+
 [MITM]
-hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com
+hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com
