@@ -195,7 +195,7 @@ global.$done = _scriptSonverterDone
  'POST') {
         $httpClient.post(url,
 [rewrite_local]
-^https?:\/\/.*\.(yuchenglw|honghufly|privacypolicie|osupdate|jnruiying)\.(net|com) url script-response-body https://raw.githubusercontent.com/chxm1023/Advertising/main/sssp.js
+^https?:\/\/.*\.(yuchenglw|honghufly|privacypolicie|osupdate|jnruiying)\.(net|com) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/refs/heads/master/Script/sssp1.js
 
 [mitm]
 hostname = *.yuchenglw.com, *.honghufly.com, *.privacypolicie.net, *.osupdate.net, *.jnruiying.com
