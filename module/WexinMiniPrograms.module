@@ -1,0 +1,36 @@
+#!name = 微信小程序去广告
+#!desc = 收录常用小程序的去广告，作者署名在插件内。
+#!openUrl = https://apps.apple.com/app/id414478124
+#!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
+
+[URL Rewrite]
+# 必胜客 res.pizzahut.com.cn
+^https:\/\/res\.pizzahut\.com\.cn\/CRM - reject
+# 麦当劳 api.mcd.cn
+^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity - reject
+# 货拉拉 qapi.huolala.cn, appuser-static.huolala.cn
+^https:\/\/qapi\.huolala\.cn\/ads - reject
+^https:\/\/qapi\.huolala\.cn\/home_new_user - reject
+^https:\/\/qapi\.huolala\.cn\/get_service_list - reject
+^https:\/\/appuser-static\.huolala\.cn\/imgs - reject
+# 蜜雪冰城 mxsa.mxbc.net
+^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query - reject
+# 德邦快递 www.deppon.com
+^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface - reject
+# 猫眼电影
+# 弹窗广告+横幅广告 # 主机名ad.maoyan.com
+^https:\/\/ad\.maoyan\.com\/api\/position\/detail - reject
+# 电竞赛事+热门赛事 # 主机名wx.maoyan.com
+^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps) - reject
+# 猫眼放映厅 # 主机名vod-movie.maoyan.com
+^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json - reject
+# 顺丰速运+ @可莉🅥
+^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query - reject
+^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList - reject
+# 滴滴代驾 daijia.kuaidadi.com, as.xiaojukeji.com
+^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= - reject
+^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe - reject
+
+[MITM]
+hostname = %APPEND% res.pizzahut.com.cn, api.mcd.cn,qapi.huolala.cn, appuser-static.huolala.cn,mxsa.mxbc.net,www.deppon.com,www.deppon.com,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,ucmp.sf-express.com,daijia.kuaidadi.com, as.xiaojukeji.com
