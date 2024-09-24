@@ -35,7 +35,7 @@ https://tagit.hyhuo.com/recover/list - reject
 ^https?:\/\/api\d\.futunn\.com\/ad\/ - reject
 ^https?:\/\/api\.futunn\.com\/v\d\/ad\/ - reject
 # 首页右下角角标
-^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data -l reject
+^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data - reject
 
 
 [MITM]
