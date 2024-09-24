@@ -1,0 +1,44 @@
+#!name=自用去开屏广告 Mock
+#!desc=极速版JD、KFC、云鲸智能、富途牛牛、发现精彩
+
+[URL Rewrite]
+# 极速版JD
+^https://api.m.jd.com/client.action?functionId=lite_advertising - reject
+# 微信小程序，交作业app
+^https:\/\/mp\.nezhazy\.cn\/student\/ad\/ - reject
+#KFC
+^https:\/\/res\.kfc\.com\.cn/CRM/kfcad/pop/ - reject
+# > top widget@ddgksf2013
+https://top-widgets-api.xiaozujian.com/api/ad/config - reject
+# > 攔截100@ddgksf2013
+https://tagit.hyhuo.com/recover/list - reject
+
+[Map Local]
+# 云鲸智能
+#云鲸智能 #开屏广告 #主机名cn-app.narwaltech.com
+^https:\/\/cn-app\.narwaltech\.com\/operate\/appPosition\/listSplash\?resourceIds=narwal_splash_screen data-type=text data="{}" status-code=200 
+#云鲸智能 #设备横幅广告
+^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=index_banner data-type=text data="{}" status-code=200 
+#云鲸智能 #我的横幅广告 
+^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=user_center_banner data-type=text data="{}" status-code=200 
+
+# > 发现精彩
+# hostname = static.95508.com
+# 开屏广告
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) data-type=text data="{}" status-code=200
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads data-type=text data="{}" status-code=200
+
+# > 富途牛牛
+# hostname = api*.futunn.com
+# 我的横幅广告
+^https?:\/\/api\.futunn\.com\/v2\/optimus\/my-homepage-config data-type=text data="{}" status-code=200
+# 账户和交易横幅广告
+^https?:\/\/api\.futunn\.com\/v2\/config\/promote-config data-type=text data="{}" status-code=200
+^https?:\/\/api\d\.futunn\.com\/ad\/ data-type=text data="{}" status-code=200
+^https?:\/\/api\.futunn\.com\/v\d\/ad\/ data-type=text data="{}" status-code=200
+# 首页右下角角标
+^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data data-type=text data="{}" status-code=200
+
+
+[MITM]
+hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com
