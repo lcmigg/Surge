@@ -14,24 +14,24 @@ https://top-widgets-api.xiaozujian.com/api/ad/config - reject
 https://tagit.hyhuo.com/recover/list - reject
 # 云鲸智能
 #云鲸智能 #开屏广告 #主机名cn-app.narwaltech.com
-^https:\/\/cn-app\.narwaltech\.com\/operate\/appPosition\/listSplash\?resourceIds=narwal_splash_screen - reject-drop
+^https:\/\/cn-app\.narwaltech\.com\/operate\/appPosition\/listSplash\?resourceIds=narwal_splash_screen - reject
 #云鲸智能 #设备横幅广告
-^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=index_banner - reject-drop
+^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=index_banner - reject
 #云鲸智能 #我的横幅广告 
-^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=user_center_banner - reject-drop
+^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=user_center_banner - reject
 
 # > 发现精彩
 # hostname = static.95508.com
 # 开屏广告
-^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - reject-drop
-^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads - reject-drop
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - reject
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads - reject
 
 # > 富途牛牛
 # hostname = api*.futunn.com
 # 我的横幅广告
-^https?:\/\/api\.futunn\.com\/v2\/optimus\/my-homepage-config - reject-drop
+^https?:\/\/api\.futunn\.com\/v2\/optimus\/my-homepage-config - reject
 # 账户和交易横幅广告
-^https?:\/\/api\.futunn\.com\/v2\/config\/promote-config - reject-drop
+^https?:\/\/api\.futunn\.com\/v2\/config\/promote-config - reject
 ^https?:\/\/api\d\.futunn\.com\/ad\/ - reject
 ^https?:\/\/api\.futunn\.com\/v\d\/ad\/ - reject
 # 首页右下角角标
