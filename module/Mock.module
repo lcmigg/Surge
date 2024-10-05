@@ -54,8 +54,8 @@ https://tagit.hyhuo.com/recover/list - reject
 ^https?:\/\/(gw|img)\.alicdn\.com\/imgextra\/.+\/[\w!]+\d+-\d+-.+-\b([8-9]\d{2,}|[1-9]\d{3,})\b-\b([5-9]\d{2,}|[1-9]\d{3,})\b data-type=text data="{}" status-code=200
 
 #央视频cdn.cmgadx.com
-^https:\/\/cdn\.cmgadx\.com\/sdk\/pool\/ data-type=text data="{}" status-code=200
+#^https:\/\/cdn\.cmgadx\.com\/sdk\/pool\/ data-type=text data="{}" status-code=200
 
 
 [MITM]
-hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com,cdn.cmgadx.com
+hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com
