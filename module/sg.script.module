@@ -1,23 +1,8 @@
 #!name=surge脚本
-#!desc=白描,微信去广告,用药助手,陆琪讲故事,workingcopy,document
+#!desc=海豚记账解锁会员,企信通小程序,录屏大师，傲软抠图
 #!system=ios
 
 [Script]
-//白描VIP
-Baimiao.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wubulaba/surgescript/master/Script/Baimiao.js,script-update-interval=0,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser
-
-//微信去广告
-WeChat.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/WeChat.js,script-update-interval=-1,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
-
-//workingcopy
-workingcopy.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/workingcopy.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh
-
-//document
-documents.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/documents.js,script-update-interval=-1,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$)
-
-//作业帮解锁付费音频
-作业帮 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js,script-update-interval=-1,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?.+
-作业帮 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/JS/zuoyebang.js,script-update-interval=-1,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+
 
 //企信通小程序
 企信通小程序 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/Alex0510/surge/surge/Script/qxt.js,script-update-interval=-1,pattern=^https://miniapp.elecredit.com/ucenter_info/
@@ -25,56 +10,16 @@ documents.js = type=http-response,requires-body=1,max-size=0,script-path=https:/
 //海豚记账 (by @superuv)
 海豚记账 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js,script-update-interval=-1,pattern=^https:\/\/book\.haitunwallet\.com\/app\/vip\/status
 
-//斑马海报
-斑马海报 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/bmhb.js,script-update-interval=-1,pattern=^https://zebra.maka.im/api/user/info
-
-//财新周刊
-财新周刊 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/ddgksf/cxzk.js,script-update-interval=-1,pattern=^http://ipadcms.caixin.com/tmp/articles/*
-
-//丁香医生VIP
-丁香医生VIP= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/dxys.js,script-update-interval=-1,pattern=^https:\/\/dxy.com\/app\/i\/user\/ask\/account\?ac
-
-//彩云天气
-彩云天气= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/caiyun.js,script-update-interval=-1,pattern=^https:\//biz.caiyunapp.com\/v2\/user\?app_name=weather
-
-//拦截100解锁超级会员
-拦截100= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js,script-update-interval=-1,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$
-
-// > 流利说·阅读(2022.01.16)
-//会员时长到2030年，破解的标志是打开阅读🈚️限制，不会提示会员才能看🎉
-//⚠️⚠️⚠️，如果没有显示会员，剩余天数999。必须卸载重装！
-流利说·阅读= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js,script-update-interval=-1,pattern=^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$
-
-// > 新语听书解锁会员
-新语听书= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/XinYuLibraryProCrack.js,script-update-interval=-1,pattern=^https?:\/\/i\.xinyulib\.com\.cn\/api\/querytoken.+
-
 // 录屏大师解锁会员
 录屏大师= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js,script-update-interval=-1,pattern=^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info
 
 // 傲软抠图解锁会员
-傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/arkt.js,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
-
-// 扫描全能王
-扫描全能王= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,script-update-interval=-1,pattern=^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\?
-
-// 爱企查vip
-爱企查vip= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js,script-update-interval=-1,pattern=^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax
-
-// > WallCraft解锁专业版
-WallCraft解锁= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/WallCraftFProCrack.js,script-update-interval=-1,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/verify_receipt\/remove_ads$
-
-# > vsco解锁
-#滤镜破解 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
-
-# ✅ Nicegram
-Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10},requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Nicegram.js,script-update-interval=0
+傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Crack/apowersoft.js,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
 
 # > TopWidgets-小组件+解锁订阅
 TopWidgets = type=http-response,pattern=^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js,script-update-interval=0
 
-#迅雷-你的专享云盘+解锁VIP
-迅雷 = type=http-response,pattern=^https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xunlei.js,script-update-interval=0
 
 
 [MITM]
-hostname = %APPEND% baimiao.uzero.cn, newdrugs.dxy.cn, www.luqijianggushi.com, education.github.com, license.pdfexpert.com, commerce-i18n-api.faceu.mobi, commerce-api.faceu.mobi, mall.zuoyebang.com, apivip.zybang.com, api.gotokeep.com, *.dushu365.com, miniapp.elecredit.com, book.haitunwallet.com, panel.getdailyart.com, zebra.maka.im, ipadcms.caixin.com, billing-ios.wallpaperscraft.com, aiqicha.baidu.com, gw.aoscdn.com, api.gotokeep.com, luping.cushuikeji.cn, i.xinyulib.com.cn, vira.llsapp.com,appweb_dq.xiangha.com, apiios_dq.xiangha.com, tagit.hyhuo.com, biz.caiyunapp.com, dxy.com, api.revenuecat.com, restore-access.indream.app, top-widgets-api.xiaozujian.com, xluser-ssl.xunlei.com, *.snailsleep.net, *.intsig.net
+hostname = %APPEND% miniapp.elecredit.com, book.haitunwallet.com, luping.cushuikeji.cn, gw.aoscdn.com, top-widgets-api.xiaozujian.com
