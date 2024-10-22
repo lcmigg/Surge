@@ -1,7 +1,0 @@
-[rewrite_local]
-
-^https?:\/\/.*\.example\.com url script-analyze-echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/master/Script/ali.js
-
-[mitm]
-
-hostname = *example.com
