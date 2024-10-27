@@ -13,6 +13,10 @@ https://top-widgets-api.xiaozujian.com/api/ad/config - reject
 # > 攔截100@ddgksf2013
 https://tagit.hyhuo.com/recover/list - reject
 
+#作业帮*.zybang\.com
+^https?:\/\/syh\.zybang\.com\/com\/adx\/impress - reject
+^https?:\/\/adx\.zuoyebang\.com\/com - reject
+
 [Map Local]
 # 云鲸智能
 #云鲸智能 #开屏广告 #主机名cn-app.narwaltech.com
@@ -56,9 +60,6 @@ https://tagit.hyhuo.com/recover/list - reject
 #央视频cdn.cmgadx.com
 #^https:\/\/cdn\.cmgadx\.com\/sdk\/pool\/ data-type=text data="{}" status-code=200
 
-#作业帮*.zybang\.com
-^https?:\/\/syh\.zybang\.com\/com\/adx\/impress data-type=text data="{}" status-code=200
-^https?:\/\/adx\.zuoyebang\.com\/com data-type=text data="{}" status-code=200
 
 [MITM]
 hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com,syh.zybang.com,adx.zuoyebang.com
