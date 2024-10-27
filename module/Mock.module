@@ -16,6 +16,7 @@ https://tagit.hyhuo.com/recover/list - reject
 #作业帮*.zybang\.com
 ^https?:\/\/syh\.zybang\.com\/com\/adx\/impress - reject
 ^https?:\/\/adx\.zuoyebang\.com - reject
+^https?\:/\/jiazhang\.zuoyebang\.com\/parent/activity/actentrance - reject
 
 [Map Local]
 # 云鲸智能
@@ -62,4 +63,4 @@ https://tagit.hyhuo.com/recover/list - reject
 
 
 [MITM]
-hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com,syh.zybang.com,adx.zuoyebang.com
+hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com,syh.zybang.com,adx.zuoyebang.com,jiazhang.zuoyebang.com
