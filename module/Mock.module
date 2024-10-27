@@ -15,7 +15,7 @@ https://tagit.hyhuo.com/recover/list - reject
 
 #作业帮*.zybang\.com
 ^https?:\/\/syh\.zybang\.com\/com\/adx\/impress - reject
-^https?:\/\/adx\.zuoyebang\.com\ - reject
+^https?:\/\/adx\.zuoyebang\.com - reject
 
 [Map Local]
 # 云鲸智能
