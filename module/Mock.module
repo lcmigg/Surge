@@ -1,5 +1,5 @@
 #!name=自用去开屏广告 Mock
-#!desc=极速版JD、KFC、云鲸智能、富途牛牛、发现精彩、车来了、作业帮去广告
+#!desc=极速版JD、KFC、云鲸智能、富途牛牛、发现精彩、车来了、作业帮、小爱音箱去广告
 
 [URL Rewrite]
 # 极速版JD
@@ -61,6 +61,9 @@ https://tagit.hyhuo.com/recover/list - reject
 #央视频cdn.cmgadx.com
 #^https:\/\/cdn\.cmgadx\.com\/sdk\/pool\/ data-type=text data="{}" status-code=200
 
+#小爱音箱cdn.cmgadx.cominfo.mina.xiaoaisound.com
+^https?:\/\/info\.mina\.xiaoaisound\.com\/(advertise|payGuide)\/ data-type=text data='{ "code": 0, "message": "Success", "data": [] }' header='Content-Type:application/json'
+
 
 [MITM]
-hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com,syh.zybang.com,adx.zuoyebang.com,jiazhang.zuoyebang.com
+hostname = %APPEND% res.kfc.com,top-widgets-api.xiaozujian.com,tagit.hyhuo.com,mp.nezhazy.cn,cn-app.narwaltech.com,static.95508.com,api*.futunn.com,*.chelaile.net.cn,img.alicdn.com,syh.zybang.com,adx.zuoyebang.com,jiazhang.zuoyebang.com,info.mina.xiaoaisound.com
