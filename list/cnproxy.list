@@ -1,4 +1,7 @@
 //cnProxy
+DOMAIN-KEYWORD,wechatpay
+DOMAIN,epay.ahrcu.com
+DOMAIN,mixpay.wechat.com
 USER-AGENT,kiwi*
 DOMAIN-SUFFIX,huya.com
 USER-AGENT,WeChat*
