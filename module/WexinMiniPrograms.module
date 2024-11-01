@@ -4,11 +4,13 @@
 #!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
 
+[Rule]
+# 微信小程序通用规则
+DOMAIN,wxsnsdy.wxs.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,wxsmsdy.video.qq.com,REJECT,extended-matching,pre-matching
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT,extended-matching,pre-matching
+
 [URL Rewrite]
-# 必胜客 res.pizzahut.com.cn
-^https:\/\/res\.pizzahut\.com\.cn\/CRM - reject
-# 麦当劳 api.mcd.cn
-^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity - reject
 # 货拉拉 qapi.huolala.cn, appuser-static.huolala.cn
 ^https:\/\/qapi\.huolala\.cn\/ads - reject
 ^https:\/\/qapi\.huolala\.cn\/home_new_user - reject
@@ -32,5 +34,24 @@
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= - reject
 ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe - reject
 
+[Map Local]
+# 移除公众号中的推广内容 //mp.weixin.qq.com
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ data-type=text data="{}" status-code=200
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
+# 必胜客 res.pizzahut.com.cn
+^https:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}" status-code=200
+# 麦当劳 api.mcd.cn
+^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity data-type=text data="{}" status-code=200
+# 神州租车 apiproxy.zuche.com
+^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/marketing data-type=text data="{}" status-code=200
+# 哈啰 api.hellobike.com
+^https:\/\/api\.hellobike\.com\/api\?adx data-type=text data="{}" status-code=200
+# 滴滴青桔 htwkop.xiaojukeji.com
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery data-type=text data="{}" status-code=200
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.combineHomepageInfo data-type=text data="{}" status-code=200
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.mallRecommend data-type=text data="{}" status-code=200
+# 途虎养车小程序 @张军
+^https:\/\/mkt-gateway\.tuhu\.cn\/mkt-scene-marketing-service\/api\/scene\/queryScheme data-type=text data="{}" status-code=200
+
 [MITM]
-hostname = %APPEND% res.pizzahut.com.cn, api.mcd.cn,qapi.huolala.cn, appuser-static.huolala.cn,mxsa.mxbc.net,www.deppon.com,www.deppon.com,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,ucmp.sf-express.com,daijia.kuaidadi.com, as.xiaojukeji.com
+hostname = %APPEND% res.pizzahut.com.cn, mp.weixin.qq.com, api.mcd.cn,qapi.huolala.cn, appuser-static.huolala.cn,mxsa.mxbc.net,www.deppon.com,www.deppon.com,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,ucmp.sf-express.com,daijia.kuaidadi.com, as.xiaojukeji.com, apiproxy.zuche.com, api.hellobike.com, htwkop.xiaojukeji.com, mkt-gateway.tuhu.cn
