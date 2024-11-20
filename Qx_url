@@ -80,7 +80,6 @@ hostname = youtubei.googleapis.com,*googlesyndication.com,*ydstatic.com,img*.126
 
 # 京东 //api.m.jd.com
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 # > jingdong
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
@@ -192,24 +191,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # 印象笔记
 ^https?:\/\/app\.yinxiang\.com\/ads\/getAdsInfo$ url reject-200
 
-# 10086
-^https?:\/\/app\.10086\.cn\/biz-orange\/DN\/(findSale|homeSale)\/getsaleAdver url reject
-
-# >中国移动营业厅 - clientaccess.10086.cn,wap.js.10086.cn
-^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
-# > zhongguoyidong
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject-200
-# > zhongguoyidongguangdong
-^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 url reject-200
-
-# > 中国联通营业厅 - m.client.10010.com
-^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject
-# 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
-^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js
-^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js
 
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen\/ url reject-200
