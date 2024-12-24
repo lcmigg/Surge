@@ -10,16 +10,14 @@
 //海豚记账 (by @superuv)
 海豚记账 = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/htjz.js,script-update-interval=-1,pattern=^https:\/\/book\.haitunwallet\.com\/app\/vip\/status
 
-// 录屏大师解锁会员
-录屏大师= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/RecordScreenProCrack.js,script-update-interval=-1,pattern=^http?:\/\/luping\.cushuikeji\.cn\/api\/v1\.user\/info
-
 // 傲软抠图解锁会员
 傲软抠图= type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Crack/apowersoft.js,script-update-interval=-1,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$
 
 # > TopWidgets-小组件+解锁订阅
 TopWidgets = type=http-response,pattern=^https:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js,script-update-interval=0
 
-
+# 扫描全能王
+扫描全能王 = type=http-response,pattern=^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% miniapp.elecredit.com, book.haitunwallet.com, luping.cushuikeji.cn, gw.aoscdn.com, top-widgets-api.xiaozujian.com
+hostname = %APPEND% miniapp.elecredit.com, book.haitunwallet.com, gw.aoscdn.com, top-widgets-api.xiaozujian.com， *.intsig.net
