@@ -19,5 +19,8 @@ TopWidgets = type=http-response,pattern=^https:\/\/top-widgets-api\.xiaozujian\.
 # 扫描全能王
 扫描全能王 = type=http-response,pattern=^https:\/\/(api|api-cs|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,script-update-interval=0
 
+# 克拉壁纸
+克拉壁纸 = type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll|picture\/search|catalog\/listAll|top\/list|picture\/date\?date),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/ClarityProCrack.js,script-update-interval=0
+
 [MITM]
-hostname = %APPEND% miniapp.elecredit.com, book.haitunwallet.com, gw.aoscdn.com, top-widgets-api.xiaozujian.com， *.intsig.net
+hostname = %APPEND% miniapp.elecredit.com, book.haitunwallet.com, gw.aoscdn.com, top-widgets-api.xiaozujian.com，*.intsig.net, claritywallpaper.com
