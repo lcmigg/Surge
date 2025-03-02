@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+^https:\/\/.*\.(intsig\.net|camscanner\.com) url script-response-body https://raw.githubusercontent.com/lcmigg/Surge/refs/heads/master/Script/CamScanner.js
 
 [mitm]
 
