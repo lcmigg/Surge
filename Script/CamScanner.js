@@ -2,6 +2,14 @@
  * CamScanner 解锁会员
  * 版本: 1.0.0
  * 适用: Loon
+
+[Script]
+# CamScanner 解锁会员
+http-response https:\/\/(api|api-cs)-cn\.intsig\.net\/purchase\/cs\/query_property\? requires-body=true, script-path=CamScanner.js
+
+[MITM]
+hostname = api-cn.intsig.net, api-cn.intsig.net
+
  */
 
 const url = $request.url;
