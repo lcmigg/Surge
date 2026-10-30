@@ -1,7 +1,15 @@
 #!name=虎扑去广告
 #!desc=关闭虎扑所有广告
+#!author=
+#!icon=
+#!openUrl=
+#!category=广告拦截
+
 [Rule]
 DOMAIN-SUFFIX,goblin.hupu.com,DIRECT
+
 [Rewrite]
-response if ${url} ~= /^https?://goblin.hupu.com/\d+/[\d.]+/interfaceAd/getOther// then response.body.mock(”json“, {”ad_code“:-41,”show_type“:0,”ads“:[]}, 200)
-[Mitm] hostname = goblin.hupu.com
+response if ${url} ~= /^https?://goblin.hupu.com/\d+/[\d.]+/interfaceAd/getOther// then response.body.mock("json", {"ad_code":-41,"show_type":0,"ads":[]}, 200)
+
+[MITM]
+hostname = %APPEND% goblin.hupu.com
